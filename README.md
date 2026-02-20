@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Portfolio Professionnel - Apolline Bellaclas
 
-# Run and deploy your AI Studio app
+Ce projet est un portfolio moderne conçu avec React, Vite et Tailwind CSS.
 
-This contains everything you need to run your app locally.
+## 🚀 Déploiement Rapide
 
-View your app in AI Studio: https://ai.studio/apps/d0da4c50-cd3f-448d-87e8-7697d167c6e5
+### 1. GitHub
+1. Créez un nouveau dépôt sur votre compte GitHub.
+2. Initialisez git dans ce dossier :
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin https://github.com/VOTRE_NOM/VOTRE_DEPOT.git
+   git push -u origin main
+   ```
 
-## Run Locally
+### 2. Netlify
+1. Connectez-vous à [Netlify](https://www.netlify.com/).
+2. Cliquez sur **"Add new site"** > **"Import an existing project"**.
+3. Sélectionnez votre dépôt GitHub.
+4. Les paramètres de build devraient être détectés automatiquement grâce au fichier `netlify.toml` :
+   - **Build command:** `npm run build`
+   - **Publish directory:** `dist`
+5. Cliquez sur **"Deploy site"**.
 
-**Prerequisites:**  Node.js
+## 🛠️ Technologies utilisées
+- **React 19**
+- **Vite** (Build tool ultra-rapide)
+- **Tailwind CSS 4** (Styling)
+- **Motion** (Animations)
+- **Lucide React** (Icônes)
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 📁 Structure du projet
+- `src/App.tsx` : Composant principal contenant tout le contenu du portfolio.
+- `src/index.css` : Configuration de la charte graphique et de Tailwind.
+- `netlify.toml` : Configuration pour le déploiement sur Netlify (gestion des redirections SPA).
