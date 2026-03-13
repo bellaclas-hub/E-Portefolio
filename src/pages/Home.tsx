@@ -55,18 +55,18 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative flex justify-center"
           >
-            <div className="aspect-[4/5] rounded-[2rem] bg-slate-200 overflow-hidden shadow-2xl border-8 border-white">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-200 overflow-hidden shadow-2xl border-8 border-white relative z-10">
               <img 
-                src="https://picsum.photos/seed/apolline-hero/800/1000" 
+                src="https://res.cloudinary.com/delgsyvkc/image/upload/v1773394135/Photo_Apolline_Bellaclas.pdf_lftaza.png" 
                 alt="Apolline Bellaclas" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                className="w-full h-full object-cover transition-all duration-1000"
                 referrerPolicy="no-referrer"
               />
             </div>
             {/* Floating Stats/Badges */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 hidden md:block">
+            <div className="absolute bottom-0 left-0 md:left-10 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 hidden md:block z-20">
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-blue-50 rounded-xl text-deep-blue">
                   <Briefcase className="w-6 h-6" />
