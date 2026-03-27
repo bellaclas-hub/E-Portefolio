@@ -15,46 +15,49 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Accueil', path: '/' },
     { name: 'À propos', path: '/a-propos' },
-    { name: 'Expériences', path: '/experiences' },
-    { name: 'Formations', path: '/formations' },
-    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Projets', path: '/portfolio' },
+    { name: 'Lexique', path: '/lexique' },
+    { name: 'Cas pratique', path: '/cas-pratique' },
     { name: 'Contact', path: '/contact' },
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md border-b border-slate-200 py-3' : 'bg-transparent py-5'}`}>
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-deep-blue tracking-tighter">
-          AB<span className="text-accent-blue">.</span>
-        </Link>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'py-2' : 'py-6'}`}>
+      <div className="max-w-7xl mx-auto px-6">
+        <div className={`flex items-center justify-between transition-all duration-500 px-6 py-3 rounded-lg ${scrolled ? 'bg-white shadow-md border border-slate-100' : 'bg-transparent'}`}>
+          <Link to="/" className="text-2xl font-bold text-pure-black tracking-tighter group">
+            AB<span className="text-primary-blue group-hover:animate-pulse">.</span>
+          </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`text-sm font-medium transition-colors hover:text-accent-blue ${location.pathname === link.path ? 'text-accent-blue' : 'text-slate-600'}`}
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`text-sm font-bold transition-all hover:text-primary-blue relative group ${location.pathname === link.path ? 'text-primary-blue' : 'text-pure-black'}`}
+              >
+                {link.name}
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-blue transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? 'w-full' : ''}`} />
+              </Link>
+            ))}
+            <div className="h-4 w-px bg-slate-200 mx-2" />
+            <a
+              href="https://www.linkedin.com/in/apolline-bellaclas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-primary-blue hover:text-white transition-all hover:scale-110 active:scale-95"
             >
-              {link.name}
-            </Link>
-          ))}
-          <a
-            href="https://www.linkedin.com/in/apolline-bellaclas/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2 rounded-full bg-slate-100 text-slate-600 hover:bg-deep-blue hover:text-white transition-all"
-          >
-            <Linkedin className="w-4 h-4" />
-          </a>
-        </div>
+              <Linkedin className="w-4 h-4" />
+            </a>
+          </div>
 
-        {/* Mobile Toggle */}
-        <button className="md:hidden text-deep-blue" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X /> : <Menu />}
-        </button>
+          {/* Mobile Toggle */}
+          <button className="md:hidden text-pure-black p-2 hover:bg-slate-100 rounded-lg transition-colors" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}
@@ -72,7 +75,7 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-lg font-semibold ${location.pathname === link.path ? 'text-accent-blue' : 'text-slate-600'}`}
+                  className={`text-lg font-bold ${location.pathname === link.path ? 'text-primary-blue' : 'text-pure-black'}`}
                 >
                   {link.name}
                 </Link>
@@ -81,7 +84,7 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/apolline-bellaclas/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-slate-600 font-medium"
+                className="flex items-center gap-2 text-primary-blue font-bold"
               >
                 <Linkedin className="w-5 h-5" /> LinkedIn
               </a>

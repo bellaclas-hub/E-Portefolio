@@ -3,12 +3,12 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Outfit", sans-serif;
+  --font-display: "Inter", sans-serif;
   
-  --color-deep-blue: #1a365d;
-  --color-accent-blue: #3182ce;
-  --color-soft-bg: #f8fafc;
-  --color-ink: #1e293b;
+  --color-primary-blue: #007BFF;
+  --color-block-gray: #F2F2F2;
+  --color-pure-white: #FFFFFF;
+  --color-pure-black: #000000;
 }
 
 @layer base {
@@ -16,25 +16,33 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-soft-bg text-ink font-sans antialiased;
+    @apply bg-pure-white text-pure-black font-sans antialiased;
   }
   h1, h2, h3, h4 {
-    @apply font-display;
+    @apply font-display font-bold text-pure-black;
   }
 }
 
-.glass-card {
-  @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-sm;
+.section-gray {
+  @apply bg-block-gray py-24 px-6 md:px-12 lg:px-24;
 }
 
-.section-padding {
-  @apply py-24 px-6 md:px-12 lg:px-24;
+.section-white {
+  @apply bg-pure-white py-24 px-6 md:px-12 lg:px-24;
 }
 
-.text-balance {
-  text-wrap: balance;
+.important-text {
+  @apply text-primary-blue font-bold;
 }
 
-.gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-deep-blue to-accent-blue;
+.btn-primary {
+  @apply bg-primary-blue text-white px-8 py-4 rounded-lg font-bold transition-all hover:brightness-110 hover:shadow-lg active:scale-95 flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply border-2 border-primary-blue text-primary-blue px-8 py-4 rounded-lg font-bold transition-all hover:bg-primary-blue/5 hover:shadow-md active:scale-95 flex items-center justify-center gap-2;
+}
+
+.card-style {
+  @apply bg-pure-white rounded-lg shadow-sm border border-slate-100 transition-all duration-300;
 }
