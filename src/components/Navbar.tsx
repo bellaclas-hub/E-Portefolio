@@ -23,9 +23,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-700 ${scrolled ? 'py-4' : 'py-8'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-700 py-6`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className={`flex items-center justify-between transition-all duration-700 px-8 py-4 rounded-full ${scrolled ? 'bg-white/80 backdrop-blur-xl shadow-lg border border-white/20' : 'bg-transparent'}`}>
+        <div className={`flex items-center justify-between transition-all duration-700 px-8 py-4 rounded-full bg-white/90 backdrop-blur-xl shadow-lg border border-slate-200/50`}>
           <Link to="/" className="text-2xl font-black text-deep-black tracking-tighter group flex items-center gap-1">
             AB<span className="w-2 h-2 rounded-full bg-primary-blue group-hover:scale-150 transition-transform duration-500"></span>
           </Link>
