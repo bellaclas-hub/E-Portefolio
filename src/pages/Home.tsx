@@ -120,32 +120,83 @@ const Home = () => {
             transition={{ duration: 1 }}
           >
             <h2 className="text-4xl md:text-6xl font-black mb-12 text-white leading-tight">Un projet réalisé avec Lovable</h2>
+            
+            {/* Introduction */}
             <div className="text-xl md:text-2xl text-slate-400 leading-relaxed space-y-8 mb-16">
               <p>
                 Ce portfolio a été conçu avec Lovable, un outil NoCode assisté par intelligence artificielle.
               </p>
               <p>
-                L’objectif de ce projet est d’analyser comment ces technologies transforment la création web.
+                Il s’inscrit dans une réflexion plus large : comment le NoCode et l’IA transforment-ils la création de sites web ?
               </p>
-              <p>
-                Cette expérience m’a permis d’observer plusieurs évolutions majeures :
-              </p>
-              <ul className="space-y-4 text-white font-bold">
+            </div>
+
+            {/* Apports */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold mb-8 text-white">Ce que cet outil m’a permis d’observer :</h3>
+              <ul className="space-y-4 text-slate-300 font-medium max-w-2xl mx-auto">
                 <li className="flex items-center justify-center gap-3">
-                  <Zap className="w-5 h-5 text-primary-blue" />
-                  une réduction significative du temps de création
+                  <Zap className="w-5 h-5 text-primary-blue flex-shrink-0" />
+                  Un gain de temps significatif dans la création et la structuration du site
                 </li>
                 <li className="flex items-center justify-center gap-3">
-                  <Zap className="w-5 h-5 text-primary-blue" />
-                  une prise en main intuitive
+                  <Zap className="w-5 h-5 text-primary-blue flex-shrink-0" />
+                  Une accessibilité accrue sans développement complexe
                 </li>
                 <li className="flex items-center justify-center gap-3">
-                  <Zap className="w-5 h-5 text-primary-blue" />
-                  une automatisation de certaines tâches
+                  <Zap className="w-5 h-5 text-primary-blue flex-shrink-0" />
+                  Une automatisation de certaines étapes
                 </li>
               </ul>
-              <p className="pt-8">
-                Mais également certaines limites, notamment en termes de personnalisation et de contrôle technique.
+            </div>
+
+            {/* Limites */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold mb-8 text-white">Mais aussi certaines limites :</h3>
+              <ul className="space-y-4 text-slate-300 font-medium max-w-2xl mx-auto">
+                <li className="flex items-center justify-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-terracotta rounded-full flex-shrink-0" />
+                  Une personnalisation restreinte
+                </li>
+                <li className="flex items-center justify-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-terracotta rounded-full flex-shrink-0" />
+                  Une dépendance aux fonctionnalités de l’outil
+                </li>
+                <li className="flex items-center justify-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-terracotta rounded-full flex-shrink-0" />
+                  Un contrôle technique limité
+                </li>
+              </ul>
+            </div>
+
+            {/* Analyse */}
+            <div className="mb-24 p-12 bg-white/5 rounded-[3rem] border border-white/10">
+              <h3 className="text-2xl font-bold mb-8 text-white uppercase tracking-widest">Analyse</h3>
+              <div className="text-xl text-slate-400 leading-relaxed space-y-6">
+                <p>
+                  Cette expérience montre que le NoCode et l’intelligence artificielle permettent de créer des sites web rapidement et efficacement.
+                </p>
+                <p>
+                  Cependant, ces outils ne remplacent pas la réflexion stratégique et créative nécessaire à un projet digital pertinent.
+                </p>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="space-y-8">
+              <p className="text-lg text-slate-400">
+                Découvrez la version complète du site réalisé avec Lovable et explorez concrètement l’impact du NoCode et de l’intelligence artificielle.
+              </p>
+              <a 
+                href="https://apolline-bellaclas-portfolio.lovable.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex px-12 py-5 text-lg"
+              >
+                Voir le projet Lovable
+              </a>
+              <p className="text-sm text-slate-500 italic">
+                Ce site a été conçu sans code, en quelques étapes seulement.
               </p>
             </div>
           </motion.div>
