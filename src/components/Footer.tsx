@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-2">
             <Link to="/" className="text-3xl font-black tracking-tighter mb-8 block group">
-              AB<span className="inline-block w-2 h-2 rounded-full bg-primary-blue ml-1 group-hover:scale-150 transition-transform"></span>
+              Accueil (AB)<span className="inline-block w-2 h-2 rounded-full bg-primary-blue ml-1 group-hover:scale-150 transition-transform"></span>
             </Link>
             <p className="text-light-gray max-w-sm text-lg leading-relaxed font-medium">
               Étudiante en Master Informatique Numérique. Passionnée par l'innovation technologique et l'impact du NoCode/IA sur la création web.
@@ -23,9 +23,9 @@ const Footer = () => {
             <h4 className="font-black text-white mb-8 uppercase tracking-[0.2em] text-[10px]">Navigation</h4>
             <ul className="space-y-5 text-sm font-bold">
               <li><Link to="/a-propos" className="text-light-gray hover:text-white transition-colors">À propos</Link></li>
-              <li><Link to="/portfolio" className="text-light-gray hover:text-white transition-colors">Projets</Link></li>
-              <li><Link to="/lexique" className="text-light-gray hover:text-white transition-colors">Lexique</Link></li>
+              <li><Link to="/portfolio" className="text-light-gray hover:text-white transition-colors">Projet</Link></li>
               <li><Link to="/cas-pratique" className="text-light-gray hover:text-white transition-colors">Cas pratique</Link></li>
+              <li><Link to="/lexique" className="text-light-gray hover:text-white transition-colors">Lexique</Link></li>
               <li><Link to="/contact" className="text-light-gray hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>

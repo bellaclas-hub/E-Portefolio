@@ -15,39 +15,43 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { name: 'Accueil', path: '/' },
     { name: 'À propos', path: '/a-propos' },
-    { name: 'Projets', path: '/portfolio' },
-    { name: 'Lexique', path: '/lexique' },
+    { name: 'Projet', path: '/portfolio' },
     { name: 'Cas pratique', path: '/cas-pratique' },
+    { name: 'Data', path: '/data' },
+    { name: 'Lexique', path: '/lexique' },
     { name: 'Contact', path: '/contact' },
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-700 py-6`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'py-4' : 'py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className={`flex items-center justify-between transition-all duration-700 px-8 py-4 rounded-full bg-white/90 backdrop-blur-xl shadow-lg border border-slate-200/50`}>
-          <Link to="/" className="text-2xl font-black text-deep-black tracking-tighter group flex items-center gap-1">
-            AB<span className="w-2 h-2 rounded-full bg-primary-blue group-hover:scale-150 transition-transform duration-500"></span>
+        <div className={`flex items-center justify-between transition-all duration-500 px-8 py-4 rounded-full bg-white/95 backdrop-blur-md shadow-lg border border-slate-200/60`}>
+          <Link to="/" className="text-xl font-black text-deep-black tracking-tighter group flex items-center gap-1.5">
+            <span className="group-hover:text-primary-blue transition-colors duration-300">AB</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-primary-blue group-hover:scale-150 transition-transform duration-500"></span>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-8 lg:gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-xs uppercase tracking-widest font-extrabold transition-all hover:text-primary-blue relative group ${location.pathname === link.path ? 'text-primary-blue' : 'text-deep-black'}`}
+                className={`text-[11px] uppercase tracking-[0.2em] font-black transition-all hover:text-primary-blue relative group ${location.pathname === link.path ? 'text-primary-blue' : 'text-deep-black/70'}`}
               >
                 {link.name}
-                <span className={`absolute -bottom-2 left-0 w-0 h-0.5 bg-primary-blue transition-all duration-500 group-hover:w-full ${location.pathname === link.path ? 'w-full' : ''}`} />
+                <span className={`absolute -bottom-1.5 left-0 h-0.5 bg-primary-blue transition-all duration-500 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`} />
               </Link>
             ))}
-            <div className="h-4 w-px bg-slate-200 mx-2" />
+            <div className="h-4 w-px bg-slate-200 mx-1" />
             <a
               href="https://www.linkedin.com/in/apolline-bellaclas/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-deep-black text-white hover:bg-primary-blue transition-all hover:scale-110 active:scale-95 shadow-lg"
+              className="p-2.5 rounded-full bg-deep-black text-white hover:bg-primary-blue transition-all hover:scale-110 active:scale-95 shadow-md"
+              title="LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
             </a>
@@ -75,7 +79,7 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-lg font-bold ${location.pathname === link.path ? 'text-primary-blue' : 'text-deep-black'}`}
+                  className={`text-lg font-black ${location.pathname === link.path ? 'text-primary-blue' : 'text-deep-black'}`}
                 >
                   {link.name}
                 </Link>
@@ -84,7 +88,7 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/apolline-bellaclas/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-primary-blue font-bold"
+                className="flex items-center gap-2 text-primary-blue font-black"
               >
                 <Linkedin className="w-5 h-5" /> LinkedIn
               </a>
