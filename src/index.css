@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Inter", sans-serif;
   
-  --color-primary-blue: #007BFF;
-  --color-block-gray: #F2F2F2;
+  --color-deep-black: #0A0A0A;
   --color-pure-white: #FFFFFF;
-  --color-pure-black: #000000;
+  --color-terracotta: #6B3E2E;
+  --color-primary-blue: #2563EB;
+  --color-text-gray: #4B5563;
+  --color-light-gray: #9CA3AF;
 }
 
 @layer base {
@@ -16,33 +18,45 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-pure-white text-pure-black font-sans antialiased;
+    @apply bg-pure-white text-deep-black font-sans antialiased;
   }
   h1, h2, h3, h4 {
-    @apply font-display font-bold text-pure-black;
+    @apply font-display font-extrabold text-deep-black tracking-tight;
   }
-}
-
-.section-gray {
-  @apply bg-block-gray py-24 px-6 md:px-12 lg:px-24;
 }
 
 .section-white {
-  @apply bg-pure-white py-24 px-6 md:px-12 lg:px-24;
+  @apply bg-pure-white py-32 px-6 md:px-12 lg:px-24;
 }
 
-.important-text {
-  @apply text-primary-blue font-bold;
+.section-dark {
+  @apply bg-deep-black text-white py-32 px-6 md:px-12 lg:px-24;
+}
+
+.section-terracotta {
+  @apply bg-terracotta text-white py-32 px-6 md:px-12 lg:px-24;
 }
 
 .btn-primary {
-  @apply bg-primary-blue text-white px-8 py-4 rounded-lg font-bold transition-all hover:brightness-110 hover:shadow-lg active:scale-95 flex items-center justify-center gap-2;
+  @apply bg-primary-blue text-white px-10 py-5 rounded-full font-bold transition-all hover:brightness-110 hover:shadow-xl active:scale-95 flex items-center justify-center gap-2 text-lg;
 }
 
 .btn-secondary {
-  @apply border-2 border-primary-blue text-primary-blue px-8 py-4 rounded-lg font-bold transition-all hover:bg-primary-blue/5 hover:shadow-md active:scale-95 flex items-center justify-center gap-2;
+  @apply border-2 border-deep-black text-deep-black px-10 py-5 rounded-full font-bold transition-all hover:bg-deep-black hover:text-white active:scale-95 flex items-center justify-center gap-2 text-lg;
+}
+
+.btn-outline-white {
+  @apply border-2 border-white text-white px-10 py-5 rounded-full font-bold transition-all hover:bg-white hover:text-deep-black active:scale-95 flex items-center justify-center gap-2 text-lg;
 }
 
 .card-style {
-  @apply bg-pure-white rounded-lg shadow-sm border border-slate-100 transition-all duration-300;
+  @apply bg-white rounded-[2rem] shadow-sm border border-slate-100 transition-all duration-500 hover:shadow-2xl p-12;
+}
+
+.huge-title {
+  @apply text-6xl md:text-8xl lg:text-9xl leading-[0.9] mb-12;
+}
+
+.sub-title {
+  @apply text-2xl md:text-3xl text-text-gray font-medium mb-12 max-w-2xl leading-relaxed;
 }

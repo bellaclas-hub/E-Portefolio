@@ -4,8 +4,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Experiences from './pages/Experiences';
-import Education from './pages/Education';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Lexique from './pages/Lexique';
@@ -30,8 +28,6 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/a-propos" element={<About />} />
-            <Route path="/experiences" element={<Experiences />} />
-            <Route path="/formations" element={<Education />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/lexique" element={<Lexique />} />
             <Route path="/cas-pratique" element={<CasPratique />} />

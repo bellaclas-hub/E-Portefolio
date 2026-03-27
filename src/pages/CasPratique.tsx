@@ -24,65 +24,69 @@ const CasPratique = () => {
   ];
 
   return (
-    <div className="pt-32 pb-24">
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
+    <div className="pt-48 pb-24">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-32">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-3xl"
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl"
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-pure-black mb-8 tracking-tight">Cas pratique</h1>
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Découvrez comment j'aborde des problématiques concrètes pour délivrer des résultats mesurables.
+          <h1 className="huge-title">Cas Pratiques</h1>
+          <p className="sub-title">
+            Analyse détaillée de problématiques réelles et des solutions stratégiques mises en œuvre pour atteindre des résultats concrets.
           </p>
         </motion.div>
       </section>
 
-      <section className="section-gray">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="space-y-12">
+      <section className="bg-pure-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+          <div className="space-y-32">
             {cases.map((c, i) => (
               <motion.div
                 key={c.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white p-12 rounded-lg border border-slate-100 shadow-sm hover:shadow-xl transition-all"
+                transition={{ duration: 0.8, delay: i * 0.1 }}
+                className="group"
               >
-                <div className="grid lg:grid-cols-2 gap-12">
-                  <div className="space-y-8">
-                    <h3 className="text-3xl font-bold text-pure-black">{c.title}</h3>
-                    <div className="space-y-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-2 bg-blue-50 text-primary-blue rounded-lg">
-                          <Target className="w-5 h-5" />
+                <div className="grid lg:grid-cols-2 gap-24 items-center">
+                  <div className="space-y-12">
+                    <h3 className="text-5xl font-black text-deep-black leading-tight group-hover:text-primary-blue transition-colors duration-500">{c.title}</h3>
+                    <div className="space-y-10">
+                      <div className="flex items-start gap-8">
+                        <div className="p-4 bg-slate-50 text-primary-blue rounded-2xl shadow-sm">
+                          <Target className="w-8 h-8" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-pure-black mb-1">Objectif</h4>
-                          <p className="text-slate-600">{c.objective}</p>
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-light-gray mb-2">Objectif Stratégique</h4>
+                          <p className="text-2xl font-black text-deep-black leading-snug">{c.objective}</p>
                         </div>
                       </div>
-                      <div className="flex items-start gap-4">
-                        <div className="p-2 bg-green-50 text-green-600 rounded-lg">
-                          <TrendingUp className="w-5 h-5" />
+                      <div className="flex items-start gap-8">
+                        <div className="p-4 bg-slate-50 text-green-600 rounded-2xl shadow-sm">
+                          <TrendingUp className="w-8 h-8" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-pure-black mb-1">Résultats</h4>
-                          <p className="text-slate-600">{c.results}</p>
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-light-gray mb-2">Impact Mesurable</h4>
+                          <p className="text-2xl font-black text-deep-black leading-snug">{c.results}</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="bg-slate-50 p-8 rounded-lg border border-slate-100">
-                    <h4 className="font-bold text-pure-black mb-6 flex items-center gap-2">
+                  <div className="bg-deep-black p-16 rounded-[3rem] shadow-2xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-primary-blue/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+                    <h4 className="text-[10px] font-black text-white mb-10 uppercase tracking-[0.2em] flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary-blue" />
-                      Étapes clés
+                      Méthodologie & Étapes
                     </h4>
-                    <ul className="space-y-4">
+                    <ul className="space-y-8">
                       {c.steps.map((step, idx) => (
-                        <li key={idx} className="flex items-center gap-3 text-slate-600 font-medium">
-                          <ChevronRight className="w-4 h-4 text-primary-blue" />
+                        <li key={idx} className="flex items-center gap-6 text-light-gray text-lg font-bold group/item">
+                          <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-xs font-black text-white group-hover/item:bg-primary-blue transition-colors duration-300">
+                            {idx + 1}
+                          </span>
                           {step}
                         </li>
                       ))}

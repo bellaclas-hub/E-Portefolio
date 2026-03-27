@@ -47,68 +47,71 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="pt-32 pb-24">
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
+    <div className="pt-48 pb-24">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-3xl"
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl"
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-pure-black mb-8 tracking-tight">Portfolio</h1>
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Voici un aperçu de mes <span className="important-text">réalisations concrètes</span> : de la stratégie de contenu au pilotage de projets digitaux.
+          <h1 className="huge-title">Portfolio</h1>
+          <p className="sub-title">
+            Une sélection de mes réalisations les plus marquantes, alliant stratégie digitale, marketing et innovation technologique.
           </p>
         </motion.div>
       </section>
 
-      <section className="section-gray">
+      <section className="bg-pure-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-2 gap-24">
             {projects.map((project, i) => (
               <motion.div
                 key={project.title}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group card-style overflow-hidden flex flex-col h-full hover:shadow-2xl transition-all duration-500"
+                transition={{ duration: 0.8, delay: i * 0.1 }}
+                className="group cursor-pointer"
               >
-                <div className="aspect-[4/3] relative overflow-hidden">
+                <div className="aspect-[16/10] relative overflow-hidden rounded-[2rem] mb-10 bg-slate-100">
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-pure-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
-                    <div className="w-16 h-16 rounded-full bg-white text-primary-blue flex items-center justify-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      {project.icon}
+                  <div className="absolute inset-0 bg-deep-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center backdrop-blur-sm">
+                    <div className="w-20 h-20 rounded-full bg-white text-primary-blue flex items-center justify-center transform scale-90 group-hover:scale-100 transition-transform duration-500 shadow-2xl">
+                      <ArrowRight className="w-8 h-8" />
                     </div>
                   </div>
-                  <div className="absolute top-6 left-6">
-                    <span className="px-4 py-2 bg-white/90 backdrop-blur-md rounded-md text-[10px] font-bold text-primary-blue uppercase tracking-widest shadow-sm">
+                  <div className="absolute top-8 left-8">
+                    <span className="px-5 py-2.5 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-black text-deep-black uppercase tracking-[0.2em] shadow-lg">
                       {project.category}
                     </span>
                   </div>
                 </div>
                 
-                <div className="p-10 flex flex-col flex-1">
-                  <h3 className="text-2xl font-bold text-pure-black mb-4 group-hover:text-primary-blue transition-colors">{project.title}</h3>
-                  <p className="text-slate-500 mb-8 leading-relaxed flex-1">{project.desc}</p>
-                  
-                  <div className="space-y-6">
+                <div className="px-4">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="p-3 bg-slate-50 rounded-xl text-primary-blue">
+                      {project.icon}
+                    </div>
                     <div className="flex flex-wrap gap-2">
                       {project.skills.map(skill => (
-                        <span key={skill} className="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-50 px-3 py-1.5 rounded-md border border-slate-100">
+                        <span key={skill} className="text-[10px] font-black uppercase tracking-widest text-light-gray">
                           {skill}
                         </span>
                       ))}
                     </div>
-                    
-                    <div className="pt-6 border-t border-slate-100 flex items-center justify-between group/link cursor-pointer">
-                      <span className="text-sm font-bold text-pure-black group-hover/link:text-primary-blue transition-colors">Voir le projet</span>
-                      <ArrowRight className="w-5 h-5 text-slate-300 group-hover/link:text-primary-blue group-hover/link:translate-x-1 transition-all" />
-                    </div>
+                  </div>
+                  <h3 className="text-4xl font-black text-deep-black mb-6 group-hover:text-primary-blue transition-colors duration-500 leading-tight">{project.title}</h3>
+                  <p className="text-text-gray text-lg mb-8 leading-relaxed max-w-xl">{project.desc}</p>
+                  
+                  <div className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.2em] text-deep-black group-hover:gap-5 transition-all duration-500">
+                    Découvrir le projet
+                    <ArrowRight className="w-4 h-4 text-primary-blue" />
                   </div>
                 </div>
               </motion.div>
@@ -117,27 +120,25 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section className="section-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="section-dark mt-48">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-slate-50 rounded-lg p-12 md:p-20 text-center border border-slate-100 shadow-sm relative overflow-hidden"
+            transition={{ duration: 0.8 }}
           >
-            <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-bold text-pure-black mb-8">Un projet en tête ?</h2>
-              <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-                Je suis toujours ouverte à de nouvelles collaborations et opportunités pour mettre mes compétences au service de projets innovants.
-              </p>
-              <Link 
-                to="/contact" 
-                className="btn-primary inline-flex items-center gap-3"
-              >
-                Travaillons ensemble
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
+            <h2 className="text-5xl md:text-7xl font-black mb-12 leading-tight">Prêt à lancer votre prochain projet ?</h2>
+            <p className="text-xl text-light-gray mb-16 max-w-2xl mx-auto leading-relaxed">
+              Je mets mon expertise en marketing digital et gestion de projet au service de votre vision.
+            </p>
+            <Link 
+              to="/contact" 
+              className="btn-outline-white inline-flex items-center gap-4 group"
+            >
+              Me contacter
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-500" />
+            </Link>
           </motion.div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { Heart, Zap, Shield, Compass, Star, TrendingUp, Users, Lightbulb, Target, MessageSquare, Rocket, RefreshCw, AlertCircle, Briefcase, CheckCircle2 } from 'lucide-react';
+import { Heart, Zap, Shield, Compass, Star, TrendingUp, Users, Lightbulb, Target, MessageSquare, Rocket, RefreshCw, AlertCircle, Briefcase, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const values = [
@@ -60,203 +61,207 @@ const About = () => {
   ];
 
   return (
-    <div className="pt-32 pb-24">
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
+    <div className="pt-48 pb-24">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-32">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-pure-black mb-12">Qui je suis</h1>
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div className="space-y-8 text-lg text-pure-black leading-relaxed">
+          <h1 className="huge-title">À Propos</h1>
+          <p className="sub-title">
+            Cheffe de projet digital & marketing passionnée par l'innovation, la stratégie de contenu et l'impact des nouvelles technologies.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Intro Section */}
+      <section className="bg-pure-white mb-48">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+          <div className="grid lg:grid-cols-2 gap-24 items-start">
+            <div className="space-y-10 text-2xl font-medium text-deep-black leading-relaxed">
               <p>
-                Je suis une professionnelle du marketing digital passionnée par la création, la stratégie et la gestion de projets.
-                J’accorde autant d’importance à la <span className="important-text">créativité</span> qu’à l’<span className="important-text">organisation</span> et à l’<span className="important-text">analyse</span>.
+                Mon parcours est guidé par une double exigence : la <span className="text-primary-blue font-black">créativité</span> pour captiver, et la <span className="text-primary-blue font-black">rigueur</span> pour transformer les idées en résultats concrets.
               </p>
               <p>
-                Mon parcours reflète ma détermination, ma <span className="important-text">résilience</span> et ma volonté constante de progresser.
+                Spécialisée dans le marketing digital, j'accompagne les marques dans leur transformation numérique en alliant vision stratégique et maîtrise des outils NoCode/IA.
               </p>
             </div>
-            <div className="card-style p-8">
-              <h3 className="font-bold text-pure-black mb-6 flex items-center gap-2">
-                <Compass className="w-5 h-5 text-primary-blue" />
-                Centres d’intérêt
+            <div className="bg-slate-50 p-12 rounded-[3rem] border border-slate-100 shadow-sm">
+              <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-light-gray mb-8 flex items-center gap-3">
+                <Compass className="w-4 h-4 text-primary-blue" />
+                Passions & Intérêts
               </h3>
-              <div className="flex flex-wrap gap-3">
-                {["Voyages", "Natation", "Plongée", "Équitation", "Musique", "Création visuelle", "Projets numériques"].map(tag => (
-                  <span key={tag} className="px-4 py-2 bg-slate-50 rounded-lg text-sm font-medium text-pure-black border border-slate-100">
+              <div className="flex flex-wrap gap-4">
+                {["Stratégie Digitale", "NoCode & IA", "Storytelling", "Voyages", "Plongée", "Équitation", "Création Visuelle"].map(tag => (
+                  <span key={tag} className="px-6 py-3 bg-white rounded-full text-xs font-black text-deep-black border border-slate-200 shadow-sm hover:border-primary-blue transition-colors cursor-default">
                     {tag}
                   </span>
                 ))}
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </section>
+
+      {/* Parcours Section */}
+      <section className="section-dark">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl md:text-7xl font-black mb-24 leading-tight">Mon Parcours</h2>
+          <div className="space-y-20">
+            {[
+              {
+                title: "Cheffe de Projet Digital",
+                company: "Legal 230",
+                period: "2023 – Présent",
+                desc: "Pilotage de la stratégie marketing globale, refonte web et optimisation SEO. Impact majeur sur la visibilité LinkedIn (+1000 abonnés)."
+              },
+              {
+                title: "Chargée Marketing & Com",
+                company: "Legal 230",
+                period: "2022 – 2023",
+                desc: "Mise en place de la stratégie B2B, création de contenus multicanaux et production vidéo."
+              },
+              {
+                title: "Assistante Marketing",
+                company: "Touch Sell",
+                period: "2021 – 2022",
+                desc: "Soutien à la création graphique et animation des réseaux sociaux professionnels."
+              }
+            ].map((exp, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: i * 0.1 }}
+                className="grid md:grid-cols-4 gap-8 border-t border-white/10 pt-12 group"
+              >
+                <div className="text-primary-blue font-black text-xl">{exp.period}</div>
+                <div className="md:col-span-3 space-y-4">
+                  <h3 className="text-3xl font-black group-hover:text-primary-blue transition-colors duration-500">{exp.title} — {exp.company}</h3>
+                  <p className="text-light-gray text-lg max-w-2xl leading-relaxed">{exp.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Formation Section */}
+      <section className="section-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl md:text-7xl font-black mb-24 leading-tight text-deep-black">Formation</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            {[
+              { year: "2024 – 2026", title: "Mastère Transformation Numérique", school: "Efrei Paris" },
+              { year: "2023 – 2025", title: "Mastère Brand Content", school: "PEM / EMCD" },
+              { year: "2022 – 2023", title: "Bachelor Marketing Digital", school: "EMCD" },
+              { year: "2020 – 2022", title: "BTS NDRC", school: "CCI Paris" }
+            ].map((edu, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: i * 0.1 }}
+                className="p-12 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:shadow-2xl transition-all duration-500 group"
+              >
+                <span className="text-xs font-black text-primary-blue uppercase tracking-[0.2em] mb-4 block">{edu.year}</span>
+                <h3 className="text-2xl font-black text-deep-black mb-4 group-hover:text-primary-blue transition-colors duration-300">{edu.title}</h3>
+                <p className="text-text-gray font-bold">{edu.school}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Values Section */}
       <section className="section-gray">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-pure-black mb-16 text-center">Mes Valeurs</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className="text-5xl md:text-7xl font-black mb-24 leading-tight text-center">Mes Valeurs</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
             {values.map((v, i) => (
               <motion.div
                 key={v.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-8 rounded-lg bg-white border border-slate-100 shadow-sm"
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="p-12 bg-white rounded-[3rem] shadow-sm hover:shadow-2xl transition-all duration-500 text-center group"
               >
-                <div className="text-primary-blue mb-6">{v.icon}</div>
-                <h4 className="text-pure-black font-bold mb-3">{v.title}</h4>
-                <p className="text-slate-600 text-sm leading-relaxed">{v.desc}</p>
+                <div className="w-20 h-20 rounded-3xl bg-slate-50 text-primary-blue flex items-center justify-center mb-10 mx-auto group-hover:bg-deep-black group-hover:text-white transition-all duration-500">
+                  {v.icon}
+                </div>
+                <h4 className="text-2xl font-black text-deep-black mb-6">{v.title}</h4>
+                <p className="text-text-gray font-medium leading-relaxed">{v.desc}</p>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Motivations & Objective */}
-      <section className="section-white max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-24">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-pure-black mb-12 flex items-center gap-3">
-              <TrendingUp className="w-8 h-8 text-primary-blue" />
-              Ce qui me motive
-            </h2>
-            <div className="space-y-4">
-              {motivations.map((m, i) => (
-                <div key={i} className="flex items-center gap-4 p-4 bg-slate-50 rounded-lg border border-slate-100">
-                  <div className="w-2 h-2 bg-primary-blue rounded-full" />
-                  <span className="text-pure-black font-medium">{m}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-pure-black mb-12 flex items-center gap-3">
-              <Target className="w-8 h-8 text-primary-blue" />
-              Objectif Professionnel
-            </h2>
-            <div className="card-style p-8 space-y-6">
-              <p className="text-lg text-pure-black">
-                Mon ambition est de piloter des projets marketing d'envergure et de contribuer à la croissance de marques innovantes.
-              </p>
-              <p className="text-lg text-pure-black">
-                À moyen terme, je souhaite évoluer vers un poste de <span className="important-text">responsable marketing</span> et développer ma propre activité.
-              </p>
-            </div>
-          </motion.div>
         </div>
       </section>
 
       {/* Feedback Section */}
-      <section className="section-gray">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-pure-black mb-6">Ce que les autres disent de moi</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Voici les qualités et compétences qui reviennent le plus souvent lorsque mes collègues, proches et anciens collaborateurs parlent de moi.
-            </p>
-          </motion.div>
+      <section className="section-white">
+        <div className="max-w-7xl mx-auto text-center mb-24">
+          <h2 className="text-5xl md:text-7xl font-black mb-12 leading-tight">Ce que l'on dit de moi</h2>
+          <p className="text-2xl text-text-gray max-w-3xl mx-auto leading-relaxed font-medium">
+            Rigueur, créativité et autonomie sont les piliers de ma réputation professionnelle.
+          </p>
+        </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mb-20">
-            {feedbackCategories.map((category, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 rounded-lg border border-slate-100 shadow-sm hover:shadow-xl transition-all"
-              >
-                <div className={`w-14 h-14 rounded-lg bg-slate-50 flex items-center justify-center mb-8 text-primary-blue`}>
-                  {category.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-pure-black mb-8">{category.title}</h3>
-                <ul className="space-y-6">
-                  {category.items.map((item, idx) => (
-                    <li key={idx} className="space-y-1">
-                      <div className="font-bold text-pure-black flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary-blue" />
-                        {item.label}
-                      </div>
-                      <p className="text-sm text-slate-500 ml-3.5">{item.desc}</p>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Improvements */}
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12">
+          {feedbackCategories.map((category, i) => (
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-10 md:p-12 rounded-lg border border-slate-200 shadow-sm"
+              transition={{ duration: 0.8, delay: i * 0.1 }}
+              className="p-12 bg-slate-50 rounded-[3rem] border border-slate-100 hover:shadow-2xl transition-all duration-500"
             >
-              <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-slate-50 text-pure-black rounded-lg">
-                  <RefreshCw className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-bold text-pure-black">Axes d'amélioration</h3>
+              <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-10 text-primary-blue shadow-sm">
+                {category.icon}
               </div>
-              <ul className="space-y-4">
-                {shortImprovements.map((text, i) => (
-                  <li key={i} className="flex items-start gap-4 text-pure-black">
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
-                    <span className="font-medium">{text}</span>
+              <h3 className="text-2xl font-black text-deep-black mb-10">{category.title}</h3>
+              <ul className="space-y-8">
+                {category.items.map((item, idx) => (
+                  <li key={idx} className="space-y-2">
+                    <div className="font-black text-deep-black text-lg flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-primary-blue" />
+                      {item.label}
+                    </div>
+                    <p className="text-text-gray font-medium ml-5">{item.desc}</p>
                   </li>
                 ))}
               </ul>
-              <p className="mt-8 text-sm text-slate-400 italic">
-                Une démarche lucide pour un développement professionnel continu.
-              </p>
             </motion.div>
+          ))}
+        </div>
+      </section>
 
-            {/* Summary Conclusion */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-pure-black p-10 md:p-12 rounded-lg text-white flex flex-col justify-center relative overflow-hidden"
+      {/* Final CTA */}
+      <section className="section-dark mt-48">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-5xl md:text-7xl font-black mb-12 leading-tight">Envie de collaborer ?</h2>
+            <p className="text-xl text-light-gray mb-16 max-w-2xl mx-auto leading-relaxed">
+              Discutons de vos projets et voyons comment je peux vous aider à atteindre vos objectifs.
+            </p>
+            <Link 
+              to="/contact" 
+              className="btn-outline-white inline-flex items-center gap-4 group"
             >
-              <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary-blue/10 rounded-full translate-y-1/2 -translate-x-1/2" />
-              
-              <h3 className="text-2xl font-bold mb-6 relative z-10">En résumé</h3>
-              <p className="text-xl text-blue-100/90 leading-relaxed font-medium relative z-10">
-                « Une professionnelle <span className="text-primary-blue">créative</span>, <span className="text-primary-blue">structurée</span>, communicante et <span className="text-primary-blue">autonome</span> — motivée, impliquée et capable de produire des résultats rapides et de qualité. »
-              </p>
-              
-              <div className="mt-10 flex items-center gap-4 relative z-10">
-                <div className="w-12 h-12 rounded-lg bg-primary-blue flex items-center justify-center">
-                  <Star className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-sm font-bold uppercase tracking-widest text-blue-200">
-                  Profil Impactant
-                </div>
-              </div>
-            </motion.div>
-          </div>
+              Me contacter
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-500" />
+            </Link>
+          </motion.div>
         </div>
       </section>
     </div>
