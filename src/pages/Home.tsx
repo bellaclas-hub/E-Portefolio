@@ -35,11 +35,12 @@ const Home = () => {
                 Portfolio Étudiant
               </motion.span>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tight mb-10 uppercase">
-                NO-CODE & IA<br />
-                <span className="text-primary-blue">DIGITAL STRATEGY</span>
+                ET SI LE FUTUR DU WEB <br />
+                <span className="text-primary-blue">NE S'ÉCRIVAIT PLUS</span> <br />
+                SEULEMENT EN CODE ?
               </h1>
               <p className="text-xl md:text-2xl text-slate-200 font-medium leading-relaxed mb-6 max-w-2xl">
-                Étudiante en master informatique numérique, j’explore comment le NoCode et l’intelligence artificielle transforment la création de sites web.
+                L'alliance de l'intelligence artificielle et du NoCode redéfinit les règles du jeu. Je ne me contente pas de l'observer : je l'expérimente.
               </p>
               <p className="text-lg text-slate-400 font-medium leading-relaxed mb-12 max-w-2xl">
                 Ce portfolio est à la fois mon CV digital et une démonstration concrète de ces nouveaux outils.
@@ -66,7 +67,27 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* INTRODUCTION - MA VISION */}
+      {/* HOOK SECTION - CURIOSITY */}
+      <section className="py-24 bg-primary-blue text-white overflow-hidden">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row items-center justify-between gap-12"
+          >
+            <h2 className="text-3xl md:text-5xl font-black leading-tight max-w-2xl">
+              "La technologie n'est plus une barrière, elle devient un accélérateur de vision."
+            </h2>
+            <div className="w-20 h-px bg-white/30 hidden md:block" />
+            <p className="text-xl text-white/80 font-medium max-w-sm">
+              Découvrez comment j'utilise ces nouveaux leviers pour transformer des idées en réalités digitales.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* INTRODUCTION - MA VISION (NARRATIVE) */}
       <section className="py-48 bg-pure-white">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <div className="grid lg:grid-cols-2 gap-32 items-center">
@@ -76,16 +97,17 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-black text-deep-black mb-12 leading-tight">Ma vision du digital</h2>
+              <span className="text-primary-blue font-black uppercase tracking-widest text-sm mb-6 block">01. Ma Vision</span>
+              <h2 className="text-4xl md:text-5xl font-black text-deep-black mb-12 leading-tight">Au-delà de la technique, <br /> l'impact.</h2>
               <div className="space-y-8 text-xl text-text-gray leading-relaxed">
-                <p>
-                  Étudiante en Master informatique numérique, je m’intéresse à la manière dont les outils NoCode et l’intelligence artificielle transforment la création de sites web.
+                <p className="font-bold text-deep-black">
+                  Tout a commencé par un constat simple : le web change, et il change vite. 
                 </p>
                 <p>
-                  Ces technologies permettent de concevoir plus rapidement des expériences digitales, tout en rendant la création accessible à des profils non techniques.
+                  En tant qu'étudiante en Master informatique numérique, j'ai vu les barrières techniques s'effondrer au profit de la créativité pure. Le NoCode et l'IA ne sont pas juste des "raccourcis", ce sont des catalyseurs de stratégie.
                 </p>
                 <p>
-                  Mon objectif est de comprendre ces évolutions et d’en exploiter le potentiel dans des projets concrets.
+                  Mon approche ? Ne plus perdre de temps sur la syntaxe, mais en gagner sur la valeur ajoutée, l'expérience utilisateur et la pertinence métier.
                 </p>
               </div>
             </motion.div>
@@ -110,190 +132,168 @@ const Home = () => {
         </div>
       </section>
 
-      {/* PROJET LOVABLE - KEY SECTION */}
-      <section className="py-48 bg-[#111111] text-white">
-        <div className="container mx-auto px-6 text-center max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-          >
-            <h2 className="text-4xl md:text-6xl font-black mb-12 text-white leading-tight">Un projet réalisé avec Lovable</h2>
-            
-            {/* Introduction */}
-            <div className="text-xl md:text-2xl text-slate-400 leading-relaxed space-y-8 mb-16">
-              <p>
-                Ce portfolio a été conçu avec Lovable, un outil NoCode assisté par intelligence artificielle.
-              </p>
-              <p>
-                Il s’inscrit dans une réflexion plus large : comment le NoCode et l’IA transforment-ils la création de sites web ?
-              </p>
-            </div>
-
-            {/* Apports */}
-            <div className="mb-16">
-              <h3 className="text-2xl font-bold mb-8 text-white">Ce que cet outil m’a permis d’observer :</h3>
-              <ul className="space-y-4 text-slate-300 font-medium max-w-2xl mx-auto">
-                <li className="flex items-center justify-center gap-3">
-                  <Zap className="w-5 h-5 text-primary-blue flex-shrink-0" />
-                  Un gain de temps significatif dans la création et la structuration du site
-                </li>
-                <li className="flex items-center justify-center gap-3">
-                  <Zap className="w-5 h-5 text-primary-blue flex-shrink-0" />
-                  Une accessibilité accrue sans développement complexe
-                </li>
-                <li className="flex items-center justify-center gap-3">
-                  <Zap className="w-5 h-5 text-primary-blue flex-shrink-0" />
-                  Une automatisation de certaines étapes
-                </li>
-              </ul>
-            </div>
-
-            {/* Limites */}
-            <div className="mb-16">
-              <h3 className="text-2xl font-bold mb-8 text-white">Mais aussi certaines limites :</h3>
-              <ul className="space-y-4 text-slate-300 font-medium max-w-2xl mx-auto">
-                <li className="flex items-center justify-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-terracotta rounded-full flex-shrink-0" />
-                  Une personnalisation restreinte
-                </li>
-                <li className="flex items-center justify-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-terracotta rounded-full flex-shrink-0" />
-                  Une dépendance aux fonctionnalités de l’outil
-                </li>
-                <li className="flex items-center justify-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-terracotta rounded-full flex-shrink-0" />
-                  Un contrôle technique limité
-                </li>
-              </ul>
-            </div>
-
-            {/* Analyse */}
-            <div className="mb-24 p-12 bg-white/5 rounded-[3rem] border border-white/10">
-              <h3 className="text-2xl font-bold mb-8 text-white uppercase tracking-widest">Analyse</h3>
-              <div className="text-xl text-slate-400 leading-relaxed space-y-6">
-                <p>
-                  Cette expérience montre que le NoCode et l’intelligence artificielle permettent de créer des sites web rapidement et efficacement.
-                </p>
-                <p>
-                  Cependant, ces outils ne remplacent pas la réflexion stratégique et créative nécessaire à un projet digital pertinent.
-                </p>
+      {/* STORYTELLING LOGIC: PROBLÈME → EXPÉRIMENTATION → ANALYSE */}
+      
+      {/* 02. LE PROBLÈME */}
+      <section className="py-48 bg-slate-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.span 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="text-terracotta font-black uppercase tracking-widest text-sm mb-6 block"
+            >
+              02. Le Problème
+            </motion.span>
+            <h2 className="text-4xl md:text-6xl font-black text-deep-black mb-12 leading-tight">
+              Le paradoxe du digital : <br /> Trop de projets, pas assez de temps.
+            </h2>
+            <p className="text-xl md:text-2xl text-text-gray leading-relaxed font-medium mb-16">
+              Aujourd'hui, une entreprise ne peut plus attendre 6 mois pour tester une idée. Le marché est trop rapide. Mais comment allier vitesse de déploiement et qualité stratégique sans compromis ?
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 text-left">
+              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                <h4 className="text-xl font-black mb-4 text-deep-black">L'inertie technique</h4>
+                <p className="text-text-gray">Les cycles de développement classiques freinent l'innovation et l'expérimentation rapide.</p>
+              </div>
+              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                <h4 className="text-xl font-black mb-4 text-deep-black">Le manque d'agilité</h4>
+                <p className="text-text-gray">La difficulté de pivoter ou d'ajuster une stratégie digitale en temps réel face aux retours utilisateurs.</p>
               </div>
             </div>
-
-            {/* CTA */}
-            <div className="space-y-8">
-              <p className="text-lg text-slate-400">
-                Découvrez la version complète du site réalisé avec Lovable et explorez concrètement l’impact du NoCode et de l’intelligence artificielle.
-              </p>
-              <a 
-                href="https://apolline-bellaclas-portfolio.lovable.app" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary inline-flex px-12 py-5 text-lg"
-              >
-                Voir le projet Lovable
-              </a>
-              <p className="text-sm text-slate-500 italic">
-                Ce site a été conçu sans code, en quelques étapes seulement.
-              </p>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* SECTION ANALYSE */}
+      {/* 03. L'EXPÉRIMENTATION (PROJET LOVABLE) */}
+      <section className="py-48 bg-deep-black text-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-blue rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-terracotta rounded-full blur-[120px]" />
+        </div>
+        
+        <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-primary-blue font-black uppercase tracking-widest text-sm mb-6 block">03. L'Expérimentation</span>
+              <h2 className="text-4xl md:text-6xl font-black mb-12 leading-tight">Mon laboratoire : <br /> Le projet Lovable.</h2>
+              <p className="text-xl text-slate-300 leading-relaxed mb-12">
+                Pour répondre à ce besoin de vitesse, j'ai testé les limites du NoCode assisté par IA. Ce portfolio est le fruit de cette expérimentation concrète.
+              </p>
+              
+              <div className="space-y-6 mb-12">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-primary-blue">
+                    <Zap className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-black text-lg">Vitesse d'exécution</h4>
+                    <p className="text-slate-400">De l'idée au déploiement en un temps record.</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-primary-blue">
+                    <Brain className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-black text-lg">IA Générative</h4>
+                    <p className="text-slate-400">Une assistance intelligente pour la structure et le code.</p>
+                  </div>
+                </div>
+              </div>
+
+              <Link to="/projet" className="btn-primary inline-flex px-12 py-5 text-lg">
+                Analyser le cas pratique
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="aspect-video bg-white/5 rounded-[3rem] border border-white/10 p-4 backdrop-blur-sm">
+                <div className="w-full h-full rounded-[2rem] overflow-hidden bg-deep-black flex items-center justify-center">
+                  <span className="text-white/20 font-black text-2xl uppercase tracking-widest">Aperçu Projet</span>
+                </div>
+              </div>
+              <div className="absolute -bottom-10 -right-10 bg-primary-blue p-8 rounded-3xl shadow-2xl hidden md:block">
+                <p className="text-4xl font-black mb-1">90%</p>
+                <p className="text-xs font-bold uppercase tracking-widest opacity-80">Gain de temps technique</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 04. L'ANALYSE */}
       <section className="py-48 bg-pure-white">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
-          <div className="mb-24 max-w-4xl">
-            <h2 className="text-4xl md:text-6xl font-black text-deep-black mb-12">L’analyse</h2>
+          <div className="max-w-4xl mb-24">
+            <span className="text-primary-blue font-black uppercase tracking-widest text-sm mb-6 block">04. L'Analyse</span>
+            <h2 className="text-4xl md:text-6xl font-black text-deep-black mb-12 leading-tight">Ce que j'ai appris : <br /> L'équilibre est la clé.</h2>
             <p className="text-xl md:text-2xl text-text-gray leading-relaxed font-medium">
-              Le NoCode et l’intelligence artificielle redéfinissent les méthodes de création web, en apportant rapidité et accessibilité, tout en posant de nouveaux enjeux techniques.
+              L'expérimentation Lovable a confirmé une intuition : si l'outil fait gagner du temps, c'est l'humain qui apporte la direction.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-16">
+          <div className="grid lg:grid-cols-3 gap-12">
             {[
               {
-                icon: <Zap className="w-8 h-8 text-primary-blue" />,
-                title: "Vitesse",
-                desc: "Réduction du temps de développement grâce à l’automatisation et aux outils visuels."
+                title: "L'outil libère l'esprit",
+                desc: "En automatisant les tâches répétitives, le NoCode permet de se concentrer sur ce qui compte vraiment : l'utilisateur et la stratégie.",
+                icon: <Sparkles className="w-8 h-8 text-primary-blue" />
               },
               {
-                icon: <Globe className="w-8 h-8 text-primary-blue" />,
-                title: "Accessibilité",
-                desc: "Permet à des profils non techniques de concevoir des sites web sans coder."
+                title: "L'IA est un co-pilote",
+                desc: "Elle ne remplace pas le designer, elle amplifie ses capacités et propose des structures que l'on peut ensuite affiner.",
+                icon: <Brain className="w-8 h-8 text-primary-blue" />
               },
               {
-                icon: <Cpu className="w-8 h-8 text-primary-blue" />,
-                title: "Limites",
-                desc: "Standardisation des designs et dépendance aux plateformes NoCode."
+                title: "La stratégie est le socle",
+                desc: "Sans une vision claire, l'outil le plus puissant ne produira qu'un résultat générique. L'expertise reste indispensable.",
+                icon: <Target className="w-8 h-8 text-primary-blue" />
               }
-            ].map((item, index) => (
+            ].map((item, i) => (
               <motion.div
-                key={index}
+                key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.8 }}
-                className="bg-white p-12 rounded-[3rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-500"
+                transition={{ delay: i * 0.1 }}
+                className="p-12 rounded-[3rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500 group"
               >
-                <div className="mb-8">{item.icon}</div>
-                <h3 className="text-2xl font-black mb-6 text-deep-black">{item.title}</h3>
-                <p className="text-lg text-text-gray leading-relaxed font-medium">{item.desc}</p>
+                <div className="mb-8 group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
+                <h4 className="text-2xl font-black mb-6 text-deep-black">{item.title}</h4>
+                <p className="text-text-gray leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* APPLICATION CONCRÈTE */}
-      <section className="py-48 bg-[#7A4A35] text-white">
-        <div className="container mx-auto px-6 md:px-12 lg:px-24">
-          <div className="grid lg:grid-cols-2 gap-32 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="order-2 lg:order-1"
-            >
-              <div className="bg-white/10 backdrop-blur-xl p-12 rounded-[3rem] border border-white/20">
-                <Layers className="w-16 h-16 text-white mb-10" />
-                <h3 className="text-3xl font-black mb-8">Focus Lovable :</h3>
-                <ul className="space-y-6">
-                  <li className="flex items-start gap-4 text-lg font-bold">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2.5" />
-                    <span>Génération assistée par IA</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-lg font-bold">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2.5" />
-                    <span>Interface intuitive</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-lg font-bold">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2.5" />
-                    <span>Déploiement rapide</span>
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="order-1 lg:order-2"
-            >
-              <h2 className="text-4xl md:text-5xl font-black mb-12">Application concrète</h2>
-              <div className="space-y-8 text-xl text-white/80 leading-relaxed font-medium">
-                <p>
-                  L’utilisation de Lovable montre qu’il est possible de créer rapidement un site structuré et fonctionnel.
-                </p>
-                <p>
-                  Cette approche permet un gain de temps important, mais reste encadrée par les possibilités de l’outil, ce qui limite certaines personnalisations avancées.
-                </p>
-              </div>
-            </motion.div>
-          </div>
+      {/* INTERMEDIATE REFLECTION SECTION */}
+      <section className="py-48 bg-deep-black text-white text-center">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+          >
+            <blockquote className="text-3xl md:text-5xl font-black leading-tight italic mb-12">
+              "La technologie n'est qu'un levier. <br /> 
+              <span className="text-primary-blue">La stratégie reste le moteur.</span>"
+            </blockquote>
+            <div className="w-24 h-1 bg-primary-blue mx-auto mb-12" />
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+              Mon rôle est de naviguer entre ces deux mondes pour créer des expériences qui ne sont pas seulement belles, mais performantes.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -379,13 +379,13 @@ const Home = () => {
             className="bg-gradient-to-br from-primary-blue to-deep-black rounded-[3rem] p-16 md:p-32 text-center relative overflow-hidden shadow-2xl"
           >
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-6xl mb-10 text-white font-black tracking-tight">Une opportunité à discuter ?</h2>
+              <h2 className="text-4xl md:text-6xl mb-10 text-white font-black tracking-tight">Prêt à explorer le futur <br /> du digital ensemble ?</h2>
               <p className="text-xl md:text-2xl text-slate-200 mb-16 max-w-2xl mx-auto leading-relaxed font-medium">
-                Je suis ouverte à échanger sur des projets, des stages ou des opportunités professionnelles.
+                Que vous ayez un projet concret ou une simple curiosité sur l'impact de l'IA et du NoCode, discutons-en.
               </p>
               <div className="flex justify-center">
-                <Link to="/contact" className="btn-outline-white px-12 py-5 text-lg">
-                  Me contacter
+                <Link to="/contact" className="btn-outline-white px-12 py-5 text-lg hover:bg-white hover:text-deep-black transition-all duration-500">
+                  Démarrer la conversation
                 </Link>
               </div>
             </div>
