@@ -57,7 +57,7 @@ const Portfolio = () => {
         >
           <h1 className="huge-title">Portfolio</h1>
           <p className="sub-title">
-            Une sélection de mes réalisations les plus marquantes, alliant stratégie digitale, marketing et innovation technologique.
+            Une sélection de mes travaux académiques et professionnels, illustrant ma réflexion sur la stratégie digitale et l'innovation technologique.
           </p>
         </motion.div>
       </section>
@@ -128,9 +128,9 @@ const Portfolio = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl md:text-7xl font-black mb-12 leading-tight">Prêt à lancer votre prochain projet ?</h2>
+            <h2 className="text-5xl md:text-7xl font-black mb-12 leading-tight">Approfondissons ensemble</h2>
             <p className="text-xl text-light-gray mb-16 max-w-2xl mx-auto leading-relaxed">
-              Je mets mon expertise en marketing digital et gestion de projet au service de votre vision.
+              Chaque projet est une opportunité d'apprentissage et d'analyse. Discutons de la manière dont ces approches peuvent s'intégrer dans vos réflexions numériques.
             </p>
             <Link 
               to="/contact" 

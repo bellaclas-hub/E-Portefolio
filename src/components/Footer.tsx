@@ -15,7 +15,7 @@ const Footer = () => {
               AB<span className="inline-block w-2 h-2 rounded-full bg-primary-blue ml-1 group-hover:scale-150 transition-transform"></span>
             </Link>
             <p className="text-light-gray max-w-sm text-lg leading-relaxed font-medium">
-              Cheffe de projet digital & marketing. Créative, rigoureuse et passionnée par la stratégie de contenu et l'innovation NoCode/IA.
+              Étudiante en Master Informatique Numérique. Passionnée par l'innovation technologique et l'impact du NoCode/IA sur la création web.
             </p>
           </div>
           

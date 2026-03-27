@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="overflow-hidden bg-pure-white">
-      {/* HERO SECTION - IMMERSIVE & IMPACTFUL */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-deep-black">
+      {/* HERO SECTION - ACADEMIC & REFLECTIVE */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-deep-black py-24">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" 
             alt="Minimalist Workspace" 
-            className="w-full h-full object-cover opacity-30 grayscale"
+            className="w-full h-full object-cover opacity-20 grayscale"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-deep-black via-transparent to-deep-black" />
@@ -19,33 +19,34 @@ const Home = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-6xl mx-auto"
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="max-w-5xl mx-auto"
           >
-            <h1 className="text-[12vw] md:text-[10vw] font-black text-white leading-[0.8] tracking-tighter mb-12 text-center">
-              DIGITAL <br />
-              <span className="text-primary-blue">STRATEGY.</span>
-            </h1>
-            <div className="flex flex-col md:flex-row justify-between items-end gap-12 mt-24">
-              <div className="max-w-xl text-left">
-                <p className="text-2xl md:text-3xl text-slate-300 font-medium leading-relaxed mb-12">
-                  Apolline Bellaclas — Cheffe de projet digital. <br />
-                  Expertise <span className="text-white font-black">NoCode</span> & <span className="text-white font-black">IA</span> au service de votre croissance.
-                </p>
-                <div className="flex flex-wrap gap-6">
-                  <Link to="/portfolio" className="btn-primary">
-                    Projets <ArrowRight className="w-5 h-5" />
-                  </Link>
-                  <Link to="/contact" className="btn-outline-white">
-                    Me contacter
-                  </Link>
-                </div>
-              </div>
-              <div className="hidden lg:block text-right">
-                <div className="text-[10px] font-black uppercase tracking-[0.4em] text-primary-blue mb-4">Basée à Paris</div>
-                <div className="text-white text-xl font-black">Disponible pour de nouveaux défis.</div>
+            <div className="flex flex-col items-center text-center">
+              <motion.span 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="text-primary-blue font-bold uppercase tracking-[0.3em] text-xs mb-8"
+              >
+                Mémoire de Master • Informatique Numérique
+              </motion.span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] tracking-tight mb-10">
+                L'impact du <span className="text-primary-blue">NoCode</span> & de l'<span className="text-primary-blue">IA</span> sur la création web.
+              </h1>
+              <p className="text-xl md:text-2xl text-slate-400 font-medium leading-relaxed mb-12 max-w-3xl">
+                Apolline Bellaclas — Étudiante en Master. <br />
+                Une exploration analytique des nouvelles paradigmes de développement et de leur influence sur les stratégies digitales.
+              </p>
+              <div className="flex flex-wrap justify-center gap-6">
+                <Link to="/portfolio" className="btn-primary px-10 py-5 text-lg">
+                  Explorer les travaux <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link to="/a-propos" className="btn-outline-white px-10 py-5 text-lg">
+                  Ma démarche
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -61,53 +62,56 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* INTRODUCTION - MINIMALIST & CLEAN */}
-      <section className="section-white">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-32 items-center">
+      {/* INTRODUCTION - ACADEMIC CONTEXT */}
+      <section className="py-32 bg-pure-white">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-24 items-start">
             <motion.div
-              initial={{ opacity: 0, x: -60 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.8 }}
             >
-              <span className="text-primary-blue font-bold uppercase tracking-[0.4em] text-sm mb-12 block">Positionnement</span>
-              <h2 className="huge-title text-deep-black">Vision & Expertise.</h2>
-              <p className="text-2xl text-text-gray leading-relaxed mb-12">
-                Étudiante en Master Informatique Numérique, je pilote des projets où l'innovation technologique rencontre la stratégie marketing.
-              </p>
-              <p className="text-2xl text-text-gray leading-relaxed mb-16">
-                Mon intérêt pour le <span className="text-deep-black font-bold underline decoration-primary-blue decoration-4 underline-offset-8">NoCode</span> et l'<span className="text-deep-black font-bold underline decoration-primary-blue decoration-4 underline-offset-8">IA</span> est une conviction : ces outils redéfinissent la création web moderne.
-              </p>
-              <div className="flex gap-12">
-                <div>
-                  <div className="text-5xl font-black text-deep-black mb-2">01</div>
-                  <div className="text-xs font-bold uppercase tracking-widest text-light-gray">Stratégie</div>
+              <span className="text-primary-blue font-bold uppercase tracking-[0.3em] text-xs mb-6 block">Recherche & Analyse</span>
+              <h2 className="text-4xl md:text-5xl font-black text-deep-black mb-10 leading-tight">Comprendre la mutation des métiers du web.</h2>
+              <div className="space-y-8 text-lg text-text-gray leading-relaxed">
+                <p>
+                  Actuellement en Master Informatique Numérique, mon parcours se situe à l'intersection de la gestion de projet et de l'innovation technologique. Mon travail de recherche se concentre sur la manière dont les outils d'automatisation et de génération transforment la chaîne de valeur traditionnelle.
+                </p>
+                <p>
+                  Le <span className="text-deep-black font-bold border-b-2 border-primary-blue/30">NoCode</span> et l'<span className="text-deep-black font-bold border-b-2 border-primary-blue/30">Intelligence Artificielle</span> ne sont pas seulement des raccourcis techniques, mais des leviers stratégiques qui redéfinissent l'agilité et l'accessibilité numérique.
+                </p>
+              </div>
+              
+              <div className="mt-16 grid grid-cols-2 gap-8">
+                <div className="p-8 bg-slate-50 rounded-3xl">
+                  <div className="text-4xl font-black text-deep-black mb-2">01</div>
+                  <div className="text-xs font-bold uppercase tracking-widest text-light-gray">Analyse Critique</div>
                 </div>
-                <div className="w-px h-16 bg-slate-100" />
-                <div>
-                  <div className="text-5xl font-black text-deep-black mb-2">02</div>
-                  <div className="text-xs font-bold uppercase tracking-widest text-light-gray">Agilité</div>
+                <div className="p-8 bg-slate-50 rounded-3xl">
+                  <div className="text-4xl font-black text-deep-black mb-2">02</div>
+                  <div className="text-xs font-bold uppercase tracking-widest text-light-gray">Expérimentation</div>
                 </div>
               </div>
             </motion.div>
+            
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="relative"
+              transition={{ duration: 1 }}
+              className="relative pt-12"
             >
-              <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl">
+              <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-xl">
                 <img 
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" 
-                  alt="Collaboration" 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                  alt="Academic Research" 
+                  className="w-full h-full object-cover grayscale"
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -bottom-16 -right-16 bg-terracotta text-white p-16 rounded-[3rem] shadow-2xl hidden xl:block max-w-md">
-                <p className="text-3xl font-bold italic leading-tight">"L'IA décuple le potentiel créatif humain."</p>
+              <div className="absolute -bottom-10 -left-10 bg-terracotta text-white p-12 rounded-[2.5rem] shadow-xl hidden xl:block max-w-xs">
+                <p className="text-xl font-medium italic leading-snug">"L'hybridation des compétences est la clé de l'innovation numérique."</p>
               </div>
             </motion.div>
           </div>
@@ -137,135 +141,140 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECTION ANALYSE - GRID BLOCKS */}
-      <section className="section-white">
-        <div className="container mx-auto">
-          <div className="mb-32">
-            <h2 className="text-6xl md:text-8xl mb-8">L'Analyse.</h2>
-            <p className="text-3xl text-text-gray max-w-3xl leading-relaxed">Comprendre les enjeux de la nouvelle ère digitale.</p>
+      {/* SECTION ANALYSE - ACADEMIC REFLECTION */}
+      <section className="py-32 bg-slate-50">
+        <div className="container mx-auto px-6">
+          <div className="mb-24 max-w-4xl">
+            <span className="text-primary-blue font-bold uppercase tracking-[0.3em] text-xs mb-6 block">Étude de Cas & Réflexion</span>
+            <h2 className="text-4xl md:text-6xl font-black text-deep-black mb-8">Analyse des enjeux.</h2>
+            <p className="text-xl md:text-2xl text-text-gray leading-relaxed">
+              Au-delà de la simple utilisation technique, il s'agit d'évaluer comment ces outils modifient les processus de conception et les structures de coûts dans l'industrie numérique.
+            </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid lg:grid-cols-3 gap-10">
             {[
               {
-                icon: <Zap className="w-12 h-12 text-primary-blue" />,
-                title: "Vitesse",
-                desc: "Réduction drastique du time-to-market. Idéal pour le prototypage et l'itération rapide."
+                icon: <Zap className="w-10 h-10 text-primary-blue" />,
+                title: "Vitesse d'Itération",
+                desc: "Le NoCode réduit drastiquement le cycle de prototypage, permettant une validation d'hypothèses en temps réel et une agilité accrue face aux retours utilisateurs."
               },
               {
-                icon: <Globe className="w-12 h-12 text-primary-blue" />,
-                title: "Accessibilité",
-                desc: "Démocratisation de la création web. Permet aux profils marketing de reprendre la main."
+                icon: <Globe className="w-10 h-10 text-primary-blue" />,
+                title: "Démocratisation",
+                desc: "L'abaissement de la barrière technique permet à des profils non-développeurs de matérialiser des concepts complexes, favorisant l'innovation interdisciplinaire."
               },
               {
-                icon: <Cpu className="w-12 h-12 text-primary-blue" />,
-                title: "Limites",
-                desc: "Dépendance aux plateformes et personnalisation parfois contrainte par la structure."
+                icon: <Cpu className="w-10 h-10 text-primary-blue" />,
+                title: "Limites Structurelles",
+                desc: "Une analyse rigoureuse impose de reconnaître les contraintes de scalabilité, de souveraineté des données et les limites de personnalisation des plateformes propriétaires."
               }
             ].map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2, duration: 0.8 }}
-                className="card-style group"
+                transition={{ delay: index * 0.1, duration: 0.8 }}
+                className="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-md transition-shadow duration-500"
               >
-                <div className="mb-12 transform group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
-                <h3 className="text-3xl font-bold mb-6">{item.title}</h3>
-                <p className="text-xl text-text-gray leading-relaxed">{item.desc}</p>
+                <div className="mb-8">{item.icon}</div>
+                <h3 className="text-2xl font-bold mb-5 text-deep-black">{item.title}</h3>
+                <p className="text-lg text-text-gray leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* APPLICATION CONCRÈTE - TERRACOTTA ACCENT */}
-      <section className="section-terracotta">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-32 items-center">
+      {/* APPLICATION CONCRÈTE - OBJECTIVE VIEW */}
+      <section className="py-32 bg-deep-black text-white">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="order-2 lg:order-1"
             >
-              <div className="bg-white/5 backdrop-blur-xl p-16 rounded-[4rem] border border-white/10 shadow-2xl">
-                <Layers className="w-20 h-20 text-white mb-12" />
-                <h3 className="text-5xl font-bold mb-12 text-white">Focus Lovable.</h3>
-                <ul className="space-y-8">
-                  <li className="flex items-center gap-6 text-2xl">
-                    <div className="w-3 h-3 bg-primary-blue rounded-full shadow-[0_0_15px_rgba(37,99,235,0.8)]" />
-                    Génération de structure par IA
+              <div className="bg-white/5 backdrop-blur-xl p-12 rounded-[3rem] border border-white/10">
+                <Layers className="w-16 h-16 text-primary-blue mb-10" />
+                <h3 className="text-3xl font-bold mb-8">Expérimentation Lovable</h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4 text-lg">
+                    <div className="w-2 h-2 bg-primary-blue rounded-full mt-2.5" />
+                    <span>Génération de code via prompts structurés.</span>
                   </li>
-                  <li className="flex items-center gap-6 text-2xl">
-                    <div className="w-3 h-3 bg-primary-blue rounded-full shadow-[0_0_15px_rgba(37,99,235,0.8)]" />
-                    Personnalisation NoCode
+                  <li className="flex items-start gap-4 text-lg">
+                    <div className="w-2 h-2 bg-primary-blue rounded-full mt-2.5" />
+                    <span>Analyse de la flexibilité du design system.</span>
                   </li>
-                  <li className="flex items-center gap-6 text-2xl">
-                    <div className="w-3 h-3 bg-primary-blue rounded-full shadow-[0_0_15px_rgba(37,99,235,0.8)]" />
-                    Déploiement automatisé
+                  <li className="flex items-start gap-4 text-lg">
+                    <div className="w-2 h-2 bg-primary-blue rounded-full mt-2.5" />
+                    <span>Évaluation des performances au déploiement.</span>
                   </li>
                 </ul>
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 60 }}
+              initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="order-1 lg:order-2"
             >
-              <h2 className="text-6xl md:text-8xl mb-12 text-white">Application.</h2>
-              <p className="text-3xl text-white/80 leading-relaxed mb-16">
-                L'usage de Lovable démontre qu'il est possible de concilier <span className="text-white font-bold">design premium</span> et <span className="text-white font-bold">efficacité technique</span>.
+              <span className="text-primary-blue font-bold uppercase tracking-[0.3em] text-xs mb-6 block">Application Pratique</span>
+              <h2 className="text-4xl md:text-5xl font-black mb-10">Démonstration technique.</h2>
+              <p className="text-xl text-slate-400 leading-relaxed mb-12">
+                L'utilisation de Lovable pour ce portfolio sert de preuve de concept : comment l'IA peut assister un étudiant dans la réalisation d'un projet complexe tout en conservant une rigueur académique et une vision critique sur les outils utilisés.
               </p>
-              <Link to="/cas-pratique" className="btn-outline-white inline-flex">
-                Étude de cas
+              <Link to="/cas-pratique" className="btn-outline-white inline-flex px-8 py-4">
+                Consulter l'étude de cas
               </Link>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* POURQUOI MOI ? - CLEAN GRID */}
-      <section className="section-white">
-        <div className="container mx-auto">
-          <div className="mb-32">
-            <h2 className="text-6xl md:text-8xl mb-8">Pourquoi moi ?</h2>
-            <p className="text-3xl text-text-gray max-w-3xl leading-relaxed">L'alliance de la rigueur et de l'agilité.</p>
+      {/* POURQUOI CE PROJET ? - ACADEMIC STRENGTHS */}
+      <section className="py-32 bg-pure-white">
+        <div className="container mx-auto px-6">
+          <div className="mb-24">
+            <span className="text-primary-blue font-bold uppercase tracking-[0.3em] text-xs mb-6 block">Compétences & Apprentissages</span>
+            <h2 className="text-4xl md:text-6xl font-black text-deep-black mb-8">Ma démarche d'apprentissage.</h2>
+            <p className="text-xl md:text-2xl text-text-gray max-w-3xl leading-relaxed">Une approche rigoureuse pour maîtriser les outils de demain.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-24">
-            <div className="space-y-20">
+          <div className="grid md:grid-cols-2 gap-16">
+            <div className="space-y-16">
               <div className="group">
-                <div className="w-20 h-20 rounded-3xl bg-slate-50 flex items-center justify-center text-primary-blue mb-8 group-hover:bg-primary-blue group-hover:text-white transition-all duration-500">
-                  <Brain className="w-10 h-10" />
+                <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center text-primary-blue mb-6 group-hover:bg-primary-blue group-hover:text-white transition-all duration-500">
+                  <Brain className="w-8 h-8" />
                 </div>
-                <h4 className="text-3xl font-bold mb-6">Vision Stratégique</h4>
-                <p className="text-xl text-text-gray leading-relaxed">Intégration des outils dans une vision marketing globale pour maximiser le ROI.</p>
+                <h4 className="text-2xl font-bold mb-4">Analyse Théorique</h4>
+                <p className="text-lg text-text-gray leading-relaxed">Étude approfondie des modèles de langage et des architectures NoCode pour en comprendre les fondements.</p>
               </div>
               <div className="group">
-                <div className="w-20 h-20 rounded-3xl bg-slate-50 flex items-center justify-center text-primary-blue mb-8 group-hover:bg-primary-blue group-hover:text-white transition-all duration-500">
-                  <Code className="w-10 h-10" />
+                <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center text-primary-blue mb-6 group-hover:bg-primary-blue group-hover:text-white transition-all duration-500">
+                  <Code className="w-8 h-8" />
                 </div>
-                <h4 className="text-3xl font-bold mb-6">Culture Technique</h4>
-                <p className="text-xl text-text-gray leading-relaxed">Dialogue fluide avec les équipes techniques grâce à mon Master Informatique.</p>
+                <h4 className="text-2xl font-bold mb-4">Culture Informatique</h4>
+                <p className="text-lg text-text-gray leading-relaxed">Mon Master m'apporte le socle technique nécessaire pour évaluer la pertinence des solutions automatisées.</p>
               </div>
             </div>
-            <div className="space-y-20">
+            <div className="space-y-16">
               <div className="group">
-                <div className="w-20 h-20 rounded-3xl bg-slate-50 flex items-center justify-center text-primary-blue mb-8 group-hover:bg-primary-blue group-hover:text-white transition-all duration-500">
-                  <Sparkles className="w-10 h-10" />
+                <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center text-primary-blue mb-6 group-hover:bg-primary-blue group-hover:text-white transition-all duration-500">
+                  <Sparkles className="w-8 h-8" />
                 </div>
-                <h4 className="text-3xl font-bold mb-6">Créativité Augmentée</h4>
-                <p className="text-xl text-text-gray leading-relaxed">L'IA comme levier pour explorer de nouvelles pistes créatives à grande échelle.</p>
+                <h4 className="text-2xl font-bold mb-4">Veille Technologique</h4>
+                <p className="text-lg text-text-gray leading-relaxed">Exploration continue des nouveaux outils pour rester à la pointe de l'innovation numérique.</p>
               </div>
               <div className="group">
-                <div className="w-20 h-20 rounded-3xl bg-slate-50 flex items-center justify-center text-primary-blue mb-8 group-hover:bg-primary-blue group-hover:text-white transition-all duration-500">
-                  <Rocket className="w-10 h-10" />
+                <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center text-primary-blue mb-6 group-hover:bg-primary-blue group-hover:text-white transition-all duration-500">
+                  <Rocket className="w-8 h-8" />
                 </div>
-                <h4 className="text-3xl font-bold mb-6">Orientation Résultats</h4>
-                <p className="text-xl text-text-gray leading-relaxed">Chaque action est guidée par la performance et l'atteinte d'objectifs concrets.</p>
+                <h4 className="text-2xl font-bold mb-4">Prototypage Rapide</h4>
+                <p className="text-lg text-text-gray leading-relaxed">Capacité à transformer une idée en prototype fonctionnel en un temps record grâce aux outils modernes.</p>
               </div>
             </div>
           </div>
@@ -297,29 +306,29 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CONTACT CTA - MINIMALIST FINALE */}
-      <section className="section-white">
-        <div className="container mx-auto">
+      {/* CONTACT CTA - STUDENT PERSPECTIVE */}
+      <section className="py-24 bg-pure-white">
+        <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-deep-black rounded-[5rem] p-24 md:p-40 text-center relative overflow-hidden"
+            className="bg-deep-black rounded-[3rem] p-16 md:p-32 text-center relative overflow-hidden"
           >
             <div className="relative z-10">
-              <h2 className="text-6xl md:text-9xl mb-16 text-white font-black tracking-tighter">PRÊT ?</h2>
-              <p className="text-2xl md:text-4xl text-slate-400 mb-20 max-w-3xl mx-auto leading-relaxed">
-                Discutons de vos prochains défis digitaux.
+              <h2 className="text-4xl md:text-6xl mb-10 text-white font-black tracking-tight">Échangeons.</h2>
+              <p className="text-xl md:text-2xl text-slate-400 mb-16 max-w-2xl mx-auto leading-relaxed">
+                Vous souhaitez en savoir plus sur mon travail de recherche ou discuter d'une opportunité de collaboration ?
               </p>
               <div className="flex justify-center">
-                <Link to="/contact" className="btn-primary min-w-[300px]">
-                  Démarrer <MessageSquare className="w-6 h-6" />
+                <Link to="/contact" className="btn-primary px-12 py-5 text-lg">
+                  Me contacter <MessageSquare className="w-6 h-6" />
                 </Link>
               </div>
             </div>
             {/* Background Accents */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-blue/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-terracotta/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary-blue/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-terracotta/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
           </motion.div>
         </div>
       </section>

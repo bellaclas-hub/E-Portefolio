@@ -71,7 +71,7 @@ const About = () => {
         >
           <h1 className="huge-title">À Propos</h1>
           <p className="sub-title">
-            Cheffe de projet digital & marketing passionnée par l'innovation, la stratégie de contenu et l'impact des nouvelles technologies.
+            Étudiante en Master Informatique Numérique, explorant les synergies entre stratégie digitale, NoCode et Intelligence Artificielle.
           </p>
         </motion.div>
       </section>
@@ -82,19 +82,19 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-24 items-start">
             <div className="space-y-10 text-2xl font-medium text-deep-black leading-relaxed">
               <p>
-                Mon parcours est guidé par une double exigence : la <span className="text-primary-blue font-black">créativité</span> pour captiver, et la <span className="text-primary-blue font-black">rigueur</span> pour transformer les idées en résultats concrets.
+                Mon parcours académique et professionnel est guidé par une curiosité constante pour les <span className="text-primary-blue font-black">technologies émergentes</span> et leur capacité à transformer nos méthodes de travail.
               </p>
               <p>
-                Spécialisée dans le marketing digital, j'accompagne les marques dans leur transformation numérique en alliant vision stratégique et maîtrise des outils NoCode/IA.
+                En tant qu'étudiante en Master, je m'attache à développer une vision critique et analytique des outils numériques, en alliant rigueur méthodologique et expérimentation pratique.
               </p>
             </div>
             <div className="bg-slate-50 p-12 rounded-[3rem] border border-slate-100 shadow-sm">
               <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-light-gray mb-8 flex items-center gap-3">
                 <Compass className="w-4 h-4 text-primary-blue" />
-                Passions & Intérêts
+                Axes de Recherche & Intérêts
               </h3>
               <div className="flex flex-wrap gap-4">
-                {["Stratégie Digitale", "NoCode & IA", "Storytelling", "Voyages", "Plongée", "Équitation", "Création Visuelle"].map(tag => (
+                {["Transformation Numérique", "NoCode & IA", "Analyse de Données", "Stratégie de Contenu", "Innovation UX", "Éthique du Numérique"].map(tag => (
                   <span key={tag} className="px-6 py-3 bg-white rounded-full text-xs font-black text-deep-black border border-slate-200 shadow-sm hover:border-primary-blue transition-colors cursor-default">
                     {tag}
                   </span>
@@ -250,9 +250,9 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl md:text-7xl font-black mb-12 leading-tight">Envie de collaborer ?</h2>
+            <h2 className="text-5xl md:text-7xl font-black mb-12 leading-tight">Échangeons sur ces enjeux</h2>
             <p className="text-xl text-light-gray mb-16 max-w-2xl mx-auto leading-relaxed">
-              Discutons de vos projets et voyons comment je peux vous aider à atteindre vos objectifs.
+              Que ce soit pour discuter de mon mémoire, d'un projet académique ou d'une opportunité professionnelle, je suis ouverte au dialogue.
             </p>
             <Link 
               to="/contact" 

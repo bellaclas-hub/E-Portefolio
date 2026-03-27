@@ -13,7 +13,7 @@ const Contact = () => {
         >
           <h1 className="huge-title">Contact</h1>
           <p className="sub-title">
-            Une idée, un projet ou simplement envie d'échanger ? Je suis à votre écoute pour transformer vos ambitions en réalité digitale.
+            Une question sur mon travail de recherche, une proposition de collaboration ou simplement envie d'échanger sur le futur du web ?
           </p>
         </motion.div>
       </section>
@@ -66,13 +66,13 @@ const Contact = () => {
                 transition={{ duration: 0.8 }}
                 className="p-12 rounded-[2rem] bg-deep-black text-white relative overflow-hidden shadow-2xl"
               >
-                <h3 className="text-3xl font-black mb-8">Expertise & Vision</h3>
+                <h3 className="text-3xl font-black mb-8">Axes d'Échange</h3>
                 <ul className="space-y-6">
                   {[
-                    "Stratégie Marketing Digital 360°",
-                    "Gestion de Projets Agiles & NoCode",
-                    "Création de Contenu & Storytelling",
-                    "Optimisation de l'Expérience Utilisateur (UX)"
+                    "Mémoire de Master & Recherche",
+                    "Expérimentations NoCode & IA",
+                    "Stratégie de Contenu Digitale",
+                    "Innovation & UX Design"
                   ].map((skill) => (
                     <li key={skill} className="flex items-center gap-4 text-light-gray font-bold">
                       <CheckCircle2 className="w-6 h-6 text-primary-blue" />
@@ -102,7 +102,7 @@ const Contact = () => {
                   />
                 </div>
                 <div className="space-y-4">
-                  <label className="text-[10px] font-black uppercase tracking-[0.2em] text-light-gray ml-2">Email professionnel</label>
+                  <label className="text-[10px] font-black uppercase tracking-[0.2em] text-light-gray ml-2">Email</label>
                   <input 
                     type="email" 
                     placeholder="votre@email.com"
@@ -113,7 +113,7 @@ const Contact = () => {
                   <label className="text-[10px] font-black uppercase tracking-[0.2em] text-light-gray ml-2">Votre message</label>
                   <textarea 
                     rows={6}
-                    placeholder="Comment puis-je vous aider ?"
+                    placeholder="Votre message ou question..."
                     className="w-full px-8 py-6 rounded-2xl bg-slate-50 border-none focus:ring-4 focus:ring-primary-blue/10 transition-all outline-none resize-none font-bold text-deep-black placeholder:text-slate-300"
                   ></textarea>
                 </div>
