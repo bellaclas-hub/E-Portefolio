@@ -200,10 +200,43 @@ const Home = () => {
         
         <div className="max-w-[1200px] mx-auto px-10 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* IMAGE A DROITE (DESKTOP) / EN HAUT (MOBILE) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative order-1 lg:order-2"
+            >
+              <a 
+                href="https://lovable.dev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block group"
+              >
+                <div className="aspect-video bg-white/5 rounded-[2.5rem] border border-white/10 p-3 backdrop-blur-md transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl group-hover:shadow-light-blue/20">
+                  <div className="w-full h-full rounded-[1.8rem] overflow-hidden bg-deep-blue border border-white/5 relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" 
+                      alt="Aperçu du site vitrine Apolline Bellaclas" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-deep-blue/20 group-hover:bg-transparent transition-colors duration-500" />
+                  </div>
+                </div>
+              </a>
+              <div className="absolute -bottom-6 -right-6 bg-light-blue p-6 md:p-8 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] hidden md:block text-deep-blue">
+                <p className="text-4xl md:text-5xl font-black mb-1">90%</p>
+                <p className="text-[10px] font-black uppercase tracking-widest">Gain de temps technique</p>
+              </div>
+            </motion.div>
+
+            {/* TEXTE A GAUCHE (DESKTOP) / EN BAS (MOBILE) */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              className="order-2 lg:order-1"
             >
               <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-2 block">03. L'Expérimentation</span>
               <h2 className="text-3xl md:text-5xl font-black mb-4 leading-tight text-white">Mon laboratoire : <br /> Le projet Lovable.</h2>
@@ -235,23 +268,6 @@ const Home = () => {
               <Link to="/portfolio" className="btn-primary shadow-lg hover:shadow-light-blue/20 transition-all">
                 Analyser le cas pratique
               </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="aspect-video bg-white/5 rounded-[3rem] border border-white/10 p-4 backdrop-blur-md">
-                <div className="w-full h-full rounded-[2rem] overflow-hidden bg-deep-blue flex items-center justify-center border border-white/5">
-                  <span className="text-white/40 font-black text-2xl uppercase tracking-widest">Aperçu Projet</span>
-                </div>
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-light-blue p-8 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] hidden md:block text-deep-blue">
-                <p className="text-5xl font-black mb-1">90%</p>
-                <p className="text-xs font-black uppercase tracking-widest">Gain de temps technique</p>
-              </div>
             </motion.div>
           </div>
         </div>
