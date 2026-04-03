@@ -18,7 +18,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="pt-32 pb-20 bg-bg-light">
+    <div className="pt-48 pb-20 bg-bg-light">
       {/* Hero Section */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
         <motion.div

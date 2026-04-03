@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden bg-bg-light">
       {/* HERO SECTION - ACADEMIC & REFLECTIVE */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-deep-blue py-20">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-deep-blue pt-40 pb-20 md:pt-48 md:pb-24">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-deep-blue" />
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-light-blue/5 to-transparent" />

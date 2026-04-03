@@ -3,7 +3,7 @@ import { Database, Clock, BarChart3, Users } from 'lucide-react';
 
 const Data = () => {
   return (
-    <div className="pt-32 pb-16 min-h-screen bg-bg-light">
+    <div className="pt-48 pb-16 min-h-screen bg-bg-light">
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
