@@ -7,21 +7,21 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-deep-blue text-white py-24 px-6 md:px-12 lg:px-24">
+    <footer className="bg-deep-blue text-white py-16 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-16 mb-20">
+        <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-2">
-            <Link to="/" className="text-3xl font-black tracking-tighter mb-8 block group">
-              Apolline Bellaclas<span className="inline-block w-2 h-2 rounded-full bg-light-blue ml-1 group-hover:scale-150 transition-transform"></span>
+            <Link to="/" className="text-2xl font-black tracking-tighter mb-6 block group">
+              Apolline Bellaclas<span className="inline-block w-1.5 h-1.5 rounded-full bg-light-blue ml-1 group-hover:scale-150 transition-transform"></span>
             </Link>
-            <p className="text-slate-400 max-w-sm text-lg leading-relaxed font-medium">
+            <p className="text-slate-400 max-w-sm text-base leading-relaxed font-medium">
               Étudiante en Master Informatique Numérique. Passionnée par l'innovation technologique et l'impact du NoCode/IA sur la création web.
             </p>
           </div>
           
           <div>
-            <h4 className="font-black text-white mb-8 uppercase tracking-[0.2em] text-[10px]">Navigation</h4>
-            <ul className="space-y-5 text-sm font-bold">
+            <h4 className="font-black text-white mb-6 uppercase tracking-[0.2em] text-[10px]">Navigation</h4>
+            <ul className="space-y-3 text-xs font-bold">
               <li><Link to="/a-propos" className="text-slate-400 hover:text-white transition-colors">À propos</Link></li>
               <li><Link to="/portfolio" className="text-slate-400 hover:text-white transition-colors">Projet</Link></li>
               <li><Link to="/cas-pratique" className="text-slate-400 hover:text-white transition-colors">Cas pratique</Link></li>
@@ -31,27 +31,27 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-black text-white mb-8 uppercase tracking-[0.2em] text-[10px]">Connect</h4>
-            <div className="flex gap-6">
+            <h4 className="font-black text-white mb-6 uppercase tracking-[0.2em] text-[10px]">Connect</h4>
+            <div className="flex gap-4">
               <a 
                 href="https://www.linkedin.com/in/apolline-bellaclas/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-deep-blue transition-all duration-500"
+                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-deep-blue transition-all duration-500"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-4 h-4" />
               </a>
               <a 
                 href="mailto:bellaclas.a@gmail.com" 
-                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-deep-blue transition-all duration-500"
+                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-deep-blue transition-all duration-500"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-4 h-4" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400">
             © {new Date().getFullYear()} Apolline Bellaclas — Built with NoCode & AI
           </p>

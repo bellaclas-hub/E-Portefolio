@@ -168,8 +168,8 @@ const Lexique = () => {
   const allCategoryNames = ['Tous', ...categories.map(c => c.title)];
 
   return (
-    <div className="pt-48 pb-24 bg-bg-light min-h-screen">
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
+    <div className="pt-32 pb-16 bg-bg-light min-h-screen">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -184,14 +184,14 @@ const Lexique = () => {
       </section>
 
       {/* Search and Filter Bar */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
-        <div className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col lg:flex-row gap-8 items-center justify-between">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-12">
+        <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col lg:flex-row gap-6 items-center justify-between">
           <div className="relative w-full lg:max-w-md">
-            <SearchIcon className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
+            <SearchIcon className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4" />
             <input 
               type="text"
               placeholder="Rechercher un concept..."
-              className="w-full pl-16 pr-6 py-4 rounded-2xl bg-bg-light border-none focus:ring-4 focus:ring-light-blue/5 outline-none transition-all font-bold text-deep-blue"
+              className="w-full pl-12 pr-5 py-3 rounded-xl bg-bg-light border-none focus:ring-4 focus:ring-light-blue/5 outline-none transition-all font-bold text-deep-blue text-sm"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -205,12 +205,12 @@ const Lexique = () => {
             )}
           </div>
 
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-2 justify-center">
             {allCategoryNames.map(cat => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-3 rounded-full text-sm font-black transition-all duration-300 ${
+                className={`px-5 py-2.5 rounded-full text-xs font-black transition-all duration-300 ${
                   activeCategory === cat 
                   ? 'bg-deep-blue text-white shadow-lg shadow-deep-blue/20 scale-105' 
                   : 'bg-bg-light text-slate-500 hover:bg-slate-100'
@@ -223,7 +223,7 @@ const Lexique = () => {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 space-y-32">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 space-y-20">
         <AnimatePresence mode="wait">
           {filteredCategories.length > 0 ? (
             filteredCategories.map((category, catIdx) => (
@@ -234,42 +234,42 @@ const Lexique = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="flex items-center gap-4 mb-10">
-                  <div className="w-12 h-12 rounded-xl bg-white shadow-md flex items-center justify-center text-light-blue border border-slate-100">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-10 h-10 rounded-xl bg-white shadow-md flex items-center justify-center text-light-blue border border-slate-100">
                     {category.icon}
                   </div>
-                  <h2 className="text-3xl font-black text-deep-blue tracking-tight">{category.title}</h2>
+                  <h2 className="text-2xl font-black text-deep-blue tracking-tight">{category.title}</h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-6">
                   {category.terms.map((term, termIdx) => (
                     <motion.div 
                       key={term.name}
                       layout
                       initial={{ opacity: 0, scale: 0.98 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col"
+                      className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col"
                     >
-                      <div className="flex items-center gap-4 mb-8">
-                        <div className="w-10 h-10 rounded-xl bg-bg-light text-light-blue flex items-center justify-center group-hover:bg-light-blue group-hover:text-white transition-colors duration-500">
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="w-8 h-8 rounded-xl bg-bg-light text-light-blue flex items-center justify-center group-hover:bg-light-blue group-hover:text-white transition-colors duration-500">
                           {term.icon}
                         </div>
-                        <h3 className="text-xl font-black text-deep-blue group-hover:text-light-blue transition-colors duration-300">
+                        <h3 className="text-lg font-black text-deep-blue group-hover:text-light-blue transition-colors duration-300">
                           {term.name}
                         </h3>
                       </div>
                       
-                      <div className="space-y-6 flex-grow">
+                      <div className="space-y-4 flex-grow">
                         <div>
-                          <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 block mb-2">Définition</span>
-                          <p className="text-text-gray font-medium leading-relaxed text-sm">
+                          <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 block mb-1">Définition</span>
+                          <p className="text-text-gray font-medium leading-relaxed text-xs">
                             {term.definition}
                           </p>
                         </div>
                         
-                        <div className="pt-6 border-t border-slate-50">
-                          <span className="text-[9px] font-black uppercase tracking-widest text-light-blue block mb-2">Enjeu Stratégique</span>
-                          <p className="text-deep-blue font-bold text-xs leading-relaxed">
+                        <div className="pt-4 border-t border-slate-50">
+                          <span className="text-[9px] font-black uppercase tracking-widest text-light-blue block mb-1">Enjeu Stratégique</span>
+                          <p className="text-deep-blue font-bold text-[10px] leading-relaxed">
                             {term.stake}
                           </p>
                         </div>
@@ -296,8 +296,8 @@ const Lexique = () => {
       </div>
 
       {/* Footer CTA */}
-      <section className="mt-48 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-        <div className="bg-deep-blue rounded-[4rem] p-16 md:p-24 text-center text-white relative overflow-hidden">
+      <section className="mt-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+        <div className="bg-deep-blue rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-light-blue/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -305,12 +305,12 @@ const Lexique = () => {
             viewport={{ once: true }}
             className="relative z-10"
           >
-            <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-black mb-6 leading-tight">
               L'expertise au service <br /> de votre croissance.
             </h2>
             <Link 
               to="/contact" 
-              className="inline-flex items-center justify-center px-12 py-6 bg-light-blue text-white rounded-full font-black text-lg uppercase tracking-widest hover:bg-white hover:text-deep-blue transition-all duration-500 hover:scale-105"
+              className="inline-flex items-center justify-center px-10 py-4 bg-light-blue text-white rounded-full font-black text-base uppercase tracking-widest hover:bg-white hover:text-deep-blue transition-all duration-500 hover:scale-105"
             >
               Me contacter
             </Link>

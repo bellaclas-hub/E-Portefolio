@@ -19,9 +19,9 @@ const About = () => {
   };
 
   return (
-    <div className="pt-48 pb-32 bg-bg-light">
+    <div className="pt-32 pb-20 bg-bg-light">
       {/* Hero Section: À propos */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-40">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -49,8 +49,8 @@ const About = () => {
       </section>
 
       {/* Mon approche */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
-        <div className="grid lg:grid-cols-2 gap-24 items-center">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -95,13 +95,13 @@ const About = () => {
       </section>
 
       {/* Compétences & Savoir-faire */}
-      <section className="bg-deep-blue py-48 px-6 md:px-12 lg:px-24 mb-48">
+      <section className="bg-deep-blue py-24 px-6 md:px-12 lg:px-24 mb-24">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-32">
+          <div className="grid md:grid-cols-2 gap-20">
             {/* Compétences */}
             <div>
-              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-12">Compétences</h2>
-              <ul className="space-y-10">
+              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8">Compétences</h2>
+              <ul className="space-y-6">
                 {[
                   "Stratégie digitale et création de contenu",
                   "Conception de sites web en NoCode",
@@ -126,8 +126,8 @@ const About = () => {
 
             {/* Savoir-faire */}
             <div>
-              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-12">Savoir-faire</h2>
-              <ul className="space-y-10">
+              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8">Savoir-faire</h2>
+              <ul className="space-y-6">
                 {[
                   "Structurer et piloter un projet digital",
                   "Concevoir des interfaces claires et efficaces",
@@ -154,13 +154,13 @@ const About = () => {
       </section>
 
       {/* Ma personnalité */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-1">
-            <h2 className="text-4xl md:text-5xl font-black text-deep-blue mb-8 tracking-tight">Ma personnalité</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-6 tracking-tight">Ma personnalité</h2>
             <p className="text-text-gray text-lg font-medium">L'humain derrière les outils.</p>
           </div>
-          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
+          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
             {[
               {
                 title: "Créative & Curieuse",
@@ -201,30 +201,30 @@ const About = () => {
       </section>
 
       {/* Vision */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="bg-white rounded-[5rem] p-16 md:p-24 text-center border border-slate-100 relative overflow-hidden shadow-sm"
+          className="bg-white rounded-[4rem] p-12 md:p-20 text-center border border-slate-100 relative overflow-hidden shadow-sm"
         >
           <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle,var(--light-blue)_0%,transparent_70%)]" />
           </div>
           
           <div className="relative z-10 max-w-4xl mx-auto">
-            <Eye className="w-12 h-12 text-light-blue mx-auto mb-12" />
-            <h2 className="text-xs font-black uppercase tracking-[0.5em] text-light-blue mb-12">Vision</h2>
-            <div className="space-y-10 text-2xl md:text-4xl font-black text-deep-blue leading-tight tracking-tight">
+            <Eye className="w-10 h-10 text-light-blue mx-auto mb-8" />
+            <h2 className="text-xs font-black uppercase tracking-[0.5em] text-light-blue mb-8">Vision</h2>
+            <div className="space-y-8 text-xl md:text-3xl font-black text-deep-blue leading-tight tracking-tight">
               <p>
                 Je considère que le <span className="text-light-blue">NoCode</span> et l’<span className="text-light-blue">intelligence artificielle</span> ne remplacent pas les compétences humaines, mais les <span className="underline decoration-light-blue decoration-4 underline-offset-8">renforcent</span>.
               </p>
               <p className="text-text-gray text-xl md:text-2xl font-bold leading-relaxed">
                 Ils permettent de gagner en rapidité et en efficacité, tout en laissant une place essentielle à la réflexion, à la stratégie et à la créativité.
               </p>
-              <div className="pt-12">
-                <p className="text-4xl md:text-6xl font-black tracking-tighter italic">
+              <div className="pt-8">
+                <p className="text-3xl md:text-5xl font-black tracking-tighter italic">
                   "Créer un site aujourd’hui ne nécessite plus de coder, mais nécessite toujours de <span className="text-light-blue">penser</span>."
                 </p>
               </div>
@@ -235,7 +235,7 @@ const About = () => {
 
       {/* Contact CTA */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto text-center">
-        <h2 className="text-xs font-black uppercase tracking-[0.4em] text-text-gray mb-12">Prêt à collaborer ?</h2>
+        <h2 className="text-xs font-black uppercase tracking-[0.4em] text-text-gray mb-8">Prêt à collaborer ?</h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
           <Link to="/contact" className="btn-primary flex items-center gap-4 group">
             Me contacter

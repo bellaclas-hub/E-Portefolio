@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden bg-bg-light">
       {/* HERO SECTION - ACADEMIC & REFLECTIVE */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-deep-blue py-32">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-deep-blue py-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-deep-blue" />
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-light-blue/5 to-transparent" />
@@ -92,7 +92,7 @@ const Home = () => {
       </section>
 
       {/* HOOK SECTION - CURIOSITY */}
-      <section className="py-24 bg-light-blue text-white overflow-hidden">
+      <section className="py-16 bg-light-blue text-white overflow-hidden">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -112,18 +112,18 @@ const Home = () => {
       </section>
 
       {/* INTRODUCTION - MA VISION (NARRATIVE) */}
-      <section className="py-48 bg-bg-light">
+      <section className="py-20 bg-bg-light">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
-          <div className="grid lg:grid-cols-2 gap-32 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <span className="text-light-blue font-black uppercase tracking-widest text-sm mb-6 block">01. Ma Vision</span>
-              <h2 className="text-4xl md:text-5xl font-black text-deep-blue mb-12 leading-tight">Au-delà de la technique, <br /> l'impact.</h2>
-              <div className="space-y-8 text-xl text-text-gray leading-relaxed">
+              <span className="text-light-blue font-black uppercase tracking-widest text-sm mb-4 block">01. Ma Vision</span>
+              <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-8 leading-tight">Au-delà de la technique, <br /> l'impact.</h2>
+              <div className="space-y-6 text-lg text-text-gray leading-relaxed">
                 <p className="font-bold text-deep-blue">
                   Tout a commencé par un constat simple : le web change, et il change vite. 
                 </p>
@@ -157,23 +157,23 @@ const Home = () => {
       </section>
 
       {/* 02. LE PROBLÈME */}
-      <section className="py-48 bg-bg-light">
+      <section className="py-20 bg-bg-light">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <div className="max-w-4xl mx-auto text-center">
             <motion.span 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-light-blue font-black uppercase tracking-widest text-sm mb-6 block"
+              className="text-light-blue font-black uppercase tracking-widest text-sm mb-4 block"
             >
               02. Le Problème
             </motion.span>
-            <h2 className="text-4xl md:text-6xl font-black text-deep-blue mb-12 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-8 leading-tight">
               Le paradoxe du digital : <br /> Trop de projets, pas assez de temps.
             </h2>
-            <p className="text-xl md:text-2xl text-text-gray leading-relaxed font-medium mb-16">
+            <p className="text-lg md:text-xl text-text-gray leading-relaxed font-medium mb-12">
               Aujourd'hui, une entreprise ne peut plus attendre 6 mois pour tester une idée. Le marché est trop rapide. Mais comment allier vitesse de déploiement et qualité stratégique sans compromis ?
             </p>
-            <div className="grid md:grid-cols-2 gap-8 text-left">
+            <div className="grid md:grid-cols-2 gap-6 text-left">
               <div className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
                 <h4 className="text-xl font-black mb-4 text-deep-blue">L'inertie technique</h4>
                 <p className="text-text-gray">Les cycles de développement classiques freinent l'innovation et l'expérimentation rapide.</p>
@@ -188,26 +188,26 @@ const Home = () => {
       </section>
 
       {/* 03. L'EXPÉRIMENTATION (PROJET LOVABLE) */}
-      <section className="py-48 bg-deep-blue text-white relative overflow-hidden">
+      <section className="py-20 bg-deep-blue text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-light-blue rounded-full blur-[120px]" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-light-blue/50 rounded-full blur-[120px]" />
         </div>
         
         <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-light-blue font-black uppercase tracking-widest text-sm mb-6 block">03. L'Expérimentation</span>
-              <h2 className="text-4xl md:text-6xl font-black mb-12 leading-tight">Mon laboratoire : <br /> Le projet Lovable.</h2>
-              <p className="text-xl text-slate-300 leading-relaxed mb-12">
+              <span className="text-light-blue font-black uppercase tracking-widest text-sm mb-4 block">03. L'Expérimentation</span>
+              <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight">Mon laboratoire : <br /> Le projet Lovable.</h2>
+              <p className="text-lg text-slate-300 leading-relaxed mb-8">
                 Pour répondre à ce besoin de vitesse, j'ai testé les limites du NoCode assisté par IA. Ce portfolio est le fruit de cette expérimentation concrète.
               </p>
               
-              <div className="space-y-6 mb-12">
+              <div className="space-y-4 mb-10">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-light-blue">
                     <Zap className="w-6 h-6" />
@@ -254,17 +254,17 @@ const Home = () => {
       </section>
 
       {/* 04. L'ANALYSE */}
-      <section className="py-48 bg-bg-light">
+      <section className="py-20 bg-bg-light">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
-          <div className="max-w-4xl mb-24">
-            <span className="text-light-blue font-black uppercase tracking-widest text-sm mb-6 block">04. L'Analyse</span>
-            <h2 className="text-4xl md:text-6xl font-black text-deep-blue mb-12 leading-tight">Ce que j'ai appris : <br /> L'équilibre est la clé.</h2>
-            <p className="text-xl md:text-2xl text-text-gray leading-relaxed font-medium">
+          <div className="max-w-4xl mb-16">
+            <span className="text-light-blue font-black uppercase tracking-widest text-sm mb-4 block">04. L'Analyse</span>
+            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-8 leading-tight">Ce que j'ai appris : <br /> L'équilibre est la clé.</h2>
+            <p className="text-lg md:text-xl text-text-gray leading-relaxed font-medium">
               L'expérimentation Lovable a confirmé une intuition : si l'outil fait gagner du temps, c'est l'humain qui apporte la direction.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid lg:grid-cols-3 gap-8">
             {[
               {
                 title: "L'outil libère l'esprit",
@@ -300,19 +300,19 @@ const Home = () => {
       </section>
 
       {/* INTERMEDIATE REFLECTION SECTION */}
-      <section className="py-48 bg-deep-blue text-white text-center">
+      <section className="py-20 bg-deep-blue text-white text-center">
         <div className="container mx-auto px-6 max-w-5xl">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <blockquote className="text-3xl md:text-5xl font-black leading-tight italic mb-12">
+            <blockquote className="text-2xl md:text-4xl font-black leading-tight italic mb-8">
               "La technologie n'est qu'un levier. <br /> 
               <span className="text-light-blue">La stratégie reste le moteur.</span>"
             </blockquote>
-            <div className="w-24 h-1 bg-light-blue mx-auto mb-12" />
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <div className="w-16 h-1 bg-light-blue mx-auto mb-8" />
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
               Mon rôle est de naviguer entre ces deux mondes pour créer des expériences qui ne sont pas seulement belles, mais performantes.
             </p>
           </motion.div>
@@ -320,17 +320,17 @@ const Home = () => {
       </section>
 
       {/* POURQUOI MOI ? */}
-      <section className="py-48 bg-bg-light">
+      <section className="py-20 bg-bg-light">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
-          <div className="mb-24">
-            <h2 className="text-4xl md:text-6xl font-black text-deep-blue mb-8">Pourquoi moi ?</h2>
-            <p className="text-xl md:text-2xl text-text-gray max-w-3xl leading-relaxed font-medium">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-6">Pourquoi moi ?</h2>
+            <p className="text-lg md:text-xl text-text-gray max-w-3xl leading-relaxed font-medium">
               Une approche mêlant marketing digital, NoCode et intelligence artificielle.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-24">
-            <div className="space-y-24">
+          <div className="grid md:grid-cols-2 gap-16">
+            <div className="space-y-16">
               <div className="group">
                 <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-light-blue mb-8 group-hover:bg-light-blue group-hover:text-white transition-all duration-500 shadow-sm">
                   <Brain className="w-8 h-8" />
@@ -367,7 +367,7 @@ const Home = () => {
       </section>
 
       {/* CONCLUSION */}
-      <section className="py-48 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6 md:px-12 lg:px-24 text-center max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -375,8 +375,8 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-6xl font-black text-deep-blue mb-12">Conclusion</h2>
-            <div className="space-y-8 text-xl md:text-2xl text-text-gray leading-relaxed font-medium">
+            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-8">Conclusion</h2>
+            <div className="space-y-6 text-lg md:text-xl text-text-gray leading-relaxed font-medium">
               <p>
                 Le NoCode et l’intelligence artificielle permettent aujourd’hui de créer des sites web rapidement et efficacement.
               </p>
@@ -392,21 +392,21 @@ const Home = () => {
       </section>
 
       {/* CONTACT CTA */}
-      <section className="py-24 bg-bg-light">
+      <section className="py-16 bg-bg-light">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-light-blue to-deep-blue rounded-[3rem] p-16 md:p-32 text-center relative overflow-hidden shadow-2xl"
+            className="bg-gradient-to-br from-light-blue to-deep-blue rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl"
           >
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-6xl mb-10 text-white font-black tracking-tight">Prêt à explorer le futur <br /> du digital ensemble ?</h2>
-              <p className="text-xl md:text-2xl text-slate-200 mb-16 max-w-2xl mx-auto leading-relaxed font-medium">
+              <h2 className="text-3xl md:text-5xl mb-8 text-white font-black tracking-tight">Prêt à explorer le futur <br /> du digital ensemble ?</h2>
+              <p className="text-lg md:text-xl text-slate-200 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
                 Que vous ayez un projet concret ou une simple curiosité sur l'impact de l'IA et du NoCode, discutons-en.
               </p>
               <div className="flex justify-center">
-                <Link to="/contact" className="btn-outline-white px-12 py-5 text-lg hover:bg-white hover:text-deep-blue transition-all duration-500">
+                <Link to="/contact" className="btn-outline-white px-10 py-4 text-lg hover:bg-white hover:text-deep-blue transition-all duration-500">
                   Démarrer la conversation
                 </Link>
               </div>

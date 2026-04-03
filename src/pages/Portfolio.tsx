@@ -18,9 +18,9 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="pt-48 pb-32 bg-bg-light">
+    <div className="pt-32 pb-20 bg-bg-light">
       {/* Hero Section */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-32">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -40,8 +40,8 @@ const Portfolio = () => {
       </section>
 
       {/* Contexte & Pourquoi ce projet */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
-        <div className="grid lg:grid-cols-2 gap-24">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
+        <div className="grid lg:grid-cols-2 gap-16">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -82,7 +82,7 @@ const Portfolio = () => {
       </section>
 
       {/* Choix de l'outil */}
-      <section className="bg-white py-32 px-6 md:px-12 lg:px-24 mb-48 border-y border-slate-100">
+      <section className="bg-white py-20 px-6 md:px-12 lg:px-24 mb-24 border-y border-slate-100">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
             <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8">Choix de l’outil : Lovable</h2>
@@ -97,8 +97,8 @@ const Portfolio = () => {
       </section>
 
       {/* Charte Graphique Section */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
-        <div className="grid lg:grid-cols-2 gap-24">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
+        <div className="grid lg:grid-cols-2 gap-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -170,9 +170,9 @@ const Portfolio = () => {
       </section>
 
       {/* Application concrète Section */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48 bg-white rounded-[3rem] p-12 md:p-20 border border-slate-100 shadow-sm">
-        <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-12">Application concrète</h2>
-        <div className="grid md:grid-cols-2 gap-16">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24 bg-white rounded-[3rem] p-10 md:p-16 border border-slate-100 shadow-sm">
+        <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8">Application concrète</h2>
+        <div className="grid md:grid-cols-2 gap-12">
           <div className="p-10 rounded-[2rem] bg-bg-light border border-slate-100">
             <h3 className="text-xl font-black text-deep-blue mb-6">Focus Lovable</h3>
             <p className="text-text-gray leading-relaxed font-medium">
@@ -189,8 +189,8 @@ const Portfolio = () => {
       </section>
 
       {/* Difficultés & Apports */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
-        <div className="grid md:grid-cols-2 gap-24">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
+        <div className="grid md:grid-cols-2 gap-16">
           {/* Difficultés */}
           <div>
             <div className="flex items-center gap-4 mb-12">
@@ -250,9 +250,9 @@ const Portfolio = () => {
       </section>
 
       {/* Analyse */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-12">Analyse</h2>
+          <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8">Analyse</h2>
           <p className="text-2xl md:text-4xl font-black text-deep-blue leading-tight tracking-tight mb-10">
             Ce projet montre que le NoCode et l’intelligence artificielle permettent aujourd’hui de créer des sites web <span className="text-light-blue">rapidement et efficacement</span>.
           </p>
@@ -263,7 +263,7 @@ const Portfolio = () => {
       </section>
 
       {/* Chiffres clés */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
         <div className="grid sm:grid-cols-3 gap-8">
           {[
             {
@@ -303,10 +303,10 @@ const Portfolio = () => {
       </section>
 
       {/* Objectif */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
-        <div className="bg-white rounded-[4rem] p-16 md:p-24 border border-slate-100 text-center">
-          <Rocket className="w-12 h-12 text-light-blue mx-auto mb-10" />
-          <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-10">Objectif professionnel</h2>
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
+        <div className="bg-white rounded-[4rem] p-12 md:p-20 border border-slate-100 text-center">
+          <Rocket className="w-10 h-10 text-light-blue mx-auto mb-8" />
+          <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8">Objectif professionnel</h2>
           <div className="max-w-3xl mx-auto">
             <p className="text-2xl md:text-4xl font-black text-deep-blue leading-tight mb-10">
               L’objectif de ce projet est clair : me démarquer dans ma recherche d’emploi et réussir à <span className="text-light-blue underline decoration-4 underline-offset-8">signer un CDI</span>.
