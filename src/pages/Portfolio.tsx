@@ -39,43 +39,86 @@ const Portfolio = () => {
         </motion.div>
       </section>
 
-      {/* Contexte & Pourquoi ce projet */}
+      {/* Case Study Visual Section */}
       <section className="max-w-[1200px] mx-auto px-10 mb-20">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* IMAGE EN HAUT (MOBILE) / A DROITE (DESKTOP) */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="order-1 lg:order-2"
+          >
+            <a 
+              href="https://apolline-bellaclas-portfolio.lovable.app" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="block group"
+            >
+              <div className="aspect-video bg-white rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden relative transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-light-blue/20">
+                {/* Browser Header Mockup */}
+                <div className="bg-slate-50 w-full h-8 flex items-center px-4 gap-1.5 border-b border-slate-100">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />
+                  <div className="ml-4 bg-slate-200/50 rounded-md h-4 w-1/3" />
+                </div>
+                <div className="relative w-full h-full overflow-hidden">
+                  <img 
+                    src="https://res.cloudinary.com/delgsyvkc/image/upload/v1775211093/Capture_d_%C3%A9cran_2025-04-03_121051_f925vj.png" 
+                    alt="Aperçu du site vitrine Apolline Bellaclas" 
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-deep-blue/5 group-hover:bg-transparent transition-colors duration-500" />
+                </div>
+              </div>
+            </a>
+          </motion.div>
+
+          {/* TEXTE EN BAS (MOBILE) / A GAUCHE (DESKTOP) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
+            className="order-2 lg:order-1"
           >
-            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6">Contexte</h2>
-            <div className="space-y-4 text-base md:text-lg text-text-gray leading-relaxed max-w-xl">
-              <p>
-                Dans le cadre de ma recherche de <span className="text-deep-blue font-bold">CDI</span>, j’ai souhaité aller au-delà du format classique du CV.
-              </p>
-              <p>
-                Aujourd’hui, dans les métiers du digital, un CV ne suffit plus toujours à refléter les compétences réelles, notamment en création, en stratégie ou en utilisation d’outils.
-              </p>
-              <p>
-                Le marché étant particulièrement concurrentiel, avec beaucoup de candidats et peu d’opportunités, il devient essentiel de <span className="text-light-blue font-bold">se démarquer</span>.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-          >
-            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6">Pourquoi ce projet</h2>
-            <div className="space-y-4 text-base md:text-lg text-text-gray leading-relaxed max-w-xl">
-              <p>
-                J’ai donc choisi de créer un <span className="text-deep-blue font-bold">site vitrine personnel</span> afin de présenter mon profil de manière plus complète et plus visuelle.
-              </p>
-              <p>
-                L’objectif était de me différencier des autres candidatures et de valoriser concrètement mes compétences, mes savoir-faire et ma capacité à concevoir un projet digital.
-              </p>
+            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6">Étude de cas détaillée</h2>
+            <h3 className="text-2xl md:text-4xl font-black text-deep-blue mb-8 leading-tight">Création d’un site vitrine personnel</h3>
+            
+            <div className="space-y-8">
+              <div>
+                <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-light-blue mb-2">Contexte</h4>
+                <p className="text-base md:text-lg text-text-gray font-medium leading-relaxed">
+                  Création d’un site pour me différencier sur le marché de l’emploi.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-light-blue mb-2">Objectif</h4>
+                <p className="text-base md:text-lg text-text-gray font-medium leading-relaxed">
+                  Structurer mon positionnement marketing et générer des opportunités.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-light-blue mb-2">Mon Rôle</h4>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                  {[
+                    "Définition du positionnement",
+                    "Création des contenus",
+                    "Structuration UX",
+                    "Déploiement via Lovable"
+                  ].map((role, i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm text-deep-blue font-bold bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+                      <div className="w-1.5 h-1.5 rounded-full bg-light-blue shrink-0" />
+                      {role}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </motion.div>
         </div>
