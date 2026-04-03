@@ -3,7 +3,7 @@ import { Mail, Linkedin, Download, Send, MapPin, Phone, CheckCircle2 } from 'luc
 
 const Contact = () => {
   return (
-    <div className="pt-48 pb-16 bg-bg-light min-h-screen">
+    <div className="pt-48 md:pt-60 pb-16 bg-bg-light min-h-screen">
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

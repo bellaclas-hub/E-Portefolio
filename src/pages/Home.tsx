@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden bg-bg-light">
       {/* HERO SECTION - ACADEMIC & REFLECTIVE */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-deep-blue pt-40 pb-20 md:pt-48 md:pb-24">
+      <section className="relative min-h-[80vh] flex items-start lg:items-center overflow-hidden bg-deep-blue pt-52 pb-20 md:pt-64 md:pb-24">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-deep-blue" />
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-light-blue/5 to-transparent" />
@@ -202,33 +202,33 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <span className="text-light-blue font-black uppercase tracking-widest text-sm mb-4 block">03. L'Expérimentation</span>
-              <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight">Mon laboratoire : <br /> Le projet Lovable.</h2>
-              <p className="text-lg text-slate-300 leading-relaxed mb-8">
+              <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-white">Mon laboratoire : <br /> Le projet Lovable.</h2>
+              <p className="text-lg text-slate-200 leading-relaxed mb-8 font-medium">
                 Pour répondre à ce besoin de vitesse, j'ai testé les limites du NoCode assisté par IA. Ce portfolio est le fruit de cette expérimentation concrète.
               </p>
               
-              <div className="space-y-4 mb-10">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-light-blue">
-                    <Zap className="w-6 h-6" />
+              <div className="space-y-6 mb-10">
+                <div className="flex items-center gap-5">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-light-blue shadow-inner border border-white/5">
+                    <Zap className="w-7 h-7" />
                   </div>
                   <div>
-                    <h4 className="font-black text-lg">Vitesse d'exécution</h4>
-                    <p className="text-slate-400">De l'idée au déploiement en un temps record.</p>
+                    <h4 className="font-black text-xl text-white mb-1">Vitesse d'exécution</h4>
+                    <p className="text-slate-300 font-medium">De l'idée au déploiement en un temps record.</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-light-blue">
-                    <Brain className="w-6 h-6" />
+                <div className="flex items-center gap-5">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-light-blue shadow-inner border border-white/5">
+                    <Brain className="w-7 h-7" />
                   </div>
                   <div>
-                    <h4 className="font-black text-lg">IA Générative</h4>
-                    <p className="text-slate-400">Une assistance intelligente pour la structure et le code.</p>
+                    <h4 className="font-black text-xl text-white mb-1">IA Générative</h4>
+                    <p className="text-slate-300 font-medium">Une assistance intelligente pour la structure et le code.</p>
                   </div>
                 </div>
               </div>
 
-              <Link to="/portfolio" className="btn-primary inline-flex px-12 py-5 text-lg">
+              <Link to="/portfolio" className="btn-primary inline-flex px-12 py-5 text-lg shadow-lg hover:shadow-light-blue/20 transition-all">
                 Analyser le cas pratique
               </Link>
             </motion.div>
@@ -239,14 +239,14 @@ const Home = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-video bg-white/5 rounded-[3rem] border border-white/10 p-4 backdrop-blur-sm">
-                <div className="w-full h-full rounded-[2rem] overflow-hidden bg-deep-blue flex items-center justify-center">
-                  <span className="text-white/20 font-black text-2xl uppercase tracking-widest">Aperçu Projet</span>
+              <div className="aspect-video bg-white/5 rounded-[3rem] border border-white/10 p-4 backdrop-blur-md">
+                <div className="w-full h-full rounded-[2rem] overflow-hidden bg-deep-blue flex items-center justify-center border border-white/5">
+                  <span className="text-white/40 font-black text-2xl uppercase tracking-widest">Aperçu Projet</span>
                 </div>
               </div>
-              <div className="absolute -bottom-10 -right-10 bg-light-blue p-8 rounded-3xl shadow-2xl hidden md:block">
-                <p className="text-4xl font-black mb-1">90%</p>
-                <p className="text-xs font-bold uppercase tracking-widest opacity-80">Gain de temps technique</p>
+              <div className="absolute -bottom-10 -right-10 bg-light-blue p-8 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] hidden md:block text-deep-blue">
+                <p className="text-5xl font-black mb-1">90%</p>
+                <p className="text-xs font-black uppercase tracking-widest">Gain de temps technique</p>
               </div>
             </motion.div>
           </div>
