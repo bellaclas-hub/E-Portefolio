@@ -168,23 +168,23 @@ const Lexique = () => {
   const allCategoryNames = ['Tous', ...categories.map(c => c.title)];
 
   return (
-    <div className="pt-48 md:pt-60 pb-16 bg-bg-light min-h-screen">
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-16">
+    <div className="pt-48 md:pt-60 pb-20 bg-bg-light min-h-screen">
+      <section className="max-w-[1200px] mx-auto px-10 mb-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-          <h1 className="huge-title text-deep-blue">Lexique Expert</h1>
-          <p className="sub-title">
+          <h1 className="text-4xl md:text-6xl font-black text-deep-blue mb-6 tracking-tighter leading-[1.1]">Lexique Expert</h1>
+          <p className="text-lg md:text-xl text-text-gray leading-relaxed font-medium max-w-2xl">
             Un portail pédagogique pour maîtriser les concepts stratégiques du digital, du NoCode et de l'IA.
           </p>
         </motion.div>
       </section>
 
       {/* Search and Filter Bar */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-12">
+      <section className="max-w-[1200px] mx-auto px-10 mb-12">
         <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col lg:flex-row gap-6 items-center justify-between">
           <div className="relative w-full lg:max-w-md">
             <SearchIcon className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4" />
@@ -223,7 +223,7 @@ const Lexique = () => {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 space-y-20">
+      <div className="max-w-[1200px] mx-auto px-10 space-y-20">
         <AnimatePresence mode="wait">
           {filteredCategories.length > 0 ? (
             filteredCategories.map((category, catIdx) => (
@@ -296,8 +296,8 @@ const Lexique = () => {
       </div>
 
       {/* Footer CTA */}
-      <section className="mt-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-        <div className="bg-deep-blue rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
+      <section className="mt-20 max-w-[1200px] mx-auto px-10 pb-20">
+        <div className="bg-deep-blue rounded-[2.5rem] p-12 md:p-16 text-center text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-light-blue/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -305,12 +305,12 @@ const Lexique = () => {
             viewport={{ once: true }}
             className="relative z-10"
           >
-            <h2 className="text-3xl md:text-4xl font-black mb-6 leading-tight">
+            <h2 className="text-2xl md:text-3xl font-black mb-6 leading-tight">
               L'expertise au service <br /> de votre croissance.
             </h2>
             <Link 
               to="/contact" 
-              className="inline-flex items-center justify-center px-10 py-4 bg-light-blue text-white rounded-full font-black text-base uppercase tracking-widest hover:bg-white hover:text-deep-blue transition-all duration-500 hover:scale-105"
+              className="btn-primary"
             >
               Me contacter
             </Link>

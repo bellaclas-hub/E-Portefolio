@@ -3,24 +3,24 @@ import { Mail, Linkedin, Download, Send, MapPin, Phone, CheckCircle2 } from 'luc
 
 const Contact = () => {
   return (
-    <div className="pt-48 md:pt-60 pb-16 bg-bg-light min-h-screen">
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
+    <div className="pt-48 md:pt-60 pb-20 bg-bg-light min-h-screen">
+      <section className="max-w-[1200px] mx-auto px-10 mb-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-          <h1 className="huge-title text-deep-blue">Contact</h1>
-          <p className="sub-title">
+          <h1 className="text-4xl md:text-6xl font-black text-deep-blue mb-6 tracking-tighter leading-[1.1]">Contact</h1>
+          <p className="text-lg md:text-xl text-text-gray leading-relaxed font-medium max-w-2xl">
             Une question sur mon travail de recherche, une proposition de collaboration ou simplement envie d'échanger sur le futur du web ?
           </p>
         </motion.div>
       </section>
 
-      <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-          <div className="grid lg:grid-cols-2 gap-20">
+      <section className="bg-white py-20 px-10">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Info */}
             <div className="space-y-12">
               <div className="grid gap-8">
@@ -47,12 +47,12 @@ const Contact = () => {
                           href={item.link} 
                           target={item.link.startsWith('http') ? "_blank" : undefined}
                           rel={item.link.startsWith('http') ? "noopener noreferrer" : undefined}
-                          className="text-xl font-black text-deep-blue hover:text-light-blue transition-colors duration-300"
+                          className="text-lg font-black text-deep-blue hover:text-light-blue transition-colors duration-300"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-xl font-black text-deep-blue">{item.value}</p>
+                        <p className="text-lg font-black text-deep-blue">{item.value}</p>
                       )}
                     </div>
                   </motion.div>
@@ -64,9 +64,9 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="p-10 rounded-[2rem] bg-deep-blue text-white relative overflow-hidden shadow-2xl"
+                className="p-8 rounded-[2rem] bg-deep-blue text-white relative overflow-hidden shadow-2xl"
               >
-                <h3 className="text-2xl font-black mb-6">Axes d'Échange</h3>
+                <h3 className="text-xl font-black mb-6">Axes d'Échange</h3>
                 <ul className="space-y-4">
                   {[
                     "Mémoire de Master & Recherche",
@@ -75,7 +75,7 @@ const Contact = () => {
                     "Innovation & UX Design"
                   ].map((skill) => (
                     <li key={skill} className="flex items-center gap-3 text-white/80 font-bold text-sm">
-                      <CheckCircle2 className="w-5 h-5 text-light-blue" />
+                      <CheckCircle2 className="w-4 h-4 text-light-blue" />
                       {skill}
                     </li>
                   ))}
@@ -89,9 +89,9 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-white p-10 md:p-12 rounded-[2.5rem] shadow-2xl border border-slate-100"
+              className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-slate-100"
             >
-              <h3 className="text-3xl font-black text-deep-blue mb-8 leading-tight">Envoyez-moi un message</h3>
+              <h3 className="text-2xl md:text-3xl font-black text-deep-blue mb-8 leading-tight">Envoyez-moi un message</h3>
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="space-y-3">
                   <label className="text-[10px] font-black uppercase tracking-[0.2em] text-text-gray ml-2">Nom complet</label>

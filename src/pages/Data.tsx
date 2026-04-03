@@ -3,23 +3,23 @@ import { Database, Clock, BarChart3, Users } from 'lucide-react';
 
 const Data = () => {
   return (
-    <div className="pt-48 md:pt-60 pb-16 min-h-screen bg-bg-light">
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-16">
+    <div className="pt-48 md:pt-60 pb-20 min-h-screen bg-bg-light">
+      <section className="max-w-[1200px] mx-auto px-10 mb-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-          <h1 className="huge-title text-deep-blue">Data & Analyse</h1>
-          <p className="sub-title">
+          <h1 className="text-4xl md:text-6xl font-black text-deep-blue mb-6 tracking-tighter leading-[1.1]">Data & Analyse</h1>
+          <p className="text-lg md:text-xl text-text-gray leading-relaxed font-medium max-w-2xl">
             Exploration de données et analyses stratégiques pour éclairer la prise de décision dans un monde en mutation.
           </p>
         </motion.div>
       </section>
 
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-        <div className="bg-white rounded-[3rem] p-10 md:p-16 shadow-xl border border-slate-100 relative overflow-hidden">
+      <section className="max-w-[1200px] mx-auto px-10">
+        <div className="bg-white rounded-[2.5rem] p-10 md:p-12 shadow-xl border border-slate-100 relative overflow-hidden">
           {/* Background decoration */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-light-blue/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
           
@@ -31,16 +31,16 @@ const Data = () => {
               <span className="text-sm font-black uppercase tracking-widest text-light-blue">Projet en cours</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-8 leading-tight">
+            <h2 className="text-2xl md:text-3xl font-black text-deep-blue mb-8 leading-tight">
               Analyse du télétravail & Transformation Numérique
             </h2>
 
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <p className="text-lg text-text-gray leading-relaxed font-medium">
+                <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium">
                   Cette page sera dédiée à une analyse approfondie du télétravail dans un contexte de transformation numérique accélérée. 
                 </p>
-                <p className="text-lg text-text-gray leading-relaxed font-medium">
+                <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium">
                   L'objectif est de comprendre comment les entreprises peuvent concilier performance collective, engagement des salariés et flexibilité du travail à distance.
                 </p>
               </div>

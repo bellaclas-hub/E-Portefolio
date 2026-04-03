@@ -24,23 +24,23 @@ const CasPratique = () => {
   ];
 
   return (
-    <div className="pt-48 md:pt-60 pb-16 bg-bg-light">
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
+    <div className="pt-48 md:pt-60 pb-20 bg-bg-light">
+      <section className="max-w-[1200px] mx-auto px-10 mb-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-          <h1 className="huge-title text-deep-blue">Cas Pratiques</h1>
-          <p className="sub-title">
+          <h1 className="text-4xl md:text-6xl font-black text-deep-blue mb-6 tracking-tighter leading-[1.1]">Cas Pratiques</h1>
+          <p className="text-lg md:text-xl text-text-gray leading-relaxed font-medium max-w-2xl">
             Analyse détaillée de problématiques réelles et des solutions stratégiques mises en œuvre pour atteindre des résultats concrets.
           </p>
         </motion.div>
       </section>
 
-      <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+      <section className="bg-white py-20 px-10">
+        <div className="max-w-[1200px] mx-auto">
           <div className="space-y-20">
             {cases.map((c, i) => (
               <motion.div
@@ -52,30 +52,30 @@ const CasPratique = () => {
                 className="group"
               >
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-                  <div className="space-y-8">
-                    <h3 className="text-3xl md:text-4xl font-black text-deep-blue leading-tight group-hover:text-light-blue transition-colors duration-500">{c.title}</h3>
-                    <div className="space-y-6">
-                      <div className="flex items-start gap-6">
-                        <div className="p-3 bg-bg-light text-light-blue rounded-xl shadow-sm border border-slate-100">
-                          <Target className="w-6 h-6" />
+                  <div className="space-y-6">
+                    <h3 className="text-2xl md:text-3xl font-black text-deep-blue leading-tight group-hover:text-light-blue transition-colors duration-500">{c.title}</h3>
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-4">
+                        <div className="p-2.5 bg-bg-light text-light-blue rounded-xl shadow-sm border border-slate-100">
+                          <Target className="w-5 h-5" />
                         </div>
                         <div>
                           <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-text-gray mb-1">Objectif Stratégique</h4>
-                          <p className="text-xl font-black text-deep-blue leading-snug">{c.objective}</p>
+                          <p className="text-lg font-black text-deep-blue leading-snug">{c.objective}</p>
                         </div>
                       </div>
-                      <div className="flex items-start gap-6">
-                        <div className="p-3 bg-bg-light text-green-600 rounded-xl shadow-sm border border-slate-100">
-                          <TrendingUp className="w-6 h-6" />
+                      <div className="flex items-start gap-4">
+                        <div className="p-2.5 bg-bg-light text-green-600 rounded-xl shadow-sm border border-slate-100">
+                          <TrendingUp className="w-5 h-5" />
                         </div>
                         <div>
                           <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-text-gray mb-1">Impact Mesurable</h4>
-                          <p className="text-xl font-black text-deep-blue leading-snug">{c.results}</p>
+                          <p className="text-lg font-black text-deep-blue leading-snug">{c.results}</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="bg-deep-blue p-10 md:p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
+                  <div className="bg-deep-blue p-8 md:p-10 rounded-[2rem] shadow-2xl relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-48 h-48 bg-light-blue/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
                     <h4 className="text-[10px] font-black text-white mb-8 uppercase tracking-[0.2em] flex items-center gap-3">
                       <CheckCircle2 className="w-4 h-4 text-light-blue" />

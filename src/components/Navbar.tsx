@@ -25,9 +25,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-4 md:top-6 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'translate-y-[-5px]' : 'translate-y-0'}`}>
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className={`flex items-center justify-between transition-all duration-500 px-6 md:px-10 py-3 md:py-4 rounded-full bg-white/80 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-white/30`}>
+    <nav className={`fixed top-6 md:top-10 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'translate-y-[-10px]' : 'translate-y-0'}`}>
+      <div className="max-w-[1200px] mx-auto px-10">
+        <div className={`flex items-center justify-between transition-all duration-500 px-6 md:px-10 py-3 md:py-4 rounded-full bg-white/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] border border-white/30`}>
           <Link to="/" className="text-xl font-black text-deep-blue tracking-tighter group flex items-center gap-1.5">
             <span className="group-hover:text-light-blue transition-colors duration-300">Apolline Bellaclas</span>
             <span className="w-1.5 h-1.5 rounded-full bg-light-blue group-hover:scale-150 transition-transform duration-500"></span>
