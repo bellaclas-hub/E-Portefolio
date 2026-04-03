@@ -29,19 +29,19 @@ const Home = () => {
                   transition={{ delay: 0.5 }}
                   className="mb-8"
                 >
-                  <h2 className="text-white text-2xl md:text-3xl font-black tracking-tight mb-1">Apolline Bellaclas</h2>
-                  <span className="text-light-blue font-bold uppercase tracking-[0.3em] text-xs">
+                  <h2 className="text-white text-[28px] md:text-[32px] font-black tracking-tight mb-1">Apolline Bellaclas</h2>
+                  <span className="text-light-blue font-bold uppercase tracking-[0.3em] text-sm md:text-base">
                     Portfolio Étudiant
                   </span>
                 </motion.div>
                 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-10 uppercase">
+                <h1 className="text-3xl md:text-4xl lg:text-[48px] font-black text-white leading-[1.1] tracking-tight mb-10 uppercase">
                   ET SI LE FUTUR DU WEB <br />
                   <span className="text-light-blue">NE S’ÉCRIVAIT PLUS</span> <br />
                   SEULEMENT EN CODE ?
                 </h1>
                 
-                <p className="text-xl text-slate-200 font-medium leading-relaxed mb-10 max-w-2xl">
+                <p className="text-base md:text-lg text-slate-200 font-medium leading-relaxed mb-10 max-w-2xl">
                   L’alliance de l’intelligence artificielle et du no-code redéfinit les règles du digital. <br className="hidden md:block" />
                   Je ne me contente pas de l’observer : je l’expérimente à travers mes projets.
                 </p>
