@@ -8,60 +8,84 @@ const Home = () => {
       {/* HERO SECTION - ACADEMIC & REFLECTIVE */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-deep-blue py-32">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" 
-            alt="Minimalist Workspace" 
-            className="w-full h-full object-cover opacity-30 grayscale blur-[2px]"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-deep-blue/20" />
-          <div className="absolute inset-0 bg-gradient-to-b from-deep-blue/10 via-transparent to-deep-blue" />
+          <div className="absolute inset-0 bg-deep-blue" />
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-light-blue/5 to-transparent" />
+          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-bg-light to-transparent" />
         </div>
 
         <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-4xl"
-          >
-            <div className="flex flex-col items-start text-left">
-              <motion.span 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="text-light-blue font-bold uppercase tracking-[0.3em] text-xs mb-8"
-              >
-                Portfolio Étudiant
-              </motion.span>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tight mb-10 uppercase">
-                ET SI LE FUTUR DU WEB <br />
-                <span className="text-light-blue">NE S'ÉCRIVAIT PLUS</span> <br />
-                SEULEMENT EN CODE ?
-              </h1>
-              <p className="text-xl md:text-2xl text-slate-200 font-medium leading-relaxed mb-6 max-w-2xl">
-                L'alliance de l'intelligence artificielle et du NoCode redéfinit les règles du jeu. Je ne me contente pas de l'observer : je l'expérimente.
-              </p>
-              <p className="text-lg text-slate-400 font-medium leading-relaxed mb-12 max-w-2xl">
-                Ce portfolio est à la fois mon CV digital et une démonstration concrète de ces nouveaux outils.
-              </p>
-              <div className="flex flex-wrap gap-6">
-                <Link to="/portfolio" className="btn-primary px-10 py-5 text-lg">
-                  Voir mes projets
-                </Link>
-                <Link to="/contact" className="btn-outline-white px-10 py-5 text-lg">
-                  Me contacter
-                </Link>
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            {/* PHOTO A GAUCHE */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              className="order-2 lg:order-1"
+            >
+              <div className="relative">
+                <div className="aspect-[4/5] md:aspect-square max-w-md mx-auto lg:mx-0 rounded-[3rem] overflow-hidden border-2 border-light-blue/20 shadow-2xl relative z-10">
+                  <img 
+                    src="https://res.cloudinary.com/delgsyvkc/image/upload/v1773394135/Photo_Apolline_Bellaclas.pdf_lftaza.png" 
+                    alt="Apolline Bellaclas" 
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                {/* Decorative elements */}
+                <div className="absolute -top-6 -left-6 w-24 h-24 bg-light-blue/10 rounded-full blur-2xl" />
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-light-blue/5 rounded-full blur-3xl" />
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+
+            {/* TEXTE A DROITE */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+              className="order-1 lg:order-2"
+            >
+              <div className="flex flex-col items-start text-left">
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5 }}
+                  className="mb-8"
+                >
+                  <h2 className="text-white text-2xl md:text-3xl font-black tracking-tight mb-1">Apolline Bellaclas</h2>
+                  <span className="text-light-blue font-bold uppercase tracking-[0.3em] text-xs">
+                    Portfolio Étudiant
+                  </span>
+                </motion.div>
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-10 uppercase">
+                  ET SI LE FUTUR DU WEB <br />
+                  <span className="text-light-blue">NE S’ÉCRIVAIT PLUS</span> <br />
+                  SEULEMENT EN CODE ?
+                </h1>
+                
+                <p className="text-xl text-slate-200 font-medium leading-relaxed mb-10 max-w-2xl">
+                  L’alliance de l’intelligence artificielle et du no-code redéfinit les règles du digital. <br className="hidden md:block" />
+                  Je ne me contente pas de l’observer : je l’expérimente à travers mes projets.
+                </p>
+                
+                <div className="flex flex-wrap gap-6">
+                  <Link to="/portfolio" className="btn-primary px-10 py-5 text-lg">
+                    Voir mes projets
+                  </Link>
+                  <Link to="/contact" className="btn-outline-white px-10 py-5 text-lg">
+                    Me contacter
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
 
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/30 animate-bounce"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/30 animate-bounce hidden lg:block"
         >
           <ChevronDown className="w-8 h-8" />
         </motion.div>
