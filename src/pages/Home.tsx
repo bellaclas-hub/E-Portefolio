@@ -15,34 +15,12 @@ const Home = () => {
 
         <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            {/* PHOTO A GAUCHE */}
+            {/* TEXTE A GAUCHE */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               className="order-2 lg:order-1"
-            >
-              <div className="relative">
-                <div className="aspect-[4/5] md:aspect-square max-w-md mx-auto lg:mx-0 rounded-[3rem] overflow-hidden border-2 border-light-blue/20 shadow-2xl relative z-10">
-                  <img 
-                    src="https://res.cloudinary.com/delgsyvkc/image/upload/v1773394135/Photo_Apolline_Bellaclas.pdf_lftaza.png" 
-                    alt="Apolline Bellaclas" 
-                    className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                {/* Decorative elements */}
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-light-blue/10 rounded-full blur-2xl" />
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-light-blue/5 rounded-full blur-3xl" />
-              </div>
-            </motion.div>
-
-            {/* TEXTE A DROITE */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-              className="order-1 lg:order-2"
             >
               <div className="flex flex-col items-start text-left">
                 <motion.div 
@@ -76,6 +54,28 @@ const Home = () => {
                     Me contacter
                   </Link>
                 </div>
+              </div>
+            </motion.div>
+
+            {/* PHOTO A DROITE */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+              className="order-1 lg:order-2"
+            >
+              <div className="relative">
+                <div className="aspect-[4/5] md:aspect-square max-w-md mx-auto lg:mx-0 rounded-[3rem] overflow-hidden border-2 border-light-blue/20 shadow-2xl relative z-10">
+                  <img 
+                    src="https://res.cloudinary.com/delgsyvkc/image/upload/v1773394135/Photo_Apolline_Bellaclas.pdf_lftaza.png" 
+                    alt="Apolline Bellaclas" 
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                {/* Decorative elements */}
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-light-blue/10 rounded-full blur-2xl" />
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-light-blue/5 rounded-full blur-3xl" />
               </div>
             </motion.div>
           </div>
