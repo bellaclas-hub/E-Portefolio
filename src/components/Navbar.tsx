@@ -28,9 +28,9 @@ const Navbar = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'py-4' : 'py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className={`flex items-center justify-between transition-all duration-500 px-8 py-4 rounded-full bg-white/95 backdrop-blur-md shadow-lg border border-slate-200/60`}>
-          <Link to="/" className="text-xl font-black text-deep-black tracking-tighter group flex items-center gap-1.5">
-            <span className="group-hover:text-primary-blue transition-colors duration-300">AB</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-primary-blue group-hover:scale-150 transition-transform duration-500"></span>
+          <Link to="/" className="text-xl font-black text-deep-blue tracking-tighter group flex items-center gap-1.5">
+            <span className="group-hover:text-light-blue transition-colors duration-300">Apolline Bellaclas</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-light-blue group-hover:scale-150 transition-transform duration-500"></span>
           </Link>
 
           {/* Desktop Nav */}
@@ -39,10 +39,10 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-[11px] uppercase tracking-[0.2em] font-black transition-all hover:text-primary-blue relative group ${location.pathname === link.path ? 'text-primary-blue' : 'text-deep-black/70'}`}
+                className={`text-[11px] uppercase tracking-[0.2em] font-black transition-all hover:text-light-blue relative group ${location.pathname === link.path ? 'text-light-blue' : 'text-deep-blue/70'}`}
               >
                 {link.name}
-                <span className={`absolute -bottom-1.5 left-0 h-0.5 bg-primary-blue transition-all duration-500 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                <span className={`absolute -bottom-1.5 left-0 h-0.5 bg-light-blue transition-all duration-500 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`} />
               </Link>
             ))}
             <div className="h-4 w-px bg-slate-200 mx-1" />
@@ -50,7 +50,7 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/apolline-bellaclas/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-full bg-deep-black text-white hover:bg-primary-blue transition-all hover:scale-110 active:scale-95 shadow-md"
+              className="p-2.5 rounded-full bg-deep-blue text-white hover:bg-light-blue transition-all hover:scale-110 active:scale-95 shadow-md"
               title="LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
@@ -58,7 +58,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Toggle */}
-          <button className="md:hidden text-deep-black p-2 hover:bg-slate-100 rounded-lg transition-colors" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden text-deep-blue p-2 hover:bg-slate-100 rounded-lg transition-colors" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -79,7 +79,7 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-lg font-black ${location.pathname === link.path ? 'text-primary-blue' : 'text-deep-black'}`}
+                  className={`text-lg font-black ${location.pathname === link.path ? 'text-light-blue' : 'text-deep-blue'}`}
                 >
                   {link.name}
                 </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/apolline-bellaclas/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-primary-blue font-black"
+                className="flex items-center gap-2 text-light-blue font-black"
               >
                 <Linkedin className="w-5 h-5" /> LinkedIn
               </a>

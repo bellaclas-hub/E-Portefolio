@@ -19,7 +19,7 @@ const About = () => {
   };
 
   return (
-    <div className="pt-48 pb-32 bg-pure-white">
+    <div className="pt-48 pb-32 bg-bg-light">
       {/* Hero Section: À propos */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-40">
         <motion.div
@@ -28,21 +28,21 @@ const About = () => {
           variants={containerVariants}
           className="max-w-3xl"
         >
-          <motion.span variants={itemVariants} className="text-[10px] font-black uppercase tracking-[0.3em] text-primary-blue mb-6 block">
+          <motion.span variants={itemVariants} className="text-[10px] font-black uppercase tracking-[0.3em] text-light-blue mb-6 block">
             Profil & Vision
           </motion.span>
-          <motion.h1 variants={itemVariants} className="text-6xl md:text-8xl font-black text-deep-black mb-12 tracking-tighter leading-[0.9]">
+          <motion.h1 variants={itemVariants} className="text-6xl md:text-8xl font-black text-deep-blue mb-12 tracking-tighter leading-[0.9]">
             À propos
           </motion.h1>
           <motion.div variants={itemVariants} className="space-y-8 text-xl md:text-2xl text-text-gray leading-relaxed font-medium">
             <p>
-              Passionnée par le <span className="text-deep-black font-black">digital</span> et les nouvelles technologies, je m’intéresse particulièrement à la manière dont le <span className="text-primary-blue font-black">NoCode</span> et l’<span className="text-primary-blue font-black">intelligence artificielle</span> transforment la création de sites web.
+              Passionnée par le <span className="text-deep-blue font-black">digital</span> et les nouvelles technologies, je m’intéresse particulièrement à la manière dont le <span className="text-light-blue font-black">NoCode</span> et l’<span className="text-light-blue font-black">intelligence artificielle</span> transforment la création de sites web.
             </p>
             <p>
-              Ces outils redéfinissent les méthodes de production, en rendant la création <span className="text-deep-black font-black">plus rapide</span>, <span className="text-deep-black font-black">plus accessible</span> et <span className="text-deep-black font-black">plus collaborative</span>.
+              Ces outils redéfinissent les méthodes de production, en rendant la création <span className="text-deep-blue font-black">plus rapide</span>, <span className="text-deep-blue font-black">plus accessible</span> et <span className="text-deep-blue font-black">plus collaborative</span>.
             </p>
             <p>
-              Mon objectif est de comprendre ces évolutions et de les intégrer dans des projets <span className="text-deep-black font-black">concrets</span> et <span className="text-deep-black font-black">cohérents</span>.
+              Mon objectif est de comprendre ces évolutions et de les intégrer dans des projets <span className="text-deep-blue font-black">concrets</span> et <span className="text-deep-blue font-black">cohérents</span>.
             </p>
           </motion.div>
         </motion.div>
@@ -57,18 +57,18 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-4xl md:text-5xl font-black text-deep-black mb-10 tracking-tight">Mon approche</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-deep-blue mb-10 tracking-tight">Mon approche</h2>
             <div className="space-y-6 text-lg text-text-gray leading-relaxed">
               <p>
-                Je développe une approche basée sur l’équilibre entre <span className="text-deep-black font-bold">stratégie</span>, <span className="text-deep-black font-bold">créativité</span> et <span className="text-deep-black font-bold">maîtrise des outils digitaux</span>.
+                Je développe une approche basée sur l’équilibre entre <span className="text-deep-blue font-bold">stratégie</span>, <span className="text-deep-blue font-bold">créativité</span> et <span className="text-deep-blue font-bold">maîtrise des outils digitaux</span>.
               </p>
               <p>
-                Chaque projet est pour moi l’occasion de structurer une réflexion, de proposer des solutions adaptées et d’exploiter le potentiel des technologies actuelles pour créer des <span className="text-primary-blue font-bold">expériences pertinentes</span>.
+                Chaque projet est pour moi l’occasion de structurer une réflexion, de proposer des solutions adaptées et d’exploiter le potentiel des technologies actuelles pour créer des <span className="text-light-blue font-bold">expériences pertinentes</span>.
               </p>
             </div>
           </motion.div>
           <div className="relative">
-            <div className="aspect-square bg-slate-50 rounded-[4rem] flex items-center justify-center p-12 border border-slate-100">
+            <div className="aspect-square bg-white rounded-[4rem] flex items-center justify-center p-12 border border-slate-100 shadow-sm">
               <div className="grid grid-cols-2 gap-8 w-full">
                 {[
                   { icon: <Target className="w-8 h-8" />, label: "Stratégie" },
@@ -82,10 +82,10 @@ const About = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center gap-4 text-center"
+                    className="bg-bg-light p-8 rounded-3xl border border-slate-100 flex flex-col items-center gap-4 text-center"
                   >
-                    <div className="text-primary-blue">{item.icon}</div>
-                    <span className="text-[10px] font-black uppercase tracking-widest">{item.label}</span>
+                    <div className="text-light-blue">{item.icon}</div>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-deep-blue">{item.label}</span>
                   </motion.div>
                 ))}
               </div>
@@ -95,12 +95,12 @@ const About = () => {
       </section>
 
       {/* Compétences & Savoir-faire */}
-      <section className="bg-deep-black py-48 px-6 md:px-12 lg:px-24 mb-48">
+      <section className="bg-deep-blue py-48 px-6 md:px-12 lg:px-24 mb-48">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-32">
             {/* Compétences */}
             <div>
-              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-primary-blue mb-12">Compétences</h2>
+              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-12">Compétences</h2>
               <ul className="space-y-10">
                 {[
                   "Stratégie digitale et création de contenu",
@@ -117,7 +117,7 @@ const About = () => {
                     transition={{ delay: i * 0.1 }}
                     className="text-2xl md:text-3xl font-black text-white flex items-start gap-6 group"
                   >
-                    <span className="text-primary-blue mt-1">0{i + 1}</span>
+                    <span className="text-light-blue mt-1">0{i + 1}</span>
                     <span className="group-hover:translate-x-4 transition-transform duration-500">{skill}</span>
                   </motion.li>
                 ))}
@@ -126,7 +126,7 @@ const About = () => {
 
             {/* Savoir-faire */}
             <div>
-              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-primary-blue mb-12">Savoir-faire</h2>
+              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-12">Savoir-faire</h2>
               <ul className="space-y-10">
                 {[
                   "Structurer et piloter un projet digital",
@@ -141,9 +141,9 @@ const About = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="text-xl md:text-2xl font-bold text-light-gray flex items-start gap-6"
+                    className="text-xl md:text-2xl font-bold text-white/80 flex items-start gap-6"
                   >
-                    <div className="w-2 h-2 rounded-full bg-primary-blue mt-3 shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-light-blue mt-3 shrink-0" />
                     {item}
                   </motion.li>
                 ))}
@@ -157,7 +157,7 @@ const About = () => {
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-1">
-            <h2 className="text-4xl md:text-5xl font-black text-deep-black mb-8 tracking-tight">Ma personnalité</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-deep-blue mb-8 tracking-tight">Ma personnalité</h2>
             <p className="text-text-gray text-lg font-medium">L'humain derrière les outils.</p>
           </div>
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
@@ -189,10 +189,10 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-10 bg-slate-50 rounded-[3rem] border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500"
+                className="p-10 bg-white rounded-[3rem] border border-slate-100 hover:shadow-xl transition-all duration-500"
               >
-                <div className="text-primary-blue mb-6">{trait.icon}</div>
-                <h3 className="text-xl font-black text-deep-black mb-4">{trait.title}</h3>
+                <div className="text-light-blue mb-6">{trait.icon}</div>
+                <h3 className="text-xl font-black text-deep-blue mb-4">{trait.title}</h3>
                 <p className="text-text-gray font-medium leading-relaxed">{trait.desc}</p>
               </motion.div>
             ))}
@@ -207,25 +207,25 @@ const About = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="bg-slate-50 rounded-[5rem] p-16 md:p-24 text-center border border-slate-100 relative overflow-hidden"
+          className="bg-white rounded-[5rem] p-16 md:p-24 text-center border border-slate-100 relative overflow-hidden shadow-sm"
         >
           <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle,var(--primary-blue)_0%,transparent_70%)]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle,var(--light-blue)_0%,transparent_70%)]" />
           </div>
           
           <div className="relative z-10 max-w-4xl mx-auto">
-            <Eye className="w-12 h-12 text-primary-blue mx-auto mb-12" />
-            <h2 className="text-xs font-black uppercase tracking-[0.5em] text-primary-blue mb-12">Vision</h2>
-            <div className="space-y-10 text-2xl md:text-4xl font-black text-deep-black leading-tight tracking-tight">
+            <Eye className="w-12 h-12 text-light-blue mx-auto mb-12" />
+            <h2 className="text-xs font-black uppercase tracking-[0.5em] text-light-blue mb-12">Vision</h2>
+            <div className="space-y-10 text-2xl md:text-4xl font-black text-deep-blue leading-tight tracking-tight">
               <p>
-                Je considère que le <span className="text-primary-blue">NoCode</span> et l’<span className="text-primary-blue">intelligence artificielle</span> ne remplacent pas les compétences humaines, mais les <span className="underline decoration-primary-blue decoration-4 underline-offset-8">renforcent</span>.
+                Je considère que le <span className="text-light-blue">NoCode</span> et l’<span className="text-light-blue">intelligence artificielle</span> ne remplacent pas les compétences humaines, mais les <span className="underline decoration-light-blue decoration-4 underline-offset-8">renforcent</span>.
               </p>
               <p className="text-text-gray text-xl md:text-2xl font-bold leading-relaxed">
                 Ils permettent de gagner en rapidité et en efficacité, tout en laissant une place essentielle à la réflexion, à la stratégie et à la créativité.
               </p>
               <div className="pt-12">
                 <p className="text-4xl md:text-6xl font-black tracking-tighter italic">
-                  "Créer un site aujourd’hui ne nécessite plus de coder, mais nécessite toujours de <span className="text-primary-blue">penser</span>."
+                  "Créer un site aujourd’hui ne nécessite plus de coder, mais nécessite toujours de <span className="text-light-blue">penser</span>."
                 </p>
               </div>
             </div>
@@ -242,10 +242,10 @@ const About = () => {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
           </Link>
           <div className="flex items-center gap-4">
-            <a href="https://www.linkedin.com/in/apolline-bellaclas/" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-slate-50 hover:bg-primary-blue hover:text-white transition-all duration-500">
+            <a href="https://www.linkedin.com/in/apolline-bellaclas/" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-white border border-slate-100 text-deep-blue hover:bg-light-blue hover:text-white transition-all duration-500 shadow-sm">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="mailto:bellaclas.a@gmail.com" className="p-4 rounded-full bg-slate-50 hover:bg-primary-blue hover:text-white transition-all duration-500">
+            <a href="mailto:bellaclas.a@gmail.com" className="p-4 rounded-full bg-white border border-slate-100 text-deep-blue hover:bg-light-blue hover:text-white transition-all duration-500 shadow-sm">
               <Mail className="w-5 h-5" />
             </a>
           </div>

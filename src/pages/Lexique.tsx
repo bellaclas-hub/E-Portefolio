@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { 
   Bot, 
   Cpu, 
@@ -167,7 +168,7 @@ const Lexique = () => {
   const allCategoryNames = ['Tous', ...categories.map(c => c.title)];
 
   return (
-    <div className="pt-48 pb-24 bg-slate-50 min-h-screen">
+    <div className="pt-48 pb-24 bg-bg-light min-h-screen">
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -175,7 +176,7 @@ const Lexique = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-          <h1 className="huge-title">Lexique Expert</h1>
+          <h1 className="huge-title text-deep-blue">Lexique Expert</h1>
           <p className="sub-title">
             Un portail pédagogique pour maîtriser les concepts stratégiques du digital, du NoCode et de l'IA.
           </p>
@@ -190,7 +191,7 @@ const Lexique = () => {
             <input 
               type="text"
               placeholder="Rechercher un concept..."
-              className="w-full pl-16 pr-6 py-4 rounded-2xl bg-slate-50 border-none focus:ring-4 focus:ring-primary-blue/5 outline-none transition-all font-bold text-deep-black"
+              className="w-full pl-16 pr-6 py-4 rounded-2xl bg-bg-light border-none focus:ring-4 focus:ring-light-blue/5 outline-none transition-all font-bold text-deep-blue"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -211,8 +212,8 @@ const Lexique = () => {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-6 py-3 rounded-full text-sm font-black transition-all duration-300 ${
                   activeCategory === cat 
-                  ? 'bg-primary-blue text-white shadow-lg shadow-primary-blue/20 scale-105' 
-                  : 'bg-slate-50 text-slate-500 hover:bg-slate-100'
+                  ? 'bg-deep-blue text-white shadow-lg shadow-deep-blue/20 scale-105' 
+                  : 'bg-bg-light text-slate-500 hover:bg-slate-100'
                 }`}
               >
                 {cat}
@@ -234,10 +235,10 @@ const Lexique = () => {
                 transition={{ duration: 0.5 }}
               >
                 <div className="flex items-center gap-4 mb-10">
-                  <div className="w-12 h-12 rounded-xl bg-white shadow-md flex items-center justify-center text-primary-blue border border-slate-100">
+                  <div className="w-12 h-12 rounded-xl bg-white shadow-md flex items-center justify-center text-light-blue border border-slate-100">
                     {category.icon}
                   </div>
-                  <h2 className="text-3xl font-black text-deep-black tracking-tight">{category.title}</h2>
+                  <h2 className="text-3xl font-black text-deep-blue tracking-tight">{category.title}</h2>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
@@ -250,10 +251,10 @@ const Lexique = () => {
                       className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col"
                     >
                       <div className="flex items-center gap-4 mb-8">
-                        <div className="w-10 h-10 rounded-xl bg-slate-50 text-primary-blue flex items-center justify-center group-hover:bg-primary-blue group-hover:text-white transition-colors duration-500">
+                        <div className="w-10 h-10 rounded-xl bg-bg-light text-light-blue flex items-center justify-center group-hover:bg-light-blue group-hover:text-white transition-colors duration-500">
                           {term.icon}
                         </div>
-                        <h3 className="text-xl font-black text-deep-black group-hover:text-primary-blue transition-colors duration-300">
+                        <h3 className="text-xl font-black text-deep-blue group-hover:text-light-blue transition-colors duration-300">
                           {term.name}
                         </h3>
                       </div>
@@ -267,8 +268,8 @@ const Lexique = () => {
                         </div>
                         
                         <div className="pt-6 border-t border-slate-50">
-                          <span className="text-[9px] font-black uppercase tracking-widest text-primary-blue block mb-2">Enjeu Stratégique</span>
-                          <p className="text-deep-black font-bold text-xs leading-relaxed">
+                          <span className="text-[9px] font-black uppercase tracking-widest text-light-blue block mb-2">Enjeu Stratégique</span>
+                          <p className="text-deep-blue font-bold text-xs leading-relaxed">
                             {term.stake}
                           </p>
                         </div>
@@ -284,10 +285,10 @@ const Lexique = () => {
               animate={{ opacity: 1 }}
               className="text-center py-20"
             >
-              <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-bg-light rounded-full flex items-center justify-center mx-auto mb-6">
                 <SearchIcon className="w-8 h-8 text-slate-300" />
               </div>
-              <h3 className="text-2xl font-black text-deep-black mb-2">Aucun résultat trouvé</h3>
+              <h3 className="text-2xl font-black text-deep-blue mb-2">Aucun résultat trouvé</h3>
               <p className="text-text-gray font-medium">Essayez d'ajuster vos filtres ou votre recherche.</p>
             </motion.div>
           )}
@@ -296,8 +297,8 @@ const Lexique = () => {
 
       {/* Footer CTA */}
       <section className="mt-48 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-        <div className="bg-deep-black rounded-[4rem] p-16 md:p-24 text-center text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-blue/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
+        <div className="bg-deep-blue rounded-[4rem] p-16 md:p-24 text-center text-white relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-light-blue/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -307,12 +308,12 @@ const Lexique = () => {
             <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
               L'expertise au service <br /> de votre croissance.
             </h2>
-            <a 
-              href="/contact" 
-              className="inline-flex items-center justify-center px-12 py-6 bg-primary-blue text-white rounded-full font-black text-lg uppercase tracking-widest hover:bg-white hover:text-deep-black transition-all duration-500 hover:scale-105"
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center justify-center px-12 py-6 bg-light-blue text-white rounded-full font-black text-lg uppercase tracking-widest hover:bg-white hover:text-deep-blue transition-all duration-500 hover:scale-105"
             >
               Me contacter
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

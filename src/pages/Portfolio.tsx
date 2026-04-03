@@ -18,7 +18,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="pt-48 pb-32 bg-pure-white">
+    <div className="pt-48 pb-32 bg-bg-light">
       {/* Hero Section */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-32">
         <motion.div
@@ -27,10 +27,10 @@ const Portfolio = () => {
           variants={containerVariants}
           className="max-w-4xl"
         >
-          <motion.span variants={itemVariants} className="text-[10px] font-black uppercase tracking-[0.3em] text-primary-blue mb-6 block">
+          <motion.span variants={itemVariants} className="text-[10px] font-black uppercase tracking-[0.3em] text-light-blue mb-6 block">
             Étude de cas : Projet Master
           </motion.span>
-          <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-black text-deep-black mb-12 tracking-tighter leading-[0.9]">
+          <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-black text-deep-blue mb-12 tracking-tighter leading-[0.9]">
             Création d’un site vitrine avec Lovable
           </motion.h1>
           <motion.p variants={itemVariants} className="text-xl md:text-2xl text-text-gray leading-relaxed font-medium max-w-2xl">
@@ -48,16 +48,16 @@ const Portfolio = () => {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-primary-blue mb-8">Contexte</h2>
+            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8">Contexte</h2>
             <div className="space-y-6 text-lg text-text-gray leading-relaxed max-w-xl">
               <p>
-                Dans le cadre de ma recherche de <span className="text-deep-black font-bold">CDI</span>, j’ai souhaité aller au-delà du format classique du CV.
+                Dans le cadre de ma recherche de <span className="text-deep-blue font-bold">CDI</span>, j’ai souhaité aller au-delà du format classique du CV.
               </p>
               <p>
                 Aujourd’hui, dans les métiers du digital, un CV ne suffit plus toujours à refléter les compétences réelles, notamment en création, en stratégie ou en utilisation d’outils.
               </p>
               <p>
-                Le marché étant particulièrement concurrentiel, avec beaucoup de candidats et peu d’opportunités, il devient essentiel de <span className="text-primary-blue font-bold">se démarquer</span>.
+                Le marché étant particulièrement concurrentiel, avec beaucoup de candidats et peu d’opportunités, il devient essentiel de <span className="text-light-blue font-bold">se démarquer</span>.
               </p>
             </div>
           </motion.div>
@@ -68,10 +68,10 @@ const Portfolio = () => {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-primary-blue mb-8">Pourquoi ce projet</h2>
+            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8">Pourquoi ce projet</h2>
             <div className="space-y-6 text-lg text-text-gray leading-relaxed max-w-xl">
               <p>
-                J’ai donc choisi de créer un <span className="text-deep-black font-bold">site vitrine personnel</span> afin de présenter mon profil de manière plus complète et plus visuelle.
+                J’ai donc choisi de créer un <span className="text-deep-blue font-bold">site vitrine personnel</span> afin de présenter mon profil de manière plus complète et plus visuelle.
               </p>
               <p>
                 L’objectif était de me différencier des autres candidatures et de valoriser concrètement mes compétences, mes savoir-faire et ma capacité à concevoir un projet digital.
@@ -82,15 +82,107 @@ const Portfolio = () => {
       </section>
 
       {/* Choix de l'outil */}
-      <section className="bg-slate-50 py-32 px-6 md:px-12 lg:px-24 mb-48 border-y border-slate-100">
+      <section className="bg-white py-32 px-6 md:px-12 lg:px-24 mb-48 border-y border-slate-100">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-primary-blue mb-8">Choix de l’outil : Lovable</h2>
-            <p className="text-2xl md:text-3xl font-black text-deep-black leading-tight mb-10">
-              Pour réaliser ce projet, j’ai utilisé <span className="text-primary-blue">Lovable</span>, un outil NoCode assisté par intelligence artificielle.
+            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8">Choix de l’outil : Lovable</h2>
+            <p className="text-2xl md:text-3xl font-black text-deep-blue leading-tight mb-10">
+              Pour réaliser ce projet, j’ai utilisé <span className="text-light-blue">Lovable</span>, un outil NoCode assisté par intelligence artificielle.
             </p>
             <p className="text-lg text-text-gray leading-relaxed font-medium">
               Cet outil permet de concevoir rapidement un site structuré sans développement complexe, en automatisant certaines étapes clés de la production.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Charte Graphique Section */}
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
+        <div className="grid lg:grid-cols-2 gap-24">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8">4.1 Objectif de la charte graphique</h2>
+            <div className="space-y-6 text-lg text-text-gray leading-relaxed">
+              <p>
+                La charte graphique du portfolio a pour objectif d’assurer :
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-light-blue shrink-0" />
+                  Une cohérence avec mon site professionnel existant
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-light-blue shrink-0" />
+                  Une image professionnelle et structurée
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-light-blue shrink-0" />
+                  Une lisibilité optimale du contenu
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-light-blue shrink-0" />
+                  Une identité visuelle stable et reconnaissable
+                </li>
+              </ul>
+              <p>
+                Le choix a été fait de conserver l’univers graphique déjà développé sur mon site personnel afin d’assurer une continuité entre mes supports académiques et professionnels.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8">4.2 Identité visuelle</h2>
+            <div className="space-y-8">
+              <div>
+                <h4 className="font-black text-deep-blue mb-4 flex items-center gap-2">
+                  🎨 Couleurs
+                </h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-4 rounded-xl bg-deep-blue text-white text-xs font-bold">
+                    Bleu profond (Dominante)
+                    <div className="mt-2 opacity-70 font-normal">Confiance, rigueur</div>
+                  </div>
+                  <div className="p-4 rounded-xl bg-light-blue text-white text-xs font-bold">
+                    Bleu clair (Accent)
+                    <div className="mt-2 opacity-70 font-normal">Interactivité</div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 className="font-black text-deep-blue mb-4 flex items-center gap-2">
+                  🔤 Typographie
+                </h4>
+                <p className="text-text-gray font-medium">
+                  Une police moderne sans-serif, lisible sur écran, favorisant une lecture fluide et structurée.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Application concrète Section */}
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48 bg-white rounded-[3rem] p-12 md:p-20 border border-slate-100 shadow-sm">
+        <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-12">Application concrète</h2>
+        <div className="grid md:grid-cols-2 gap-16">
+          <div className="p-10 rounded-[2rem] bg-bg-light border border-slate-100">
+            <h3 className="text-xl font-black text-deep-blue mb-6">Focus Lovable</h3>
+            <p className="text-text-gray leading-relaxed font-medium">
+              L'utilisation de Lovable a permis de mettre en œuvre cette charte graphique avec une grande précision, tout en bénéficiant de la rapidité du NoCode.
+            </p>
+          </div>
+          <div className="p-10 rounded-[2rem] bg-bg-light border border-slate-100">
+            <h3 className="text-xl font-black text-deep-blue mb-6">Cohérence</h3>
+            <p className="text-text-gray leading-relaxed font-medium">
+              Chaque élément visuel a été pensé pour refléter un positionnement marketing B2B, orienté sérieux et crédibilité.
             </p>
           </div>
         </div>
@@ -102,8 +194,8 @@ const Portfolio = () => {
           {/* Difficultés */}
           <div>
             <div className="flex items-center gap-4 mb-12">
-              <AlertCircle className="w-6 h-6 text-primary-blue" />
-              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-deep-black">Difficultés rencontrées</h2>
+              <AlertCircle className="w-6 h-6 text-light-blue" />
+              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-deep-blue">Difficultés rencontrées</h2>
             </div>
             <ul className="space-y-8">
               {[
@@ -130,8 +222,8 @@ const Portfolio = () => {
           {/* Apports */}
           <div>
             <div className="flex items-center gap-4 mb-12">
-              <TrendingUp className="w-6 h-6 text-primary-blue" />
-              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-deep-black">Apports du projet</h2>
+              <TrendingUp className="w-6 h-6 text-light-blue" />
+              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-deep-blue">Apports du projet</h2>
             </div>
             <ul className="space-y-8">
               {[
@@ -148,7 +240,7 @@ const Portfolio = () => {
                   transition={{ delay: i * 0.1 }}
                   className="flex items-start gap-4 text-lg text-text-gray font-medium"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary-blue mt-2.5 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-light-blue mt-2.5 shrink-0" />
                   {item}
                 </motion.li>
               ))}
@@ -160,12 +252,12 @@ const Portfolio = () => {
       {/* Analyse */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-xs font-black uppercase tracking-[0.4em] text-primary-blue mb-12">Analyse</h2>
-          <p className="text-2xl md:text-4xl font-black text-deep-black leading-tight tracking-tight mb-10">
-            Ce projet montre que le NoCode et l’intelligence artificielle permettent aujourd’hui de créer des sites web <span className="text-primary-blue">rapidement et efficacement</span>.
+          <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-12">Analyse</h2>
+          <p className="text-2xl md:text-4xl font-black text-deep-blue leading-tight tracking-tight mb-10">
+            Ce projet montre que le NoCode et l’intelligence artificielle permettent aujourd’hui de créer des sites web <span className="text-light-blue">rapidement et efficacement</span>.
           </p>
           <p className="text-xl text-text-gray font-medium leading-relaxed">
-            Cependant, ces outils nécessitent toujours une <span className="text-deep-black font-bold">réflexion stratégique</span> pour concevoir une expérience pertinente.
+            Cependant, ces outils nécessitent toujours une <span className="text-deep-blue font-bold">réflexion stratégique</span> pour concevoir une expérience pertinente.
           </p>
         </div>
       </section>
@@ -196,12 +288,12 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-10 bg-deep-black rounded-[3rem] text-white"
+              className="p-10 bg-deep-blue rounded-[3rem] text-white"
             >
-              <BarChart3 className="w-8 h-8 text-primary-blue mb-8" />
+              <BarChart3 className="w-8 h-8 text-light-blue mb-8" />
               <div className="text-5xl font-black mb-4 tracking-tighter">{stat.value}</div>
-              <div className="text-xs font-black uppercase tracking-widest text-primary-blue mb-4">{stat.label}</div>
-              <p className="text-sm text-light-gray font-medium leading-relaxed">{stat.desc}</p>
+              <div className="text-xs font-black uppercase tracking-widest text-light-blue mb-4">{stat.label}</div>
+              <p className="text-sm text-slate-300 font-medium leading-relaxed">{stat.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -212,12 +304,12 @@ const Portfolio = () => {
 
       {/* Objectif */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-48">
-        <div className="bg-slate-50 rounded-[4rem] p-16 md:p-24 border border-slate-100 text-center">
-          <Rocket className="w-12 h-12 text-primary-blue mx-auto mb-10" />
-          <h2 className="text-xs font-black uppercase tracking-[0.4em] text-primary-blue mb-10">Objectif professionnel</h2>
+        <div className="bg-white rounded-[4rem] p-16 md:p-24 border border-slate-100 text-center">
+          <Rocket className="w-12 h-12 text-light-blue mx-auto mb-10" />
+          <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-10">Objectif professionnel</h2>
           <div className="max-w-3xl mx-auto">
-            <p className="text-2xl md:text-4xl font-black text-deep-black leading-tight mb-10">
-              L’objectif de ce projet est clair : me démarquer dans ma recherche d’emploi et réussir à <span className="text-primary-blue underline decoration-4 underline-offset-8">signer un CDI</span>.
+            <p className="text-2xl md:text-4xl font-black text-deep-blue leading-tight mb-10">
+              L’objectif de ce projet est clair : me démarquer dans ma recherche d’emploi et réussir à <span className="text-light-blue underline decoration-4 underline-offset-8">signer un CDI</span>.
             </p>
             <p className="text-lg text-text-gray font-medium leading-relaxed">
               Ce site vitrine est un levier pour montrer concrètement mes compétences et mon positionnement dans un environnement digital en constante évolution.
