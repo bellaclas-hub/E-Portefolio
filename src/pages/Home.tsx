@@ -214,14 +214,24 @@ const Home = () => {
                 className="block group"
               >
                 <div className="aspect-video bg-white/5 rounded-[2.5rem] border border-white/10 p-3 backdrop-blur-md transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl group-hover:shadow-light-blue/20">
-                  <div className="w-full h-full rounded-[1.8rem] overflow-hidden bg-deep-blue border border-white/5 relative">
-                    <img 
-                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" 
-                      alt="Aperçu du site vitrine Apolline Bellaclas" 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-deep-blue/20 group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="w-full h-full rounded-[1.8rem] overflow-hidden bg-deep-blue border border-white/5 relative flex flex-col">
+                    {/* Browser Header Mockup */}
+                    <div className="bg-white/10 w-full h-7 flex items-center px-4 gap-1.5 border-b border-white/5">
+                      <div className="w-2 h-2 rounded-full bg-[#FF5F56]" />
+                      <div className="w-2 h-2 rounded-full bg-[#FFBD2E]" />
+                      <div className="w-2 h-2 rounded-full bg-[#27C93F]" />
+                      <div className="ml-4 bg-white/5 rounded-md h-4 w-1/2" />
+                    </div>
+                    {/* Browser Content */}
+                    <div className="flex-grow relative overflow-hidden">
+                      <img 
+                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" 
+                        alt="Aperçu du site vitrine Apolline Bellaclas" 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-deep-blue/20 group-hover:bg-transparent transition-colors duration-500" />
+                    </div>
                   </div>
                 </div>
               </a>
