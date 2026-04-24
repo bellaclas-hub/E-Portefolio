@@ -96,25 +96,6 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* HOOK SECTION - CURIOSITY */}
-      <section className="py-12 bg-light-blue text-white overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center text-center gap-8"
-          >
-            <h2 className="text-2xl md:text-4xl font-black leading-tight max-w-3xl">
-              "La technologie n'est plus une barrière, elle devient un accélérateur de vision."
-            </h2>
-            <p className="text-lg md:text-xl text-white/90 font-medium max-w-2xl">
-              Découvrez comment j'utilise ces nouveaux leviers pour transformer des idées en réalités digitales.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* INTRODUCTION - MA VISION (NARRATIVE) */}
       <section className="py-20 bg-bg-light">
         <div className="max-w-[1200px] mx-auto px-10">
@@ -172,19 +153,19 @@ const Home = () => {
               02. Le Problème
             </motion.span>
             <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-4 leading-tight">
-              Le paradoxe du digital : <br /> Trop de projets, pas assez de temps.
+              L’accélération du digital.
             </h2>
             <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium mb-10">
-              Aujourd'hui, une entreprise ne peut plus attendre 6 mois pour tester une idée. Le marché est trop rapide. Mais comment allier vitesse de déploiement et qualité stratégique sans compromis ?
+              Dans un environnement où l’IA et les LLM redéfinissent les standards de production, le véritable enjeu n’est plus seulement la vitesse, mais la pertinence et la structure de l’exécution.
             </p>
             <div className="grid md:grid-cols-2 gap-8 text-left">
               <div className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="text-xl font-black mb-4 text-deep-blue">L'inertie technique</h4>
-                <p className="text-text-gray">Les cycles de développement classiques freinent l'innovation et l'expérimentation rapide.</p>
+                <h4 className="text-xl font-black mb-4 text-deep-blue">Compression des cycles</h4>
+                <p className="text-text-gray">L'IA permet d'accélérer drastiquement le contenu et le prototypage. Une refonte web qui exigeait autrefois 6 mois de travail peut désormais être structurée et lancée en un temps record sans sacrifier la vision stratégique.</p>
               </div>
               <div className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="text-xl font-black mb-4 text-deep-blue">Le manque d'agilité</h4>
-                <p className="text-text-gray">La difficulté de pivoter ou d'ajuster une stratégie digitale en temps réel face aux retours utilisateurs.</p>
+                <h4 className="text-xl font-black mb-4 text-deep-blue">Le paradoxe de l'exigence</h4>
+                <p className="text-text-gray">Si les délais se réduisent, les attentes en termes de qualité et de ROI augmentent. Le défi n'est plus de produire rapidement, mais de garantir une performance et des résultats mesurables dès le déploiement.</p>
               </div>
             </div>
           </div>
@@ -248,35 +229,50 @@ const Home = () => {
               viewport={{ once: true }}
               className="order-2 lg:order-1"
             >
-              <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-2 block">03. L'Expérimentation</span>
-              <h2 className="text-3xl md:text-5xl font-black mb-4 leading-tight text-white">Mon laboratoire : <br /> Le projet Lovable.</h2>
-              <p className="text-base md:text-lg text-slate-200 leading-relaxed mb-8 font-medium">
-                Pour répondre à ce besoin de vitesse, j'ai testé les limites du NoCode assisté par IA. Ce portfolio est le fruit de cette expérimentation concrète.
-              </p>
+              <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-2 block">03. Mon Approche</span>
+              <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight text-white">Aller au-delà <br /> du CV classique.</h2>
               
-              <div className="space-y-6 mb-10">
-                <div className="flex items-center gap-5">
-                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-light-blue shadow-inner border border-white/5">
-                    <Zap className="w-7 h-7" />
-                  </div>
-                  <div>
-                    <h4 className="font-black text-xl text-white mb-1">Vitesse d'exécution</h4>
-                    <p className="text-slate-300 font-medium">De l'idée au déploiement en un temps record.</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-light-blue shadow-inner border border-white/5">
-                    <Brain className="w-7 h-7" />
-                  </div>
-                  <div>
-                    <h4 className="font-black text-xl text-white mb-1">IA Générative</h4>
-                    <p className="text-slate-300 font-medium">Une assistance intelligente pour la structure et le code.</p>
-                  </div>
+              <div className="space-y-6 text-base md:text-lg text-slate-200 leading-relaxed font-medium mb-8">
+                <p>
+                  J’ai créé ce site vitrine pour aller au-delà d’un CV classique.
+                </p>
+                <p>
+                  Aujourd’hui, un profil marketing ne se résume pas à une liste d’expériences : il doit être capable de montrer concrètement ce qu’il sait faire. Ce site me permet de présenter mes projets, mes contenus et ma manière de travailler de façon visuelle et structurée.
+                </p>
+                <p className="text-white font-bold">
+                  C’est aussi un moyen pour moi de valoriser ce qui fait ma différence :
+                  <span className="block mt-2 text-light-blue">👉 un double parcours marketing et commercial, qui me permet de comprendre à la fois les enjeux de communication et les attentes concrètes des équipes commerciales.</span>
+                </p>
+                <p>
+                  Grâce à cette approche, je conçois des contenus qui ne sont pas seulement esthétiques ou engageants, mais réellement utiles pour la prospection et la performance business.
+                </p>
+              </div>
+
+              <div className="mb-10">
+                <h4 className="font-black text-lg text-white mb-4 uppercase tracking-wider">Démonstration de mes compétences :</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    "Structuration d’un message",
+                    "Création de contenu",
+                    "Logique UX",
+                    "Outils digitaux (Lovable)"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/5">
+                      <div className="w-2 h-2 rounded-full bg-light-blue shadow-[0_0_10px_rgba(0,210,255,0.5)]" />
+                      <span className="text-slate-200 text-sm font-bold">{item}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
+              <div className="bg-light-blue/10 border-l-4 border-light-blue p-6 rounded-r-2xl mb-10">
+                <p className="text-white font-bold leading-relaxed">
+                  🎯 L’objectif est simple : permettre à un recruteur de comprendre rapidement qui je suis, ce que je sais faire, et ce que je peux apporter.
+                </p>
+              </div>
+
               <Link to="/portfolio" className="btn-primary shadow-lg hover:shadow-light-blue/20 transition-all">
-                Analyser le cas pratique
+                Voir mes projets concrets
               </Link>
             </motion.div>
           </div>
@@ -326,26 +322,6 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* INTERMEDIATE REFLECTION SECTION */}
-      <section className="py-16 bg-deep-blue text-white text-center">
-        <div className="max-w-[1200px] mx-auto px-10">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-          >
-            <blockquote className="text-xl md:text-3xl font-black leading-tight italic mb-6">
-              "La technologie n'est qu'un levier. <br /> 
-              <span className="text-light-blue">La stratégie reste le moteur.</span>"
-            </blockquote>
-            <div className="w-16 h-1 bg-light-blue mx-auto mb-6" />
-            <p className="text-base md:text-lg text-slate-400 max-w-2xl mx-auto">
-              Mon rôle est de naviguer entre ces deux mondes pour créer des expériences qui ne sont pas seulement belles, mais performantes.
-            </p>
-          </motion.div>
         </div>
       </section>
 
