@@ -174,13 +174,13 @@ const Home = () => {
         </div>
         
         <div className="max-w-[1200px] mx-auto px-10 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 lg:gap-24 items-start">
+          <div className="grid lg:grid-cols-2 gap-20 lg:gap-24 items-center">
             {/* IMAGE A DROITE (DESKTOP) / EN HAUT (MOBILE) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative order-1 lg:order-2 pt-2"
+              className="relative order-1 lg:order-2"
             >
               <a 
                 href="https://lovable.dev" 
@@ -210,7 +210,7 @@ const Home = () => {
                   </div>
                 </div>
                 
-                {/* Badge 90% (Repositionné pour être rattaché visuellement à l'image) */}
+                {/* Badge 90% */}
                 <div className="absolute -bottom-4 -right-4 bg-light-blue p-5 md:p-6 rounded-2xl shadow-2xl z-20 text-deep-blue transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
                   <p className="text-3xl md:text-4xl font-black mb-0.5">90%</p>
                   <p className="text-[9px] font-black uppercase tracking-widest leading-none">Gain de temps</p>
@@ -249,22 +249,24 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-
-                {/* 3. Objectif - Highlighted Banner */}
-                <div className="bg-gradient-to-r from-light-blue/20 to-transparent border-l-4 border-light-blue p-8 rounded-r-3xl">
-                  <p className="text-white text-lg md:text-xl font-black leading-relaxed">
-                    🎯 L’objectif : permettre à un recruteur de comprendre rapidement qui je suis, ce que je sais faire, et ce que je peux apporter.
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-12">
-                <Link to="/portfolio" className="btn-primary shadow-2xl hover:shadow-light-blue/40 transition-all px-12 py-4">
-                  Voir mes réalisations
-                </Link>
               </div>
             </motion.div>
           </div>
+
+          {/* Footer de section pour combler le vide et dynamiser la lecture */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 flex flex-col md:flex-row items-center justify-between gap-10 bg-gradient-to-r from-light-blue/20 to-transparent border-l-4 border-light-blue p-10 rounded-r-3xl"
+          >
+            <p className="text-white text-xl md:text-2xl font-black leading-relaxed flex-1">
+              🎯 L’objectif : permettre à un recruteur de comprendre rapidement qui je suis, ce que je sais faire, et ce que je peux apporter.
+            </p>
+            <Link to="/portfolio" className="btn-primary shadow-2xl hover:shadow-light-blue/40 transition-all px-12 py-4 whitespace-nowrap">
+              Voir mes réalisations
+            </Link>
+          </motion.div>
         </div>
       </section>
 
