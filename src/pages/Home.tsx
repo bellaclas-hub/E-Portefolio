@@ -228,29 +228,32 @@ const Home = () => {
               <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-3 block">03. Mon Approche</span>
               <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-white">Aller au-delà <br /> du CV classique.</h2>
               
-              <div className="space-y-8">
+              <div className="space-y-10">
                 {/* 1. Message principal */}
-                <p className="text-base md:text-lg text-slate-200 leading-relaxed font-medium">
-                  Aujourd’hui, un profil marketing doit être capable de montrer concrètement ce qu’il sait faire. Ce site me permet de présenter mes projets, mes contenus et ma manière de travailler de façon visuelle et structurée.
+                <p className="text-lg md:text-xl text-white font-medium leading-relaxed opacity-90">
+                  Aujourd’hui, un profil marketing doit être capable de <span className="text-light-blue font-bold">montrer concrètement</span> ce qu’il sait faire. Ce site me permet de présenter mes projets, mes contenus et ma manière de travailler de façon visuelle et structurée.
                 </p>
 
-                {/* 2. Ma différence */}
-                <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-                  <span className="text-light-blue font-black uppercase tracking-widest text-[10px] mb-2 block">Ma différence</span>
-                  <p className="text-white font-bold leading-relaxed">
-                    👉 un double parcours marketing et commercial, qui me permet de comprendre à la fois les enjeux de communication et les attentes concrètes des équipes commerciales.
-                  </p>
+                {/* 2. Les piliers (Ma différence & Bonus) */}
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-all duration-300">
+                    <span className="text-light-blue font-black uppercase tracking-widest text-[10px] mb-3 block">Ma différence</span>
+                    <p className="text-white text-sm md:text-base leading-relaxed font-semibold">
+                      👉 un double parcours marketing et commercial, qui me permet de comprendre à la fois les enjeux de communication et les attentes concrètes des équipes commerciales.
+                    </p>
+                  </div>
+                  <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-all duration-300">
+                    <span className="text-light-blue font-black uppercase tracking-widest text-[10px] mb-3 block">Valeur Ajoutée</span>
+                    <p className="text-white text-sm md:text-base leading-relaxed font-semibold">
+                      Je conçois des contenus qui ne sont pas seulement esthétiques ou engageants, mais réellement utiles pour la prospection et la performance business.
+                    </p>
+                  </div>
                 </div>
 
-                {/* 3. Bonus */}
-                <p className="text-slate-300 italic border-l-2 border-slate-700 pl-4">
-                  Je conçois des contenus qui ne sont pas seulement esthétiques ou engageants, mais réellement utiles pour la prospection et la performance business.
-                </p>
-
-                {/* 4. Objectif */}
-                <div className="bg-light-blue/10 border-l-4 border-light-blue p-6 rounded-r-2xl">
-                  <p className="text-white font-black leading-relaxed">
-                    🎯 L’objectif est simple : permettre à un recruteur de comprendre rapidement qui je suis, ce que je sais faire, et ce que je peux apporter.
+                {/* 3. Objectif - Highlighted Banner */}
+                <div className="bg-gradient-to-r from-light-blue/20 to-transparent border-l-4 border-light-blue p-8 rounded-r-3xl">
+                  <p className="text-white text-lg md:text-xl font-black leading-relaxed">
+                    🎯 L’objectif : permettre à un recruteur de comprendre rapidement qui je suis, ce que je sais faire, et ce que je peux apporter.
                   </p>
                 </div>
               </div>
