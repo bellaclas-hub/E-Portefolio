@@ -388,25 +388,25 @@ const Home = () => {
       </section>
 
       {/* CONTACT CTA */}
-      <section className="py-28 bg-bg-light">
-        <div className="max-w-[1200px] mx-auto px-10">
+      <section className="py-20 bg-bg-light">
+        <div className="max-w-[1000px] mx-auto px-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-light-blue to-deep-blue rounded-[3rem] p-20 md:p-32 text-center relative overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.25)] border border-white/10"
+            className="bg-gradient-to-br from-light-blue to-deep-blue rounded-[2.5rem] p-12 md:p-16 text-center relative overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.2)] border border-white/10"
           >
             <div className="absolute inset-0 opacity-20 pointer-events-none">
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,white,transparent)]" />
             </div>
             
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-6xl mb-8 text-white font-black tracking-tight leading-[1.1]">Prêt à explorer le futur <br /> du digital ensemble ?</h2>
-              <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+              <h2 className="text-3xl md:text-5xl mb-4 text-white font-black tracking-tight leading-[1.2]">Prêt à explorer le futur <br /> du digital ensemble ?</h2>
+              <p className="text-base md:text-lg text-white/90 mb-8 max-w-xl mx-auto leading-relaxed font-medium">
                 Que vous ayez un projet concret ou une simple curiosité sur l'impact de l'IA et du NoCode, discutons-en dès maintenant.
               </p>
               <div className="flex justify-center">
-                <Link to="/contact" className="btn-outline-white shadow-2xl hover:shadow-white/20 px-12 py-5 text-lg">
+                <Link to="/contact" className="btn-outline-white shadow-xl hover:shadow-white/10 px-8 py-3 text-base">
                   Démarrer la conversation
                 </Link>
               </div>
