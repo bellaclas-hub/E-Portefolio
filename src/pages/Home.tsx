@@ -41,11 +41,6 @@ const Home = () => {
                   SEULEMENT EN CODE ?
                 </h1>
                 
-                <p className="text-base md:text-lg text-slate-200 font-medium leading-relaxed mb-8 max-w-2xl">
-                  L’alliance de l’intelligence artificielle et du no-code redéfinit les règles du digital. <br className="hidden md:block" />
-                  Je ne me contente pas de l’observer : je l’expérimente à travers mes projets.
-                </p>
-                
                 <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
                   <a 
                     href="https://res.cloudinary.com/delgsyvkc/image/upload/v1775209438/CV_Apolline_Bellaclas_jthzlo.png" 
@@ -107,7 +102,6 @@ const Home = () => {
               transition={{ duration: 0.8 }}
             >
               <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-2 block">01. Ma Vision</span>
-              <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-4 leading-tight">Au-delà de la technique, <br /> l'impact.</h2>
               <div className="space-y-4 text-base md:text-lg text-text-gray leading-relaxed">
                 <p className="font-bold text-deep-blue">
                   Tout a commencé par un constat simple : le web change, et il change vite. 
@@ -156,15 +150,15 @@ const Home = () => {
               L’accélération du digital.
             </h2>
             <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium mb-10">
-              Dans un environnement où l’IA et les LLM redéfinissent les standards de production, le véritable enjeu n’est plus seulement la vitesse, mais la pertinence et la structure de l’exécution.
+              L’IA et les LLM redéfinissent les standards de production, le véritable enjeu n’est plus seulement la vitesse, mais la pertinence et la structure de l’exécution.
             </p>
             <div className="grid md:grid-cols-2 gap-8 text-left">
               <div className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="text-xl font-black mb-4 text-deep-blue">Compression des cycles</h4>
+                <h4 className="text-xl font-black mb-4 text-deep-blue">Des cycles de livraison plus courts</h4>
                 <p className="text-text-gray">L'IA permet d'accélérer drastiquement le contenu et le prototypage. Une refonte web qui exigeait autrefois 6 mois de travail peut désormais être structurée et lancée en un temps record sans sacrifier la vision stratégique.</p>
               </div>
               <div className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="text-xl font-black mb-4 text-deep-blue">Le paradoxe de l'exigence</h4>
+                <h4 className="text-xl font-black mb-4 text-deep-blue">Les exigences sont de plus en plus élevées</h4>
                 <p className="text-text-gray">Si les délais se réduisent, les attentes en termes de qualité et de ROI augmentent. Le défi n'est plus de produire rapidement, mais de garantir une performance et des résultats mesurables dès le déploiement.</p>
               </div>
             </div>
@@ -284,7 +278,7 @@ const Home = () => {
         <div className="max-w-[1200px] mx-auto px-10">
           <div className="max-w-4xl mb-10">
             <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-2 block">04. L'Analyse</span>
-            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-4 leading-tight">Ce que j'ai appris : <br /> L'équilibre est la clé.</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-4 leading-tight">Ce que j'ai appris</h2>
             <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium">
               L'expérimentation Lovable a confirmé une intuition : si l'outil fait gagner du temps, c'est l'humain qui apporte la direction.
             </p>
