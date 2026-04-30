@@ -92,7 +92,7 @@ const Home = () => {
       </section>
 
       {/* INTRODUCTION - MA VISION (NARRATIVE) */}
-      <section className="py-20 bg-bg-light">
+      <section className="py-24 bg-white border-b border-slate-100">
         <div className="max-w-[1200px] mx-auto px-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -136,30 +136,30 @@ const Home = () => {
       </section>
 
       {/* 02. LE PROBLÈME */}
-      <section className="py-20 bg-bg-light">
+      <section className="py-24 bg-bg-light">
         <div className="max-w-[1200px] mx-auto px-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.span 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-light-blue font-black uppercase tracking-widest text-xs mb-2 block"
+              className="text-light-blue font-black uppercase tracking-widest text-xs mb-3 block"
             >
               02. Le Problème
             </motion.span>
-            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-4 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-6 leading-tight">
               L’accélération du digital.
             </h2>
-            <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium mb-10">
+            <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium mb-12 max-w-2xl mx-auto">
               L’IA et les LLM redéfinissent les standards de production, le véritable enjeu n’est plus seulement la vitesse, mais la pertinence et la structure de l’exécution.
             </p>
-            <div className="grid md:grid-cols-2 gap-8 text-left">
-              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="text-xl font-black mb-4 text-deep-blue">Des cycles de livraison plus courts</h4>
-                <p className="text-text-gray">L'IA permet d'accélérer drastiquement le contenu et le prototypage. Une refonte web qui exigeait autrefois 6 mois de travail peut désormais être structurée et lancée en un temps record sans sacrifier la vision stratégique.</p>
+            <div className="grid md:grid-cols-2 gap-6 text-left max-w-5xl mx-auto">
+              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-md hover:shadow-xl transition-all duration-500">
+                <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">Des cycles de livraison plus courts</h4>
+                <p className="text-text-gray leading-relaxed">L'IA permet d'accélérer drastiquement le contenu et le prototypage. Une refonte web qui exigeait autrefois 6 mois de travail peut désormais être structurée et lancée en un temps record sans sacrifier la vision stratégique.</p>
               </div>
-              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="text-xl font-black mb-4 text-deep-blue">Les exigences sont de plus en plus élevées</h4>
-                <p className="text-text-gray">Si les délais se réduisent, les attentes en termes de qualité et de ROI augmentent. Le défi n'est plus de produire rapidement, mais de garantir une performance et des résultats mesurables dès le déploiement.</p>
+              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-md hover:shadow-xl transition-all duration-500">
+                <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">Les exigences sont de plus en plus élevées</h4>
+                <p className="text-text-gray leading-relaxed">Si les délais se réduisent, les attentes en termes de qualité et de ROI augmentent. Le défi n'est plus de produire rapidement, mais de garantir une performance et des résultats mesurables dès le déploiement.</p>
               </div>
             </div>
           </div>
@@ -167,14 +167,14 @@ const Home = () => {
       </section>
 
       {/* 03. L'EXPÉRIMENTATION (PROJET LOVABLE) */}
-      <section id="projets" className="py-20 bg-deep-blue text-white relative overflow-hidden">
+      <section id="projets" className="py-28 bg-deep-blue text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-light-blue rounded-full blur-[120px]" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-light-blue/50 rounded-full blur-[120px]" />
         </div>
         
         <div className="max-w-[1200px] mx-auto px-10 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 lg:gap-24 items-center">
             {/* IMAGE A DROITE (DESKTOP) / EN HAUT (MOBILE) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -186,7 +186,7 @@ const Home = () => {
                 href="https://lovable.dev" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block group"
+                className="block group relative"
               >
                 <div className="aspect-video bg-white/5 rounded-[2.5rem] border border-white/10 p-3 backdrop-blur-md transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl group-hover:shadow-light-blue/20">
                   <div className="w-full h-full rounded-[1.8rem] overflow-hidden bg-deep-blue border border-white/5 relative flex flex-col">
@@ -209,11 +209,13 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
+                
+                {/* Badge 90% (Repositionné pour être rattaché visuellement à l'image) */}
+                <div className="absolute -bottom-4 -right-4 bg-light-blue p-5 md:p-6 rounded-2xl shadow-2xl z-20 text-deep-blue transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
+                  <p className="text-3xl md:text-4xl font-black mb-0.5">90%</p>
+                  <p className="text-[9px] font-black uppercase tracking-widest leading-none">Gain de temps</p>
+                </div>
               </a>
-              <div className="absolute -bottom-6 -right-6 bg-light-blue p-6 md:p-8 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] hidden md:block text-deep-blue">
-                <p className="text-4xl md:text-5xl font-black mb-1">90%</p>
-                <p className="text-[10px] font-black uppercase tracking-widest">Gain de temps technique</p>
-              </div>
             </motion.div>
 
             {/* TEXTE A GAUCHE (DESKTOP) / EN BAS (MOBILE) */}
@@ -221,29 +223,29 @@ const Home = () => {
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="order-2 lg:order-1"
+              className="order-2 lg:order-1 max-w-xl"
             >
-              <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-2 block">03. Mon Approche</span>
-              <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight text-white">Aller au-delà <br /> du CV classique.</h2>
+              <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-3 block">03. Mon Approche</span>
+              <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-white">Aller au-delà <br /> du CV classique.</h2>
               
-              <div className="space-y-6 text-base md:text-lg text-slate-200 leading-relaxed font-medium mb-8">
+              <div className="space-y-6 text-base md:text-lg text-slate-200 leading-relaxed font-medium mb-12">
                 <p>
                   J’ai créé ce site vitrine pour aller au-delà d’un CV classique.
                 </p>
                 <p>
                   Aujourd’hui, un profil marketing ne se résume pas à une liste d’expériences : il doit être capable de montrer concrètement ce qu’il sait faire. Ce site me permet de présenter mes projets, mes contenus et ma manière de travailler de façon visuelle et structurée.
                 </p>
-                <p className="text-white font-bold">
+                <div className="text-white font-bold bg-white/5 p-6 rounded-2xl border border-white/5 mt-8">
                   C’est aussi un moyen pour moi de valoriser ce qui fait ma différence :
-                  <span className="block mt-2 text-light-blue">👉 un double parcours marketing et commercial, qui me permet de comprendre à la fois les enjeux de communication et les attentes concrètes des équipes commerciales.</span>
-                </p>
-                <p>
+                  <span className="block mt-3 text-light-blue text-sm md:text-base leading-relaxed font-semibold">👉 un double parcours marketing et commercial, qui me permet de comprendre à la fois les enjeux de communication et les attentes concrètes des équipes commerciales.</span>
+                </div>
+                <p className="mt-8">
                   Grâce à cette approche, je conçois des contenus qui ne sont pas seulement esthétiques ou engageants, mais réellement utiles pour la prospection et la performance business.
                 </p>
               </div>
 
-              <div className="mb-10">
-                <h4 className="font-black text-lg text-white mb-4 uppercase tracking-wider">Démonstration de mes compétences :</h4>
+              <div className="mb-12">
+                <h4 className="font-black text-base text-white mb-6 uppercase tracking-wider opacity-80">Démonstration de mes compétences :</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
                     "Structuration d’un message",
@@ -251,7 +253,7 @@ const Home = () => {
                     "Logique UX",
                     "Outils digitaux (Lovable)"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/5">
+                    <div key={i} className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
                       <div className="w-2 h-2 rounded-full bg-light-blue shadow-[0_0_10px_rgba(0,210,255,0.5)]" />
                       <span className="text-slate-200 text-sm font-bold">{item}</span>
                     </div>
@@ -259,13 +261,13 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="bg-light-blue/10 border-l-4 border-light-blue p-6 rounded-r-2xl mb-10">
-                <p className="text-white font-bold leading-relaxed">
+              <div className="bg-gradient-to-r from-light-blue/20 to-transparent border-l-4 border-light-blue p-8 rounded-r-2xl mb-12">
+                <p className="text-white font-bold leading-relaxed italic">
                   🎯 L’objectif est simple : permettre à un recruteur de comprendre rapidement qui je suis, ce que je sais faire, et ce que je peux apporter.
                 </p>
               </div>
 
-              <Link to="/portfolio" className="btn-primary shadow-lg hover:shadow-light-blue/20 transition-all">
+              <Link to="/portfolio" className="btn-primary shadow-xl hover:shadow-light-blue/20 transition-all px-10">
                 Voir mes projets concrets
               </Link>
             </motion.div>
@@ -274,12 +276,12 @@ const Home = () => {
       </section>
 
       {/* 04. L'ANALYSE */}
-      <section className="py-20 bg-bg-light">
+      <section className="py-24 bg-white border-y border-slate-100">
         <div className="max-w-[1200px] mx-auto px-10">
-          <div className="max-w-4xl mb-10">
-            <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-2 block">04. L'Analyse</span>
-            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-4 leading-tight">Ce que j'ai appris</h2>
-            <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium">
+          <div className="max-w-4xl mb-12">
+            <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-3 block">04. L'Analyse</span>
+            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-6 leading-tight">Ce que j'ai appris</h2>
+            <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium max-w-2xl">
               L'expérimentation Lovable a confirmé une intuition : si l'outil fait gagner du temps, c'est l'humain qui apporte la direction.
             </p>
           </div>
@@ -308,11 +310,11 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl transition-all duration-500 group"
+                className="p-10 rounded-[3rem] bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-light-blue/20 transition-all duration-500 group"
               >
                 <div className="mb-6 group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
                 <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">{item.title}</h4>
-                <p className="text-sm md:text-base text-text-gray leading-relaxed">{item.desc}</p>
+                <p className="text-sm md:text-base text-text-gray leading-relaxed font-medium">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -320,44 +322,44 @@ const Home = () => {
       </section>
 
       {/* POURQUOI MOI ? */}
-      <section className="py-20 bg-bg-light">
+      <section className="py-24 bg-bg-light">
         <div className="max-w-[1200px] mx-auto px-10">
-          <div className="mb-10 text-center md:text-left">
-            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-4">Pourquoi moi ?</h2>
-            <p className="text-base md:text-lg text-text-gray max-w-3xl leading-relaxed font-medium">
-              Une approche mêlant marketing digital, NoCode et intelligence artificielle.
+          <div className="mb-16 text-center md:text-left">
+            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-6">Pourquoi moi ?</h2>
+            <p className="text-base md:text-lg text-text-gray max-w-2xl leading-relaxed font-semibold opacity-90">
+              Une approche mêlant marketing digital, NoCode et intelligence artificielle pour des résultats concrets.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               {
                 title: "Vision stratégique",
                 desc: "Comprendre les enjeux digitaux pour concevoir des solutions adaptées.",
-                icon: <Brain className="w-10 h-10" />
+                icon: <Brain className="w-12 h-12" />
               },
               {
                 title: "Créativité augmentée",
                 desc: "Utiliser les outils IA pour enrichir les processus créatifs.",
-                icon: <Sparkles className="w-10 h-10" />
+                icon: <Sparkles className="w-12 h-12" />
               },
               {
                 title: "Culture technique",
                 desc: "Allier réflexion stratégique et compréhension des outils numériques.",
-                icon: <Code className="w-10 h-10" />
+                icon: <Code className="w-12 h-12" />
               },
               {
                 title: "Orientation résultats",
                 desc: "Concevoir des projets efficaces et mesurables.",
-                icon: <Target className="w-10 h-10" />
+                icon: <Target className="w-12 h-12" />
               }
             ].map((item, i) => (
-              <div key={i} className="group bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-all">
-                <div className="w-20 h-20 rounded-2xl bg-bg-light flex items-center justify-center text-light-blue mb-6 group-hover:bg-light-blue group-hover:text-white transition-all duration-500 shadow-inner">
+              <div key={i} className="group bg-white p-10 rounded-[3rem] border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-center text-center">
+                <div className="w-24 h-24 rounded-3xl bg-slate-50 flex items-center justify-center text-light-blue mb-8 group-hover:bg-light-blue group-hover:text-white transition-all duration-500 shadow-inner group-hover:scale-110">
                   {item.icon}
                 </div>
-                <h4 className="text-xl font-black mb-4 text-deep-blue">{item.title}</h4>
-                <p className="text-sm text-text-gray leading-relaxed font-medium">{item.desc}</p>
+                <h4 className="text-2xl font-black mb-4 text-deep-blue leading-tight">{item.title}</h4>
+                <p className="text-sm md:text-base text-text-gray leading-relaxed font-medium opacity-80">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -365,7 +367,7 @@ const Home = () => {
       </section>
 
       {/* CONCLUSION */}
-      <section className="py-16 bg-white">
+      <section className="py-24 bg-white border-b border-slate-100">
         <div className="max-w-[1200px] mx-auto px-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -374,15 +376,15 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-6">Conclusion</h2>
-            <div className="space-y-4 text-base md:text-lg text-text-gray leading-relaxed font-medium">
+            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-8">Conclusion</h2>
+            <div className="space-y-6 text-base md:text-lg text-text-gray leading-relaxed font-medium">
               <p>
                 Le NoCode et l’intelligence artificielle permettent aujourd’hui de créer des sites web rapidement et efficacement.
               </p>
               <p>
                 Cependant, ils ne remplacent pas la réflexion stratégique et créative nécessaire à un projet digital performant.
               </p>
-              <p>
+              <p className="text-deep-blue font-bold">
                 Ce projet illustre l’équilibre à trouver entre accessibilité, performance et expertise.
               </p>
             </div>
@@ -391,21 +393,25 @@ const Home = () => {
       </section>
 
       {/* CONTACT CTA */}
-      <section className="py-16 bg-bg-light">
+      <section className="py-28 bg-bg-light">
         <div className="max-w-[1200px] mx-auto px-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-light-blue to-deep-blue rounded-[3rem] p-16 md:p-24 text-center relative overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.2)]"
+            className="bg-gradient-to-br from-light-blue to-deep-blue rounded-[3rem] p-20 md:p-32 text-center relative overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.25)] border border-white/10"
           >
+            <div className="absolute inset-0 opacity-20 pointer-events-none">
+              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,white,transparent)]" />
+            </div>
+            
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl mb-6 text-white font-black tracking-tight">Prêt à explorer le futur <br /> du digital ensemble ?</h2>
-              <p className="text-base md:text-lg text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
-                Que vous ayez un projet concret ou une simple curiosité sur l'impact de l'IA et du NoCode, discutons-en.
+              <h2 className="text-4xl md:text-6xl mb-8 text-white font-black tracking-tight leading-[1.1]">Prêt à explorer le futur <br /> du digital ensemble ?</h2>
+              <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+                Que vous ayez un projet concret ou une simple curiosité sur l'impact de l'IA et du NoCode, discutons-en dès maintenant.
               </p>
               <div className="flex justify-center">
-                <Link to="/contact" className="btn-outline-white shadow-xl hover:shadow-white/10">
+                <Link to="/contact" className="btn-outline-white shadow-2xl hover:shadow-white/20 px-12 py-5 text-lg">
                   Démarrer la conversation
                 </Link>
               </div>
