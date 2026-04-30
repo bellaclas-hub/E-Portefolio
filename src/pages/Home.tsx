@@ -167,20 +167,20 @@ const Home = () => {
       </section>
 
       {/* 03. L'EXPÉRIMENTATION (PROJET LOVABLE) */}
-      <section id="projets" className="py-28 bg-deep-blue text-white relative overflow-hidden">
+      <section id="projets" className="py-20 bg-deep-blue text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-light-blue rounded-full blur-[120px]" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-light-blue/50 rounded-full blur-[120px]" />
         </div>
         
         <div className="max-w-[1200px] mx-auto px-10 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 lg:gap-24 items-start">
             {/* IMAGE A DROITE (DESKTOP) / EN HAUT (MOBILE) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative order-1 lg:order-2"
+              className="relative order-1 lg:order-2 pt-2"
             >
               <a 
                 href="https://lovable.dev" 
@@ -228,48 +228,38 @@ const Home = () => {
               <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-3 block">03. Mon Approche</span>
               <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-white">Aller au-delà <br /> du CV classique.</h2>
               
-              <div className="space-y-6 text-base md:text-lg text-slate-200 leading-relaxed font-medium mb-12">
-                <p>
-                  J’ai créé ce site vitrine pour aller au-delà d’un CV classique.
+              <div className="space-y-8">
+                {/* 1. Message principal */}
+                <p className="text-base md:text-lg text-slate-200 leading-relaxed font-medium">
+                  Aujourd’hui, un profil marketing doit être capable de montrer concrètement ce qu’il sait faire. Ce site me permet de présenter mes projets, mes contenus et ma manière de travailler de façon visuelle et structurée.
                 </p>
-                <p>
-                  Aujourd’hui, un profil marketing ne se résume pas à une liste d’expériences : il doit être capable de montrer concrètement ce qu’il sait faire. Ce site me permet de présenter mes projets, mes contenus et ma manière de travailler de façon visuelle et structurée.
-                </p>
-                <div className="text-white font-bold bg-white/5 p-6 rounded-2xl border border-white/5 mt-8">
-                  C’est aussi un moyen pour moi de valoriser ce qui fait ma différence :
-                  <span className="block mt-3 text-light-blue text-sm md:text-base leading-relaxed font-semibold">👉 un double parcours marketing et commercial, qui me permet de comprendre à la fois les enjeux de communication et les attentes concrètes des équipes commerciales.</span>
-                </div>
-                <p className="mt-8">
-                  Grâce à cette approche, je conçois des contenus qui ne sont pas seulement esthétiques ou engageants, mais réellement utiles pour la prospection et la performance business.
-                </p>
-              </div>
 
-              <div className="mb-12">
-                <h4 className="font-black text-base text-white mb-6 uppercase tracking-wider opacity-80">Démonstration de mes compétences :</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[
-                    "Structuration d’un message",
-                    "Création de contenu",
-                    "Logique UX",
-                    "Outils digitaux (Lovable)"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
-                      <div className="w-2 h-2 rounded-full bg-light-blue shadow-[0_0_10px_rgba(0,210,255,0.5)]" />
-                      <span className="text-slate-200 text-sm font-bold">{item}</span>
-                    </div>
-                  ))}
+                {/* 2. Ma différence */}
+                <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
+                  <span className="text-light-blue font-black uppercase tracking-widest text-[10px] mb-2 block">Ma différence</span>
+                  <p className="text-white font-bold leading-relaxed">
+                    👉 un double parcours marketing et commercial, qui me permet de comprendre à la fois les enjeux de communication et les attentes concrètes des équipes commerciales.
+                  </p>
+                </div>
+
+                {/* 3. Bonus */}
+                <p className="text-slate-300 italic border-l-2 border-slate-700 pl-4">
+                  Je conçois des contenus qui ne sont pas seulement esthétiques ou engageants, mais réellement utiles pour la prospection et la performance business.
+                </p>
+
+                {/* 4. Objectif */}
+                <div className="bg-light-blue/10 border-l-4 border-light-blue p-6 rounded-r-2xl">
+                  <p className="text-white font-black leading-relaxed">
+                    🎯 L’objectif est simple : permettre à un recruteur de comprendre rapidement qui je suis, ce que je sais faire, et ce que je peux apporter.
+                  </p>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-light-blue/20 to-transparent border-l-4 border-light-blue p-8 rounded-r-2xl mb-12">
-                <p className="text-white font-bold leading-relaxed italic">
-                  🎯 L’objectif est simple : permettre à un recruteur de comprendre rapidement qui je suis, ce que je sais faire, et ce que je peux apporter.
-                </p>
+              <div className="mt-12">
+                <Link to="/portfolio" className="btn-primary shadow-2xl hover:shadow-light-blue/40 transition-all px-12 py-4">
+                  Voir mes réalisations
+                </Link>
               </div>
-
-              <Link to="/portfolio" className="btn-primary shadow-xl hover:shadow-light-blue/20 transition-all px-10">
-                Voir mes projets concrets
-              </Link>
             </motion.div>
           </div>
         </div>
