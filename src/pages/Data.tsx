@@ -68,7 +68,7 @@ const Data = () => {
           <div className="absolute top-0 right-0 w-96 h-96 bg-light-blue/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2" />
           <div className="relative z-10">
             <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-6 block">La problématique</span>
-            <h2 className="text-2xl md:text-4xl font-black mb-8 leading-tight max-w-4xl">
+            <h2 className="text-2xl md:text-4xl font-black mb-8 leading-tight max-w-4xl text-white">
               “Le télétravail constitue-t-il aujourd’hui un mode de travail performant côté salariés et réellement présent côté entreprises ?”
             </h2>
             <p className="text-slate-300 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
@@ -207,7 +207,7 @@ const Data = () => {
           className="bg-gradient-to-r from-light-blue to-deep-blue rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden"
         >
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight">Consulter le dashboard interactif</h2>
+            <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-white">Consulter le dashboard interactif</h2>
             <p className="text-white/80 text-lg md:text-xl font-medium mb-12 max-w-2xl mx-auto">
               Accédez à l'ensemble des données visualisées et découvrez les résultats détaillés de cette étude.
             </p>
@@ -216,7 +216,7 @@ const Data = () => {
                 href="file:///C:/Users/bella/Downloads/dashboard_3_dossiers_fr%20(7).html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline-white flex items-center gap-3 px-12 py-5 text-lg group bg-white text-deep-blue hover:text-white"
+                className="flex items-center gap-3 px-12 py-5 text-lg font-black rounded-xl bg-white text-deep-blue hover:bg-slate-100 transition-all shadow-xl active:scale-95 group"
               >
                 Voir le dashboard
                 <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

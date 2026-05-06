@@ -200,13 +200,10 @@ const Home = () => {
                     {/* Browser Content */}
                     <div className="flex-grow relative overflow-hidden bg-slate-900">
                       <img 
-                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" 
+                        src="https://res.cloudinary.com/delgsyvkc/image/upload/v1778085335/Capture_d_%C3%A9cran_2026-05-06_183517_fnrh2i.png" 
                         alt="Aperçu de mon site vitrine réalisé avec Lovable" 
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         referrerPolicy="no-referrer"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop';
-                        }}
                       />
                       <div className="absolute inset-0 bg-deep-blue/20 group-hover:bg-transparent transition-colors duration-500" />
                     </div>
