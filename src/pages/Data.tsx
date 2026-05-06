@@ -82,50 +82,6 @@ const Data = () => {
         </motion.div>
       </section>
 
-      {/* SECTION 3 — CONTEXTE */}
-      <section className="max-w-[1200px] mx-auto px-10 mb-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-8 tracking-tight">Contexte de l'étude</h2>
-            <div className="space-y-6 text-text-gray font-medium text-lg leading-relaxed">
-              <p>
-                Le télétravail s’est fortement développé avec la digitalisation des outils de travail. Il est aujourd’hui associé à plusieurs enjeux stratégiques :
-              </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-                {[
-                  "Équilibre vie pro / vie perso",
-                  "Autonomie renforcée",
-                  "Productivité individuelle",
-                  "Attractivité des entreprises",
-                  "Évolution du management"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-light-blue" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-xl"
-          >
-            <Globe className="w-12 h-12 text-light-blue mb-6" />
-            <h3 className="text-xl font-black text-deep-blue mb-4">Un enjeu global</h3>
-            <p className="text-text-gray font-medium leading-relaxed">
-              La transformation numérique ne se limite pas aux outils. Elle redéfinit en profondeur le contrat social entre l'employeur et son collaborateur, rendant la flexibilité géographique incontournable.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* NEW SECTION 1 — Stratégie de collecte des données */}
       <section className="max-w-[1200px] mx-auto px-10 mb-24">
         <motion.div
@@ -170,7 +126,7 @@ const Data = () => {
                 ]
               }
             ].map((source, i) => (
-              <div key={i} className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-lg">
+              <div key={i} className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-lg font-sans">
                 <h3 className="text-deep-blue font-black mb-6 text-lg tracking-tight">{source.title}</h3>
                 <div className="space-y-4">
                   {source.items.map((item, j) => (
@@ -184,32 +140,33 @@ const Data = () => {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-green-50/50 p-8 rounded-3xl border border-green-100 flex gap-6">
-              <ShieldCheck className="w-10 h-10 text-green-600 shrink-0" />
-              <div>
-                <h4 className="text-green-800 font-black mb-3">Conformité RGPD</h4>
-                <p className="text-green-900/70 text-sm font-medium leading-relaxed">
-                  Toutes les données exploitées sont anonymisées et agrégées : aucune donnée personnelle directement identifiante n'est traitée. Les sources sont déclaratives ou publiques, conformes aux principes du RGPD (minimisation, finalité, transparence). Dans une démarche d'industrialisation, j'envisage la mise en place d'un registre de traitement et d'une politique de durée de conservation explicite.
+          <div className="bg-slate-50 border border-slate-100 rounded-[2.5rem] overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              <div className="p-10 border-b md:border-b-0 md:border-r border-slate-200">
+                <div className="flex gap-4 mb-4">
+                  <ShieldCheck className="w-6 h-6 text-green-600 shrink-0" />
+                  <h4 className="text-deep-blue font-black tracking-tight text-lg">Conformité RGPD</h4>
+                </div>
+                <p className="text-text-gray text-sm font-medium leading-relaxed">
+                  Données anonymisées et agrégées. Sources déclaratives ou publiques conformes aux principes de minimisation et finalité. Industrialisation prévue via un registre de traitement dédié.
                 </p>
               </div>
-            </div>
-            <div className="bg-slate-900 p-8 rounded-3xl text-white">
-              <h4 className="text-light-blue font-black mb-4">Cartographie des flux</h4>
-              <ul className="space-y-3 font-medium text-sm text-slate-300">
-                <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-light-blue" />
-                  <span>Sources internes : Études RH déclaratives</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-light-blue" />
-                  <span>Sources externes : Plateformes d'emploi, enquêtes publiques</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-light-blue" />
-                  <span>Outils mobilisés : Tableurs structurés, parsing HTML/JSON, agrégation manuelle</span>
-                </li>
-              </ul>
+              <div className="p-10">
+                <div className="flex gap-4 mb-4">
+                  <Layers className="w-6 h-6 text-light-blue shrink-0" />
+                  <h4 className="text-deep-blue font-black tracking-tight text-lg">Cartographie des flux</h4>
+                </div>
+                <ul className="space-y-2 text-text-gray text-sm font-medium">
+                  <li className="flex items-center gap-2">
+                    <div className="w-1 h-1 rounded-full bg-light-blue" />
+                    <span>Sources : Études RH & Plateformes emploi</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-1 h-1 rounded-full bg-light-blue" />
+                    <span>Outils : Tableurs, scrapers & agrégateurs</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -444,7 +401,7 @@ ORDER BY moyenne DESC;`}
             <p>Un modèle d'IA n'est pertinent que s'il est mesuré, suivi et ajusté. Là où les KPIs métier (taux de conversion, engagement) mesurent un résultat business, les KPIs modèle mesurent la qualité de la prédiction. Voici les indicateurs que j'intégrerais à un tableau de bord de monitoring.</p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 gap-6 mb-12">
             {[
               { t: "Accuracy", d: "Part de prédictions correctes sur le total. KPI global mais à compléter par d'autres." },
               { t: "Precision", d: "Parmi les prédictions positives, combien le sont vraiment. Critique pour limiter les faux positifs." },
@@ -466,7 +423,7 @@ ORDER BY moyenne DESC;`}
                 </div>
                 <div>
                   <h4 className="text-xl font-black mb-3">AUC-ROC</h4>
-                  <p className="font-medium text-white/80 leading-relaxed">Mesure la capacité du modèle à distinguer les classes (objectif : &gt; 0,80).</p>
+                  <p className="font-medium text-white/80 leading-relaxed text-sm">Mesure la capacité du modèle à distinguer les classes (objectif : &gt; 0,80).</p>
                 </div>
               </div>
             </div>
@@ -477,17 +434,17 @@ ORDER BY moyenne DESC;`}
                 </div>
                 <div>
                   <h4 className="text-xl font-black mb-3">Matrice de confusion</h4>
-                  <p className="font-medium text-white/80 leading-relaxed">Ventilation des vrais/faux positifs et négatifs pour identifier les biais.</p>
+                  <p className="font-medium text-white/80 leading-relaxed text-sm">Ventilation des vrais/faux positifs et négatifs pour identifier les outils.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-slate-50 border border-slate-200 p-10 rounded-[3rem] text-center">
-            <Settings className="w-10 h-10 text-light-blue mx-auto mb-6 animate-spin-slow" />
-            <h4 className="text-2xl font-black text-deep-blue mb-4">Système de suivi</h4>
-            <p className="text-text-gray font-medium max-w-2xl mx-auto leading-relaxed">
-              Le monitoring de ces indicateurs serait automatisé via un dashboard de supervision. En cas de drift (dérive du modèle dans le temps), une alerte permettrait de déclencher un ré-entraînement. La sécurité du modèle (résistance aux données aberrantes) serait également testée régulièrement.
+          <div className="bg-slate-50 border border-slate-200 p-8 rounded-[2.5rem] text-center">
+            <Settings className="w-8 h-8 text-light-blue mx-auto mb-4" />
+            <h4 className="text-xl font-black text-deep-blue mb-2">Système de suivi</h4>
+            <p className="text-text-gray font-medium max-w-2xl mx-auto text-sm">
+              Monitoring automatisé via dashboard de supervision avec alertes en cas de drift pour déclencher un ré-entraînement immédiat.
             </p>
           </div>
         </motion.div>
@@ -501,7 +458,7 @@ ORDER BY moyenne DESC;`}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-2 tracking-tight text-center">Pipeline de bout en bout</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-2 tracking-tight text-center">Pipeline & industrialisation</h2>
             <p className="text-light-blue font-bold text-center mb-16 text-lg">De la donnée brute à la décision : un processus reproductible et automatisé.</p>
             
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-20 overflow-x-auto pb-8">
@@ -514,30 +471,30 @@ ORDER BY moyenne DESC;`}
               ].map((item, i) => (
                 <div key={i} className="flex flex-col lg:flex-row items-center gap-6 group">
                   <div className="w-48 text-center">
-                    <div className="w-16 h-16 rounded-3xl bg-white border-2 border-slate-100 shadow-xl flex items-center justify-center mx-auto mb-4 text-light-blue font-black text-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <div className="w-16 h-16 rounded-3xl bg-white border-2 border-slate-100 shadow-xl flex items-center justify-center mx-auto mb-4 text-light-blue font-black text-xl group-hover:scale-110 transition-all duration-500">
                       {item.step}
                     </div>
                     <h4 className="font-black text-deep-blue text-sm mb-1">{item.title}</h4>
                     <p className="text-text-gray text-[10px] font-bold leading-tight">{item.desc}</p>
                   </div>
                   {i < 4 && (
-                    <ArrowRight className="w-6 h-6 text-slate-300 hidden lg:block group-hover:translate-x-2 transition-transform" />
+                    <ArrowRight className="w-6 h-6 text-slate-300 hidden lg:block group-hover:translate-x-1 transition-transform" />
                   )}
                 </div>
               ))}
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-200">
-                <h4 className="text-2xl font-black text-deep-blue mb-6">Interface utilisateur</h4>
-                <p className="text-text-gray font-medium leading-relaxed">
-                  L'aboutissement du pipeline est le tableau de bord interactif que vous pouvez consulter ci-dessous. Il a été conçu selon des principes d'accessibilité universelle : navigation par onglets, lisibilité typographique, contrastes suffisants, langage clair et libellés en français.
+              <div className="bg-slate-50 p-8 rounded-[2rem] border border-slate-200">
+                <h4 className="text-xl font-black text-deep-blue mb-4">Interface utilisateur</h4>
+                <p className="text-text-gray text-sm font-medium leading-relaxed">
+                  Tableau de bord interactif conçu selon des principes d'accessibilité universelle : navigation fluide, contrastes optimisés et langage clair.
                 </p>
               </div>
-              <div className="bg-deep-blue p-10 rounded-[2.5rem] text-white">
-                <h4 className="text-2xl font-black text-white mb-6">Automatisation</h4>
-                <p className="text-slate-300 font-medium leading-relaxed">
-                  Dans une logique d'industrialisation, plusieurs tâches récurrentes seraient automatisées : actualisation hebdomadaire des données, recalcul des moyennes, génération de rapports synthétiques pour la direction RH.
+              <div className="bg-deep-blue p-8 rounded-[2rem] text-white">
+                <h4 className="text-xl font-black text-white mb-4">Automatisation</h4>
+                <p className="text-slate-300 text-sm font-medium leading-relaxed">
+                  Tâches récurrentes automatisées : actualisation hebdomadaire des données, calcul des moyennes et reporting synthétique RH.
                 </p>
               </div>
             </div>
@@ -595,82 +552,6 @@ ORDER BY moyenne DESC;`}
         </motion.div>
       </section>
 
-      {/* SECTION 4 — DONNÉES ANALYSÉES */}
-      <section className="max-w-[1200px] mx-auto px-10 mb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-slate-50 rounded-[2.5rem] p-10 md:p-16 border border-slate-200"
-        >
-          <h2 className="text-3xl font-black text-deep-blue mb-10 text-center">Les données exploitées</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: "Salariés", icon: <Users />, desc: "Données liées aux profils et comportements des collaborateurs." },
-              { title: "Satisfaction", icon: <PieChart />, desc: "Mesure du bien-être et de l'adhésion au mode de travail." },
-              { title: "Offres d'emploi", icon: <FileText />, desc: "Analyse de la présence du télétravail dans les annonces." }
-            ].map((item, i) => (
-              <div key={i} className="text-center p-6">
-                <div className="w-16 h-16 rounded-full bg-white text-light-blue flex items-center justify-center mx-auto mb-6 shadow-sm border border-slate-100">
-                  {item.icon}
-                </div>
-                <h3 className="text-lg font-black text-deep-blue mb-3">{item.title}</h3>
-                <p className="text-text-gray font-medium text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-12 p-6 bg-white rounded-2xl border border-slate-200 text-center">
-            <p className="text-text-gray font-medium">
-              Le dashboard permet de visualiser ces éléments et de comparer les tendances de manière interactive.
-            </p>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* SECTION 5 — AXES D’ANALYSE */}
-      <section className="max-w-[1200px] mx-auto px-10 mb-24">
-        <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-12 tracking-tight text-center">3 principaux axes d'analyse</h2>
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8"
-        >
-          {[
-            {
-              title: "Productivité",
-              desc: "Analyser si le télétravail favorise ou non la performance des salariés au quotidien.",
-              icon: <Target className="w-6 h-6" />
-            },
-            {
-              title: "Satisfaction",
-              desc: "Observer si les salariés associent le télétravail à une meilleure qualité de vie au travail (QVT).",
-              icon: <PieChart className="w-6 h-6" />
-            },
-            {
-              title: "Offres d’emploi",
-              desc: "Étudier si les entreprises proposent réellement du télétravail dans leurs annonces de recrutement.",
-              icon: <FileText className="w-6 h-6" />
-            }
-          ].map((axis, i) => (
-            <motion.div
-              key={i}
-              variants={itemVariants}
-              className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-xl hover:shadow-2xl transition-all duration-500 group"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-light-blue/10 text-light-blue flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                {axis.icon}
-              </div>
-              <h3 className="text-xl font-black text-deep-blue mb-4">{axis.title}</h3>
-              <p className="text-text-gray font-medium leading-relaxed">
-                {axis.desc}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
-
       {/* SECTION 6 — ACCÈS AU DASHBOARD */}
       <section className="max-w-[1200px] mx-auto px-10 mb-24">
         <motion.div
@@ -710,7 +591,7 @@ ORDER BY moyenne DESC;`}
           <ArrowRight className="w-10 h-10 text-light-blue mx-auto mb-4" />
           <h2 className="text-3xl font-black text-deep-blue">Conclusion</h2>
           <p className="text-text-gray text-lg md:text-xl font-medium leading-relaxed">
-            Cette analyse permet de comprendre si le télétravail est seulement une attente des salariés ou s’il est aussi réellement intégré dans les pratiques des entreprises. Elle offre une vision factuelle d'un sujet souvent perçu de manière subjective.
+            Cette analyse confronte la perception du télétravail par les salariés à sa place réelle dans les pratiques de recrutement. Une démarche factuelle sur un sujet souvent traité de manière subjective.
           </p>
         </motion.div>
       </section>
