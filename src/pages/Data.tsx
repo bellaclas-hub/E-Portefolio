@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { 
-  Database, Target, Globe, FileText, PieChart, ExternalLink, ArrowRight, 
+  RefreshCw, Database, Target, Globe, FileText, PieChart, ExternalLink, ArrowRight, 
   CheckCircle2, Users, ShieldCheck, AlertTriangle, Code2, Layers, 
   Settings, ClipboardCheck, Layout 
 } from 'lucide-react';
@@ -430,22 +430,41 @@ ORDER BY moyenne DESC;`}
             <div className="bg-deep-blue text-white p-8 rounded-3xl shadow-lg border-2 border-white/20">
               <div className="flex gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
-                  <Layout className="w-6 h-6" />
+                  <Layout className="w-6 h-6 text-light-blue" />
                 </div>
                 <div>
                   <h4 className="text-xl font-black mb-3">Matrice de confusion</h4>
-                  <p className="font-medium text-white/80 leading-relaxed text-sm">Ventilation des vrais/faux positifs et négatifs pour identifier les outils.</p>
+                  <p className="font-bold text-white leading-relaxed text-sm">Ventilation des vrais/faux positifs et négatifs pour identifier les outils.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-slate-50 border border-slate-200 p-8 rounded-[2.5rem] text-center">
-            <Settings className="w-8 h-8 text-light-blue mx-auto mb-4" />
-            <h4 className="text-xl font-black text-deep-blue mb-2">Système de suivi</h4>
-            <p className="text-text-gray font-medium max-w-2xl mx-auto text-sm">
-              Monitoring automatisé via dashboard de supervision avec alertes en cas de drift pour déclencher un ré-entraînement immédiat.
-            </p>
+          <h3 className="text-2xl font-black text-deep-blue mb-8 text-center">Système de suivi</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-lg text-center flex flex-col items-center h-full">
+              <div className="w-12 h-12 rounded-2xl bg-light-blue/10 text-light-blue flex items-center justify-center mb-6">
+                <RefreshCw className="w-6 h-6" />
+              </div>
+              <h4 className="text-lg font-black text-deep-blue mb-3">Monitoring continu</h4>
+              <p className="text-text-gray text-sm font-medium leading-relaxed">Suivi automatisé des KPIs via un dashboard de supervision.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-lg text-center flex flex-col items-center h-full">
+              <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-6">
+                <AlertTriangle className="w-6 h-6" />
+              </div>
+              <h4 className="text-lg font-black text-deep-blue mb-3">Détection de drift</h4>
+              <p className="text-text-gray text-sm font-medium leading-relaxed">Alerte automatique en cas de dérive du modèle, déclenchant un ré-entraînement.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-lg text-center flex flex-col items-center h-full">
+              <div className="w-12 h-12 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center mb-6">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <h4 className="text-lg font-black text-deep-blue mb-3">Tests de sécurité</h4>
+              <p className="text-text-gray text-sm font-medium leading-relaxed">Vérification régulière de la robustesse face aux données aberrantes.</p>
+            </div>
           </div>
         </motion.div>
       </section>
