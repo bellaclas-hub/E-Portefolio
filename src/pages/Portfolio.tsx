@@ -64,12 +64,15 @@ const Portfolio = () => {
                   <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />
                   <div className="ml-4 bg-slate-200/50 rounded-md h-4 w-1/3" />
                 </div>
-                <div className="relative w-full h-full overflow-hidden">
+                <div className="relative w-full h-full overflow-hidden bg-slate-50">
                   <img 
-                    src="https://res.cloudinary.com/delgsyvkc/image/upload/v1775211093/Capture_d_%C3%A9cran_2025-04-03_121051_f925vj.png" 
-                    alt="Aperçu du site vitrine Apolline Bellaclas" 
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" 
+                    alt="Aperçu de mon site vitrine réalisé avec Lovable" 
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop';
+                    }}
                   />
                   <div className="absolute inset-0 bg-deep-blue/5 group-hover:bg-transparent transition-colors duration-500" />
                 </div>

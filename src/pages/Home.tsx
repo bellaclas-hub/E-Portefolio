@@ -198,12 +198,15 @@ const Home = () => {
                       <div className="ml-4 bg-white/5 rounded-md h-4 w-1/2" />
                     </div>
                     {/* Browser Content */}
-                    <div className="flex-grow relative overflow-hidden">
+                    <div className="flex-grow relative overflow-hidden bg-slate-900">
                       <img 
                         src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" 
-                        alt="Aperçu du site vitrine Apolline Bellaclas" 
+                        alt="Aperçu de mon site vitrine réalisé avec Lovable" 
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop';
+                        }}
                       />
                       <div className="absolute inset-0 bg-deep-blue/20 group-hover:bg-transparent transition-colors duration-500" />
                     </div>

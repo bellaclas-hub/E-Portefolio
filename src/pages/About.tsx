@@ -36,13 +36,13 @@ const About = () => {
           </motion.h1>
           <motion.div variants={itemVariants} className="space-y-6 text-lg md:text-xl text-text-gray leading-relaxed font-medium">
             <p>
-              Passionnée par le <span className="text-deep-blue font-black">digital</span> et les nouvelles technologies, je m’intéresse particulièrement à la manière dont le <span className="text-light-blue font-black">NoCode</span> et l’<span className="text-light-blue font-black">intelligence artificielle</span> transforment la création de sites web.
+              Je m'intéresse particulièrement à la manière dont le <span className="text-light-blue font-black">NoCode</span> et l'<span className="text-light-blue font-black">intelligence artificielle</span> transforment la création de sites web.
             </p>
             <p>
               Ces outils redéfinissent les méthodes de production, en rendant la création <span className="text-deep-blue font-black">plus rapide</span>, <span className="text-deep-blue font-black">plus accessible</span> et <span className="text-deep-blue font-black">plus collaborative</span>.
             </p>
             <p>
-              Mon objectif est de comprendre ces évolutions et de les intégrer dans des projets <span className="text-deep-blue font-black">concrets</span> et <span className="text-deep-blue font-black">cohérents</span>.
+              Mon objectif est de comprendre ces évolutions et de les intégrer dans mes projets.
             </p>
           </motion.div>
         </motion.div>
@@ -60,10 +60,10 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-6 tracking-tight">Mon approche</h2>
             <div className="space-y-4 text-base md:text-lg text-text-gray leading-relaxed">
               <p>
-                Je développe une approche basée sur l’équilibre entre <span className="text-deep-blue font-bold">stratégie</span>, <span className="text-deep-blue font-bold">créativité</span> et <span className="text-deep-blue font-bold">maîtrise des outils digitaux</span>.
+                Je développe une approche basée sur l'équilibre entre <span className="text-deep-blue font-bold">stratégie</span>, <span className="text-deep-blue font-bold">créativité</span> et <span className="text-deep-blue font-bold">maîtrise des outils numériques</span>.
               </p>
               <p>
-                Chaque projet est pour moi l’occasion de structurer une réflexion, de proposer des solutions adaptées et d’exploiter le potentiel des technologies actuelles pour créer des <span className="text-light-blue font-bold">expériences pertinentes</span>.
+                Chaque projet est pour moi l'occasion de structurer une réflexion, de proposer des solutions adaptées et d'exploiter le potentiel des technologies actuelles.
               </p>
             </div>
           </motion.div>
@@ -164,22 +164,22 @@ const About = () => {
             {[
               {
                 title: "Créative & Curieuse",
-                desc: "J’aime explorer de nouvelles façons de concevoir des projets digitaux.",
+                desc: "J'aime découvrir de nouvelles façons de concevoir des projets numériques.",
                 icon: <Lightbulb className="w-6 h-6" />
               },
               {
                 title: "Autonome & Organisée",
-                desc: "Je sais structurer mon travail tout en restant force de proposition.",
+                desc: "Je sais être organisée dans mon travail tout en restant force de proposition.",
                 icon: <Shield className="w-6 h-6" />
               },
               {
                 title: "Adaptable",
-                desc: "Je m’adapte rapidement aux outils et aux évolutions du secteur.",
+                desc: "Je m'adapte rapidement aux outils et aux évolutions du numérique.",
                 icon: <Zap className="w-6 h-6" />
               },
               {
                 title: "Apprentissage continu",
-                desc: "Une volonté constante d’apprendre et de progresser.",
+                desc: "Une volonté constante d'apprendre et de progresser.",
                 icon: <ArrowRight className="w-6 h-6" />
               }
             ].map((trait, i) => (
@@ -223,11 +223,6 @@ const About = () => {
               <p className="text-text-gray text-lg md:text-xl font-bold leading-relaxed">
                 Ils permettent de gagner en rapidité et en efficacité, tout en laissant une place essentielle à la réflexion, à la stratégie et à la créativité.
               </p>
-              <div className="pt-6">
-                <p className="text-2xl md:text-4xl font-black tracking-tighter italic">
-                  "Créer un site aujourd’hui ne nécessite plus de coder, mais nécessite toujours de <span className="text-light-blue">penser</span>."
-                </p>
-              </div>
             </div>
           </div>
         </motion.div>
