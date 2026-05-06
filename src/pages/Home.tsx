@@ -107,10 +107,10 @@ const Home = () => {
                   Tout a commencé par un constat simple : le web change, et il change vite. 
                 </p>
                 <p>
-                  En tant qu'étudiante en Master informatique numérique, j'ai vu les barrières techniques s'effondrer au profit de la créativité pure. Le NoCode et l'IA ne sont pas juste des "raccourcis", ce sont des catalyseurs de stratégie.
+                  En tant qu’étudiante en master informatique numérique, j’ai vu les barrières techniques diminuer au profit de la créativité. Aujourd’hui, le NoCode et l’IA ne sont pas seulement des outils pour aller plus vite, ce sont de vrais leviers pour penser et structurer des projets.
                 </p>
                 <p>
-                  Mon approche ? Ne plus perdre de temps sur la syntaxe, mais en gagner sur la valeur ajoutée, l'expérience utilisateur et la pertinence métier.
+                  Mon approche ? Passer moins de temps sur la technique, et me concentrer sur ce qui apporte vraiment de la valeur : l’expérience utilisateur, la cohérence et les besoins métier.
                 </p>
               </div>
             </motion.div>
