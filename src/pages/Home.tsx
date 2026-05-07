@@ -114,7 +114,7 @@ const Home = () => {
               Mon positionnement
             </h2>
             <p className="text-lg text-text-gray leading-relaxed font-medium max-w-3xl mx-auto">
-              Diplômée en Master Informatique Numérique, mes travaux explorent comment les outils NoCode et l'intelligence artificielle transforment la production digitale. Mon approche repose sur la conviction que ces outils ne remplacent pas les compétences humaines : ils les renforcent, à condition d'être pilotés par une stratégie claire.
+              Étudiante en Manager — Expert en transformation numérique, mes travaux explorent comment les outils NoCode et l'intelligence artificielle transforment la production digitale. Mon approche repose sur la conviction que ces outils ne remplacent pas les compétences humaines : ils les renforcent, à condition d'être pilotés par une stratégie claire.
             </p>
           </div>
 
@@ -205,7 +205,7 @@ const Home = () => {
               Deux projets, deux problématiques
             </h2>
             <p className="text-lg text-text-gray leading-relaxed font-medium max-w-2xl">
-              Mes travaux s'articulent autour de deux études de cas complémentaires : une analyse data sur le télétravail, et la conception d'un portfolio digital avec un outil NoCode assisté par IA.
+              Mes travaux s'articulent autour de deux projets : une analyse data sur le télétravail, et la conception d'un site vitrine digital avec un outil NoCode assisté par IA.
             </p>
           </div>
 
@@ -222,14 +222,14 @@ const Home = () => {
                   <span className="font-mono text-light-blue text-xs uppercase tracking-[0.4em] mb-4 block">
                     ÉTUDE DE CAS 01 · ANALYSE DATA
                   </span>
-                  <h3 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
+                  <h3 className="text-[28px] md:text-[42px] font-bold text-white mb-8 tracking-[-0.02em] leading-tight">
                     Le télétravail : performance & réalité
                   </h3>
                   <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-6 rounded-2xl mb-8 italic text-slate-200">
                     "Le télétravail constitue-t-il aujourd'hui un mode de travail performant côté salariés et réellement présent côté entreprises ?"
                   </div>
                   <p className="text-slate-300 mb-10 leading-relaxed">
-                    Analyse de trois jeux de données issus de Kaggle, croisant études salariés et marché de l'emploi. Plus de 1 200 observations exploitées.
+                    Analyse de trois dossiers de données issus de Kaggle, croisant études salariés et marché de l'emploi. Plus de 1 200 observations exploitées.
                   </p>
                   <Link 
                     to="/data" 
@@ -241,9 +241,9 @@ const Home = () => {
                 </div>
                 
                 <div className="flex flex-col items-center justify-center text-center bg-white/5 rounded-[2.5rem] p-10 border border-white/5">
-                  <span className="text-7xl md:text-8xl font-black text-light-blue mb-2">+10 pts</span>
+                  <span className="text-5xl md:text-7xl font-black text-light-blue mb-2">73,6 % vs 63,8 %</span>
                   <p className="text-sm md:text-base font-bold uppercase tracking-widest text-slate-300">
-                    de productivité en faveur du télétravail <br />
+                    télétravail vs présentiel <br />
                     <span className="opacity-60">(auto-évaluation salariés)</span>
                   </p>
                 </div>
