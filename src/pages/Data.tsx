@@ -433,8 +433,8 @@ ORDER BY moyenne DESC;`}
                   <Layout className="w-6 h-6 text-light-blue" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-black mb-3">Matrice de confusion</h4>
-                  <p className="font-bold text-white leading-relaxed text-sm">Ventilation des vrais/faux positifs et négatifs pour identifier les outils.</p>
+                  <h4 className="text-xl font-black mb-3 text-white">Matrice de confusion</h4>
+                  <p className="font-bold text-slate-100 leading-relaxed text-sm">Ventilation des vrais/faux positifs et négatifs pour identifier les outils.</p>
                 </div>
               </div>
             </div>
@@ -586,7 +586,7 @@ ORDER BY moyenne DESC;`}
             </p>
             <div className="flex justify-center">
               <a 
-                href="[À REMPLACER PAR L'URL PUBLIQUE DU DASHBOARD APRÈS UPLOAD VERCEL/NETLIFY]"
+                href="file:///C:/Users/bella/Downloads/dashboard_3_dossiers_fr%20(8).html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 px-12 py-5 text-lg font-black rounded-xl bg-white text-deep-blue hover:bg-slate-100 transition-all shadow-xl active:scale-95 group"

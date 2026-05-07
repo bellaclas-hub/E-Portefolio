@@ -91,7 +91,38 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* INTRODUCTION - MA VISION (NARRATIVE) */}
+      {/* 01. LE PROBLÈME */}
+      <section className="py-24 bg-bg-light">
+        <div className="max-w-[1200px] mx-auto px-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.span 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="text-light-blue font-black uppercase tracking-widest text-xs mb-3 block"
+            >
+              01. Le Problème
+            </motion.span>
+            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-6 leading-tight">
+              L’accélération du digital.
+            </h2>
+            <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium mb-12 max-w-2xl mx-auto">
+              L’IA et les LLM redéfinissent les standards de production, le véritable enjeu n’est plus seulement la vitesse, mais la pertinence et la structure de l’exécution.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 text-left max-w-5xl mx-auto">
+              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-md hover:shadow-xl transition-all duration-500">
+                <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">Des cycles de livraison plus courts</h4>
+                <p className="text-text-gray leading-relaxed">L'IA permet d'accélérer drastiquement le contenu et le prototypage. Une refonte web qui exigeait autrefois 6 mois de travail peut désormais être structurée et lancée en un temps record sans sacrifier la vision stratégique.</p>
+              </div>
+              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-md hover:shadow-xl transition-all duration-500">
+                <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">Les exigences sont de plus en plus élevées</h4>
+                <p className="text-text-gray leading-relaxed">Si les délais se réduisent, les attentes en termes de qualité et de ROI augmentent. Le défi n'est plus de produire rapidement, mais de garantir une performance et des résultats mesurables dès le déploiement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 02. MA VISION (NARRATIVE) */}
       <section className="py-24 bg-white border-b border-slate-100">
         <div className="max-w-[1200px] mx-auto px-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -101,7 +132,7 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-2 block">01. Ma Vision</span>
+              <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-2 block">02. Ma Vision</span>
               <div className="space-y-4 text-base md:text-lg text-text-gray leading-relaxed">
                 <p className="font-bold text-deep-blue">
                   Tout a commencé par un constat simple : le web change, et il change vite. 
@@ -131,37 +162,6 @@ const Home = () => {
                 />
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* 02. LE PROBLÈME */}
-      <section className="py-24 bg-bg-light">
-        <div className="max-w-[1200px] mx-auto px-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.span 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="text-light-blue font-black uppercase tracking-widest text-xs mb-3 block"
-            >
-              02. Le Problème
-            </motion.span>
-            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-6 leading-tight">
-              L’accélération du digital.
-            </h2>
-            <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium mb-12 max-w-2xl mx-auto">
-              L’IA et les LLM redéfinissent les standards de production, le véritable enjeu n’est plus seulement la vitesse, mais la pertinence et la structure de l’exécution.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 text-left max-w-5xl mx-auto">
-              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-md hover:shadow-xl transition-all duration-500">
-                <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">Des cycles de livraison plus courts</h4>
-                <p className="text-text-gray leading-relaxed">L'IA permet d'accélérer drastiquement le contenu et le prototypage. Une refonte web qui exigeait autrefois 6 mois de travail peut désormais être structurée et lancée en un temps record sans sacrifier la vision stratégique.</p>
-              </div>
-              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-md hover:shadow-xl transition-all duration-500">
-                <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">Les exigences sont de plus en plus élevées</h4>
-                <p className="text-text-gray leading-relaxed">Si les délais se réduisent, les attentes en termes de qualité et de ROI augmentent. Le défi n'est plus de produire rapidement, mais de garantir une performance et des résultats mesurables dès le déploiement.</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
