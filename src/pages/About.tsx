@@ -36,7 +36,7 @@ const About = () => {
           </motion.h1>
           <motion.div variants={itemVariants} className="space-y-6 text-lg md:text-xl text-text-gray leading-relaxed font-medium">
             <p>
-              Je m'intéresse particulièrement à la manière dont le <span className="text-light-blue font-black">NoCode</span> et l'<span className="text-light-blue font-black">intelligence artificielle</span> transforment la création de sites web.
+              Le <span className="text-light-blue font-black">NoCode</span> et l'<span className="text-light-blue font-black">intelligence artificielle</span> transforment la création de sites web.
             </p>
             <p>
               Ces outils redéfinissent les méthodes de production, en rendant la création <span className="text-deep-blue font-black">plus rapide</span>, <span className="text-deep-blue font-black">plus accessible</span> et <span className="text-deep-blue font-black">plus collaborative</span>.
@@ -88,7 +88,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-6 tracking-tight">Mon approche</h2>
             <div className="space-y-4 text-base md:text-lg text-text-gray leading-relaxed">
               <p>
-                Je développe une approche basée sur l'équilibre entre <span className="text-deep-blue font-bold">stratégie</span>, <span className="text-deep-blue font-bold">créativité</span> et <span className="text-deep-blue font-bold">maîtrise des outils numériques</span>.
+                L'équilibre entre <span className="text-deep-blue font-bold">stratégie</span>, <span className="text-deep-blue font-bold">créativité</span> et <span className="text-deep-blue font-bold">maîtrise des outils numériques</span>.
               </p>
               <p>
                 Chaque projet est pour moi l'occasion de structurer une réflexion, de proposer des solutions adaptées et d'exploiter le potentiel des technologies actuelles.
@@ -153,65 +153,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Compétences & Savoir-faire */}
-      <section className="bg-deep-blue py-20 px-10 mb-20">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="grid md:grid-cols-2 gap-16">
-            {/* Compétences */}
-            <div>
-              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6">Compétences</h2>
-              <ul className="space-y-4">
-                {[
-                  "Stratégie digitale et création de contenu",
-                  "Conception de sites web en NoCode",
-                  "Utilisation d’outils d’intelligence artificielle",
-                  "UX/UI et expérience utilisateur",
-                  "Analyse et optimisation de projets digitaux"
-                ].map((skill, i) => (
-                  <motion.li
-                    key={i}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                    className="text-xl md:text-2xl font-black text-white flex items-start gap-4 group"
-                  >
-                    <span className="text-light-blue mt-1 text-base">0{i + 1}</span>
-                    <span className="group-hover:translate-x-2 transition-transform duration-500">{skill}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Savoir-faire */}
-            <div>
-              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6">Savoir-faire</h2>
-              <ul className="space-y-4">
-                {[
-                  "Structurer et piloter un projet digital",
-                  "Concevoir des interfaces claires et efficaces",
-                  "Adapter un message à une cible précise",
-                  "Exploiter les outils NoCode et IA pour gagner en efficacité",
-                  "Analyser et améliorer les performances"
-                ].map((item, i) => (
-                  <motion.li
-                    key={i}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                    className="text-lg md:text-xl font-bold text-white/80 flex items-start gap-4"
-                  >
-                    <div className="w-1.5 h-1.5 rounded-full bg-light-blue mt-2.5 shrink-0" />
-                    {item}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Ma personnalité */}
       <section className="max-w-[1200px] mx-auto px-10 mb-20">
         <div className="grid lg:grid-cols-3 gap-12">
@@ -255,6 +196,65 @@ const About = () => {
                 <p className="text-sm md:text-base text-text-gray font-medium leading-relaxed">{trait.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compétences & Savoir-faire */}
+      <section className="bg-deep-blue py-12 px-10 mb-20">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Compétences */}
+            <div>
+              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6">Compétences</h2>
+              <ul className="space-y-3">
+                {[
+                  "Stratégie digitale et création de contenu",
+                  "Conception de sites web en NoCode",
+                  "Utilisation d’outils d’intelligence artificielle",
+                  "UX/UI et expérience utilisateur",
+                  "Analyse et optimisation de projets digitaux"
+                ].map((skill, i) => (
+                  <motion.li
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="text-lg md:text-xl font-black text-white flex items-start gap-3 group"
+                  >
+                    <span className="text-light-blue mt-1 text-sm">0{i + 1}</span>
+                    <span className="group-hover:translate-x-2 transition-transform duration-500">{skill}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Savoir-faire */}
+            <div>
+              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6">Savoir-faire</h2>
+              <ul className="space-y-3">
+                {[
+                  "Structurer et piloter un projet digital",
+                  "Concevoir des interfaces claires et efficaces",
+                  "Adapter un message à une cible précise",
+                  "Exploiter les outils NoCode et IA pour gagner en efficacité",
+                  "Analyser et améliorer les performances"
+                ].map((item, i) => (
+                  <motion.li
+                    key={i}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="text-base md:text-lg font-bold text-white/80 flex items-start gap-4"
+                  >
+                    <div className="w-1.5 h-1.5 rounded-full bg-light-blue mt-2 shrink-0" />
+                    {item}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Lexique from './pages/Lexique';
 import CasPratique from './pages/CasPratique';
 import Data from './pages/Data';
+import Methodologie from './pages/Methodologie';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/a-propos" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/data" element={<Data />} />
+            <Route path="/methodologie" element={<Methodologie />} />
             <Route path="/lexique" element={<Lexique />} />
             <Route path="/cas-pratique" element={<CasPratique />} />
             <Route path="/contact" element={<Contact />} />
