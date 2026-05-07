@@ -1,416 +1,326 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Sparkles, Zap, Brain, Code, Rocket, MessageSquare, Globe, Cpu, Layers, ChevronDown, Mail, Linkedin, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Eye, FileText, ChevronDown, ArrowRight, Target, Star, Zap, TrendingUp } from 'lucide-react';
 
 const Home = () => {
   return (
     <div className="overflow-hidden bg-bg-light">
-      {/* HERO SECTION - ACADEMIC & REFLECTIVE */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-deep-blue pt-48 pb-20 md:pt-56 md:pb-24">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-deep-blue" />
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-light-blue/5 to-transparent" />
-          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-bg-light to-transparent" />
+      {/* 1. HERO SECTION */}
+      <section className="relative min-h-screen flex items-center bg-deep-blue pt-32 pb-20 md:pt-40 md:pb-32 px-10">
+        {/* Background elements */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-light-blue/10 to-transparent pointer-events-none" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-light-blue/5 rounded-full blur-[120px] pointer-events-none" />
         </div>
 
-        <div className="max-w-[1200px] mx-auto px-10 relative z-10">
+        <div className="max-w-[1200px] mx-auto relative z-10 w-full">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            {/* TEXTE A GAUCHE */}
+            {/* COLONNE GAUCHE */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="order-2 lg:order-1"
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <div className="flex flex-col items-start text-left">
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 }}
-                  className="mb-4"
-                >
-                  <h2 className="text-white text-[28px] md:text-[32px] font-black tracking-tight mb-0.5">Apolline Bellaclas</h2>
-                  <span className="text-light-blue font-bold uppercase tracking-[0.3em] text-xs md:text-sm">
-                    Portfolio Étudiant
-                  </span>
-                </motion.div>
-                
-                <h1 className="text-3xl md:text-4xl lg:text-[44px] font-black text-white leading-[1.1] tracking-tight mb-6 uppercase">
-                  ET SI LE FUTUR DU WEB <br />
-                  <span className="text-light-blue">NE S’ÉCRIVAIT PLUS</span> <br />
-                  SEULEMENT EN CODE ?
-                </h1>
-                
-                <div className="flex flex-col sm:flex-row items-center gap-4 lg:gap-6 mt-8 w-full sm:w-auto">
-                  <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                    <a 
-                      href="https://res.cloudinary.com/delgsyvkc/image/upload/v1775209438/CV_Apolline_Bellaclas_jthzlo.png" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="btn-primary w-full sm:w-auto"
-                    >
-                      Voir mon CV
-                    </a>
-                    <a href="#projets" className="btn-outline-white w-full sm:w-auto">
-                      Voir mes projets
-                    </a>
-                  </div>
+              <span className="font-mono text-slate-400 text-xs uppercase tracking-[0.4em] mb-4 block">
+                Portfolio professionnel
+              </span>
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-2 tracking-tight">
+                Apolline Bellaclas
+              </h1>
+              <h2 className="text-xl md:text-2xl font-bold text-light-blue mb-8 tracking-tight">
+                Cheffe de projet digital
+              </h2>
+              <p className="text-lg text-slate-300 mb-12 leading-relaxed max-w-xl">
+                J'évolue à l'intersection du marketing digital, du NoCode et de l'intelligence artificielle, avec une exigence : produire des analyses stratégiques et des livrables professionnels.
+              </p>
 
-                  {/* QR Code Hero Integration */}
-                  <div className="hidden sm:flex items-center gap-3 bg-white/10 border border-white/10 p-2 pr-4 rounded-2xl backdrop-blur-md hover:bg-white/15 transition-all cursor-help group">
-                    <div className="bg-white p-1.5 rounded-xl shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <img 
-                        src="https://res.cloudinary.com/delgsyvkc/image/upload/v1778150150/Untitled_e7mnb6.png" 
-                        alt="QR Code Portfolio" 
-                        className="w-10 h-10 object-contain"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                    <div className="flex flex-col pointer-events-none">
-                      <span className="text-[10px] font-black text-white uppercase tracking-widest leading-none">Version Mobile</span>
-                    </div>
+              <div className="flex flex-col sm:flex-row items-center gap-8 lg:gap-12">
+                {/* CTA Button */}
+                <a 
+                  href="https://res.cloudinary.com/delgsyvkc/image/upload/v1775209438/CV_Apolline_Bellaclas_jthzlo.png" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-5 text-base font-black text-white rounded-2xl bg-gradient-to-r from-light-blue to-deep-blue hover:from-light-blue/90 hover:to-deep-blue/90 shadow-xl shadow-light-blue/20 transition-all active:scale-95 group"
+                >
+                  <FileText className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  Voir mon CV
+                </a>
+
+                {/* QR Code Container */}
+                <div className="flex items-center gap-4 group">
+                  <div className="bg-white p-2.5 rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105">
+                    <img 
+                      src="https://res.cloudinary.com/delgsyvkc/image/upload/v1778150150/Untitled_e7mnb6.png" 
+                      alt="Portfolio QR Code" 
+                      className="w-20 h-20 md:w-24 md:h-24 object-contain"
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
+                  <p className="text-[10px] md:text-xs text-slate-400 font-bold uppercase tracking-widest leading-relaxed max-w-[100px]">
+                    Scanner pour accéder au portfolio
+                  </p>
                 </div>
               </div>
             </motion.div>
 
-            {/* PHOTO A DROITE */}
+            {/* COLONNE DROITE - PHOTO */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-              className="order-1 lg:order-2"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+              className="relative"
             >
-              <div className="relative">
-                <div className="aspect-[4/5] md:aspect-square max-w-md ml-auto mr-0 lg:mr-4 rounded-[3rem] overflow-hidden border-2 border-light-blue/20 shadow-2xl relative z-10">
-                  <img 
-                    src="https://res.cloudinary.com/delgsyvkc/image/upload/v1773394135/Photo_Apolline_Bellaclas.pdf_lftaza.png" 
-                    alt="Apolline Bellaclas" 
-                    className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                {/* Decorative elements */}
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-light-blue/10 rounded-full blur-2xl" />
-                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-light-blue/5 rounded-full blur-3xl" />
+              <div className="aspect-[4/5] bg-slate-800 rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl relative z-10">
+                <img 
+                  src="https://res.cloudinary.com/delgsyvkc/image/upload/v1773394135/Photo_Apolline_Bellaclas.pdf_lftaza.png" 
+                  alt="Apolline Bellaclas" 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
               </div>
+              {/* Decorative glows */}
+              <div className="absolute -top-12 -right-12 w-64 h-64 bg-light-blue/20 rounded-full blur-[100px] pointer-events-none" />
+              <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-deep-blue rounded-full blur-[100px] pointer-events-none" />
             </motion.div>
           </div>
         </div>
 
+        {/* Scroll Indicator */}
         <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/30 animate-bounce hidden lg:block"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/20 hidden lg:block z-30"
         >
           <ChevronDown className="w-8 h-8" />
         </motion.div>
+
+        {/* White fade to next section */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none" />
       </section>
 
-      {/* 01. LE PROBLÈME */}
-      <section className="py-24 bg-bg-light">
+      {/* 2. SECTION "QUI JE SUIS" */}
+      <section className="py-24 bg-white">
         <div className="max-w-[1200px] mx-auto px-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center mb-16">
             <motion.span 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-light-blue font-black uppercase tracking-widest text-xs mb-3 block"
+              viewport={{ once: true }}
+              className="text-light-blue font-black uppercase tracking-[0.4em] text-xs mb-3 block"
             >
-              01. Le Problème
+              01. PROFIL
             </motion.span>
-            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-6 leading-tight">
-              L’accélération du digital.
+            <h2 className="text-3xl md:text-5xl font-bold text-deep-blue mb-8 tracking-tight">
+              Mon positionnement
             </h2>
-            <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium mb-12 max-w-2xl mx-auto">
-              L’IA et les LLM transforment les méthodes de production : la vitesse ne suffit plus, la pertinence et la structuration deviennent essentielles.
+            <p className="text-lg text-text-gray leading-relaxed font-medium max-w-3xl mx-auto">
+              Diplômée en Master Informatique Numérique, mes travaux explorent comment les outils NoCode et l'intelligence artificielle transforment la production digitale. Mon approche repose sur la conviction que ces outils ne remplacent pas les compétences humaines : ils les renforcent, à condition d'être pilotés par une stratégie claire.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 text-left max-w-5xl mx-auto">
-              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-md hover:shadow-xl transition-all duration-500">
-                <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">Des cycles de livraison plus courts</h4>
-                <p className="text-text-gray leading-relaxed">L’IA permet d’accélérer fortement la création de contenu et le prototypage. Une refonte de site qui prenait auparavant plusieurs mois peut aujourd’hui être structurée et lancée beaucoup plus rapidement, tout en gardant une vraie réflexion stratégique.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* CARD 1 — Vision */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-8 bg-white border border-slate-100 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 group"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-light-blue/10 flex items-center justify-center text-light-blue mb-6 group-hover:scale-110 transition-transform">
+                <Eye className="w-6 h-6" />
               </div>
-              <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-md hover:shadow-xl transition-all duration-500">
-                <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">Les exigences sont de plus en plus élevées</h4>
-                <p className="text-text-gray leading-relaxed">Les délais se raccourcissent, mais les exigences en qualité et en ROI augmentent. L’enjeu n’est plus d’aller vite, mais de générer des résultats mesurables dès la mise en ligne.</p>
+              <h4 className="text-xl font-bold text-deep-blue mb-3">Vision</h4>
+              <p className="text-sm text-text-gray leading-relaxed font-medium">
+                Je considère que la technologie doit être au service de la stratégie, et non l'inverse. Mon rôle est de faire le pont entre ces deux mondes.
+              </p>
+            </motion.div>
+
+            {/* CARD 2 — Approche */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="p-8 bg-white border border-slate-100 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 group"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-light-blue/10 flex items-center justify-center text-light-blue mb-6 group-hover:scale-110 transition-transform">
+                <Target className="w-6 h-6" />
               </div>
-            </div>
+              <h4 className="text-xl font-bold text-deep-blue mb-3">Approche</h4>
+              <p className="text-sm text-text-gray leading-relaxed font-medium">
+                Double sensibilité marketing et analyse de données. Une démarche qui croise rigueur business et exigences techniques du digital.
+              </p>
+            </motion.div>
+
+            {/* CARD 3 — Ma différence */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="p-8 bg-white border border-slate-100 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 group"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-light-blue/10 flex items-center justify-center text-light-blue mb-6 group-hover:scale-110 transition-transform">
+                <Star className="w-6 h-6" />
+              </div>
+              <h4 className="text-xl font-bold text-deep-blue mb-3">Ma différence</h4>
+              <p className="text-sm text-text-gray leading-relaxed font-medium">
+                Un double parcours marketing et commercial, qui me permet de comprendre les enjeux de communication et les attentes des équipes commerciales.
+              </p>
+            </motion.div>
+
+            {/* CARD 4 — Valeur ajoutée */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="p-8 bg-white border border-slate-100 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 group"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-light-blue/10 flex items-center justify-center text-light-blue mb-6 group-hover:scale-110 transition-transform">
+                <TrendingUp className="w-6 h-6" />
+              </div>
+              <h4 className="text-xl font-bold text-deep-blue mb-3">Valeur ajoutée</h4>
+              <p className="text-sm text-text-gray leading-relaxed font-medium">
+                Concevoir des contenus et des analyses qui ne sont pas seulement esthétiques ou engageants, mais réellement utiles à la performance business.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* 02. MA VISION (NARRATIVE) */}
-      <section className="py-24 bg-white border-b border-slate-100">
+      {/* 3. SECTION "MES TRAVAUX" */}
+      <section className="py-24 bg-bg-light">
         <div className="max-w-[1200px] mx-auto px-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-4xl mb-16">
+            <motion.span 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-light-blue font-black uppercase tracking-[0.4em] text-xs mb-3 block"
+            >
+              02. ÉTUDES DE CAS
+            </motion.span>
+            <h2 className="text-3xl md:text-5xl font-bold text-deep-blue mb-6 tracking-tight">
+              Deux projets, deux problématiques
+            </h2>
+            <p className="text-lg text-text-gray leading-relaxed font-medium max-w-2xl">
+              Mes travaux s'articulent autour de deux études de cas complémentaires : une analyse data sur le télétravail, et la conception d'un portfolio digital avec un outil NoCode assisté par IA.
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {/* ETUDE DE CAS 01 — LE TÉLÉTRAVAIL */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              className="bg-deep-blue rounded-[3rem] overflow-hidden p-10 md:p-16 text-white shadow-2xl relative"
             >
-              <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-2 block">02. Ma Vision</span>
-              <div className="space-y-4 text-base md:text-lg text-text-gray leading-relaxed">
-                <p className="font-bold text-deep-blue">
-                  Tout a commencé par un constat simple : le web change, et il change vite. 
-                </p>
-                <p>
-                  En tant qu’étudiante en manager en transformation numérique, j’ai vu les barrières techniques diminuer au profit de la créativité. Aujourd’hui, le NoCode et l’IA ne sont pas seulement des outils pour aller plus vite, ce sont de vrais leviers pour penser et structurer des projets. 
-                </p>
-                <p>
-                  Mon approche ? Passer moins de temps sur la technique, et me concentrer sur ce qui apporte vraiment de la valeur : l’expérience utilisateur, la cohérence et les besoins métier.
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-              className="relative"
-            >
-              <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border border-slate-200">
-                <img 
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" 
-                  alt="Academic Research" 
-                  className="w-full h-full object-cover grayscale opacity-90"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* 03. L'EXPÉRIMENTATION (PROJET LOVABLE) */}
-      <section id="projets" className="py-20 bg-deep-blue text-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-light-blue rounded-full blur-[120px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-light-blue/50 rounded-full blur-[120px]" />
-        </div>
-        
-        <div className="max-w-[1200px] mx-auto px-10 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 lg:gap-24 items-center">
-            {/* IMAGE A DROITE (DESKTOP) / EN HAUT (MOBILE) */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative order-1 lg:order-2"
-            >
-              <a 
-                href="https://lovable.dev" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block group relative"
-              >
-                <div className="aspect-video bg-white/5 rounded-[2.5rem] border border-white/10 p-3 backdrop-blur-md transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl group-hover:shadow-light-blue/20">
-                  <div className="w-full h-full rounded-[1.8rem] overflow-hidden bg-deep-blue border border-white/5 relative flex flex-col">
-                    {/* Browser Header Mockup */}
-                    <div className="bg-white/10 w-full h-7 flex items-center px-4 gap-1.5 border-b border-white/5">
-                      <div className="w-2 h-2 rounded-full bg-[#FF5F56]" />
-                      <div className="w-2 h-2 rounded-full bg-[#FFBD2E]" />
-                      <div className="w-2 h-2 rounded-full bg-[#27C93F]" />
-                      <div className="ml-4 bg-white/5 rounded-md h-4 w-1/2" />
-                    </div>
-                    {/* Browser Content */}
-                    <div className="flex-grow relative overflow-hidden bg-slate-900">
-                      <img 
-                        src="https://res.cloudinary.com/delgsyvkc/image/upload/v1778085335/Capture_d_%C3%A9cran_2026-05-06_183517_fnrh2i.png" 
-                        alt="Aperçu de mon site vitrine réalisé avec Lovable" 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        referrerPolicy="no-referrer"
-                      />
-                      <div className="absolute inset-0 bg-deep-blue/20 group-hover:bg-transparent transition-colors duration-500" />
-                    </div>
+              <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <span className="font-mono text-light-blue text-xs uppercase tracking-[0.4em] mb-4 block">
+                    ÉTUDE DE CAS 01 · ANALYSE DATA
+                  </span>
+                  <h3 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
+                    Le télétravail : performance & réalité
+                  </h3>
+                  <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-6 rounded-2xl mb-8 italic text-slate-200">
+                    "Le télétravail constitue-t-il aujourd'hui un mode de travail performant côté salariés et réellement présent côté entreprises ?"
                   </div>
+                  <p className="text-slate-300 mb-10 leading-relaxed">
+                    Analyse de trois jeux de données issus de Kaggle, croisant études salariés et marché de l'emploi. Plus de 1 200 observations exploitées.
+                  </p>
+                  <Link 
+                    to="/data" 
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-white text-deep-blue font-bold rounded-xl hover:bg-light-blue hover:text-white transition-all shadow-xl"
+                  >
+                    Voir l'analyse complète
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
                 </div>
                 
-                {/* Badge 90% */}
-                <div className="absolute -bottom-4 -right-4 bg-light-blue p-5 md:p-6 rounded-2xl shadow-2xl z-20 text-deep-blue transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
-                  <p className="text-3xl md:text-4xl font-black mb-0.5">90%</p>
-                  <p className="text-[9px] font-black uppercase tracking-widest leading-none">Gain de temps</p>
+                <div className="flex flex-col items-center justify-center text-center bg-white/5 rounded-[2.5rem] p-10 border border-white/5">
+                  <span className="text-7xl md:text-8xl font-black text-light-blue mb-2">+10 pts</span>
+                  <p className="text-sm md:text-base font-bold uppercase tracking-widest text-slate-300">
+                    de productivité en faveur du télétravail <br />
+                    <span className="opacity-60">(auto-évaluation salariés)</span>
+                  </p>
                 </div>
-              </a>
+              </div>
             </motion.div>
 
-            {/* TEXTE A GAUCHE (DESKTOP) / EN BAS (MOBILE) */}
+            {/* ETUDE DE CAS 02 — LE PORTFOLIO LOVABLE */}
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="order-2 lg:order-1 max-w-xl"
+              className="bg-white rounded-[3rem] overflow-hidden p-10 md:p-16 text-deep-blue border border-slate-100 shadow-xl relative"
             >
-              <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-3 block">03. Mon Approche</span>
-              <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-white">Aller au-delà <br /> du CV classique.</h2>
-              
-              <div className="space-y-10">
-                {/* 1. Message principal */}
-                <p className="text-lg md:text-xl text-white font-medium leading-relaxed opacity-90">
-                   Aujourd’hui, un profil marketing doit être capable de <span className="text-light-blue font-bold">montrer concrètement</span> ce qu’il sait faire. Ce site me permet de présenter mes projets, mes contenus et ma manière de travailler de façon visuelle et structurée.
-                </p>
+              <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <span className="font-mono text-light-blue text-xs uppercase tracking-[0.4em] mb-4 block">
+                    ÉTUDE DE CAS 02 · NOCODE + IA
+                  </span>
+                  <h3 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight text-deep-blue">
+                    Conception d'un site vitrine avec Lovable
+                  </h3>
+                  <div className="bg-light-blue/10 border border-light-blue/20 p-6 rounded-2xl mb-8 italic text-text-gray font-medium">
+                    "Un outil NoCode assisté par IA peut-il produire un livrable professionnel sans sacrifier la réflexion stratégique ?"
+                  </div>
+                  <p className="text-text-gray mb-10 leading-relaxed font-medium">
+                    Exploration des capacités de génération assistée par IA pour restructurer un portfolio digital complet en un temps record.
+                  </p>
+                  <Link 
+                    to="/portfolio" 
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-deep-blue text-white font-bold rounded-xl hover:bg-light-blue transition-all shadow-xl"
+                  >
+                    Découvrir le projet
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </div>
+                
+                <div className="relative group">
+                  <div className="aspect-video bg-slate-100 rounded-[2rem] overflow-hidden border border-slate-200 shadow-lg">
+                    <img 
+                      src="https://res.cloudinary.com/delgsyvkc/image/upload/v1778085335/Capture_d_%C3%A9cran_2026-05-06_183517_fnrh2i.png" 
+                      alt="Aperçu Lovable" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                  <div className="absolute -bottom-4 -right-4 bg-deep-blue text-white p-6 rounded-2xl shadow-2xl">
+                    <p className="text-3xl font-black mb-0">90%</p>
+                    <p className="text-[9px] font-black uppercase tracking-widest leading-none">Gain de temps</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
-
-          {/* Footer de section pour combler le vide et dynamiser la lecture */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-16 flex flex-col md:flex-row items-center justify-between gap-10 bg-gradient-to-r from-light-blue/20 to-transparent border-l-4 border-light-blue p-10 rounded-r-3xl"
-          >
-            <p className="text-white text-xl md:text-2xl font-black leading-relaxed flex-1">
-              🎯 L’objectif : permettre à un recruteur de comprendre rapidement qui je suis, ce que je sais faire, et ce que je peux apporter.
-            </p>
-            <Link to="/portfolio" className="btn-primary shadow-2xl hover:shadow-light-blue/40 transition-all px-12 py-4 whitespace-nowrap">
-              Voir mes réalisations
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 04. L'ANALYSE */}
-      <section className="py-24 bg-white border-y border-slate-100">
-        <div className="max-w-[1200px] mx-auto px-10">
-          <div className="max-w-4xl mb-12">
-            <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-3 block">04. L'Analyse</span>
-            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-6 leading-tight">Ce que j'ai appris</h2>
-            <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium max-w-2xl">
-              L'expérimentation Lovable a confirmé une intuition : si l'outil fait gagner du temps, c'est l'humain qui apporte la direction.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "L'outil libère l'esprit",
-                desc: "En automatisant les tâches répétitives, le NoCode permet de se concentrer sur ce qui compte vraiment : l'utilisateur et la stratégie.",
-                icon: <Sparkles className="w-8 h-8 text-light-blue" />
-              },
-              {
-                title: "L'IA est un co-pilote",
-                desc: "Elle ne remplace pas le designer, elle amplifie ses capacités et propose des structures que l'on peut ensuite affiner.",
-                icon: <Brain className="w-8 h-8 text-light-blue" />
-              },
-              {
-                title: "La stratégie est le socle",
-                desc: "Sans une vision claire, l'outil le plus puissant ne produira qu'un résultat générique. L'expertise reste indispensable.",
-                icon: <Target className="w-8 h-8 text-light-blue" />
-              }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-10 rounded-[3rem] bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-light-blue/20 transition-all duration-500 group"
-              >
-                <div className="mb-6 group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
-                <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">{item.title}</h4>
-                <p className="text-sm md:text-base text-text-gray leading-relaxed font-medium">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* POURQUOI MOI ? */}
-      <section className="py-24 bg-bg-light">
-        <div className="max-w-[1200px] mx-auto px-10">
-          <div className="mb-16 text-center md:text-left">
-            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-6">Pourquoi moi ?</h2>
-            <p className="text-base md:text-lg text-text-gray max-w-2xl leading-relaxed font-semibold opacity-90">
-              Une approche mêlant marketing digital, NoCode et intelligence artificielle pour des résultats concrets.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {[
-              {
-                title: "Vision stratégique",
-                desc: "Comprendre les enjeux digitaux pour concevoir des solutions adaptées.",
-                icon: <Brain className="w-12 h-12" />
-              },
-              {
-                title: "Créativité augmentée",
-                desc: "Utiliser les outils IA pour enrichir les processus créatifs.",
-                icon: <Sparkles className="w-12 h-12" />
-              },
-              {
-                title: "Culture technique",
-                desc: "Allier réflexion stratégique et compréhension des outils numériques.",
-                icon: <Code className="w-12 h-12" />
-              },
-              {
-                title: "Orientation résultats",
-                desc: "Concevoir des projets efficaces et mesurables.",
-                icon: <Target className="w-12 h-12" />
-              }
-            ].map((item, i) => (
-              <div key={i} className="group bg-white p-10 rounded-[3rem] border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-center text-center">
-                <div className="w-24 h-24 rounded-3xl bg-slate-50 flex items-center justify-center text-light-blue mb-8 group-hover:bg-light-blue group-hover:text-white transition-all duration-500 shadow-inner group-hover:scale-110">
-                  {item.icon}
-                </div>
-                <h4 className="text-2xl font-black mb-4 text-deep-blue leading-tight">{item.title}</h4>
-                <p className="text-sm md:text-base text-text-gray leading-relaxed font-medium opacity-80">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CONCLUSION */}
-      <section className="py-24 bg-white border-b border-slate-100">
-        <div className="max-w-[1200px] mx-auto px-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-5xl font-black text-deep-blue mb-8">Conclusion</h2>
-            <div className="space-y-6 text-base md:text-lg text-text-gray leading-relaxed font-medium">
-              <p>
-                Le NoCode et l’intelligence artificielle permettent aujourd’hui de créer des sites web rapidement et efficacement.
-              </p>
-              <p>
-                Cependant, ils ne remplacent pas la réflexion stratégique et créative nécessaire à un projet digital performant.
-              </p>
-              <p className="text-deep-blue font-bold">
-                Ce projet illustre l’équilibre à trouver entre accessibilité, performance et expertise.
-              </p>
-            </div>
-          </motion.div>
         </div>
       </section>
 
       {/* CONTACT CTA */}
-      <section className="py-20 bg-bg-light">
+      <section className="py-24 bg-bg-light">
         <div className="max-w-[1000px] mx-auto px-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-light-blue to-deep-blue rounded-[2.5rem] p-12 md:p-16 text-center relative overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.2)] border border-white/10"
+            className="bg-deep-blue rounded-[3rem] p-12 md:p-16 text-center relative overflow-hidden shadow-2xl"
           >
-            <div className="absolute inset-0 opacity-20 pointer-events-none">
-              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,white,transparent)]" />
-            </div>
-            
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl mb-4 text-white font-black tracking-tight leading-[1.2]">Prêt à explorer le futur <br /> du digital ensemble ?</h2>
-              <p className="text-base md:text-lg text-white/90 mb-8 max-w-xl mx-auto leading-relaxed font-medium">
-                Que vous ayez un projet concret ou une simple curiosité sur l'impact de l'IA et du NoCode, discutons-en dès maintenant.
+              <h2 className="text-3xl md:text-5xl mb-6 text-white font-bold tracking-tight">Prêt à collaborer ?</h2>
+              <p className="text-lg text-slate-300 mb-10 max-w-xl mx-auto leading-relaxed">
+                N'hésitez pas à me contacter pour discuter de vos projets digitaux ou de mon parcours.
               </p>
-              <div className="flex justify-center">
-                <Link to="/contact" className="btn-outline-white shadow-xl hover:shadow-white/10 px-8 py-3 text-base">
-                  Démarrer la conversation
-                </Link>
-              </div>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center gap-3 px-10 py-4 bg-light-blue text-deep-blue font-bold rounded-xl hover:bg-white transition-all shadow-lg shadow-light-blue/20"
+              >
+                Me contacter
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </motion.div>
         </div>
