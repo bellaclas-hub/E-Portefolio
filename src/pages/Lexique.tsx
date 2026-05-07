@@ -85,6 +85,12 @@ const Lexique = () => {
           definition: "Le Data Lake stocke des données brutes (non structurées) tandis que le Warehouse stocke des données traitées et structurées.",
           stake: "Optimisation du stockage Big Data et fiabilité des rapports décisionnels (BI).",
           icon: <Database className="w-5 h-5" />
+        },
+        {
+          name: "Pipeline data",
+          definition: "Un pipeline data est un ensemble d’étapes qui permet de collecter, organiser et transformer des données pour les rendre exploitables.",
+          stake: "Automatisation du flux de données pour garantir une information propre et prête à l'analyse.",
+          icon: <Filter className="w-5 h-5" />
         }
       ]
     },

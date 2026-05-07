@@ -121,6 +121,37 @@ const About = () => {
           </div>
         </div>
       </section>
+      
+      {/* Mon positionnement */}
+      <section className="max-w-[1200px] mx-auto px-10 mb-20">
+        <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8 text-center">Mon positionnement</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="p-10 bg-white rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500"
+          >
+            <h3 className="text-xl md:text-2xl font-black text-deep-blue mb-4">Ma différence</h3>
+            <p className="text-base md:text-lg text-text-gray font-medium leading-relaxed">
+              Un double parcours marketing et commercial, qui me permet de comprendre à la fois les enjeux de communication et les attentes concrètes des équipes commerciales.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="p-10 bg-white rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500"
+          >
+            <h3 className="text-xl md:text-2xl font-black text-deep-blue mb-4">Valeur ajoutée</h3>
+            <p className="text-base md:text-lg text-text-gray font-medium leading-relaxed">
+              Je conçois des contenus qui ne sont pas seulement esthétiques ou engageants, mais réellement utiles pour la prospection et la performance business.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Compétences & Savoir-faire */}
       <section className="bg-deep-blue py-20 px-10 mb-20">

@@ -41,18 +41,35 @@ const Home = () => {
                   SEULEMENT EN CODE ?
                 </h1>
                 
-                <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
-                  <a 
-                    href="https://res.cloudinary.com/delgsyvkc/image/upload/v1775209438/CV_Apolline_Bellaclas_jthzlo.png" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="btn-primary w-full sm:w-auto"
-                  >
-                    Voir mon CV
-                  </a>
-                  <a href="#projets" className="btn-outline-white w-full sm:w-auto">
-                    Voir mes projets
-                  </a>
+                <div className="flex flex-col sm:flex-row items-center gap-4 lg:gap-6 mt-8 w-full sm:w-auto">
+                  <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                    <a 
+                      href="https://res.cloudinary.com/delgsyvkc/image/upload/v1775209438/CV_Apolline_Bellaclas_jthzlo.png" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn-primary w-full sm:w-auto"
+                    >
+                      Voir mon CV
+                    </a>
+                    <a href="#projets" className="btn-outline-white w-full sm:w-auto">
+                      Voir mes projets
+                    </a>
+                  </div>
+
+                  {/* QR Code Hero Integration */}
+                  <div className="hidden sm:flex items-center gap-3 bg-white/10 border border-white/10 p-2 pr-4 rounded-2xl backdrop-blur-md hover:bg-white/15 transition-all cursor-help group">
+                    <div className="bg-white p-1.5 rounded-xl shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <img 
+                        src="https://res.cloudinary.com/delgsyvkc/image/upload/v1778150150/Untitled_e7mnb6.png" 
+                        alt="QR Code Portfolio" 
+                        className="w-10 h-10 object-contain"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                    <div className="flex flex-col pointer-events-none">
+                      <span className="text-[10px] font-black text-white uppercase tracking-widest leading-none">Version Mobile</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -106,16 +123,16 @@ const Home = () => {
               L’accélération du digital.
             </h2>
             <p className="text-base md:text-lg text-text-gray leading-relaxed font-medium mb-12 max-w-2xl mx-auto">
-              L’IA et les LLM redéfinissent les standards de production, le véritable enjeu n’est plus seulement la vitesse, mais la pertinence et la structure de l’exécution.
+              L’IA et les LLM transforment les méthodes de production : la vitesse ne suffit plus, la pertinence et la structuration deviennent essentielles.
             </p>
             <div className="grid md:grid-cols-2 gap-6 text-left max-w-5xl mx-auto">
               <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-md hover:shadow-xl transition-all duration-500">
                 <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">Des cycles de livraison plus courts</h4>
-                <p className="text-text-gray leading-relaxed">L'IA permet d'accélérer drastiquement le contenu et le prototypage. Une refonte web qui exigeait autrefois 6 mois de travail peut désormais être structurée et lancée en un temps record sans sacrifier la vision stratégique.</p>
+                <p className="text-text-gray leading-relaxed">L’IA permet d’accélérer fortement la création de contenu et le prototypage. Une refonte de site qui prenait auparavant plusieurs mois peut aujourd’hui être structurée et lancée beaucoup plus rapidement, tout en gardant une vraie réflexion stratégique.</p>
               </div>
               <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-md hover:shadow-xl transition-all duration-500">
                 <h4 className="text-xl md:text-2xl font-black mb-4 text-deep-blue">Les exigences sont de plus en plus élevées</h4>
-                <p className="text-text-gray leading-relaxed">Si les délais se réduisent, les attentes en termes de qualité et de ROI augmentent. Le défi n'est plus de produire rapidement, mais de garantir une performance et des résultats mesurables dès le déploiement.</p>
+                <p className="text-text-gray leading-relaxed">Les délais se raccourcissent, mais les exigences en qualité et en ROI augmentent. L’enjeu n’est plus d’aller vite, mais de générer des résultats mesurables dès la mise en ligne.</p>
               </div>
             </div>
           </div>
@@ -138,7 +155,7 @@ const Home = () => {
                   Tout a commencé par un constat simple : le web change, et il change vite. 
                 </p>
                 <p>
-                  En tant qu’étudiante en master informatique numérique, j’ai vu les barrières techniques diminuer au profit de la créativité. Aujourd’hui, le NoCode et l’IA ne sont pas seulement des outils pour aller plus vite, ce sont de vrais leviers pour penser et structurer des projets.
+                  En tant qu’étudiante en manager en transformation numérique, j’ai vu les barrières techniques diminuer au profit de la créativité. Aujourd’hui, le NoCode et l’IA ne sont pas seulement des outils pour aller plus vite, ce sont de vrais leviers pour penser et structurer des projets. 
                 </p>
                 <p>
                   Mon approche ? Passer moins de temps sur la technique, et me concentrer sur ce qui apporte vraiment de la valeur : l’expérience utilisateur, la cohérence et les besoins métier.
@@ -231,24 +248,8 @@ const Home = () => {
               <div className="space-y-10">
                 {/* 1. Message principal */}
                 <p className="text-lg md:text-xl text-white font-medium leading-relaxed opacity-90">
-                  Aujourd’hui, un profil marketing doit être capable de <span className="text-light-blue font-bold">montrer concrètement</span> ce qu’il sait faire. Ce site me permet de présenter mes projets, mes contenus et ma manière de travailler de façon visuelle et structurée.
+                   Aujourd’hui, un profil marketing doit être capable de <span className="text-light-blue font-bold">montrer concrètement</span> ce qu’il sait faire. Ce site me permet de présenter mes projets, mes contenus et ma manière de travailler de façon visuelle et structurée.
                 </p>
-
-                {/* 2. Les piliers (Ma différence & Bonus) */}
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-all duration-300">
-                    <span className="text-light-blue font-black uppercase tracking-widest text-[10px] mb-3 block">Ma différence</span>
-                    <p className="text-white text-sm md:text-base leading-relaxed font-semibold">
-                      👉 un double parcours marketing et commercial, qui me permet de comprendre à la fois les enjeux de communication et les attentes concrètes des équipes commerciales.
-                    </p>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-all duration-300">
-                    <span className="text-light-blue font-black uppercase tracking-widest text-[10px] mb-3 block">Valeur Ajoutée</span>
-                    <p className="text-white text-sm md:text-base leading-relaxed font-semibold">
-                      Je conçois des contenus qui ne sont pas seulement esthétiques ou engageants, mais réellement utiles pour la prospection et la performance business.
-                    </p>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>
