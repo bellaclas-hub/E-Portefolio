@@ -14,12 +14,13 @@ const Home = () => {
         </div>
 
         <div className="max-w-[1200px] mx-auto relative z-10 w-full">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 lg:gap-0 items-center">
             {/* COLONNE GAUCHE */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
+              className="lg:col-span-7 order-2 lg:order-1"
             >
               <span className="font-mono text-slate-400 text-xs uppercase tracking-[0.4em] mb-4 block">
                 Portfolio professionnel
@@ -68,9 +69,9 @@ const Home = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-              className="relative"
+              className="relative lg:col-span-3 order-1 lg:order-2 flex justify-center"
             >
-              <div className="aspect-[4/5] bg-slate-800 rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl relative z-10">
+              <div className="w-full max-w-[200px] md:max-w-[240px] lg:max-w-[280px] lg:w-[280px] lg:h-[360px] aspect-[3/4] lg:aspect-auto bg-slate-800 rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl relative z-10">
                 <img 
                   src="https://res.cloudinary.com/delgsyvkc/image/upload/v1773394135/Photo_Apolline_Bellaclas.pdf_lftaza.png" 
                   alt="Apolline Bellaclas" 
