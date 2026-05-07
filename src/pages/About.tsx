@@ -48,6 +48,34 @@ const About = () => {
         </motion.div>
       </section>
 
+      {/* Vision */}
+      <section className="max-w-[1200px] mx-auto px-10 mb-20">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="bg-white rounded-[3rem] p-12 md:p-16 text-center border border-slate-100 relative overflow-hidden shadow-sm"
+        >
+          <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle,var(--light-blue)_0%,transparent_70%)]" />
+          </div>
+          
+          <div className="relative z-10 max-w-4xl mx-auto">
+            <Eye className="w-10 h-10 text-light-blue mx-auto mb-6" />
+            <h2 className="text-xs font-black uppercase tracking-[0.5em] text-light-blue mb-6">Vision</h2>
+            <div className="space-y-6 text-xl md:text-2xl font-black text-deep-blue leading-tight tracking-tight">
+              <p>
+                Je considère que le <span className="text-light-blue">NoCode</span> et l’<span className="text-light-blue">intelligence artificielle</span> ne remplacent pas les compétences humaines, mais les <span className="underline decoration-light-blue decoration-4 underline-offset-8">renforcent</span>.
+              </p>
+              <p className="text-text-gray text-lg md:text-xl font-bold leading-relaxed">
+                Ils permettent de gagner en rapidité et en efficacité, tout en laissant une place essentielle à la réflexion, à la stratégie et à la créativité.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Mon approche */}
       <section className="max-w-[1200px] mx-auto px-10 mb-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -198,34 +226,6 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Vision */}
-      <section className="max-w-[1200px] mx-auto px-10 mb-20">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="bg-white rounded-[3rem] p-12 md:p-16 text-center border border-slate-100 relative overflow-hidden shadow-sm"
-        >
-          <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle,var(--light-blue)_0%,transparent_70%)]" />
-          </div>
-          
-          <div className="relative z-10 max-w-4xl mx-auto">
-            <Eye className="w-10 h-10 text-light-blue mx-auto mb-6" />
-            <h2 className="text-xs font-black uppercase tracking-[0.5em] text-light-blue mb-6">Vision</h2>
-            <div className="space-y-6 text-xl md:text-2xl font-black text-deep-blue leading-tight tracking-tight">
-              <p>
-                Je considère que le <span className="text-light-blue">NoCode</span> et l’<span className="text-light-blue">intelligence artificielle</span> ne remplacent pas les compétences humaines, mais les <span className="underline decoration-light-blue decoration-4 underline-offset-8">renforcent</span>.
-              </p>
-              <p className="text-text-gray text-lg md:text-xl font-bold leading-relaxed">
-                Ils permettent de gagner en rapidité et en efficacité, tout en laissant une place essentielle à la réflexion, à la stratégie et à la créativité.
-              </p>
-            </div>
-          </div>
-        </motion.div>
       </section>
 
       {/* Contact CTA */}
