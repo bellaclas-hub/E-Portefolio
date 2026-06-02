@@ -41,18 +41,18 @@ const Contact = () => {
                       {item.icon}
                     </div>
                     <div>
-                      <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-text-gray mb-1">{item.title}</h4>
+                      <h4 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-gray mb-1">{item.title}</h4>
                       {item.link ? (
                         <a 
                           href={item.link} 
                           target={item.link.startsWith('http') ? "_blank" : undefined}
                           rel={item.link.startsWith('http') ? "noopener noreferrer" : undefined}
-                          className="text-lg font-black text-deep-blue hover:text-light-blue transition-colors duration-300"
+                          className="text-lg font-semibold text-deep-blue hover:text-light-blue transition-colors duration-300"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-lg font-black text-deep-blue">{item.value}</p>
+                        <p className="text-lg font-semibold text-deep-blue">{item.value}</p>
                       )}
                     </div>
                   </motion.div>
@@ -74,7 +74,7 @@ const Contact = () => {
                     "Stratégie de Contenu Digitale",
                     "Innovation & UX Design"
                   ].map((skill) => (
-                    <li key={skill} className="flex items-center gap-3 text-white/80 font-bold text-sm">
+                    <li key={skill} className="flex items-center gap-3 text-white/80 font-medium text-sm">
                       <CheckCircle2 className="w-4 h-4 text-light-blue" />
                       {skill}
                     </li>
@@ -94,27 +94,27 @@ const Contact = () => {
               <h3 className="text-2xl md:text-3xl font-black text-deep-blue mb-8 leading-tight">Envoyez-moi un message</h3>
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="space-y-3">
-                  <label className="text-[10px] font-black uppercase tracking-[0.2em] text-text-gray ml-2">Nom complet</label>
+                  <label className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-gray ml-2">Nom complet</label>
                   <input 
                     type="text" 
                     placeholder="Votre nom"
-                    className="w-full px-6 py-4 rounded-xl bg-bg-light border-none focus:ring-4 focus:ring-light-blue/10 transition-all outline-none font-bold text-deep-blue placeholder:text-slate-300 text-sm"
+                    className="w-full px-6 py-4 rounded-xl bg-bg-light border-none focus:ring-4 focus:ring-light-blue/10 transition-all outline-none font-medium text-deep-blue placeholder:text-slate-300 text-sm"
                   />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[10px] font-black uppercase tracking-[0.2em] text-text-gray ml-2">Email</label>
+                  <label className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-gray ml-2">Email</label>
                   <input 
                     type="email" 
                     placeholder="votre@email.com"
-                    className="w-full px-6 py-4 rounded-xl bg-bg-light border-none focus:ring-4 focus:ring-light-blue/10 transition-all outline-none font-bold text-deep-blue placeholder:text-slate-300 text-sm"
+                    className="w-full px-6 py-4 rounded-xl bg-bg-light border-none focus:ring-4 focus:ring-light-blue/10 transition-all outline-none font-medium text-deep-blue placeholder:text-slate-300 text-sm"
                   />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[10px] font-black uppercase tracking-[0.2em] text-text-gray ml-2">Votre message</label>
+                  <label className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-gray ml-2">Votre message</label>
                   <textarea 
                     rows={4}
                     placeholder="Votre message ou question..."
-                    className="w-full px-6 py-4 rounded-xl bg-bg-light border-none focus:ring-4 focus:ring-light-blue/10 transition-all outline-none resize-none font-bold text-deep-blue placeholder:text-slate-300 text-sm"
+                    className="w-full px-6 py-4 rounded-xl bg-bg-light border-none focus:ring-4 focus:ring-light-blue/10 transition-all outline-none resize-none font-medium text-deep-blue placeholder:text-slate-300 text-sm"
                   ></textarea>
                 </div>
                 <button className="btn-primary w-full flex items-center justify-center gap-3 group py-4 text-sm">

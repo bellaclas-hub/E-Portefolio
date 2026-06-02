@@ -20,8 +20,8 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-black text-white mb-6 uppercase tracking-[0.2em] text-[10px]">Navigation</h4>
-            <ul className="space-y-3 text-xs font-bold">
+            <h4 className="font-semibold text-white mb-6 uppercase tracking-[0.2em] text-[10px]">Navigation</h4>
+            <ul className="space-y-3 text-xs font-semibold">
               <li><Link to="/a-propos" className="text-slate-400 hover:text-white transition-colors">À propos</Link></li>
               <li><Link to="/cas-pratique" className="text-slate-400 hover:text-white transition-colors">Cas pratique</Link></li>
               <li><Link to="/data" className="text-slate-400 hover:text-white transition-colors">Data</Link></li>
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-black text-white mb-6 uppercase tracking-[0.2em] text-[10px]">Connect</h4>
+            <h4 className="font-semibold text-white mb-6 uppercase tracking-[0.2em] text-[10px]">Connect</h4>
             <div className="flex gap-4">
               <a 
                 href="https://www.linkedin.com/in/apolline-bellaclas/" 
@@ -53,12 +53,12 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400">
+          <p className="text-[10px] uppercase tracking-widest font-semibold text-slate-400">
             © {new Date().getFullYear()} Apolline Bellaclas — Built with NoCode & AI
           </p>
           <button 
             onClick={scrollToTop}
-            className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] hover:text-light-blue transition-colors group"
+            className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] hover:text-light-blue transition-colors group"
           >
             Back to top
             <ArrowUp className="w-4 h-4 group-hover:-translate-y-2 transition-transform duration-500" />

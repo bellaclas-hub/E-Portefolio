@@ -41,7 +41,7 @@ const Home = () => {
                   href="https://res.cloudinary.com/delgsyvkc/image/upload/v1775209438/CV_Apolline_Bellaclas_jthzlo.png" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-5 text-base font-black text-white rounded-2xl bg-gradient-to-r from-light-blue to-deep-blue hover:from-light-blue/90 hover:to-deep-blue/90 shadow-xl shadow-light-blue/20 transition-all active:scale-95 group"
+                  className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-5 text-base font-semibold text-white rounded-2xl bg-gradient-to-r from-light-blue to-deep-blue hover:from-light-blue/90 hover:to-deep-blue/90 shadow-xl shadow-light-blue/20 transition-all active:scale-95 group"
                 >
                   <FileText className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                   Voir mon CV
@@ -57,7 +57,7 @@ const Home = () => {
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <p className="text-[10px] md:text-xs text-slate-400 font-bold uppercase tracking-widest leading-relaxed max-w-[100px]">
+                  <p className="text-[10px] md:text-xs text-slate-400 font-medium uppercase tracking-widest leading-relaxed max-w-[100px]">
                     Scanner pour accéder au portfolio
                   </p>
                 </div>
@@ -107,15 +107,15 @@ const Home = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-light-blue font-black uppercase tracking-[0.4em] text-xs mb-3 block"
+              className="text-light-blue font-medium uppercase tracking-[0.4em] text-xs mb-3 block"
             >
               01. PROFIL
             </motion.span>
             <h2 className="text-3xl md:text-5xl font-bold text-deep-blue mb-8 tracking-tight">
-              Mon positionnement
+              Profil
             </h2>
             <p className="text-lg text-text-gray leading-relaxed font-medium max-w-3xl mx-auto">
-              Étudiante en Manager — Expert en transformation numérique, mes travaux explorent comment les outils NoCode et l'intelligence artificielle transforment la production digitale. Mon approche repose sur la conviction que ces outils ne remplacent pas les compétences humaines : ils les renforcent, à condition d'être pilotés par une stratégie claire.
+              Étudiante en Manager en transformation numérique, mes travaux explorent comment les outils NoCode et l'intelligence artificielle transforment la production digitale. Mon approche repose sur la conviction que ces outils ne remplacent pas les compétences humaines : ils les renforcent, à condition d'être pilotés par une stratégie claire.
             </p>
           </div>
 
@@ -198,7 +198,7 @@ const Home = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-light-blue font-black uppercase tracking-[0.4em] text-xs mb-3 block"
+              className="text-light-blue font-medium uppercase tracking-[0.4em] text-xs mb-3 block"
             >
               02. ÉTUDES DE CAS
             </motion.span>
@@ -243,7 +243,7 @@ const Home = () => {
                 
                 <div className="flex flex-col items-center justify-center text-center bg-white/5 rounded-[2.5rem] p-10 border border-white/5">
                   <span className="text-5xl md:text-7xl font-black text-light-blue mb-2">73,6 % vs 63,8 %</span>
-                  <p className="text-sm md:text-base font-bold uppercase tracking-widest text-slate-300">
+                  <p className="text-sm md:text-base font-medium uppercase tracking-widest text-slate-300">
                     télétravail vs présentiel <br />
                     <span className="opacity-60">(auto-évaluation salariés)</span>
                   </p>
@@ -292,7 +292,7 @@ const Home = () => {
                   </div>
                   <div className="absolute -bottom-4 -right-4 bg-deep-blue text-white p-6 rounded-2xl shadow-2xl">
                     <p className="text-3xl font-black mb-0">90%</p>
-                    <p className="text-[9px] font-black uppercase tracking-widest leading-none">Gain de temps</p>
+                    <p className="text-[9px] font-medium uppercase tracking-widest leading-none">Gain de temps</p>
                   </div>
                 </div>
               </div>

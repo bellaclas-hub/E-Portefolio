@@ -28,7 +28,7 @@ const About = () => {
           variants={containerVariants}
           className="max-w-3xl"
         >
-          <motion.span variants={itemVariants} className="text-xs font-black uppercase tracking-[0.3em] text-light-blue mb-4 block">
+          <motion.span variants={itemVariants} className="text-xs font-semibold uppercase tracking-[0.3em] text-light-blue mb-4 block">
             Profil & Vision
           </motion.span>
           <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-black text-deep-blue mb-8 tracking-tighter leading-[1.1]">
@@ -36,10 +36,10 @@ const About = () => {
           </motion.h1>
           <motion.div variants={itemVariants} className="space-y-6 text-lg md:text-xl text-text-gray leading-relaxed font-medium">
             <p>
-              Le <span className="text-light-blue font-black">NoCode</span> et l'<span className="text-light-blue font-black">intelligence artificielle</span> transforment la création de sites web.
+              Le <span className="text-light-blue font-semibold">NoCode</span> et l'<span className="text-light-blue font-semibold">intelligence artificielle</span> transforment la création de sites web.
             </p>
             <p>
-              Ces outils redéfinissent les méthodes de production, en rendant la création <span className="text-deep-blue font-black">plus rapide</span>, <span className="text-deep-blue font-black">plus accessible</span> et <span className="text-deep-blue font-black">plus collaborative</span>.
+              Ces outils redéfinissent les méthodes de production, en rendant la création <span className="text-deep-blue font-semibold">plus rapide</span>, <span className="text-deep-blue font-semibold">plus accessible</span> et <span className="text-deep-blue font-semibold">plus collaborative</span>.
             </p>
             <p>
               Mon objectif est de comprendre ces évolutions et de les intégrer dans mes projets.
@@ -63,12 +63,12 @@ const About = () => {
           
           <div className="relative z-10 max-w-4xl mx-auto">
             <Eye className="w-10 h-10 text-light-blue mx-auto mb-6" />
-            <h2 className="text-xs font-black uppercase tracking-[0.5em] text-light-blue mb-6">Vision</h2>
-            <div className="space-y-6 text-xl md:text-2xl font-black text-deep-blue leading-tight tracking-tight">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.5em] text-light-blue mb-6">Vision</h2>
+            <div className="space-y-6 text-xl md:text-2xl font-medium text-deep-blue leading-tight tracking-tight">
               <p>
                 Je considère que le <span className="text-light-blue">NoCode</span> et l’<span className="text-light-blue">intelligence artificielle</span> ne remplacent pas les compétences humaines, mais les <span className="underline decoration-light-blue decoration-4 underline-offset-8">renforcent</span>.
               </p>
-              <p className="text-text-gray text-lg md:text-xl font-bold leading-relaxed">
+              <p className="text-text-gray text-lg md:text-xl font-medium leading-relaxed">
                 Ils permettent de gagner en rapidité et en efficacité, tout en laissant une place essentielle à la réflexion, à la stratégie et à la créativité.
               </p>
             </div>
@@ -88,7 +88,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-6 tracking-tight">Mon approche</h2>
             <div className="space-y-4 text-base md:text-lg text-text-gray leading-relaxed">
               <p>
-                L'équilibre entre <span className="text-deep-blue font-bold">stratégie</span>, <span className="text-deep-blue font-bold">créativité</span> et <span className="text-deep-blue font-bold">maîtrise des outils numériques</span>.
+                L'équilibre entre <span className="text-deep-blue font-semibold">stratégie</span>, <span className="text-deep-blue font-semibold">créativité</span> et <span className="text-deep-blue font-semibold">maîtrise des outils numériques</span>.
               </p>
               <p>
                 Chaque projet est pour moi l'occasion de structurer une réflexion, de proposer des solutions adaptées et d'exploiter le potentiel des technologies actuelles.
@@ -113,7 +113,7 @@ const About = () => {
                     className="bg-bg-light p-8 rounded-3xl border border-slate-100 flex flex-col items-center gap-4 text-center"
                   >
                     <div className="text-light-blue">{item.icon}</div>
-                    <span className="text-[10px] font-black uppercase tracking-widest text-deep-blue">{item.label}</span>
+                    <span className="text-[10px] font-semibold uppercase tracking-widest text-deep-blue">{item.label}</span>
                   </motion.div>
                 ))}
               </div>
@@ -122,9 +122,9 @@ const About = () => {
         </div>
       </section>
       
-      {/* Mon positionnement */}
+      {/* Profil */}
       <section className="max-w-[1200px] mx-auto px-10 mb-20">
-        <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8 text-center">Mon positionnement</h2>
+        <h2 className="text-xs font-semibold uppercase tracking-[0.4em] text-light-blue mb-8 text-center">Profil</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -206,7 +206,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Compétences */}
             <div>
-              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6">Compétences</h2>
+              <h2 className="text-xs font-semibold uppercase tracking-[0.4em] text-light-blue mb-6">Compétences</h2>
               <ul className="space-y-3">
                 {[
                   "Stratégie digitale et création de contenu",
@@ -221,7 +221,7 @@ const About = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="text-lg md:text-xl font-black text-white flex items-start gap-3 group"
+                    className="text-lg md:text-xl font-semibold text-white flex items-start gap-3 group"
                   >
                     <span className="text-light-blue mt-1 text-sm">0{i + 1}</span>
                     <span className="group-hover:translate-x-2 transition-transform duration-500">{skill}</span>
@@ -232,7 +232,7 @@ const About = () => {
 
             {/* Savoir-faire */}
             <div>
-              <h2 className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6">Savoir-faire</h2>
+              <h2 className="text-xs font-semibold uppercase tracking-[0.4em] text-light-blue mb-6">Savoir-faire</h2>
               <ul className="space-y-3">
                 {[
                   "Structurer et piloter un projet digital",
@@ -247,7 +247,7 @@ const About = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="text-base md:text-lg font-bold text-white/80 flex items-start gap-4"
+                    className="text-base md:text-lg font-medium text-white/80 flex items-start gap-4"
                   >
                     <div className="w-1.5 h-1.5 rounded-full bg-light-blue mt-2 shrink-0" />
                     {item}
@@ -261,7 +261,7 @@ const About = () => {
 
       {/* Contact CTA */}
       <section className="max-w-[1200px] mx-auto px-10 text-center pb-20">
-        <h2 className="text-xs font-black uppercase tracking-[0.4em] text-text-gray mb-6">Prêt à collaborer ?</h2>
+        <h2 className="text-xs font-semibold uppercase tracking-[0.4em] text-text-gray mb-6">Prêt à collaborer ?</h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           <Link to="/contact" className="btn-primary group">
             Me contacter

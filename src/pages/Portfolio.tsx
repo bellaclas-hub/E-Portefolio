@@ -227,7 +227,7 @@ const Portfolio = () => {
           className="bg-slate-50 border border-slate-100 rounded-[3rem] p-12 md:p-20 text-center"
         >
           <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-8 block">CONCLUSION</span>
-          <h2 className="text-2xl md:text-4xl font-black text-deep-blue mb-8 tracking-tight">Réponsé à la problématique</h2>
+          <h2 className="text-2xl md:text-4xl font-black text-deep-blue mb-8 tracking-tight">Réponse à la problématique</h2>
           
           <p className="text-xl md:text-2xl font-black text-deep-blue mb-6 leading-relaxed max-w-4xl mx-auto">
             "Oui — un outil NoCode assisté par IA peut produire un livrable professionnel, à condition que la stratégie et la rigueur restent humaines."
@@ -262,7 +262,7 @@ const Portfolio = () => {
               { 
                 val: "70 %", 
                 label: "Des futures applications", 
-                sub: "Devraient être développées en NoCode/Low-code d'ici 2025 (projection marché)" 
+                sub: "Pourraient être développées en NoCode/Low-code à horizon 2026 (projection marché Gartner)" 
               },
               { 
                 val: "10-20h", 

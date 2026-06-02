@@ -197,7 +197,7 @@ const Lexique = () => {
             <input 
               type="text"
               placeholder="Rechercher un concept..."
-              className="w-full pl-12 pr-5 py-3 rounded-xl bg-bg-light border-none focus:ring-4 focus:ring-light-blue/5 outline-none transition-all font-bold text-deep-blue text-sm"
+              className="w-full pl-12 pr-5 py-3 rounded-xl bg-bg-light border-none focus:ring-4 focus:ring-light-blue/5 outline-none transition-all font-medium text-deep-blue text-sm"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -216,7 +216,7 @@ const Lexique = () => {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-5 py-2.5 rounded-full text-xs font-black transition-all duration-300 ${
+                className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 ${
                   activeCategory === cat 
                   ? 'bg-deep-blue text-white shadow-lg shadow-deep-blue/20 scale-105' 
                   : 'bg-bg-light text-slate-500 hover:bg-slate-100'
@@ -267,15 +267,15 @@ const Lexique = () => {
                       
                       <div className="space-y-4 flex-grow">
                         <div>
-                          <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 block mb-1">Définition</span>
+                          <span className="text-[9px] font-semibold uppercase tracking-widest text-slate-400 block mb-1">Définition</span>
                           <p className="text-text-gray font-medium leading-relaxed text-xs">
                             {term.definition}
                           </p>
                         </div>
                         
                         <div className="pt-4 border-t border-slate-50">
-                          <span className="text-[9px] font-black uppercase tracking-widest text-light-blue block mb-1">Enjeu Stratégique</span>
-                          <p className="text-deep-blue font-bold text-[10px] leading-relaxed">
+                          <span className="text-[9px] font-semibold uppercase tracking-widest text-light-blue block mb-1">Enjeu Stratégique</span>
+                          <p className="text-deep-blue font-medium text-[10px] leading-relaxed">
                             {term.stake}
                           </p>
                         </div>

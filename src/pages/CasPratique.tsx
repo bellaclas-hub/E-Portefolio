@@ -60,8 +60,8 @@ const CasPratique = () => {
                           <Target className="w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-text-gray mb-1">Objectif Stratégique</h4>
-                          <p className="text-lg font-black text-deep-blue leading-snug">{c.objective}</p>
+                          <h4 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-gray mb-1">Objectif Stratégique</h4>
+                          <p className="text-lg font-medium text-deep-blue leading-snug">{c.objective}</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-4">
@@ -69,22 +69,22 @@ const CasPratique = () => {
                           <TrendingUp className="w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-text-gray mb-1">Impact Mesurable</h4>
-                          <p className="text-lg font-black text-deep-blue leading-snug">{c.results}</p>
+                          <h4 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-gray mb-1">Impact Mesurable</h4>
+                          <p className="text-lg font-medium text-deep-blue leading-snug">{c.results}</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="bg-deep-blue p-8 md:p-10 rounded-[2rem] shadow-2xl relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-48 h-48 bg-light-blue/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
-                    <h4 className="text-[10px] font-black text-white mb-8 uppercase tracking-[0.2em] flex items-center gap-3">
+                    <h4 className="text-[10px] font-semibold text-white mb-8 uppercase tracking-[0.2em] flex items-center gap-3">
                       <CheckCircle2 className="w-4 h-4 text-light-blue" />
                       Méthodologie & Étapes
                     </h4>
                     <ul className="space-y-6">
                       {c.steps.map((step, idx) => (
-                        <li key={idx} className="flex items-center gap-4 text-white/80 text-base font-bold group/item">
-                          <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-[10px] font-black text-white group-hover/item:bg-light-blue transition-colors duration-300">
+                        <li key={idx} className="flex items-center gap-4 text-white/80 text-base font-medium group/item">
+                          <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-[10px] font-semibold text-white group-hover/item:bg-light-blue transition-colors duration-300">
                             {idx + 1}
                           </span>
                           {step}

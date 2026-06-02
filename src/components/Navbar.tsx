@@ -39,7 +39,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-[11px] uppercase tracking-[0.2em] font-black transition-all hover:text-light-blue relative group ${location.pathname === link.path ? 'text-light-blue' : 'text-deep-blue/70'}`}
+                className={`text-[11px] uppercase tracking-[0.2em] font-semibold transition-all hover:text-light-blue relative group ${location.pathname === link.path ? 'text-light-blue' : 'text-deep-blue/70'}`}
               >
                 {link.name}
                 <span className={`absolute -bottom-1.5 left-0 h-0.5 bg-light-blue transition-all duration-500 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`} />
@@ -79,7 +79,7 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-lg font-black ${location.pathname === link.path ? 'text-light-blue' : 'text-deep-blue'}`}
+                  className={`text-lg font-semibold ${location.pathname === link.path ? 'text-light-blue' : 'text-deep-blue'}`}
                 >
                   {link.name}
                 </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/apolline-bellaclas/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-light-blue font-black"
+                className="flex items-center gap-2 text-light-blue font-semibold"
               >
                 <Linkedin className="w-5 h-5" /> LinkedIn
               </a>

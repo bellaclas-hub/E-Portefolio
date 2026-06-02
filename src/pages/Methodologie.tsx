@@ -17,7 +17,7 @@ const Methodologie = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-          <span className="text-sm font-black uppercase tracking-[0.4em] text-light-blue mb-4 block">DÉTAIL MÉTHODOLOGIQUE</span>
+          <span className="text-sm font-semibold uppercase tracking-[0.4em] text-light-blue mb-4 block">DÉTAIL MÉTHODOLOGIQUE</span>
           <h1 className="text-4xl md:text-6xl font-black text-deep-blue mb-8 tracking-tighter leading-[1.1]">
             Méthodologie complète
           </h1>
@@ -35,7 +35,7 @@ const Methodologie = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-2 tracking-tight text-center">Stratégie de collecte des données</h2>
-          <p className="text-light-blue font-bold text-center mb-10 text-lg">Cartographier les sources, sécuriser la conformité, garantir la pertinence.</p>
+          <p className="text-light-blue font-medium text-center mb-10 text-lg">Cartographier les sources, sécuriser la conformité, garantir la pertinence.</p>
           
           <div className="max-w-3xl mx-auto mb-12 text-center text-text-gray font-medium leading-relaxed">
             <p>La fiabilité d'une analyse repose d'abord sur la qualité de sa collecte. Pour cette étude, j'ai croisé trois sources complémentaires afin d'aborder le télétravail sous deux angles : la perception des salariés et la réalité du marché de l'emploi.</p>
@@ -76,8 +76,8 @@ const Methodologie = () => {
                 <div className="space-y-4">
                   {source.items.map((item, j) => (
                     <div key={j}>
-                      <span className="text-xs font-black uppercase text-light-blue/60 tracking-wider block mb-1">{item.label}</span>
-                      <p className="text-deep-blue font-bold text-sm">{item.val}</p>
+                      <span className="text-xs font-semibold uppercase text-light-blue/60 tracking-wider block mb-1">{item.label}</span>
+                      <p className="text-deep-blue font-medium text-sm">{item.val}</p>
                     </div>
                   ))}
                 </div>
@@ -126,7 +126,7 @@ const Methodologie = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-2 tracking-tight text-center">Préparation & nettoyage des données</h2>
-            <p className="text-light-blue font-bold text-center mb-16 text-lg">De la donnée brute à un jeu exploitable et fiable.</p>
+            <p className="text-light-blue font-medium text-center mb-16 text-lg">De la donnée brute à un jeu exploitable et fiable.</p>
             
             <div className="grid lg:grid-cols-2 gap-16">
               <div>
@@ -139,7 +139,7 @@ const Methodologie = () => {
                     { title: "Documentation des choix", desc: "chaque retraitement est tracé pour assurer la reproductibilité" }
                   ].map((step, i) => (
                     <div key={i} className="flex gap-6">
-                      <div className="w-10 h-10 rounded-full bg-deep-blue text-white flex items-center justify-center shrink-0 font-black">
+                      <div className="w-10 h-10 rounded-full bg-deep-blue text-white flex items-center justify-center shrink-0 font-semibold">
                         {i + 1}
                       </div>
                       <div>
@@ -153,7 +153,7 @@ const Methodologie = () => {
 
               <div className="space-y-8">
                 <div className="bg-light-blue/5 p-8 rounded-[2rem] border border-light-blue/10">
-                  <h4 className="text-light-blue font-black mb-4 flex items-center gap-3">
+                  <h4 className="text-light-blue font-semibold mb-4 flex items-center gap-3">
                     <Database className="w-5 h-5" />
                     Cas concret traité
                   </h4>
@@ -185,7 +185,7 @@ const Methodologie = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-2 tracking-tight text-center">Extraction & requêtes — la donnée à la demande</h2>
-          <p className="text-light-blue font-bold text-center mb-10 text-lg">Manipuler des données structurées avec des langages de requête adaptés.</p>
+          <p className="text-light-blue font-medium text-center mb-10 text-lg">Manipuler des données structurées avec des langages de requête adaptés.</p>
           
           <div className="max-w-3xl mx-auto mb-12 text-center text-text-gray font-medium leading-relaxed text-lg">
             <p>Le traitement avancé d'un dataset suppose la maîtrise de langages d'interrogation. Pour ce projet, les opérations clés sont : le filtrage par mode de travail, le calcul de moyennes par segment, la jointure entre datasets et l'agrégation par catégorie de poste.</p>
@@ -196,7 +196,7 @@ const Methodologie = () => {
               <Code2 className="w-10 h-10 text-light-blue mb-6" />
               <h3 className="text-xl font-black text-deep-blue mb-4">Bases relationnelles (SQL)</h3>
               <p className="text-text-gray font-medium mb-6">"Adaptées aux données structurées avec relations claires (ex. : enquête salariés ↔ table modes de travail)."</p>
-              <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-widest text-deep-blue/40">
+              <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-widest text-deep-blue/40">
                 <span>SELECT</span> <span>JOIN</span> <span>GROUP BY</span> <span>AVG()</span>
               </div>
             </div>
@@ -204,13 +204,13 @@ const Methodologie = () => {
               <Layers className="w-10 h-10 text-light-blue mb-6" />
               <h3 className="text-xl font-black text-deep-blue mb-4">Bases non relationnelles (NoSQL)</h3>
               <p className="text-text-gray font-medium mb-6">"Pertinentes pour les données semi-structurées issues d'API ou de scraping (ex. : offres d'emploi en JSON)."</p>
-              <p className="text-sm font-bold text-light-blue uppercase tracking-widest">Avantages : flexibilité du schéma, scalabilité horizontale.</p>
+              <p className="text-sm font-semibold text-light-blue uppercase tracking-widest">Avantages : flexibilité du schéma, scalabilité horizontale.</p>
             </div>
           </div>
 
           <div className="bg-[#1e293b] rounded-[2rem] p-8 md:p-12 overflow-hidden shadow-2xl">
             <div className="flex justify-between items-center mb-6">
-              <span className="text-slate-500 font-bold text-sm tracking-wider uppercase">Exemple appliqué à mon étude</span>
+              <span className="text-slate-500 font-semibold text-sm tracking-wider uppercase">Exemple appliqué à mon étude</span>
               <div className="flex gap-1.5">
                 <div className="w-3 h-3 rounded-full bg-slate-700" />
                 <div className="w-3 h-3 rounded-full bg-slate-700" />
@@ -243,7 +243,7 @@ ORDER BY moyenne DESC;`}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-black mb-2 tracking-tight text-center text-white">Modélisation — passer du descriptif au prédictif</h2>
-            <p className="text-light-blue font-bold text-center mb-10 text-lg">La phase suivante : exploiter l'IA pour anticiper plutôt que constater.</p>
+            <p className="text-light-blue font-medium text-center mb-10 text-lg">La phase suivante : exploiter l'IA pour anticiper plutôt que constater.</p>
             
             <div className="max-w-3xl mx-auto mb-16 text-center text-slate-300 font-medium leading-relaxed">
               <p>Mon analyse actuelle est descriptive : elle décrit l'état du télétravail aujourd'hui. La suite logique est prédictive : pouvoir anticiper, à partir d'un profil de poste ou d'un profil salarié, le mode de travail le plus susceptible d'être proposé ou choisi. Voici la démarche que j'industrialiserais.</p>
@@ -267,7 +267,7 @@ ORDER BY moyenne DESC;`}
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-white mt-1.5" />
-                    <span className="text-white font-bold italic">Cas d'usage : Anticiper le mode pour une nouvelle offre</span>
+                    <span className="text-white font-medium italic">Cas d'usage : Anticiper le mode pour une nouvelle offre</span>
                   </li>
                 </ul>
               </div>
@@ -288,7 +288,7 @@ ORDER BY moyenne DESC;`}
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-white mt-1.5" />
-                    <span className="text-white font-bold italic">Cas d'usage : Personnaliser les politiques RH par segment</span>
+                    <span className="text-white font-medium italic">Cas d'usage : Personnaliser les politiques RH par segment</span>
                   </li>
                 </ul>
               </div>
@@ -300,11 +300,11 @@ ORDER BY moyenne DESC;`}
                 <table className="w-full text-left">
                   <thead>
                     <tr className="bg-white/10">
-                      <th className="px-6 py-4 font-black text-light-blue uppercase text-xs tracking-widest">Modèle</th>
-                      <th className="px-6 py-4 font-black text-light-blue uppercase text-xs tracking-widest">Lisibilité</th>
-                      <th className="px-6 py-4 font-black text-light-blue uppercase text-xs tracking-widest">Performance attendue</th>
-                      <th className="px-6 py-4 font-black text-light-blue uppercase text-xs tracking-widest">Coût computationnel</th>
-                      <th className="px-6 py-4 font-black text-light-blue uppercase text-xs tracking-widest">Choix retenu</th>
+                      <th className="px-6 py-4 font-semibold text-light-blue uppercase text-xs tracking-widest">Modèle</th>
+                      <th className="px-6 py-4 font-semibold text-light-blue uppercase text-xs tracking-widest">Lisibilité</th>
+                      <th className="px-6 py-4 font-semibold text-light-blue uppercase text-xs tracking-widest">Performance attendue</th>
+                      <th className="px-6 py-4 font-semibold text-light-blue uppercase text-xs tracking-widest">Coût computationnel</th>
+                      <th className="px-6 py-4 font-semibold text-light-blue uppercase text-xs tracking-widest">Choix retenu</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-white/10">
@@ -314,11 +314,11 @@ ORDER BY moyenne DESC;`}
                       { m: "XGBoost", l: "Faible", p: "Très élevée", c: "Élevé", ch: "Si volumétrie ↑" }
                     ].map((row, i) => (
                       <tr key={i} className="hover:bg-white/5 transition-colors">
-                        <td className="px-6 py-4 font-bold text-sm">{row.m}</td>
+                        <td className="px-6 py-4 font-medium text-sm">{row.m}</td>
                         <td className="px-6 py-4 text-slate-300 text-sm">{row.l}</td>
                         <td className="px-6 py-4 text-slate-300 text-sm">{row.p}</td>
                         <td className="px-6 py-4 text-slate-300 text-sm">{row.c}</td>
-                        <td className="px-6 py-4 text-sm font-black text-light-blue">{row.ch}</td>
+                        <td className="px-6 py-4 text-sm font-semibold text-light-blue">{row.ch}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -340,7 +340,7 @@ ORDER BY moyenne DESC;`}
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-black mb-2 tracking-tight text-center">Indicateurs de suivi & d'évaluation continue</h2>
-          <p className="text-light-blue font-bold text-center mb-10 text-lg">Au-delà des KPIs métier : mesurer la fiabilité du modèle dans le temps.</p>
+          <p className="text-light-blue font-medium text-center mb-10 text-lg">Au-delà des KPIs métier : mesurer la fiabilité du modèle dans le temps.</p>
           
           <div className="max-w-3xl mx-auto mb-16 text-center text-text-gray font-medium leading-relaxed text-lg">
             <p>Un modèle d'IA n'est pertinent que s'il est mesuré, suivi et ajusté. Là où les KPIs métier (taux de conversion, engagement) mesurent un résultat business, les KPIs modèle mesurers la qualité de la prédiction. Voici les indicateurs que j'intégrerais à un tableau de bord de monitoring.</p>
@@ -379,7 +379,7 @@ ORDER BY moyenne DESC;`}
                 </div>
                 <div>
                   <h4 className="text-xl font-black mb-3 text-white">Matrice de confusion</h4>
-                  <p className="font-bold text-slate-100 leading-relaxed text-sm">Ventilation des vrais/faux positifs et négatifs pour identifier les outils.</p>
+                  <p className="font-medium text-slate-100 leading-relaxed text-sm">Ventilation des vrais/faux positifs et négatifs pour identifier les outils.</p>
                 </div>
               </div>
             </div>
@@ -423,7 +423,7 @@ ORDER BY moyenne DESC;`}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-2 tracking-tight text-center">Pipeline & industrialisation</h2>
-            <p className="text-light-blue font-bold text-center mb-16 text-lg">De la donnée brute à la décision : un processus reproductible et automatisé.</p>
+            <p className="text-light-blue font-medium text-center mb-16 text-lg">De la donnée brute à la décision : un processus reproductible et automatisé.</p>
             
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-20 overflow-x-auto pb-8">
               {[
@@ -435,11 +435,11 @@ ORDER BY moyenne DESC;`}
               ].map((item, i) => (
                 <div key={i} className="flex flex-col lg:flex-row items-center gap-6 group">
                   <div className="w-48 text-center">
-                    <div className="w-16 h-16 rounded-3xl bg-white border-2 border-slate-100 shadow-xl flex items-center justify-center mx-auto mb-4 text-light-blue font-black text-xl group-hover:scale-110 transition-all duration-500">
+                    <div className="w-16 h-16 rounded-3xl bg-white border-2 border-slate-100 shadow-xl flex items-center justify-center mx-auto mb-4 text-light-blue font-semibold text-xl group-hover:scale-110 transition-all duration-500">
                       {item.step}
                     </div>
                     <h4 className="font-black text-deep-blue text-sm mb-1">{item.title}</h4>
-                    <p className="text-text-gray text-[10px] font-bold leading-tight">{item.desc}</p>
+                    <p className="text-text-gray text-[10px] font-medium leading-tight">{item.desc}</p>
                   </div>
                   {i < 4 && (
                     <ArrowRight className="w-6 h-6 text-slate-300 hidden lg:block group-hover:translate-x-1 transition-transform" />
@@ -470,7 +470,7 @@ ORDER BY moyenne DESC;`}
       <section className="max-w-[1200px] mx-auto px-10 text-center pb-20">
         <Link 
           to="/data" 
-          className="inline-flex items-center gap-2 text-deep-blue font-black uppercase tracking-widest hover:text-light-blue transition-colors"
+          className="inline-flex items-center gap-2 text-deep-blue font-semibold uppercase tracking-widest hover:text-light-blue transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
           Retour à l'analyse Data

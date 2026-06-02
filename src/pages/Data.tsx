@@ -36,7 +36,7 @@ const Data = () => {
             <div className="w-12 h-12 rounded-2xl bg-light-blue/10 text-light-blue flex items-center justify-center shadow-sm">
               <Database className="w-6 h-6" />
             </div>
-            <span className="text-sm font-black uppercase tracking-widest text-light-blue">Analyse de données</span>
+            <span className="text-sm font-semibold uppercase tracking-widest text-light-blue">Analyse de données</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-deep-blue mb-8 tracking-tighter leading-[1.1]">
             Le Télétravail : <br /> Performance & Réalité
@@ -51,11 +51,11 @@ const Data = () => {
             <div className="grid md:grid-cols-2 gap-4 mt-6">
               <div className="flex items-start gap-3 bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-light-blue shrink-0 mt-1" />
-                <p className="text-deep-blue font-bold text-base">Côté salariés : productivité et satisfaction</p>
+                <p className="text-deep-blue font-medium text-base">Côté salariés : productivité et satisfaction</p>
               </div>
               <div className="flex items-start gap-3 bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-light-blue shrink-0 mt-1" />
-                <p className="text-deep-blue font-bold text-base">Côté entreprises : présence dans les offres d’emploi</p>
+                <p className="text-deep-blue font-medium text-base">Côté entreprises : présence dans les offres d’emploi</p>
               </div>
             </div>
           </div>
@@ -65,14 +65,14 @@ const Data = () => {
       {/* SECTION 2 — PROBLÉMATIQUE */}
       <section className="max-w-[1200px] mx-auto px-10 mb-24">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+         initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           className="bg-deep-blue rounded-[3rem] p-10 md:p-16 text-white relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-96 h-96 bg-light-blue/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2" />
           <div className="relative z-10">
-            <span className="text-light-blue font-black uppercase tracking-widest text-xs mb-6 block">La problématique</span>
+            <span className="text-light-blue font-semibold uppercase tracking-widest text-xs mb-6 block">La problématique</span>
             <h2 className="text-2xl md:text-4xl font-black mb-8 leading-tight max-w-4xl text-white">
               “Le télétravail constitue-t-il aujourd’hui un mode de travail performant côté salariés et réellement présent côté entreprises ?”
             </h2>
@@ -92,7 +92,7 @@ const Data = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-4 block">MA DÉMARCHE</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.4em] text-light-blue mb-4 block">MA DÉMARCHE</span>
             <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-6 tracking-tight">Parcours de l'analyse</h2>
             <p className="text-lg text-text-gray font-medium max-w-2xl mx-auto">
               Six étapes structurent ma démarche, de la définition de la problématique à l'interprétation finale des résultats.
@@ -120,7 +120,7 @@ const Data = () => {
                   transition={{ delay: i * 0.1 }}
                   className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500"
                 >
-                  <div className="w-12 h-12 rounded-full bg-light-blue/10 text-light-blue flex items-center justify-center mb-6 font-mono font-black text-sm">
+                  <div className="w-12 h-12 rounded-full bg-light-blue/10 text-light-blue flex items-center justify-center mb-6 font-mono font-semibold text-sm">
                     {item.step}
                   </div>
                   <div className="w-16 h-16 rounded-2xl bg-white border border-slate-100 shadow-lg flex items-center justify-center mb-6 text-deep-blue group-hover:scale-110 transition-transform duration-500">
@@ -144,7 +144,7 @@ const Data = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-4 block">MÉTHODOLOGIE TECHNIQUE</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.4em] text-light-blue mb-4 block">MÉTHODOLOGIE TECHNIQUE</span>
             <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight text-white">Une démarche complète en 5 étapes</h2>
             <p className="text-lg text-slate-300 font-medium max-w-2xl mx-auto">
               De la collecte à l'évaluation, ma méthodologie couvre l'ensemble du cycle data, de l'analyse descriptive à la modélisation prédictive.
@@ -172,7 +172,7 @@ const Data = () => {
                 </div>
                 <h3 className="text-lg font-black text-white mb-2">{item.title}</h3>
                 <p className="text-xs text-slate-400 font-medium leading-relaxed mb-6 flex-grow">{item.desc}</p>
-                <span className="font-mono text-[10px] text-slate-500 font-bold uppercase tracking-widest">{item.code}</span>
+                <span className="font-mono text-[10px] text-slate-500 font-semibold uppercase tracking-widest">{item.code}</span>
               </motion.div>
             ))}
           </div>
@@ -180,7 +180,7 @@ const Data = () => {
           <div className="text-center">
             <Link 
               to="/methodologie"
-              className="inline-flex items-center gap-3 px-10 py-4 bg-white text-deep-blue font-black rounded-full hover:bg-slate-100 transition-all shadow-xl group"
+              className="inline-flex items-center gap-3 px-10 py-4 bg-white text-deep-blue font-semibold rounded-full hover:bg-slate-100 transition-all shadow-xl group"
             >
               Voir le détail méthodologique
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -204,8 +204,8 @@ const Data = () => {
             <table className="w-full text-left">
               <thead>
                 <tr className="bg-slate-100/50">
-                  <th className="px-8 py-6 font-black text-deep-blue uppercase text-xs tracking-widest">Étape</th>
-                  <th className="px-8 py-6 font-black text-deep-blue uppercase text-xs tracking-widest text-center">Statut</th>
+                  <th className="px-8 py-6 font-semibold text-deep-blue uppercase text-xs tracking-widest">Étape</th>
+                  <th className="px-8 py-6 font-semibold text-deep-blue uppercase text-xs tracking-widest text-center">Statut</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200">
@@ -218,8 +218,8 @@ const Data = () => {
                   { e: "Suivi & évaluation continue", s: "🔄 KPIs identifiés et planifiés" }
                 ].map((row, i) => (
                   <tr key={i}>
-                    <td className="px-8 py-5 font-bold text-deep-blue">{row.e}</td>
-                    <td className="px-8 py-5 font-black text-center text-sm">
+                    <td className="px-8 py-5 font-medium text-deep-blue">{row.e}</td>
+                    <td className="px-8 py-5 font-semibold text-center text-sm">
                       <span className={row.s.includes('✅') ? 'text-green-600' : 'text-amber-500'}>
                         {row.s}
                       </span>
@@ -257,7 +257,7 @@ const Data = () => {
                 href="file:///C:/Users/bella/Downloads/dashboard_3_dossiers_fr%20(8).html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-12 py-5 text-lg font-black rounded-xl bg-white text-deep-blue hover:bg-slate-100 transition-all shadow-xl active:scale-95 group"
+                className="flex items-center gap-3 px-12 py-5 text-lg font-semibold rounded-xl bg-white text-deep-blue hover:bg-slate-100 transition-all shadow-xl active:scale-95 group"
               >
                 Voir le dashboard
                 <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
