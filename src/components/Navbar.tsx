@@ -17,10 +17,10 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Accueil', path: '/' },
     { name: 'À propos', path: '/a-propos' },
-    { name: 'Cas pratique', path: '/cas-pratique' },
-    { name: 'Data', path: '/data' },
+    { name: 'Projet Data', path: '/data' },
+    { name: 'Projet NoCode & IA', path: '/portfolio' },
+    { name: 'Expériences', path: '/cas-pratique' },
     { name: 'Lexique', path: '/lexique' },
-    { name: 'Projet', path: '/portfolio' },
     { name: 'Contact', path: '/contact' },
   ];
 
