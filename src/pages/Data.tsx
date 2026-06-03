@@ -147,17 +147,17 @@ const Data = () => {
             <span className="text-xs font-semibold uppercase tracking-[0.4em] text-light-blue mb-4 block">MÉTHODOLOGIE TECHNIQUE</span>
             <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight text-white">Une démarche complète en 5 étapes</h2>
             <p className="text-lg text-slate-300 font-medium max-w-2xl mx-auto">
-              De la collecte à l'évaluation, ma méthodologie couvre l'ensemble du cycle data, de l'analyse descriptive à la modélisation prédictive.
+              De la collecte des données à leur interprétation, ma méthodologie suit le cycle d'une analyse descriptive rigoureuse.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
             {[
-              { icon: Database, title: "Collecte", desc: "3 sources Kaggle, anonymisées et conformes RGPD.", code: "C17.1" },
-              { icon: Filter, title: "Nettoyage", desc: "Détection d'anomalies, recodage, validation qualité.", code: "C17.2" },
-              { icon: Terminal, title: "Requêtes", desc: "SQL pour bases relationnelles, NoSQL pour données.", code: "C17.3" },
-              { icon: Cpu, title: "Modélisation", desc: "Random Forest pour la classification, K-Means.", code: "C18.1 · C19.1" },
-              { icon: Activity, title: "Évaluation", desc: "KPIs Accuracy, F1-Score, AUC-ROC ; suivi.", code: "C19.2 · C19.3" }
+              { icon: Database, title: "Collecte", desc: "3 jeux de données open source issus de Kaggle." },
+              { icon: Filter, title: "Nettoyage", desc: "Détection d'anomalies, recodage et validation qualité." },
+              { icon: Terminal, title: "Analyse Python", desc: "Traitement des données avec Python (pandas) sur Google Colab." },
+              { icon: Activity, title: "Visualisation", desc: "Génération de graphiques pour explorer les tendances." },
+              { icon: Sparkles, title: "Interprétation", desc: "Lecture et structuration des résultats avec l'IA." }
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -172,7 +172,6 @@ const Data = () => {
                 </div>
                 <h3 className="text-lg font-black text-white mb-2">{item.title}</h3>
                 <p className="text-xs text-slate-400 font-medium leading-relaxed mb-6 flex-grow">{item.desc}</p>
-                <span className="font-mono text-[10px] text-slate-500 font-semibold uppercase tracking-widest">{item.code}</span>
               </motion.div>
             ))}
           </div>
@@ -213,9 +212,7 @@ const Data = () => {
                   { e: "Stratégie de collecte", s: "✅ Réalisée" },
                   { e: "Nettoyage et préparation", s: "✅ Réalisée" },
                   { e: "Extraction & analyse descriptive", s: "✅ Réalisée" },
-                  { e: "Visualisation interactive", s: "✅ Réalisée" },
-                  { e: "Modélisation prédictive", s: "🔄 Plan d'industrialisation défini" },
-                  { e: "Suivi & évaluation continue", s: "🔄 KPIs identifiés et planifiés" }
+                  { e: "Visualisation des résultats", s: "✅ Réalisée" }
                 ].map((row, i) => (
                   <tr key={i}>
                     <td className="px-8 py-5 font-medium text-deep-blue">{row.e}</td>
