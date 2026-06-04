@@ -41,9 +41,9 @@ const CasPratique = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-          <h1 className="text-4xl md:text-6xl font-black text-deep-blue mb-6 tracking-tighter leading-[1.1]">Cas Pratiques</h1>
+          <h1 className="text-4xl md:text-6xl font-black text-deep-blue mb-6 tracking-tighter leading-[1.1]">Expériences professionnelles</h1>
           <p className="text-lg md:text-xl text-text-gray leading-relaxed font-medium max-w-2xl">
-            Analyse détaillée de problématiques réelles et des solutions stratégiques mises en œuvre pour atteindre des résultats concrets.
+            Les projets concrets que j'ai menés en alternance, de la communication digitale à l'organisation d'événements.
           </p>
         </motion.div>
       </section>
@@ -90,7 +90,7 @@ const CasPratique = () => {
                           <TrendingUp className="w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-gray mb-1">Impact Mesurable</h4>
+                          <h4 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-gray mb-1">Résultat</h4>
                           <p className="text-lg font-medium text-deep-blue leading-snug">{c.results}</p>
                         </div>
                       </div>
