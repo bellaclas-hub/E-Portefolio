@@ -1,25 +1,34 @@
 import { motion } from 'motion/react';
-import { Target, TrendingUp, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Target, TrendingUp, CheckCircle2, ChevronRight, Briefcase } from 'lucide-react';
 
 const CasPratique = () => {
   const cases = [
     {
-      title: "Optimisation de la stratégie LinkedIn",
-      objective: "Augmenter l'engagement et la visibilité de la marque.",
-      results: "+1000 abonnés en un an, engagement multiplié par 3.",
-      steps: ["Audit de l'existant", "Définition d'une ligne éditoriale", "Création de visuels impactants", "Analyse hebdomadaire des KPIs"]
+      title: "Relance de la présence LinkedIn",
+      context: "Alternance · Agence de traduction juridique",
+      period: "2023–2024 · sur 1 an",
+      objective: "Réinstaller durablement la présence de l'entreprise sur LinkedIn, quasi inactive avant mon arrivée.",
+      role: "Refonte complète de la communication : plan stratégique, ligne éditoriale, création des visuels et rédaction des publications (environ 3 posts par semaine).",
+      results: "Plus de 1 000 abonnés atteints en un an, avec une présence désormais régulière.",
+      steps: ["Audit de la présence existante", "Définition du plan stratégique et de la ligne éditoriale", "Création des visuels et rédaction des posts", "Publication régulière (~3/semaine) et suivi"]
     },
     {
-      title: "Refonte de site web B2B",
-      objective: "Améliorer l'expérience utilisateur et le taux de conversion.",
-      results: "Temps de session augmenté de 40%, baisse du taux de rebond.",
-      steps: ["Analyse du parcours client", "Maquettage UX/UI", "Optimisation SEO on-page", "Tests utilisateurs"]
+      title: "Refonte du site web B2B",
+      context: "Alternance · Agence de traduction juridique",
+      period: "2023–2024 · 3 à 4 mois",
+      objective: "Moderniser le site et améliorer l'expérience utilisateur.",
+      role: "Refonte de la charte graphique, maquettage de toutes les pages, reprise des textes et du design, puis intégration et développement sous WordPress avec Elementor.",
+      results: "Refonte complète du site livrée et mise en ligne : nouvelle charte graphique, design et structure repensés.",
+      steps: ["Refonte de la charte graphique", "Maquettage UX/UI de toutes les pages", "Reprise des contenus et du design", "Développement sous WordPress avec Elementor"]
     },
     {
-      title: "Organisation d'un événement professionnel",
-      objective: "Générer des leads qualifiés et renforcer les partenariats.",
-      results: "50+ leads qualifiés, 10 nouveaux partenariats signés.",
-      steps: ["Ciblage des participants", "Gestion de la logistique", "Communication multicanale", "Suivi post-événement"]
+      title: "Organisation d'afterworks clients & prospects",
+      context: "Alternance · Agence de traduction juridique",
+      period: "2 éditions sur 2 ans",
+      objective: "Créer des temps de rencontre pour renforcer la relation avec les clients et les prospects.",
+      role: "Organisation de deux afterworks : ciblage des invités, logistique, communication et suivi.",
+      results: "Deux éditions organisées, réunissant clients et prospects de l'agence.",
+      steps: ["Ciblage des invités (clients et prospects)", "Gestion de la logistique", "Communication de l'événement", "Suivi post-événement"]
     }
   ];
 
@@ -53,7 +62,10 @@ const CasPratique = () => {
               >
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <div className="space-y-6">
-                    <h3 className="text-2xl md:text-3xl font-black text-deep-blue leading-tight group-hover:text-light-blue transition-colors duration-500">{c.title}</h3>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-light-blue mb-2">{c.context} · <span className="text-text-gray">{c.period}</span></p>
+                      <h3 className="text-2xl md:text-3xl font-black text-deep-blue leading-tight group-hover:text-light-blue transition-colors duration-500">{c.title}</h3>
+                    </div>
                     <div className="space-y-4">
                       <div className="flex items-start gap-4">
                         <div className="p-2.5 bg-bg-light text-light-blue rounded-xl shadow-sm border border-slate-100">
@@ -62,6 +74,15 @@ const CasPratique = () => {
                         <div>
                           <h4 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-gray mb-1">Objectif Stratégique</h4>
                           <p className="text-lg font-medium text-deep-blue leading-snug">{c.objective}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-4">
+                        <div className="p-2.5 bg-bg-light text-amber-600 rounded-xl shadow-sm border border-slate-100">
+                          <Briefcase className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h4 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-gray mb-1">Rôle &amp; Missions</h4>
+                          <p className="text-lg font-medium text-deep-blue leading-snug">{c.role}</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-4">
