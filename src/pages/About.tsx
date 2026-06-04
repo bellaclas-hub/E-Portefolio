@@ -36,13 +36,13 @@ const About = () => {
           </motion.h1>
           <motion.div variants={itemVariants} className="space-y-6 text-lg md:text-xl text-text-gray leading-relaxed font-medium">
             <p>
-              Le <span className="text-light-blue font-semibold">NoCode</span> et l'<span className="text-light-blue font-semibold">intelligence artificielle</span> transforment la création de sites web.
+              Tout est parti de mon BTS : c'est là que j'ai découvert le digital, et réalisé à quel point le marketing, la communication ou le SEO étaient sous-estimés par les entreprises.
             </p>
             <p>
-              Ces outils redéfinissent les méthodes de production, en rendant la création <span className="text-deep-blue font-semibold">plus rapide</span>, <span className="text-deep-blue font-semibold">plus accessible</span> et <span className="text-deep-blue font-semibold">plus collaborative</span>.
+              Depuis, ce qui m'anime, c'est de m'approprier les nouveaux outils — le <span className="text-light-blue font-semibold">NoCode</span> et l'<span className="text-light-blue font-semibold">intelligence artificielle</span> — pour concevoir des projets digitaux plus vite et plus malin.
             </p>
             <p>
-              Mon objectif est de comprendre ces évolutions et de les intégrer dans mes projets.
+              Le NoCode, je l'ai découvert cette année en cours. Je n'ai pas arrêté d'explorer depuis.
             </p>
           </motion.div>
         </motion.div>
@@ -66,10 +66,10 @@ const About = () => {
             <h2 className="text-xs font-semibold uppercase tracking-[0.5em] text-light-blue mb-6">Vision</h2>
             <div className="space-y-6 text-xl md:text-2xl font-medium text-deep-blue leading-tight tracking-tight">
               <p>
-                Je considère que le <span className="text-light-blue">NoCode</span> et l’<span className="text-light-blue">intelligence artificielle</span> ne remplacent pas les compétences humaines, mais les <span className="underline decoration-light-blue decoration-4 underline-offset-8">renforcent</span>.
+                Pour moi, le <span className="text-light-blue">NoCode</span> et l’<span className="text-light-blue">intelligence artificielle</span> ne remplacent pas l'humain : ils le <span className="underline decoration-light-blue decoration-4 underline-offset-8">renforcent</span>.
               </p>
               <p className="text-text-gray text-lg md:text-xl font-medium leading-relaxed">
-                Ils permettent de gagner en rapidité et en efficacité, tout en laissant une place essentielle à la réflexion, à la stratégie et à la créativité.
+                Ils me font gagner du temps — du temps que je remets là où il compte vraiment : comprendre un besoin, réfléchir, créer.
               </p>
             </div>
           </div>
@@ -88,10 +88,10 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-6 tracking-tight">Mon approche</h2>
             <div className="space-y-4 text-base md:text-lg text-text-gray leading-relaxed">
               <p>
-                L'équilibre entre <span className="text-deep-blue font-semibold">stratégie</span>, <span className="text-deep-blue font-semibold">créativité</span> et <span className="text-deep-blue font-semibold">maîtrise des outils numériques</span>.
+                Ce que je préfère, c'est mener un projet de <span className="text-deep-blue font-semibold">A à Z</span>.
               </p>
               <p>
-                Chaque projet est pour moi l'occasion de structurer une réflexion, de proposer des solutions adaptées et d'exploiter le potentiel des technologies actuelles.
+                Je pars d'un vrai besoin, je teste des outils, et je garde ce qui marche.
               </p>
             </div>
           </motion.div>
@@ -135,7 +135,7 @@ const About = () => {
           >
             <h3 className="text-xl md:text-2xl font-black text-deep-blue mb-4">Ma différence</h3>
             <p className="text-base md:text-lg text-text-gray font-medium leading-relaxed">
-              Un double parcours marketing et commercial, qui me permet de comprendre à la fois les enjeux de communication et les attentes concrètes des équipes commerciales.
+              Mon parcours mêle marketing et commercial. Du coup, je comprends aussi bien les enjeux de communication que les attentes très concrètes d'une équipe de vente.
             </p>
           </motion.div>
           <motion.div
@@ -147,7 +147,7 @@ const About = () => {
           >
             <h3 className="text-xl md:text-2xl font-black text-deep-blue mb-4">Valeur ajoutée</h3>
             <p className="text-base md:text-lg text-text-gray font-medium leading-relaxed">
-              Je conçois des contenus qui ne sont pas seulement esthétiques ou engageants, mais réellement utiles pour la prospection et la performance business.
+              J'ai une vraie facilité à lire les gens : cerner ce qui motive un client, ce dont il a besoin. C'est ce qui me permet de créer des contenus qui ne sont pas juste jolis, mais qui servent vraiment à prospecter.
             </p>
           </motion.div>
         </div>
@@ -163,23 +163,23 @@ const About = () => {
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
             {[
               {
-                title: "Créative & Curieuse",
-                desc: "J'aime découvrir de nouvelles façons de concevoir des projets numériques.",
+                title: "Réfléchie",
+                desc: "Je préfère bien penser un projet avant de me lancer ; mes choix sont rarement faits au hasard.",
                 icon: <Lightbulb className="w-6 h-6" />
               },
               {
-                title: "Autonome & Organisée",
-                desc: "Je sais être organisée dans mon travail tout en restant force de proposition.",
+                title: "À l'écoute",
+                desc: "J'analyse vite les comportements, ce qui m'aide à cerner ce dont un client a vraiment besoin.",
                 icon: <Shield className="w-6 h-6" />
               },
               {
-                title: "Adaptable",
-                desc: "Je m'adapte rapidement aux outils et aux évolutions du numérique.",
+                title: "Organisée & autonome",
+                desc: "Mener un projet du début à la fin sans qu'on ait à me pousser, c'est mon terrain.",
                 icon: <Zap className="w-6 h-6" />
               },
               {
-                title: "Apprentissage continu",
-                desc: "Une volonté constante d'apprendre et de progresser.",
+                title: "Curieuse des outils",
+                desc: "Dès qu'un nouvel outil numérique sort, j'ai envie de l'essayer pour voir ce qu'il a dans le ventre.",
                 icon: <ArrowRight className="w-6 h-6" />
               }
             ].map((trait, i) => (
