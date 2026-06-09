@@ -29,10 +29,10 @@ const Home = () => {
                 Apolline Bellaclas
               </h1>
               <h2 className="text-xl md:text-2xl font-bold text-light-blue mb-8 tracking-tight">
-                Cheffe de projet digital
+                Future manager en transformation numérique
               </h2>
               <p className="text-lg text-slate-300 mb-12 leading-relaxed max-w-xl">
-                J'évolue à l'intersection du marketing digital, du NoCode et de l'intelligence artificielle, avec une exigence : produire des analyses stratégiques et des livrables professionnels.
+                Je conçois des projets digitaux concrets, du marketing à la data, en m'appuyant sur le NoCode et l'IA pour aller plus vite sans rogner sur la qualité.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-8 lg:gap-12">
@@ -115,7 +115,7 @@ const Home = () => {
               Profil
             </h2>
             <p className="text-lg text-text-gray leading-relaxed font-medium max-w-3xl mx-auto">
-              Étudiante en Manager en transformation numérique, mes travaux explorent comment les outils NoCode et l'intelligence artificielle transforment la production digitale. Mon approche repose sur la conviction que ces outils ne remplacent pas les compétences humaines : ils les renforcent, à condition d'être pilotés par une stratégie claire.
+              Je suis étudiante en management de la transformation numérique. À travers mes projets, j'explore une idée simple : le NoCode et l'IA ne remplacent pas l'humain, ils le rendent plus efficace, à condition de garder une stratégie claire derrière.
             </p>
           </div>
 
@@ -132,7 +132,7 @@ const Home = () => {
               </div>
               <h4 className="text-xl font-bold text-deep-blue mb-3">Vision</h4>
               <p className="text-sm text-text-gray leading-relaxed font-medium">
-                Je considère que la technologie doit être au service de la stratégie, et non l'inverse. Mon rôle est de faire le pont entre ces deux mondes.
+                La technologie doit servir la stratégie, pas l'inverse. Mon truc, c'est de faire le lien entre les deux.
               </p>
             </motion.div>
 
@@ -149,7 +149,7 @@ const Home = () => {
               </div>
               <h4 className="text-xl font-bold text-deep-blue mb-3">Approche</h4>
               <p className="text-sm text-text-gray leading-relaxed font-medium">
-                Double sensibilité marketing et analyse de données. Une démarche qui croise rigueur business et exigences techniques du digital.
+                Je commence par écouter le besoin réel, puis je prends le projet en main du début à la fin, quitte à tester plusieurs pistes avant de garder la bonne.
               </p>
             </motion.div>
 
@@ -166,7 +166,7 @@ const Home = () => {
               </div>
               <h4 className="text-xl font-bold text-deep-blue mb-3">Ma différence</h4>
               <p className="text-sm text-text-gray leading-relaxed font-medium">
-                Un double parcours marketing et commercial, qui me permet de comprendre les enjeux de communication et les attentes des équipes commerciales.
+                Un parcours à la fois marketing et commercial : je comprends les besoins de com' comme ceux d'une équipe de vente.
               </p>
             </motion.div>
 
@@ -183,7 +183,7 @@ const Home = () => {
               </div>
               <h4 className="text-xl font-bold text-deep-blue mb-3">Valeur ajoutée</h4>
               <p className="text-sm text-text-gray leading-relaxed font-medium">
-                Concevoir des contenus et des analyses qui ne sont pas seulement esthétiques ou engageants, mais réellement utiles à la performance business.
+                Des contenus et des analyses qui ne sont pas juste jolis : ils servent vraiment à prospecter et à décider.
               </p>
             </motion.div>
           </div>
@@ -206,7 +206,7 @@ const Home = () => {
               Deux projets, deux problématiques
             </h2>
             <p className="text-lg text-text-gray leading-relaxed font-medium max-w-2xl">
-              Mes travaux s'articulent autour de deux projets : une analyse data sur le télétravail, et la conception d'un site vitrine digital avec un outil NoCode assisté par IA.
+              Deux projets, deux terrains différents : une analyse de données sur le télétravail, et la conception d'un site vitrine avec un outil NoCode assisté par IA.
             </p>
           </div>
 
@@ -230,7 +230,7 @@ const Home = () => {
                     "Le télétravail constitue-t-il aujourd'hui un mode de travail performant côté salariés et réellement présent côté entreprises ?"
                   </div>
                   <p className="text-slate-300 mb-10 leading-relaxed">
-                    Analyse de trois dossiers de données issus de Kaggle, croisant études salariés et marché de l'emploi. Plus de 1 200 observations exploitées.
+                    Analyse de trois jeux de données Kaggle — 1 039 offres d'emploi et deux enquêtes salariés — croisant la réalité du marché et le ressenti des salariés.
                   </p>
                   <Link 
                     to="/data" 
@@ -270,7 +270,7 @@ const Home = () => {
                     "Un outil NoCode assisté par IA peut-il produire un livrable professionnel sans sacrifier la réflexion stratégique ?"
                   </div>
                   <p className="text-text-gray mb-10 leading-relaxed font-medium">
-                    Exploration des capacités de génération assistée par IA pour restructurer un portfolio digital complet en un temps record.
+                    Tester jusqu'où un outil NoCode assisté par IA peut aller pour construire un site vitrine complet. Vite, mais bien.
                   </p>
                   <Link 
                     to="/portfolio" 
