@@ -38,7 +38,7 @@ const Portfolio = () => {
               Conception d'un site vitrine avec Lovable
             </motion.h1>
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-text-gray leading-relaxed font-medium">
-              Retour sur la conception de ce portfolio digital, entre stratégie, NoCode et intelligence artificielle.
+              Comment j'ai conçu ce site avec le NoCode et l'IA — et surtout, ce que j'en retiens.
             </motion.p>
           </motion.div>
 
@@ -78,7 +78,7 @@ const Portfolio = () => {
             "Un outil NoCode assisté par IA peut-il produire un livrable professionnel sans sacrifier la stratégie et la rigueur ?"
           </h2>
           <p className="text-slate-400 font-medium text-sm md:text-base max-w-2xl mx-auto relative z-10">
-            Cette problématique guide l'ensemble de ma démarche : tester en pratique les apports et les limites du NoCode + IA, et identifier où la valeur humaine reste indispensable.
+            Pour y répondre, j'ai joué le jeu en vraie grandeur : créer moi-même mon site vitrine avec ces outils, et voir où l'humain reste indispensable.
           </p>
           
           <div className="absolute top-0 right-0 w-64 h-64 bg-light-blue/10 blur-[100px] rounded-full -mr-20 -mt-20" />
@@ -94,22 +94,22 @@ const Portfolio = () => {
           viewport={{ once: true }}
         >
           <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-4 block">01. CONTEXTE</span>
-          <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-8 tracking-tight">Pourquoi un site portfolio ?</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-8 tracking-tight">Pourquoi un site vitrine ?</h2>
           <p className="text-lg md:text-xl text-text-gray font-medium leading-relaxed max-w-3xl mb-12">
-            Dans un marché de l'emploi digital en constante évolution, un CV classique ne suffit plus. Concevoir un portfolio professionnel permet à la fois de structurer mon positionnement digital et de me différencier sur le marché de l'emploi en démontrant concrètement mes compétences.
+            J'ai découvert Lovable grâce à un prof. Dès que j'ai su m'en servir, j'ai voulu créer mon propre site vitrine : un support qui illustre mon CV, montre ce que je sais faire, et m'aide à me démarquer dans mes candidatures — avec un objectif clair, décrocher un CDD ou un CDI.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-xl font-black text-deep-blue mb-4">Objectif</h3>
               <p className="text-text-gray font-medium leading-relaxed">
-                Centraliser mes travaux académiques et projets personnels au sein d'une interface unique, fluide et professionnelle pour illustrer ma double compétence Manager et Expert Digital.
+                Réunir mes projets au même endroit, dans une interface claire et pro, pour montrer ce que j'ai fait et ce que je sais faire.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-black text-deep-blue mb-4">Mon rôle</h3>
               <p className="text-text-gray font-medium leading-relaxed">
-                Pilotage complet du projet : définition de la stratégie éditoriale, rédaction des contenus, structuration du parcours utilisateur et supervision technique du déploiement via Lovable.
+                J'ai piloté le projet de bout en bout : la ligne éditoriale, la rédaction, le parcours utilisateur et le déploiement sur Lovable.
               </p>
             </div>
           </div>
@@ -124,10 +124,10 @@ const Portfolio = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-4 block">03. CHOIX DE L'OUTIL</span>
+          <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-4 block">02. CHOIX DE L'OUTIL</span>
           <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-4 tracking-tight">Pourquoi Lovable ?</h2>
           <p className="text-lg text-text-gray font-medium max-w-3xl leading-relaxed">
-            Pour répondre à cette problématique, j'ai choisi Lovable, un outil NoCode assisté par intelligence artificielle, en pleine émergence sur le marché de la production digitale.
+            Lovable, c'est le premier outil NoCode que j'ai appris à utiliser. Boosté à l'IA, il permet de créer vite un site vraiment pro — exactement ce qu'il me fallait.
           </p>
         </motion.div>
 
@@ -136,17 +136,17 @@ const Portfolio = () => {
             { 
               icon: Zap, 
               title: "Rapidité", 
-              desc: "Conception d'un site structuré sans développement complexe, en automatisant les étapes les plus chronophages." 
+              desc: "Construire un site structuré sans coder, en automatisant les étapes les plus longues." 
             },
             { 
               icon: Bot, 
               title: "IA générative", 
-              desc: "Génération assistée du code et de la structure, avec une supervision humaine sur les choix stratégiques." 
+              desc: "L'IA génère le code et la structure ; moi, je garde la main sur les choix stratégiques." 
             },
             { 
               icon: TrendingUp, 
-              title: "Pertinence du test", 
-              desc: "Une technologie en pleine émergence qu'il est stratégique de maîtriser pour rester compétitive sur le marché digital." 
+              title: "Anticiper le marché", 
+              desc: "Apprendre à m'en servir maintenant, c'est me préparer à un métier qui évolue vite." 
             }
           ].map((card, i) => (
             <motion.div
@@ -175,14 +175,14 @@ const Portfolio = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6 block">04. DIFFICULTÉS RENCONTRÉES</span>
+            <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6 block">03. DIFFICULTÉS RENCONTRÉES</span>
             <h2 className="text-3xl font-black text-deep-blue mb-8 tracking-tight">Une analyse honnête des limites</h2>
             <ul className="space-y-4">
               {[
-                "Difficulté à obtenir un rendu totalement personnalisé sans intervention manuelle",
-                "Contraintes liées aux modèles proposés par l'outil",
-                "Nécessité d'adapter et de retravailler les contenus générés",
-                "Limites dans le contrôle technique fin"
+                "Un rendu difficile à personnaliser à 100 % sans remettre les mains dedans",
+                "Des modèles imposés par l'outil, parfois contraignants",
+                "Des contenus générés à retravailler systématiquement",
+                "Un contrôle technique fin assez limité"
               ].map((text, i) => (
                 <li key={i} className="flex items-start gap-4">
                   <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2.5 shrink-0" />
@@ -197,14 +197,14 @@ const Portfolio = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6 block">05. APPORTS DU PROJET</span>
+            <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-6 block">04. APPORTS DU PROJET</span>
             <h2 className="text-3xl font-black text-deep-blue mb-8 tracking-tight">Ce que ce projet a apporté</h2>
             <ul className="space-y-4">
               {[
-                "Structuration d'un projet digital de A à Z, du positionnement au déploiement",
-                "Utilisation concrète et critique du NoCode et de l'intelligence artificielle",
-                "Développement d'une réflexion sur les nouvelles méthodes de création web",
-                "Travail sur l'équilibre entre rapidité d'exécution, qualité du design et pertinence stratégique"
+                "Avoir mené un projet digital de A à Z, du positionnement au déploiement",
+                "Avoir utilisé le NoCode et l'IA pour de vrai, avec un regard critique",
+                "M'être forgé une vraie opinion sur ces nouvelles façons de créer un site",
+                "Avoir trouvé l'équilibre entre vitesse, qualité du design et stratégie"
               ].map((text, i) => (
                 <li key={i} className="flex items-start gap-4">
                   <div className="w-6 h-6 rounded-full bg-light-blue/10 text-light-blue flex items-center justify-center shrink-0 mt-1">
@@ -234,7 +234,7 @@ const Portfolio = () => {
           </p>
           
           <p className="text-base md:text-lg text-text-gray font-medium max-w-3xl mx-auto leading-relaxed">
-            Lovable a permis 90 % de réduction du temps de développement, mais c'est ma définition du positionnement, ma réflexion UX et ma supervision continue qui ont fait la différence. L'IA est un co-pilote, pas un pilote.
+            Lovable m'a fait gagner un temps fou, mais c'est mon positionnement, ma réflexion UX et ma supervision qui ont fait la différence. L'IA est un co-pilote, pas un pilote.
           </p>
         </motion.div>
       </section>
@@ -248,7 +248,7 @@ const Portfolio = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-4 block">06. CHIFFRES-CLÉS</span>
+            <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-4 block">05. CHIFFRES-CLÉS</span>
             <h2 className="text-3xl md:text-4xl font-black mb-4 tracking-tight text-white">Trois indicateurs concrets</h2>
           </motion.div>
 
@@ -261,8 +261,8 @@ const Portfolio = () => {
               },
               { 
                 val: "70 %", 
-                label: "Des futures applications", 
-                sub: "Pourraient être développées en NoCode/Low-code à horizon 2026 (projection marché Gartner)" 
+                label: "Des nouvelles applications", 
+                sub: "Pourraient s'appuyer sur le low-code/no-code (prévision Gartner)" 
               },
               { 
                 val: "10-20h", 
