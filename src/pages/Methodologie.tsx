@@ -38,36 +38,36 @@ const Methodologie = () => {
           <p className="text-light-blue font-medium text-center mb-10 text-lg">Cartographier les sources, sécuriser la conformité, garantir la pertinence.</p>
           
           <div className="max-w-3xl mx-auto mb-12 text-center text-text-gray font-medium leading-relaxed">
-            <p>La fiabilité d'une analyse repose d'abord sur la qualité de sa collecte. Pour cette étude, j'ai croisé trois sources complémentaires afin d'aborder le télétravail sous deux angles : la perception des salariés et la réalité du marché de l'emploi.</p>
+            <p>La fiabilité d'une analyse repose d'abord sur la qualité de sa collecte. Pour cette étude, j'ai croisé trois jeux de données open source (Kaggle), afin d'aborder le télétravail sous deux angles : la perception des salariés et la réalité du marché de l'emploi.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
               { 
-                title: "Source interne — études salariés", 
+                title: "Salariés — productivité", 
                 items: [
-                  { label: "Type", val: "Données déclaratives" },
-                  { label: "Volume", val: "200 répondants" },
-                  { label: "Méthode", val: "Questionnaire" },
-                  { label: "Variables", val: "Mode, productivité, satisfaction, stress" }
+                  { label: "Type", val: "Enquête salariés" },
+                  { label: "Source", val: "Jeu de données Kaggle (open data)" },
+                  { label: "Volume", val: "≈ 1 000 répondants" },
+                  { label: "Variables", val: "Mode, productivité, heures, bien-être" }
                 ]
               },
               { 
-                title: "Source externe — productivité perçue", 
+                title: "Salariés — bien-être", 
                 items: [
-                  { label: "Type", val: "Auto-évaluation" },
-                  { label: "Volume", val: "Échantillon dédié" },
-                  { label: "Méthode", val: "Enquête en ligne" },
-                  { label: "Variables", val: "% productivité par mode" }
+                  { label: "Type", val: "Enquête salariés" },
+                  { label: "Source", val: "Jeu de données Kaggle (open data)" },
+                  { label: "Volume", val: "≈ 100 répondants" },
+                  { label: "Variables", val: "Mode, burnout, équilibre vie pro/perso" }
                 ]
               },
               { 
-                title: "Source externe — marché de l'emploi", 
+                title: "Offres d'emploi (marché)", 
                 items: [
-                  { label: "Type", val: "Annonces en ligne" },
+                  { label: "Type", val: "Offres d'emploi en ligne" },
+                  { label: "Source", val: "Jeu de données Kaggle (open data)" },
                   { label: "Volume", val: "1 039 offres" },
-                  { label: "Méthode", val: "Agrégation d'offres" },
-                  { label: "Variables", val: "Mode proposé, catégorie de poste" }
+                  { label: "Variables", val: "Mode de travail, catégorie de poste" }
                 ]
               }
             ].map((source, i) => (
@@ -90,25 +90,25 @@ const Methodologie = () => {
               <div className="p-10 border-b md:border-b-0 md:border-r border-slate-200">
                 <div className="flex gap-4 mb-4">
                   <ShieldCheck className="w-6 h-6 text-green-600 shrink-0" />
-                  <h4 className="text-deep-blue font-black tracking-tight text-lg">Conformité RGPD</h4>
+                  <h4 className="text-deep-blue font-black tracking-tight text-lg">Données ouvertes</h4>
                 </div>
                 <p className="text-text-gray text-sm font-medium leading-relaxed">
-                  Données anonymisées et agrégées. Sources déclaratives ou publiques conformes aux principes de minimisation et finalité. Industrialisation prévue via un registre de traitement dédié.
+                  Les trois jeux de données proviennent de Kaggle : des données publiques et déjà anonymisées. Je n'ai collecté aucune donnée personnelle moi-même.
                 </p>
               </div>
               <div className="p-10">
                 <div className="flex gap-4 mb-4">
                   <Layers className="w-6 h-6 text-light-blue shrink-0" />
-                  <h4 className="text-deep-blue font-black tracking-tight text-lg">Cartographie des flux</h4>
+                  <h4 className="text-deep-blue font-black tracking-tight text-lg">Sources & outils</h4>
                 </div>
                 <ul className="space-y-2 text-text-gray text-sm font-medium">
                   <li className="flex items-center gap-2">
                     <div className="w-1 h-1 rounded-full bg-light-blue" />
-                    <span>Sources : Études RH & Plateformes emploi</span>
+                    <span>Sources : Kaggle (open data)</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1 h-1 rounded-full bg-light-blue" />
-                    <span>Outils : Tableurs, scrapers & agrégateurs</span>
+                    <span>Outils : Python (pandas) sur Google Colab</span>
                   </li>
                 </ul>
               </div>
