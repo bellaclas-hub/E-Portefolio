@@ -43,7 +43,7 @@ const Data = () => {
           </h1>
           <div className="space-y-6 text-lg md:text-xl text-text-gray leading-relaxed font-medium max-w-3xl">
             <p>
-              Le télétravail est devenu un mode d’organisation important depuis plusieurs années. Il interroge à la fois les salariés, les entreprises et le marché de l’emploi.
+              Le télétravail s'est imposé comme une vraie façon de travailler. Il soulève des questions, autant pour les salariés que pour les entreprises.
             </p>
             <p>
               Cette page a pour objectif d’analyser le télétravail sous deux angles :
@@ -77,7 +77,7 @@ const Data = () => {
               “Le télétravail constitue-t-il aujourd’hui un mode de travail performant côté salariés et réellement présent côté entreprises ?”
             </h2>
             <p className="text-slate-300 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
-              Cette problématique permet de comparer la perception du télétravail par les salariés avec sa place concrète dans les pratiques de recrutement des entreprises.
+              L'idée : comparer ce que les salariés ressentent du télétravail avec sa place réelle dans les recrutements.
             </p>
           </div>
         </motion.div>
@@ -230,7 +230,7 @@ const Data = () => {
           <div className="flex gap-6 items-start">
             <ClipboardCheck className="w-8 h-8 text-light-blue shrink-0 mt-1" />
             <p className="text-text-gray font-medium leading-relaxed italic">
-              "Cette feuille de route illustre une démarche complète : du recueil de la donnée à son exploitation par l'IA, en passant par la rigueur méthodologique nécessaire à chaque étape."
+              "De la collecte des données jusqu'à leur interprétation avec l'IA, j'ai gardé la même rigueur à chaque étape."
             </p>
           </div>
         </motion.div>
