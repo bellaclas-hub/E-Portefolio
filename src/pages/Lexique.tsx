@@ -33,26 +33,26 @@ const Lexique = () => {
       terms: [
         {
           name: "LLM (Large Language Model)",
-          definition: "Modèle de langage entraîné sur des volumes massifs de données pour comprendre et générer du texte de manière contextuelle.",
-          stake: "Automatisation de la création de contenu et analyse sémantique à grande échelle.",
+          definition: "Une IA entraînée sur d'énormes quantités de textes, capable de comprendre une question et d'y répondre en langage naturel.",
+          stake: "Générer ou résumer du contenu très vite.",
           icon: <Globe className="w-5 h-5" />
         },
         {
           name: "RAG (Retrieval-Augmented Generation)",
-          definition: "Technique permettant à un LLM de consulter des sources de données externes fiables avant de générer une réponse.",
-          stake: "Réduction drastique des hallucinations et mise à jour des connaissances du modèle en temps réel.",
+          definition: "Une technique qui permet à l'IA d'aller chercher l'info dans des sources fiables avant de répondre, au lieu de répondre « de mémoire ».",
+          stake: "Des réponses plus justes et à jour, avec moins d'erreurs inventées.",
           icon: <Database className="w-5 h-5" />
         },
         {
           name: "Prompt Engineering",
-          definition: "Méthodologie de structuration des requêtes visant à maximiser la pertinence et la précision des sorties d'une IA générative.",
-          stake: "Gain de productivité opérationnelle et contrôle fin de la tonalité des réponses.",
+          definition: "L'art de bien formuler sa demande à une IA pour obtenir une réponse précise et utile.",
+          stake: "Gagner du temps et garder le contrôle sur le résultat.",
           icon: <Zap className="w-5 h-5" />
         },
         {
           name: "Machine Learning",
-          definition: "Discipline de l'IA permettant aux algorithmes d'identifier des patterns complexes pour effectuer des prédictions.",
-          stake: "Anticipation des comportements clients et personnalisation prédictive de l'offre.",
+          definition: "Des programmes qui apprennent à partir de données pour repérer des tendances et faire des prédictions, sans être programmés règle par règle.",
+          stake: "Anticiper le comportement des clients.",
           icon: <Cpu className="w-5 h-5" />
         }
       ]
@@ -64,32 +64,32 @@ const Lexique = () => {
       terms: [
         {
           name: "API (Application Programming Interface)",
-          definition: "Protocole de communication permettant à des systèmes hétérogènes d'échanger des données de manière standardisée.",
-          stake: "Interconnectivité des outils métiers et création de workflows automatisés sans silos.",
+          definition: "Une passerelle qui permet à deux logiciels de se parler et d'échanger des données automatiquement.",
+          stake: "Connecter ses outils et automatiser des tâches.",
           icon: <Database className="w-5 h-5" />
         },
         {
           name: "SaaS (Software as a Service)",
-          definition: "Modèle de distribution logicielle basé sur le cloud, offrant une accessibilité universelle via un abonnement.",
-          stake: "Scalabilité immédiate, réduction des coûts de maintenance et agilité de déploiement.",
+          definition: "Un logiciel qu'on utilise en ligne, par abonnement, sans rien installer (ex. Canva, Notion).",
+          stake: "Accessible partout, peu de coûts d'installation.",
           icon: <Layers className="w-5 h-5" />
         },
         {
           name: "Citizen Development",
-          definition: "Mouvement permettant aux collaborateurs métiers de concevoir des solutions applicatives sans expertise en programmation.",
-          stake: "Désengorgement des services IT et accélération de l'innovation terrain.",
+          definition: "Quand une personne non-développeuse crée elle-même ses outils grâce au NoCode.",
+          stake: "Soulager l'informatique et aller plus vite.",
           icon: <Users className="w-5 h-5" />
         },
         {
           name: "Data Lake vs Warehouse",
-          definition: "Le Data Lake stocke des données brutes (non structurées) tandis que le Warehouse stocke des données traitées et structurées.",
-          stake: "Optimisation du stockage Big Data et fiabilité des rapports décisionnels (BI).",
+          definition: "Le Data Lake stocke des données brutes, en vrac ; le Warehouse des données déjà triées et organisées.",
+          stake: "Bien choisir pour avoir des analyses fiables.",
           icon: <Database className="w-5 h-5" />
         },
         {
           name: "Pipeline data",
           definition: "Un pipeline data est un ensemble d’étapes qui permet de collecter, organiser et transformer des données pour les rendre exploitables.",
-          stake: "Automatisation du flux de données pour garantir une information propre et prête à l'analyse.",
+          stake: "Automatiser le flux pour des données propres, prêtes à analyser.",
           icon: <Filter className="w-5 h-5" />
         }
       ]
@@ -101,26 +101,26 @@ const Lexique = () => {
       terms: [
         {
           name: "KPI (Key Performance Indicator)",
-          definition: "Métriques critiques sélectionnées pour évaluer le succès d'une initiative par rapport à des objectifs stratégiques.",
-          stake: "Mesure objective du ROI et pilotage agile des campagnes marketing.",
+          definition: "Un indicateur chiffré qui mesure si on atteint un objectif (ventes, taux de clic…).",
+          stake: "Savoir, chiffres en main, ce qui marche.",
           icon: <BarChart3 className="w-5 h-5" />
         },
         {
           name: "Attribution Marketing",
-          definition: "Modèle analytique permettant d'identifier les points de contact ayant contribué à une conversion finale.",
-          stake: "Optimisation fine du mix-média et compréhension du parcours d'achat.",
+          definition: "Identifier quelles actions (pub, email, réseau social…) ont vraiment mené un client à acheter.",
+          stake: "Savoir où mettre son budget.",
           icon: <Target className="w-5 h-5" />
         },
         {
           name: "Churn Rate",
-          definition: "Taux d'attrition mesurant la proportion de clients perdus sur une période donnée.",
-          stake: "Indicateur vital de la satisfaction client et de la pérennité du modèle économique.",
+          definition: "Le taux de clients qu'on perd sur une période donnée.",
+          stake: "Un bon signal de la satisfaction client.",
           icon: <Users className="w-5 h-5" />
         },
         {
           name: "A/B Testing",
-          definition: "Méthode expérimentale consistant à comparer deux versions d'un élément pour identifier la plus performante.",
-          stake: "Optimisation continue du taux de conversion basée sur des preuves empiriques.",
+          definition: "Tester deux versions d'un même élément pour voir laquelle marche le mieux.",
+          stake: "S'améliorer sur des faits, pas des intuitions.",
           icon: <Zap className="w-5 h-5" />
         }
       ]
@@ -132,26 +132,26 @@ const Lexique = () => {
       terms: [
         {
           name: "Customer Journey Mapping",
-          definition: "Analyse exhaustive des interactions et des émotions d'un utilisateur tout au long de son parcours.",
-          stake: "Amélioration de la rétention client et création d'un avantage concurrentiel par l'expérience.",
+          definition: "Cartographier toutes les étapes et les ressentis d'un utilisateur, de la découverte à l'achat.",
+          stake: "Repérer les points de friction et améliorer l'expérience.",
           icon: <Users className="w-5 h-5" />
         },
         {
           name: "Atomic Design",
-          definition: "Méthodologie de conception consistant à diviser les interfaces en composants élémentaires réutilisables.",
-          stake: "Cohérence visuelle absolue et gain d'efficacité majeur lors du développement.",
+          definition: "Construire une interface à partir de petits éléments réutilisables (boutons, champs…) qu'on assemble.",
+          stake: "Un design cohérent partout et un développement plus rapide.",
           icon: <Cpu className="w-5 h-5" />
         },
         {
           name: "User Persona",
-          definition: "Profil fictif représentant un segment d'audience cible, basé sur des données réelles et des comportements.",
-          stake: "Alignement des équipes sur les besoins réels des utilisateurs finaux.",
+          definition: "Un portrait-type d'un utilisateur cible, inspiré de vraies données.",
+          stake: "Garder l'équipe concentrée sur les vrais besoins.",
           icon: <Users className="w-5 h-5" />
         },
         {
           name: "Accessibilité Numérique",
-          definition: "Conception de services digitaux inclusifs pour les personnes en situation de handicap.",
-          stake: "Responsabilité sociétale (RSE) et élargissement de l'audience adressable.",
+          definition: "Concevoir des sites utilisables par tous, y compris les personnes en situation de handicap.",
+          stake: "Un enjeu citoyen, et une audience plus large.",
           icon: <CheckCircle2 className="w-5 h-5" />
         }
       ]
