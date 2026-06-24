@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<style>
+:root {
+  --navy-deep: #07112B;
+  --navy: #0B1B3F;
+  --blue-700: #1E3A8A;
+  --blue-500: #2563EB;
+  --blue-300: #60A5FA;
+  --cyan-500: #06B6D4;
+  --cyan-300: #67E8F9;
+  --white: #FFFFFF;
+  --off-white: #F7F9FC;
+  --gray-100: #EEF2F7;
+  --gray-200: #DCE3ED;
+  --gray-400: #8895A8;
+  --gray-500: #5B6878;
+  --gray-700: #2E3A4F;
+  --gray-900: #0F172A;
+  --mode-remote: #2563EB;
+  --mode-hybrid: #06B6D4;
+  --mode-onsite: #334155;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04), 0 1px 3px rgba(15,23,42,0.06);
+  --shadow-md: 0 4px 12px rgba(15,23,42,0.06), 0 2px 4px rgba(15,23,42,0.04);
+  --gradient: linear-gradient(135deg, #1E40AF 0%, #2563EB 45%, #06B6D4 100%);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--off-white);
+  color: var(--gray-700);
+  line-height: 1.55;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+@media (max-width: 720px) { .wrap { padding: 0 18px; } }
+
+/* ───── Top bar (navy) ───── */
+.topbar {
+  background: var(--navy-deep);
+  color: var(--white);
+  padding: 18px 0;
+  position: relative;
+  overflow: hidden;
+}
+.topbar::after {
+  content: '';
+  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 60%; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(96,165,250,0.5), transparent);
+}
+.topbar-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex; align-items: center; gap: 12px;
+  font-family: 'Sora', sans-serif; font-weight: 600; font-size: 16px;
+}
+.brand-mark {
+  width: 28px; height: 28px;
+  background: var(--gradient);
+  border-radius: 7px;
+  position: relative;
+}
+.brand-mark::after {
+  content: ''; position: absolute; inset: 5px;
+  background: var(--navy-deep); border-radius: 3px;
+}
+.brand-mark::before {
+  content: ''; position: absolute; inset: 9px;
+  background: var(--gradient); border-radius: 1.5px; z-index: 2;
+}
+.topbar-title {
+  font-family: 'Sora', sans-serif; font-weight: 600; font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: -0.005em;
+}
+.topbar-meta {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.1em;
+}
+
+/* ───── Tab bar (sticky white) ───── */
+.tab-section {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky; top: 0; z-index: 50;
+  box-shadow: var(--shadow-sm);
+}
+.tab-bar {
+  display: flex; gap: 8px; padding: 12px 0;
+  overflow-x: auto;
+}
+.tab {
+  flex-shrink: 0;
+  display: inline-flex; flex-direction: column;
+  align-items: flex-start;
+  font-family: inherit;
+  background: transparent;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 10px 18px;
+  cursor: pointer;
+  color: var(--gray-700);
+  transition: all 0.25s ease;
+  min-width: 180px;
+}
+.tab:hover { border-color: var(--blue-300); background: var(--off-white); }
+.tab .tab-num {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gray-400); font-weight: 500;
+}
+.tab .tab-label {
+  font-family: 'Sora', sans-serif; font-weight: 600; font-size: 15px;
+  color: var(--gray-900); margin-top: 3px;
+  letter-spacing: -0.005em;
+}
+.tab .tab-meta {
+  font-size: 11px; color: var(--gray-500); margin-top: 2px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.tab.active {
+  background: var(--gradient);
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+}
+.tab.active .tab-num   { color: rgba(255,255,255,0.7); }
+.tab.active .tab-label { color: var(--white); }
+.tab.active .tab-meta  { color: rgba(255,255,255,0.85); }
+
+/* ───── Panels ───── */
+.panel { display: none; padding: 36px 0 56px; }
+.panel.active { display: block; animation: fadeUp 0.4s cubic-bezier(0.2,0.7,0.2,1); }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.subsection { margin-bottom: 36px; }
+.subsection:last-child { margin-bottom: 0; }
+.sub-head {
+  display: flex; align-items: center; gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.sub-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  background: var(--gradient);
+  color: var(--white);
+  padding: 5px 11px;
+  border-radius: 999px;
+}
+.sub-name {
+  font-family: 'Sora', sans-serif; font-weight: 600; font-size: 18px;
+  color: var(--gray-900); letter-spacing: -0.01em;
+}
+.sub-meta {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: var(--gray-500); margin-left: auto;
+}
+
+.cards-grid { display: grid; gap: 16px; }
+.cards-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.cards-grid.cols-1 { grid-template-columns: 1fr; }
+@media (max-width: 1080px) { .cards-grid.cols-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px)  { .cards-grid.cols-3 { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s cubic-bezier(0.2,0.7,0.2,1);
+  display: flex; flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gray-200);
+}
+.card-title {
+  font-family: 'Sora', sans-serif; font-weight: 600; font-size: 14px;
+  color: var(--gray-900);
+  letter-spacing: -0.005em;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.card-title .unit {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--gray-500);
+  letter-spacing: 0.02em;
+  margin-left: 6px;
+  text-transform: lowercase;
+}
+.chart-area { flex: 1; min-height: 260px; margin: 0 -6px; }
+.chart-area.tall { min-height: 340px; }
+
+.note {
+  margin-top: 8px;
+  font-size: 11px; color: var(--gray-500);
+  font-style: italic;
+}
+
+/* ───── Lecture : phrase explicative sous chaque graphique ───── */
+.lecture {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: rgba(37, 99, 235, 0.05);
+  border-radius: 8px;
+  font-size: 12.5px;
+  color: var(--gray-700);
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.lecture::before {
+  content: '💡';
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1.3;
+}
+.lecture strong { color: var(--gray-900); font-weight: 600; }
+
+/* ───── À retenir : encadré en haut de chaque onglet ───── */
+.takeaway {
+  background: linear-gradient(135deg, #1E40AF, #2563EB);
+  color: var(--white);
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+.takeaway-icon {
+  flex-shrink: 0;
+  font-size: 28px;
+  line-height: 1;
+}
+.takeaway-content {
+  flex: 1;
+}
+.takeaway-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+}
+.takeaway-text {
+  font-family: 'Sora', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--white);
+}
+.takeaway-text strong { font-weight: 700; }
+
+/* ───── Conclusion globale du dashboard ───── */
+.global-conclusion {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px 0 24px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+.global-conclusion::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #2563EB, #06B6D4);
+}
+.global-conclusion-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.global-conclusion-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--gradient);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.global-conclusion-title {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--gray-900);
+  letter-spacing: -0.01em;
+}
+.global-conclusion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+@media (max-width: 760px) { .global-conclusion-grid { grid-template-columns: 1fr; } }
+.gc-axis {
+  background: var(--off-white);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+.gc-axis-title {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+}
+.gc-axis-text {
+  font-size: 13px;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+.gc-axis-text strong { color: var(--gray-900); font-weight: 600; }
+.gc-final {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--gray-200);
+  font-size: 14px;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+.gc-final strong { color: var(--gray-900); font-weight: 600; }
+
+/* ───── Synthèse box (en tête de chaque dossier) ───── */
+.synth {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(6, 182, 212, 0.05));
+  border: 1px solid var(--gray-200);
+  border-left: 3px solid;
+  border-image: linear-gradient(180deg, #2563EB, #06B6D4) 1;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.synth-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--blue-500);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+.synth-text {
+  font-size: 14px; color: var(--gray-700); line-height: 1.55;
+  flex: 1;
+  min-width: 240px;
+}
+.synth-text strong { color: var(--gray-900); font-weight: 600; }
+.synth-axis {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  color: var(--blue-500);
+  letter-spacing: 0.04em;
+}
+.synth-axis::before { content: '→ '; opacity: 0.6; }
+
+/* ───── Problématique banner ───── */
+.problematic {
+  background: var(--navy-deep);
+  color: var(--white);
+  padding: 32px 0;
+  position: relative;
+  overflow: hidden;
+}
+.problematic::before {
+  content: ''; position: absolute;
+  width: 360px; height: 360px; border-radius: 50%;
+  filter: blur(80px); opacity: 0.4;
+  background: radial-gradient(circle, var(--blue-500), transparent 65%);
+  top: -200px; right: -100px;
+  pointer-events: none;
+}
+.problematic::after {
+  content: ''; position: absolute;
+  width: 320px; height: 320px; border-radius: 50%;
+  filter: blur(80px); opacity: 0.3;
+  background: radial-gradient(circle, var(--cyan-500), transparent 65%);
+  bottom: -180px; left: -80px;
+  pointer-events: none;
+}
+.problematic-inner {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  align-items: start;
+}
+@media (max-width: 760px) { .problematic-inner { grid-template-columns: 1fr; gap: 14px; } }
+.problematic-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--cyan-300);
+  padding: 8px 14px;
+  border: 1px solid rgba(103, 232, 249, 0.3);
+  border-radius: 999px;
+  background: rgba(6, 182, 212, 0.08);
+  white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.problematic-label::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--cyan-400); flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.18);
+}
+.problematic-text {
+  font-family: 'Sora', sans-serif; font-weight: 500;
+  font-size: clamp(18px, 2.2vw, 24px); line-height: 1.45;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.92);
+  font-style: italic;
+}
+.problematic-text strong {
+  font-weight: 600;
+  background: linear-gradient(135deg, #60A5FA, #67E8F9);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+}
+
+/* ───── Conclusion banner ───── */
+.conclusion {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px 0;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+.conclusion::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #2563EB, #06B6D4);
+}
+.conclusion-head { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+.conclusion-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  background: var(--gradient);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.conclusion-title {
+  font-family: 'Sora', sans-serif; font-weight: 600; font-size: 22px;
+  color: var(--gray-900); letter-spacing: -0.01em;
+}
+.conclusion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+@media (max-width: 760px) { .conclusion-grid { grid-template-columns: 1fr; } }
+.conclusion-axis {
+  background: var(--off-white);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+.conclusion-axis-head {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--gray-900);
+}
+.conclusion-axis-icon {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-family: 'Sora', sans-serif; font-weight: 700;
+  color: var(--white);
+}
+.icon-yes { background: #10B981; }
+.icon-mid { background: #F59E0B; }
+.conclusion-axis p { font-size: 13px; color: var(--gray-700); line-height: 1.5; }
+.conclusion-axis strong { color: var(--gray-900); }
+.conclusion-summary {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--gray-200);
+  font-size: 14px;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+.conclusion-summary strong { color: var(--gray-900); }
+.conclusion-verdict {
+  display: inline-block;
+  font-family: 'Sora', sans-serif; font-weight: 600; font-size: 16px;
+  background: var(--gradient);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+
+/* ───── Footer (minimal) ───── */
+.foot {
+  padding: 24px 0;
+  border-top: 1px solid var(--gray-200);
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--gray-500);
+}
+.foot .legend { display: inline-flex; gap: 14px; flex-wrap: wrap; }
+.foot .legend span { display: inline-flex; align-items: center; gap: 5px; }
+.foot .legend span::before {
+  content: ''; width: 8px; height: 8px; border-radius: 50%;
+}
+.foot .legend .remote::before { background: var(--mode-remote); }
+.foot .legend .hybrid::before { background: var(--mode-hybrid); }
+.foot .legend .onsite::before { background: var(--mode-onsite); }
+.foot .period-notice {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 10px;
+  background: rgba(180, 83, 9, 0.08);
+  color: #B45309;
+  border: 1px solid rgba(180, 83, 9, 0.2);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.foot .period-notice:first-of-type {
+  background: rgba(37, 99, 235, 0.08);
+  color: #1D4ED8;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<header class="topbar">
+  <div class="wrap">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark"></span>
+      </div>
+      <span class="topbar-meta">v1.0 · 05.2026</span>
+    </div>
+  </div>
+</header>
+
+<!-- Problématique -->
+<section class="problematic">
+  <div class="wrap">
+    <div class="problematic-inner">
+      <span class="problematic-label">Problématique</span>
+      <p class="problematic-text">Le télétravail constitue-t-il aujourd'hui un mode de travail <strong>performant côté salariés</strong> (productivité, satisfaction) <strong>et présent côté entreprises</strong> (offres d'emploi) ?</p>
+    </div>
+  </div>
+</section>
+
+<!-- Tab Bar -->
+<div class="tab-section">
+  <div class="wrap">
+    <nav class="tab-bar" role="tablist">
+      <button class="tab active" data-target="panel-1" role="tab">
+        <span class="tab-num">Dossier 01</span>
+        <span class="tab-label">Études salariés</span>
+        <span class="tab-meta">7 graphiques</span>
+      </button>
+      <button class="tab" data-target="panel-2" role="tab">
+        <span class="tab-num">Dossier 02</span>
+        <span class="tab-label">Productivité perçue</span>
+        <span class="tab-meta">1 graphique</span>
+      </button>
+      <button class="tab" data-target="panel-3" role="tab">
+        <span class="tab-num">Dossier 03</span>
+        <span class="tab-label">Marché de l'emploi</span>
+        <span class="tab-meta">2 graphiques</span>
+      </button>
+    </nav>
+  </div>
+</div>
+
+<!-- ─────────── PANEL 1 ─────────── -->
+<section class="panel active" id="panel-1" role="tabpanel">
+  <div class="wrap">
+
+    <div class="takeaway">
+      <div class="takeaway-icon">📌</div>
+      <div class="takeaway-content">
+        <div class="takeaway-label">À retenir — Études salariés</div>
+        <div class="takeaway-text">Sur les deux enquêtes salariés (productivité et satisfaction), <strong>l'hybride domine, le télétravail suit, le présentiel arrive dernier</strong>. Le présentiel n'est jamais le mode le mieux noté.</div>
+      </div>
+    </div>
+
+    <div class="synth">
+      <span class="synth-label">En bref</span>
+      <span class="synth-text">Trois enquêtes mesurant les effets du mode de travail sur la <strong>productivité</strong>, la <strong>satisfaction</strong> et le <strong>stress</strong>, auprès de <strong>100 salariés</strong> par enquête. Le télétravail et l'hybride dominent en effectifs comme en scores moyens.
+        <span class="synth-axis">Performance et satisfaction côté salariés (axes 1 et 2 de la problématique)</span>
+      </span>
+    </div>
+
+    <div class="subsection">
+      <div class="sub-head">
+        <span class="sub-tag">1.1 Productivité</span>
+        <span class="sub-name">Modes & productivité</span>
+        <span class="sub-meta">100 salariés</span>
+      </div>
+      <div class="cards-grid cols-3">
+        <div class="card">
+          <div class="card-title">Répartition des modes <span class="unit">en nombre de salariés</span></div>
+          <div class="chart-area" id="g1"></div>
+          <div class="lecture"><span><strong>Lecture :</strong> Sur 100 salariés interrogés, le télétravail concerne le plus grand nombre (41), suivi de l'hybride (33). Le présentiel est minoritaire (26).</span></div>
+        </div>
+        <div class="card">
+          <div class="card-title">Productivité moyenne par mode <span class="unit">score sur 10</span></div>
+          <div class="chart-area" id="g2"></div>
+          <div class="lecture"><span><strong>Lecture :</strong> L'hybride obtient la meilleure note (6,27), juste devant le télétravail (6,13). <strong>Le présentiel arrive dernier</strong> (5,70).</span></div>
+        </div>
+        <div class="card">
+          <div class="card-title">Liens <span class="unit">coefficient de -1 à +1</span></div>
+          <div class="chart-area" id="g3"></div>
+          <div class="lecture"><span><strong>Lecture :</strong> Le dataset source ne contenait qu'une seule variable numérique. Cette heatmap est donc dégénérée — limite assumée et signalée.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="sub-head">
+        <span class="sub-tag">1.2 Satisfaction</span>
+        <span class="sub-name">Modes & satisfaction</span>
+        <span class="sub-meta">100 salariés</span>
+      </div>
+      <div class="cards-grid cols-3">
+        <div class="card">
+          <div class="card-title">Répartition des modes <span class="unit">en nombre de salariés</span></div>
+          <div class="chart-area" id="g4"></div>
+          <div class="lecture"><span><strong>Lecture :</strong> Échantillon plus équilibré : présentiel (36), télétravail (33), hybride (31). Les trois modes sont quasiment représentés à parts égales.</span></div>
+        </div>
+        <div class="card">
+          <div class="card-title">Satisfaction moyenne par mode <span class="unit">score sur 5</span></div>
+          <div class="chart-area" id="g5"></div>
+          <div class="lecture"><span><strong>Lecture :</strong> Même hiérarchie que pour la productivité : <strong>hybride en tête (2,16)</strong>, puis télétravail (2,09), puis présentiel (2,06). Les écarts sont faibles car la population est en burnout.</span></div>
+        </div>
+        <div class="card">
+          <div class="card-title">Liens <span class="unit">coefficient de -1 à +1</span></div>
+          <div class="chart-area" id="g6"></div>
+          <div class="lecture"><span><strong>Lecture :</strong> Comme pour le dataset précédent, une seule variable disponible. Heatmap dégénérée signalée.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="sub-head">
+        <span class="sub-tag">1.3 Santé mentale</span>
+        <span class="sub-name">Stress</span>
+      </div>
+      <div class="cards-grid cols-3">
+        <div class="card">
+          <div class="card-title">Liens <span class="unit">coefficient de -1 à +1</span></div>
+          <div class="chart-area" id="g7"></div>
+          <div class="lecture"><span><strong>Lecture :</strong> Ce dataset ne contenait qu'une variable « stress ». Comme pour les autres, la matrice de corrélation est dégénérée. Limite reconnue et expliquée dans la méthodologie.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── PANEL 2 ─────────── -->
+<section class="panel" id="panel-2" role="tabpanel">
+  <div class="wrap">
+    <div class="takeaway">
+      <div class="takeaway-icon">📌</div>
+      <div class="takeaway-content">
+        <div class="takeaway-label">À retenir — Productivité perçue</div>
+        <div class="takeaway-text">Quand les salariés évaluent eux-mêmes leur productivité, <strong>le télétravail dépasse le présentiel de près de 10 points</strong> (73,6 % contre 63,8 %). Le chiffre le plus marquant de l'étude.</div>
+      </div>
+    </div>
+
+    <div class="synth">
+      <span class="synth-label">En bref</span>
+      <span class="synth-text">Enquête déclarative — les salariés évaluent eux-mêmes leur productivité selon leur mode actuel. Le <strong>télétravail devance le présentiel de près de 10 points</strong> (73,6 % contre 63,8 %).
+        <span class="synth-axis">Renforce l'axe productivité côté salariés (axe 1 de la problématique)</span>
+      </span>
+    </div>
+    <div class="subsection">
+      <div class="sub-head">
+        <span class="sub-tag">2.1 Productivité auto-évaluée</span>
+        <span class="sub-name">Productivité perçue par mode actuel</span>
+      </div>
+      <div class="cards-grid cols-1">
+        <div class="card">
+          <div class="card-title">Productivité perçue moyenne <span class="unit">en %, auto-évaluée</span></div>
+          <div class="chart-area tall" id="g8"></div>
+          <div class="lecture"><span><strong>Lecture :</strong> Sur une échelle de 0 à 100 %, les salariés en télétravail se notent <strong>73,6 %</strong>, contre <strong>63,8 %</strong> pour ceux en présentiel. <strong>Un écart de près de 10 points en faveur du télétravail</strong>.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── PANEL 3 ─────────── -->
+<section class="panel" id="panel-3" role="tabpanel">
+  <div class="wrap">
+    <div class="takeaway">
+      <div class="takeaway-icon">📌</div>
+      <div class="takeaway-content">
+        <div class="takeaway-label">À retenir — Marché de l'emploi</div>
+        <div class="takeaway-text">Sur 1 039 offres analysées, <strong>le présentiel reste majoritaire (45 %)</strong>, le télétravail suit de près (40 %), l'hybride est minoritaire (15 %). <strong>Le mode varie fortement selon le métier</strong>.</div>
+      </div>
+    </div>
+
+    <div class="synth">
+      <span class="synth-label">En bref</span>
+      <span class="synth-text"><strong>1 039 offres d'emploi analysées</strong> par mode de travail proposé et par catégorie de poste. Le présentiel reste majoritaire (45 %) mais le télétravail représente près de <strong>4 offres sur 10</strong>.
+        <span class="synth-axis">Présence côté entreprises (axe 3 de la problématique)</span>
+      </span>
+    </div>
+    <div class="subsection">
+      <div class="sub-head">
+        <span class="sub-tag">3.1 Répartition des offres</span>
+        <span class="sub-name">Modes proposés dans les offres</span>
+        <span class="sub-meta">1 039 offres analysées</span>
+      </div>
+      <div class="cards-grid cols-1">
+        <div class="card">
+          <div class="card-title">Répartition des modes <span class="unit">en nombre d'offres</span></div>
+          <div class="chart-area tall" id="g9"></div>
+          <div class="lecture"><span><strong>Lecture :</strong> Sur 1 039 offres analysées, <strong>464 proposent du présentiel (45 %)</strong>, 413 du télétravail (40 %), et 162 de l'hybride (15 %). Le présentiel reste majoritaire, mais le télétravail est juste derrière.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="sub-head">
+        <span class="sub-tag">3.2 Catégories</span>
+        <span class="sub-name">Postes par mode de travail</span>
+      </div>
+      <div class="cards-grid cols-1">
+        <div class="card">
+          <div class="card-title">Volume par catégorie × mode <span class="unit">en nombre d'offres</span></div>
+          <div class="chart-area tall" id="g10" style="min-height: 440px;"></div>
+          <div class="lecture"><span><strong>Lecture :</strong> Le mode de travail varie fortement selon le métier. <strong>L'UI/UX est massivement en télétravail</strong> (107 offres sur 182, soit 59 %). À l'inverse, <strong>les RH sont majoritairement en présentiel</strong> (96 offres). Cloud et Data Scientist sont plus mixtes.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Conclusion -->
+<div class="wrap">
+  <div class="conclusion">
+    <div class="conclusion-head">
+      <span class="conclusion-label">Conclusion</span>
+      <span class="conclusion-title">Réponse à la problématique</span>
+    </div>
+    <div class="conclusion-verdict">Oui — partiellement, avec des nuances par axe.</div>
+    <div class="conclusion-grid">
+      <div class="conclusion-axis">
+        <div class="conclusion-axis-head"><span class="conclusion-axis-icon icon-yes">✓</span>Productivité (salariés)</div>
+        <p>Le télétravail et l'hybride <strong>dépassent le présentiel</strong> sur les deux datasets disponibles. Auto-évaluation : <strong>+9,9 points</strong> en faveur du télétravail.</p>
+      </div>
+      <div class="conclusion-axis">
+        <div class="conclusion-axis-head"><span class="conclusion-axis-icon icon-mid">~</span>Satisfaction (salariés)</div>
+        <p>Hiérarchie identique (Hybride &gt; Télétravail &gt; Présentiel) mais <strong>écarts faibles</strong> entre modes. Avantage modeste, non décisif.</p>
+      </div>
+      <div class="conclusion-axis">
+        <div class="conclusion-axis-head"><span class="conclusion-axis-icon icon-mid">~</span>Présence (entreprises)</div>
+        <p>Le télétravail représente <strong>40 % des offres</strong> — fortement présent mais <strong>second derrière le présentiel (45 %)</strong>.</p>
+      </div>
+    </div>
+    <div class="conclusion-summary">
+      Le télétravail s'affirme comme un mode de travail <strong>performant côté salariés</strong>, particulièrement sur la productivité. Côté entreprises, il est <strong>massivement présent dans les offres</strong> sans toutefois supplanter le présentiel. La <strong>vraie réponse pourrait être l'hybride</strong>, qui se classe en tête sur la productivité comme sur la satisfaction salariés — mais qui reste minoritaire sur le marché de l'emploi (15 % des offres).
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <span>Dashboard · Mai 2026</span>
+    <span class="period-notice">📦 Sources : datasets Kaggle (publics)</span>
+    <span class="period-notice">⚠ Période des données : non renseignée dans les sources</span>
+    <span class="legend">
+      <span class="remote">Télétravail</span>
+      <span class="hybrid">Hybride</span>
+      <span class="onsite">Présentiel</span>
+    </span>
+  </div>
+</div>
+
+<script>
+const DATA = {
+  // ─ Dossier 1 ─ Remote_Workers
+  g1:  { type:'distrib', x:['Télétravail','Hybride','Présentiel'], y:[41,33,26], yLabel:'Effectif' },
+  g2:  { type:'metric',  x:['Hybride','Présentiel','Télétravail'], y:[6.27,5.70,6.13], yLabel:'/10', yMax:7,  fmt:v=>v.toFixed(2) },
+  g3:  { type:'corr',    x:['Productivité'], y:['Productivité'], z:[[1.0]] },
+  // ─ Dossier 1 ─ Burnout
+  g4:  { type:'distrib', x:['Présentiel','Télétravail','Hybride'], y:[36,33,31], yLabel:'Effectif' },
+  g5:  { type:'metric',  x:['Hybride','Présentiel','Télétravail'], y:[2.16,2.06,2.09], yLabel:'/5', yMax:3, fmt:v=>v.toFixed(2) },
+  g6:  { type:'corr',    x:['Satisfaction'], y:['Satisfaction'], z:[[1.0]] },
+  // ─ Dossier 1 ─ Impact_Mental
+  g7:  { type:'corr',    x:['Stress'], y:['Stress'], z:[[1.0]] },
+  // ─ Dossier 2 ─ Remote_Work_Productivity
+  g8:  { type:'metric',  x:['Présentiel','Télétravail'], y:[63.77,73.63], yLabel:'%', yMax:90, fmt:v=>v.toFixed(1)+' %' },
+  // ─ Dossier 3 ─ Workplace (libellés mal saisis fusionnés : 461+3=464, 161+1=162)
+  g9:  { type:'distrib', x:['Présentiel','Télétravail','Hybride'], y:[464,413,162], yLabel:"Offres" },
+  // ─ Dossier 3 ─ Catégories (idem : "Sur cite" 3 offres ajoutées au Présentiel pour Software Developer ; "Hybride" 1 offre ajoutée à Hybride pour HR)
+  g10: { type:'grouped',
+         cats:['Business Analyst','Cloud','Data Scientist','HR','Software Developer','UI/UX'],
+         series:{ 'Télétravail':[44,65,71,56,70,107], 'Présentiel':[90,62,83,96,83,50], 'Hybride':[38,33,24,21,21,25] }
+  }
+};
+
+const C = {
+  remote: '#2563EB', hybrid: '#06B6D4', onsite: '#334155',
+  ink:'#0F172A', inkSoft:'#2E3A4F', mute:'#5B6878',
+  grid:'rgba(15,23,42,0.05)', axis:'rgba(15,23,42,0.15)'
+};
+function colorForMode(label){
+  const s = String(label).toLowerCase();
+  if (s.includes('télétravail') || s.includes('remote')) return C.remote;
+  if (s.includes('hybride') || s.includes('hybrid'))     return C.hybrid;
+  return C.onsite; // Présentiel / Onsite / Office / In-Office
+}
+
+const baseLayout = {
+  paper_bgcolor:'rgba(0,0,0,0)', plot_bgcolor:'rgba(0,0,0,0)',
+  font:{ family:'Plus Jakarta Sans, sans-serif', size:11, color:C.inkSoft },
+  margin:{ l:48, r:14, t:10, b:46 },
+  xaxis:{ gridcolor:C.grid, linecolor:C.axis, tickcolor:C.axis, zeroline:false, automargin:true,
+          tickfont:{ family:'Plus Jakarta Sans, sans-serif', size:11, color:C.inkSoft } },
+  yaxis:{ gridcolor:C.grid, linecolor:C.axis, tickcolor:C.axis, zeroline:false, automargin:true,
+          tickfont:{ family:'Plus Jakarta Sans, sans-serif', size:10, color:C.mute } },
+  hoverlabel:{ bgcolor:'#FFFFFF', bordercolor:'rgba(15,23,42,0.1)',
+               font:{ family:'Plus Jakarta Sans, sans-serif', size:12, color:C.ink } },
+  showlegend:false
+};
+const baseConfig = { displayModeBar:false, responsive:true };
+
+function renderDistrib(divId, d){
+  const colors = d.x.map(colorForMode);
+  Plotly.newPlot(divId, [{
+    type:'bar', x:d.x, y:d.y,
+    marker:{ color:colors, line:{ width:0 } },
+    text: d.y,
+    textposition:'outside',
+    textfont:{ family:'Sora, sans-serif', size:11, color:C.ink, weight:600 },
+    hovertemplate:'<b>%{x}</b><br>'+(d.yLabel||'Valeur')+': %{y}<extra></extra>',
+    cliponaxis:false
+  }], {
+    ...baseLayout,
+    yaxis:{ ...baseLayout.yaxis, range:[0, Math.max(...d.y)*1.18] }
+  }, baseConfig);
+}
+
+function renderMetric(divId, d){
+  const colors = d.x.map(colorForMode);
+  Plotly.newPlot(divId, [{
+    type:'bar', x:d.x, y:d.y,
+    marker:{ color:colors, line:{ width:0 } },
+    text: d.y.map(v => d.fmt? d.fmt(v) : v),
+    textposition:'outside',
+    textfont:{ family:'Sora, sans-serif', size:11, color:C.ink, weight:600 },
+    hovertemplate:'<b>%{x}</b><br>'+(d.yLabel||'Valeur')+': %{y}<extra></extra>',
+    cliponaxis:false
+  }], {
+    ...baseLayout,
+    yaxis:{ ...baseLayout.yaxis, range:[0, d.yMax || Math.max(...d.y)*1.2] }
+  }, baseConfig);
+}
+
+function renderCorr(divId, d){
+  const colorscale = [
+    [0.0, '#EEF2F7'],
+    [0.5, '#06B6D4'],
+    [1.0, '#1E3A8A']
+  ];
+  Plotly.newPlot(divId, [{
+    type:'heatmap', z:d.z, x:d.x, y:d.y,
+    colorscale, zmin:-1, zmax:1,
+    text:d.z, texttemplate:'%{z:.2f}',
+    textfont:{ family:'Sora, sans-serif', size:18, color:'#FFFFFF', weight:700 },
+    hovertemplate:'x: %{x}<br>y: %{y}<br>r = %{z:.2f}<extra></extra>',
+    showscale:true,
+    colorbar:{ thickness:6, len:0.5, outlinewidth:0,
+               tickfont:{ family:'JetBrains Mono, monospace', size:9, color:C.mute } }
+  }], {
+    ...baseLayout,
+    margin:{ l:80, r:50, t:10, b:50 },
+    xaxis:{ ...baseLayout.xaxis, ticks:'', showgrid:false, automargin:true },
+    yaxis:{ ...baseLayout.yaxis, ticks:'', showgrid:false, automargin:true }
+  }, baseConfig);
+}
+
+function renderGrouped(divId, d){
+  const modes = ['Télétravail','Présentiel','Hybride'];
+  const traces = modes.map(m => ({
+    type:'bar', name:m,
+    x:d.cats, y:d.series[m],
+    marker:{ color:colorForMode(m), line:{ width:0 } },
+    text:d.series[m],
+    textposition:'outside',
+    textfont:{ family:'Sora, sans-serif', size:10, color:C.ink, weight:600 },
+    hovertemplate:'<b>%{x}</b><br>'+m+': %{y}<extra></extra>',
+    cliponaxis:false
+  }));
+  Plotly.newPlot(divId, traces, {
+    ...baseLayout,
+    barmode:'group',
+    showlegend:true,
+    legend:{ orientation:'h', y:-0.2, x:0.5, xanchor:'center',
+             bgcolor:'rgba(0,0,0,0)',
+             font:{ family:'Plus Jakarta Sans, sans-serif', size:12, color:C.ink } },
+    margin:{ l:48, r:14, t:10, b:90 }
+  }, baseConfig);
+}
+
+function renderAll(){
+  Object.entries(DATA).forEach(([id, d]) => {
+    if (d.type === 'distrib')      renderDistrib(id, d);
+    else if (d.type === 'metric')  renderMetric(id, d);
+    else if (d.type === 'corr')    renderCorr(id, d);
+    else if (d.type === 'grouped') renderGrouped(id, d);
+  });
+}
+
+function activateTab(targetId){
+  document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.dataset.target === targetId));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === targetId));
+  setTimeout(() => {
+    Object.keys(DATA).forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.offsetParent) Plotly.Plots.resize(el);
+    });
+  }, 60);
+}
+document.querySelectorAll('.tab').forEach(b => {
+  b.addEventListener('click', () => activateTab(b.dataset.target));
+});
+
+window.addEventListener('DOMContentLoaded', renderAll);
+window.addEventListener('resize', () => {
+  Object.keys(DATA).forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.offsetParent) Plotly.Plots.resize(el);
+  });
+});
+
+document.addEventListener('keydown', e => {
+  if (['1','2','3'].includes(e.key) && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) {
+    activateTab('panel-' + e.key);
+  }
+});
+</script>
+</body>
+</html>
+
+
+
