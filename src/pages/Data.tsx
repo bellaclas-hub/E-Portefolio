@@ -251,7 +251,7 @@ const Data = () => {
             </p>
             <div className="flex justify-center">
               <a 
-                href="/dashboard.html"
+                href="https://bellaclas-hub.github.io/dashboard/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 px-12 py-5 text-lg font-semibold rounded-xl bg-white text-deep-blue hover:bg-slate-100 transition-all shadow-xl active:scale-95 group"
