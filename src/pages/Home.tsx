@@ -115,7 +115,7 @@ const Home = () => {
               Profil
             </h2>
             <p className="text-lg text-text-gray leading-relaxed font-medium max-w-3xl mx-auto">
-              Je suis étudiante en management de la transformation numérique. À travers mes projets, j'explore une idée simple : le NoCode et l'IA ne remplacent pas l'humain, ils le rendent plus efficace, à condition de garder une stratégie claire derrière.
+              Étudiante en Manager, Expert en transformation numérique, mes projets explorent une conviction : le NoCode et l'IA ne remplacent pas l'humain, ils le rendent plus efficace, à condition de garder une stratégie claire derrière.
             </p>
           </div>
 
@@ -132,7 +132,7 @@ const Home = () => {
               </div>
               <h4 className="text-xl font-bold text-deep-blue mb-3">Vision</h4>
               <p className="text-sm text-text-gray leading-relaxed font-medium">
-                La technologie doit servir la stratégie, pas l'inverse. Mon truc, c'est de faire le lien entre les deux.
+                La technologie doit servir la stratégie, pas l'inverse. Ma valeur : faire le lien entre les deux.
               </p>
             </motion.div>
 
@@ -230,7 +230,7 @@ const Home = () => {
                     "Le télétravail constitue-t-il aujourd'hui un mode de travail performant côté salariés et réellement présent côté entreprises ?"
                   </div>
                   <p className="text-slate-300 mb-10 leading-relaxed">
-                    Analyse de trois jeux de données Kaggle — 1 039 offres d'emploi et deux enquêtes salariés — croisant la réalité du marché et le ressenti des salariés.
+                    Analyse de trois dossiers de données Kaggle — 1 039 offres d'emploi et deux enquêtes salariés — croisant la réalité du marché et le ressenti des salariés.
                   </p>
                   <Link 
                     to="/data" 

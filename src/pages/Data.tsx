@@ -188,76 +188,56 @@ const Data = () => {
         </div>
       </section>
 
-      {/* NEW SECTION BONUS — Synthèse de la démarche */}
-      <section className="max-w-[1000px] mx-auto px-10 mb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-white p-10 md:p-16 rounded-[3rem] border border-slate-100 shadow-2xl relative overflow-hidden"
-        >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-light-blue/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-          <h2 className="text-3xl font-black text-deep-blue mb-10 text-center">La démarche en un coup d'œil</h2>
-          
-          <div className="bg-slate-50 rounded-3xl overflow-hidden mb-10 border border-slate-200">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="bg-slate-100/50">
-                  <th className="px-8 py-6 font-semibold text-deep-blue uppercase text-xs tracking-widest">Étape</th>
-                  <th className="px-8 py-6 font-semibold text-deep-blue uppercase text-xs tracking-widest text-center">Statut</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-200">
-                {[
-                  { e: "Stratégie de collecte", s: "✅ Réalisée" },
-                  { e: "Nettoyage et préparation", s: "✅ Réalisée" },
-                  { e: "Extraction & analyse descriptive", s: "✅ Réalisée" },
-                  { e: "Visualisation des résultats", s: "✅ Réalisée" }
-                ].map((row, i) => (
-                  <tr key={i}>
-                    <td className="px-8 py-5 font-medium text-deep-blue">{row.e}</td>
-                    <td className="px-8 py-5 font-semibold text-center text-sm">
-                      <span className={row.s.includes('✅') ? 'text-green-600' : 'text-amber-500'}>
-                        {row.s}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          
-          <div className="flex gap-6 items-start">
-            <ClipboardCheck className="w-8 h-8 text-light-blue shrink-0 mt-1" />
-            <p className="text-text-gray font-medium leading-relaxed italic">
-              "De la collecte des données jusqu'à leur interprétation avec l'IA, j'ai gardé la même rigueur à chaque étape."
-            </p>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* SECTION 6 — ACCÈS AU DASHBOARD */}
+      {/* SECTION 6 — ACCÈS AU DASHBOARD & SYNTHÈSE FUSIONNÉS */}
       <section className="max-w-[1200px] mx-auto px-10 mb-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-light-blue to-deep-blue rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden"
+          className="bg-gradient-to-r from-light-blue to-deep-blue rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl"
         >
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-white">Consulter le dashboard interactif</h2>
+            <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight text-white">Consulter le dashboard interactif</h2>
             <p className="text-white/80 text-lg md:text-xl font-medium mb-12 max-w-2xl mx-auto">
               Accédez à l'ensemble des données visualisées et découvrez les résultats détaillés de cette étude.
             </p>
+
+            {/* Mini-tableau récapitulatif des 4 étapes réalisées */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 max-w-4xl mx-auto text-left">
+              {[
+                "Stratégie de collecte",
+                "Nettoyage et préparation",
+                "Extraction & analyse descriptive",
+                "Visualisation des résultats"
+              ].map((etape, i) => (
+                <div key={i} className="flex items-center gap-3 p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-sm">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                  <div className="flex flex-col">
+                    <span className="text-xs text-white/90 font-semibold leading-tight">{etape}</span>
+                    <span className="text-[10px] font-bold text-emerald-300 uppercase tracking-wider mt-0.5">Réalisée</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Citation rigueur */}
+            <div className="flex gap-4 items-center justify-center max-w-2xl mx-auto mb-10 text-white/95 italic text-sm border-t border-white/10 pt-8">
+              <ClipboardCheck className="w-5 h-5 text-white/75 shrink-0" />
+              <span>"De la collecte des données jusqu'à leur interprétation avec l'IA, j'ai gardé la même rigueur à chaque étape."</span>
+            </div>
+
+            {/* Bouton CTA */}
             <div className="flex justify-center">
               <a 
                 href="https://bellaclas-hub.github.io/dashboard/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-12 py-5 text-lg font-semibold rounded-xl bg-white text-deep-blue hover:bg-slate-100 transition-all shadow-xl active:scale-95 group"
+                className="flex items-center gap-3 px-12 py-5 text-lg font-semibold rounded-full bg-white text-deep-blue hover:bg-slate-100 hover:scale-105 active:scale-95 transition-all shadow-xl duration-300 group"
               >
-                Voir le dashboard
-                <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                Voir le dashboard →
               </a>
             </div>
           </div>
