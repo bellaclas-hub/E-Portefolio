@@ -22,6 +22,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-white mb-6 uppercase tracking-[0.2em] text-[10px]">Navigation</h4>
             <ul className="space-y-3 text-xs font-semibold">
+              <li><Link to="/" className="text-slate-400 hover:text-white transition-colors">Accueil</Link></li>
               <li><Link to="/a-propos" className="text-slate-400 hover:text-white transition-colors">À propos</Link></li>
               <li><Link to="/cas-pratique" className="text-slate-400 hover:text-white transition-colors">Cas pratique</Link></li>
               <li><Link to="/data" className="text-slate-400 hover:text-white transition-colors">Data</Link></li>

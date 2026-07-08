@@ -51,7 +51,7 @@ const Home = () => {
                 <div className="flex items-center gap-4 group">
                   <div className="bg-white p-2.5 rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105">
                     <img 
-                      src="https://res.cloudinary.com/delgsyvkc/image/upload/v1778150150/Untitled_e7mnb6.png" 
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fe-portefolio.vercel.app%2F" 
                       alt="Portfolio QR Code" 
                       className="w-20 h-20 md:w-24 md:h-24 object-contain"
                       referrerPolicy="no-referrer"
