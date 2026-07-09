@@ -106,7 +106,7 @@ const Data = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
               {[
                 { step: "01", icon: HelpCircle, title: "Pose de la problématique", desc: "Définition de la question centrale et du périmètre d'analyse." },
-                { step: "02", icon: Target, title: "Définition des objectifs", desc: "Identification des angles d'analyse — salariés et entreprises." },
+                { step: "02", icon: Target, title: "Définition des objectifs", desc: "Identification des angles d'analyse (salariés et entreprises)." },
                 { step: "03", icon: Database, title: "Recherche Kaggle", desc: "Sélection de 3 dossiers de données open source sur Kaggle, plateforme de référence." },
                 { step: "04", icon: Terminal, title: "Analyse via Google Colab", desc: "Traitement des bases de données par code Python pour générer les graphiques." },
                 { step: "05", icon: Download, title: "Téléchargement des graphiques", desc: "Extraction des visualisations exploitables pour le dashboard." },

@@ -38,7 +38,7 @@ const Portfolio = () => {
               Conception d'un site vitrine avec Lovable
             </motion.h1>
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-text-gray leading-relaxed font-medium">
-              Comment j'ai conçu ce site avec le NoCode et l'IA — et surtout, ce que j'en retiens.
+              Comment j'ai conçu ce site avec le NoCode et l'IA, et surtout, ce que j'en retiens.
             </motion.p>
           </motion.div>
 
@@ -96,7 +96,7 @@ const Portfolio = () => {
           <span className="text-xs font-black uppercase tracking-[0.4em] text-light-blue mb-4 block">01. CONTEXTE</span>
           <h2 className="text-3xl md:text-4xl font-black text-deep-blue mb-8 tracking-tight">Pourquoi un site vitrine ?</h2>
           <p className="text-lg md:text-xl text-text-gray font-medium leading-relaxed max-w-3xl mb-12">
-            J'ai découvert Lovable grâce à un prof. Dès que j'ai su m'en servir, j'ai voulu créer mon propre site vitrine : un support qui illustre mon CV, montre ce que je sais faire, et m'aide à me démarquer dans mes candidatures — avec un objectif clair, décrocher un CDD ou un CDI.
+            J'ai découvert Lovable grâce à un prof. Dès que j'ai su m'en servir, j'ai voulu créer mon propre site vitrine : un support qui illustre mon CV, montre ce que je sais faire, et m'aide à me démarquer dans mes candidatures, avec un objectif clair : décrocher un CDD ou un CDI.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -230,7 +230,7 @@ const Portfolio = () => {
           <h2 className="text-2xl md:text-4xl font-black text-deep-blue mb-8 tracking-tight">Réponse à la problématique</h2>
           
           <p className="text-xl md:text-2xl font-black text-deep-blue mb-6 leading-relaxed max-w-4xl mx-auto">
-            "Oui — un outil NoCode assisté par IA peut produire un livrable professionnel, à condition que la stratégie et la rigueur restent humaines."
+            "Oui, un outil NoCode assisté par IA peut produire un livrable professionnel, à condition que la stratégie et la rigueur restent humaines."
           </p>
           
           <p className="text-base md:text-lg text-text-gray font-medium max-w-3xl mx-auto leading-relaxed">

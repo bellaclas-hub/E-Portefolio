@@ -39,7 +39,7 @@ const About = () => {
               Tout est parti de mon BTS : c'est là que j'ai découvert le digital, et réalisé à quel point le marketing, la communication ou le SEO étaient sous-estimés par les entreprises.
             </p>
             <p>
-              Depuis, ce qui m'anime, c'est de m'approprier les nouveaux outils — le <span className="text-light-blue font-semibold">NoCode</span> et l'<span className="text-light-blue font-semibold">intelligence artificielle</span> — pour concevoir des projets digitaux plus vite et plus malin.
+              Depuis, ce qui m'anime, c'est de m'approprier les nouveaux outils, le <span className="text-light-blue font-semibold">NoCode</span> et l'<span className="text-light-blue font-semibold">intelligence artificielle</span>, pour concevoir des projets digitaux plus vite et plus malin.
             </p>
             <p>
               Le NoCode, je l'ai découvert cette année en cours. Je n'ai pas arrêté d'explorer depuis.
@@ -69,7 +69,7 @@ const About = () => {
                 Pour moi, le <span className="text-light-blue">NoCode</span> et l’<span className="text-light-blue">intelligence artificielle</span> ne remplacent pas l'humain : ils le <span className="underline decoration-light-blue decoration-4 underline-offset-8">renforcent</span>.
               </p>
               <p className="text-text-gray text-lg md:text-xl font-medium leading-relaxed">
-                Ils me font gagner du temps — du temps que je remets là où il compte vraiment : comprendre un besoin, réfléchir, créer.
+                Ils me font gagner du temps, du temps que je remets là où il compte vraiment : comprendre un besoin, réfléchir, créer.
               </p>
             </div>
           </div>

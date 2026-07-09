@@ -44,7 +44,7 @@ const Methodologie = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
               { 
-                title: "Salariés — productivité", 
+                title: "Salariés (productivité)", 
                 items: [
                   { label: "Type", val: "Enquête salariés" },
                   { label: "Source", val: "Jeu de données Kaggle (open data)" },
@@ -53,7 +53,7 @@ const Methodologie = () => {
                 ]
               },
               { 
-                title: "Salariés — bien-être", 
+                title: "Salariés (bien-être)", 
                 items: [
                   { label: "Type", val: "Enquête salariés" },
                   { label: "Source", val: "Jeu de données Kaggle (open data)" },
